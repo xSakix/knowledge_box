@@ -1,0 +1,4309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/ng_conf_2023_neuralchat.html">
+      
+      
+        <link rel="prev" href="ng_conf_2022.html">
+      
+      
+        <link rel="next" href="nordic_js_2022.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>ng conf 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#typing-the-not-so-secret-to-customisation-ngtemplateoutlet-stephen-cooper-ng-conf-2023" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ng conf 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ng_conf_2023_neuralchat.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#typing-the-not-so-secret-to-customisation-ngtemplateoutlet-stephen-cooper-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typing the not so secret to customisation ngTemplateOutlet | Stephen Cooper |  ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-magic-and-mystery-of-angular-change-detection-anthony-scardapane-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Magic and Mystery of Angular Change Detection | Anthony Scardapane | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-angular-with-webstorm-workshop-paul-everitt-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Angular with WebStorm Workshop | Paul Everitt | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-enterprise-frontend-for-success-alex-okrushko-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Enterprise Frontend for Success |  Alex Okrushko | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#road-to-module-federation-sumit-arora-abdella-ali-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Road to Module Federation | Sumit Arora &amp; Abdella Ali | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-patterns-for-angular-lara-newsom-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reactive Patterns For Angular | Lara Newsom | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-deployments-for-web-developers-cecelia-martinez-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Deployments for Web Developers | Cecelia Martinez | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfe-production-gotchas-and-thing-you-should-prepare-bruce-zhang-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFE Production Gotchas, and thing you should prepare | Bruce Zhang | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-architectures-with-angulars-latest-innovations-manfred-steyer-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightweight Architectures with Angular's Latest Innovations | Manfred Steyer | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-the-identity-guardians-auth-tokens-in-a-flash-alisa-duncan-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing the Identity Guardians - Auth tokens in a flash! | Alisa Duncan | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-reactive-with-angular-signals-deborah-kurata-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go Reactive with Angular Signals | Deborah Kurata | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fun-with-feature-flags-brooke-avery-preston-lamb-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fun with Feature Flags | Brooke Avery &amp; Preston Lamb | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-tuning-your-angular-workflow-with-nx-beyond-the-cli-juri-strumpflohner-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fine-Tuning Your Angular Workflow with Nx: Beyond the CLI | Juri Strumpflohner | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delighting-users-with-performant-apps-mike-hartington-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delighting users with performant apps | Mike Hartington | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-rxjs-operators-are-standing-by-act-now-chris-perko-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom RxJS Operators are Standing By! Act Now! | Chris Perko | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#craigs-angularrust-spectacular-brought-to-you-by-rust-eze-craig-spence-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Craig's Angular/Rust Spectacular (brought to you by Rust-eze) | Craig Spence | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-your-old-angular-apps-stephen-fluin-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Up Your Old Angular Apps! | Stephen Fluin | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-trust-with-your-users-workshop-brian-love-mike-ryan-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Trust with Your Users Workshop | Brian Love &amp; Mike Ryan | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auxiliary-routes-the-ant-man-of-angular-ankita-sood-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auxiliary Routes - the Ant-Man of Angular | Ankita Sood | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-across-the-stack-with-analog-brandon-roberts-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Across the Stack with Analog | Brandon Roberts | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-outside-the-box-taking-your-lob-apps-to-the-next-level-dan-wahlin-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thinking Outside the Box: Taking Your LOB Apps to the Next Level | Dan Wahlin | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-monorepo-cant-save-you-from-your-own-corporate-dysfunction-isaac-mann-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Monorepo Can't Save You From Your Own Corporate Dysfunction | Isaac Mann | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-more-using-github-ai-and-vs-code-john-papa-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do More using GitHub, AI, and VS Code | John Papa | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-team-panel-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Team Panel | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faster-apps-with-angular-ssr-mark-thompson-jessica-janiuk-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faster apps with Angular SSR | Mark Thompson &amp; Jessica Janiuk | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#superpowers-with-signals-emma-twersky-alex-rickabaugh-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Superpowers with Signals | Emma Twersky &amp; Alex Rickabaugh |  ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-keynote-minko-gechev-jeremy-elbourn-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Keynote | Minko Gechev &amp; Jeremy Elbourn | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#typing-the-not-so-secret-to-customisation-ngtemplateoutlet-stephen-cooper-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typing the not so secret to customisation ngTemplateOutlet | Stephen Cooper |  ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-magic-and-mystery-of-angular-change-detection-anthony-scardapane-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Magic and Mystery of Angular Change Detection | Anthony Scardapane | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-angular-with-webstorm-workshop-paul-everitt-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Angular with WebStorm Workshop | Paul Everitt | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-enterprise-frontend-for-success-alex-okrushko-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Enterprise Frontend for Success |  Alex Okrushko | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#road-to-module-federation-sumit-arora-abdella-ali-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Road to Module Federation | Sumit Arora &amp; Abdella Ali | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-patterns-for-angular-lara-newsom-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reactive Patterns For Angular | Lara Newsom | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-deployments-for-web-developers-cecelia-martinez-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Deployments for Web Developers | Cecelia Martinez | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfe-production-gotchas-and-thing-you-should-prepare-bruce-zhang-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFE Production Gotchas, and thing you should prepare | Bruce Zhang | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-architectures-with-angulars-latest-innovations-manfred-steyer-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightweight Architectures with Angular's Latest Innovations | Manfred Steyer | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-the-identity-guardians-auth-tokens-in-a-flash-alisa-duncan-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing the Identity Guardians - Auth tokens in a flash! | Alisa Duncan | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-reactive-with-angular-signals-deborah-kurata-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go Reactive with Angular Signals | Deborah Kurata | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fun-with-feature-flags-brooke-avery-preston-lamb-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fun with Feature Flags | Brooke Avery &amp; Preston Lamb | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-tuning-your-angular-workflow-with-nx-beyond-the-cli-juri-strumpflohner-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fine-Tuning Your Angular Workflow with Nx: Beyond the CLI | Juri Strumpflohner | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delighting-users-with-performant-apps-mike-hartington-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delighting users with performant apps | Mike Hartington | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-rxjs-operators-are-standing-by-act-now-chris-perko-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom RxJS Operators are Standing By! Act Now! | Chris Perko | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#craigs-angularrust-spectacular-brought-to-you-by-rust-eze-craig-spence-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Craig's Angular/Rust Spectacular (brought to you by Rust-eze) | Craig Spence | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up-your-old-angular-apps-stephen-fluin-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Up Your Old Angular Apps! | Stephen Fluin | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-trust-with-your-users-workshop-brian-love-mike-ryan-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Trust with Your Users Workshop | Brian Love &amp; Mike Ryan | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auxiliary-routes-the-ant-man-of-angular-ankita-sood-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auxiliary Routes - the Ant-Man of Angular | Ankita Sood | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-across-the-stack-with-analog-brandon-roberts-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Across the Stack with Analog | Brandon Roberts | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-outside-the-box-taking-your-lob-apps-to-the-next-level-dan-wahlin-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thinking Outside the Box: Taking Your LOB Apps to the Next Level | Dan Wahlin | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-monorepo-cant-save-you-from-your-own-corporate-dysfunction-isaac-mann-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Monorepo Can't Save You From Your Own Corporate Dysfunction | Isaac Mann | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-more-using-github-ai-and-vs-code-john-papa-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do More using GitHub, AI, and VS Code | John Papa | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-team-panel-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Team Panel | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faster-apps-with-angular-ssr-mark-thompson-jessica-janiuk-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faster apps with Angular SSR | Mark Thompson &amp; Jessica Janiuk | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#superpowers-with-signals-emma-twersky-alex-rickabaugh-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Superpowers with Signals | Emma Twersky &amp; Alex Rickabaugh |  ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-keynote-minko-gechev-jeremy-elbourn-ng-conf-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Keynote | Minko Gechev &amp; Jeremy Elbourn | ng-conf 2023
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ng conf 2023</h1>
+
+<h2 id="typing-the-not-so-secret-to-customisation-ngtemplateoutlet-stephen-cooper-ng-conf-2023">Typing the not so secret to customisation ngTemplateOutlet | Stephen Cooper |  ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ELRCT7ooNCU">https://www.youtube.com/watch?v=ELRCT7ooNCU</a></p>
+<ul>
+<li>NG Template Outlet is a powerful tool for creating customizable components.</li>
+<li>Define template using NG Template tag and options.</li>
+<li>Use template variables to extract information from context.</li>
+<li>ND Template Outlet Context Guard provides client customization.</li>
+<li>In 2019, issues with template typing were addressed.</li>
+<li>New features in Angular 16 include generic types for templates.</li>
+<li>Type checking is crucial for ensuring correct rendering and preventing errors.</li>
+<li>The speaker discussed a repo example of entertainment Outlets using NG Template.</li>
+</ul>
+<h2 id="the-magic-and-mystery-of-angular-change-detection-anthony-scardapane-ng-conf-2023">The Magic and Mystery of Angular Change Detection | Anthony Scardapane | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=68GpNWO-4QM">https://www.youtube.com/watch?v=68GpNWO-4QM</a></p>
+<ul>
+<li>Understand change detection in Angular</li>
+<li>Process: create mode, update mode, and bootstrapping</li>
+<li>Change detection workflow: traverse component tree, check bindings, and update views</li>
+<li>Zone JS: patching browser APIs to notify Angular of changes</li>
+<li>Push component strategy: mark dirty components and run change detection implicitly</li>
+<li>Signal-based components: signal value changes trigger template reading and change detection</li>
+<li>Efficiency improvements with signal components</li>
+<li>Future RFCs: coexist with existing features, optimize change detection strategies</li>
+</ul>
+<h2 id="power-angular-with-webstorm-workshop-paul-everitt-ng-conf-2023">Power Angular with WebStorm Workshop | Paul Everitt | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3CLxk-vvPhI">https://www.youtube.com/watch?v=3CLxk-vvPhI</a></p>
+<ol>
+<li>User is working on an angular project and using webstorm IDE.</li>
+<li>They create a component for their app called Heroes and add tests to it.</li>
+<li>The user encounters various issues, fixes them, and commits the changes.</li>
+<li>They use tools like prettier to clean up code and make refactors.</li>
+<li>Webstorm IDE helps with autocomplete, syntax highlighting, and other features that improve productivity.</li>
+<li>The user also uses a test runner to run their tests, ensuring everything works as intended.</li>
+<li>Throughout the process, they share their experience and learnings on how webstorm helps them build better apps efficiently.- Importance of CSS integration and maintaining local history</li>
+<li>GitHub Copilot extension, IntelliJ IDEA features for git</li>
+<li>Difficulty in managing multiple branches and commits without proper token</li>
+<li>Stash vs. Shelf: Stash allows selective rollbacks while Shelf is more limited</li>
+<li>Preference for fine Explorer over other project organizers</li>
+<li>Microsoft's UI evolution: New UI received mixed reactions, but people found it easier to focus</li>
+<li>Idea of bringing back a feature in the form of an option or menu</li>
+<li>Double-clicking files to view differences in IDEs</li>
+<li>The speaker appreciates the context and ideas shared</li>
+</ol>
+<h2 id="setting-up-enterprise-frontend-for-success-alex-okrushko-ng-conf-2023">Setting up Enterprise Frontend for Success |  Alex Okrushko | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=K4IvRizYM1w">https://www.youtube.com/watch?v=K4IvRizYM1w</a></p>
+<ul>
+<li>Speaker's background: Born in Ukraine, now working as a principal architect at Cisco and organizing Angular Toronto events.</li>
+<li>Frontend success: Define objective, focus on engineering ownership of code, team building, communication, monorepo, feature flags, trunk-based development, code style, automation testing, planning, and daily release.</li>
+<li>Tools: NX monorepo, feature Flags, GitHub flow/trunk-based development, TypeScript linting rules, automated formatting tools, documentation, design reviews, and Discord for support.</li>
+<li>Key takeaways: Communication is crucial in distributed teams; trunk-based development simplifies deployment and bug fixes; adopting a daily release cycle enables faster rollbacks and better focus on specific features.</li>
+</ul>
+<h2 id="road-to-module-federation-sumit-arora-abdella-ali-ng-conf-2023">Road to Module Federation | Sumit Arora &amp; Abdella Ali | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1vGWnvSXO6Y">https://www.youtube.com/watch?v=1vGWnvSXO6Y</a></p>
+<ol>
+<li>Module Federation is a solution for separating concerns in applications and breaking them into smaller, independently deployable parts.</li>
+<li>It provides better scalability, flexibility, and collaboration between teams by allowing each part to be maintained and released individually while still maintaining consistency across the application.</li>
+<li>Benefits include clear developer experience, faster deployment process, improved testing, and easier internationalization handling.</li>
+<li>Important aspects are clear communication, shared guidelines, and a well-defined structure with separate teams for backend, frontend, and infrastructure.</li>
+<li>Focus on creating a consistent look and feel across the application while allowing individual creativity.</li>
+<li>To implement Module Federation, consider using mono repositories, shared libraries, and a well-designed architecture that enforces consistency and alignment between teams.</li>
+</ol>
+<h2 id="reactive-patterns-for-angular-lara-newsom-ng-conf-2023">Reactive Patterns For Angular | Lara Newsom | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Tr2AHKdtHVA">https://www.youtube.com/watch?v=Tr2AHKdtHVA</a></p>
+<ul>
+<li>Utilize input Setters and emit events for data changes</li>
+<li>Pattern 1: Use Setters with filtering logic instead of ngOnChange</li>
+<li>Pattern 2: Cut middleman, use a router module to manage application state</li>
+<li>Pattern 3: Compose data and get consumers</li>
+<li>Combine patterns for a clear data flow throughout the app</li>
+<li>Orchestrate data flow for better maintainability and performance</li>
+<li>Use signal-based reactive programming for easier testing and maintenance</li>
+</ul>
+<h2 id="mobile-deployments-for-web-developers-cecelia-martinez-ng-conf-2023">Mobile Deployments for Web Developers | Cecelia Martinez | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NcnjNiuutGs">https://www.youtube.com/watch?v=NcnjNiuutGs</a></p>
+<ul>
+<li>Mobile deployment is complex due to differences between web and mobile platforms.</li>
+<li>Testing: Web testing occurs in specific environments while mobile apps require real devices, emulators, or cloud services for testing.</li>
+<li>Build process: Web development uses transpilers and bundlers, while mobile development involves compilation and code signing.</li>
+<li>App Store approval process: Apple's App Store has strict requirements, and rejections are often due to privacy issues, substandard UI, and app functionality.</li>
+<li>Updating apps: Live updates allow bug fixes without App Store approval, but require platform-specific tools or general mobile tools like CodeMagic, Bitrise, or Cloud Services.</li>
+<li>Tool selection: Consider platform-specific or multi-functional tools for your team's expertise and existing infrastructure.</li>
+<li>CI/CD platforms: Relevant options include App Flow (free), CircleCI, Jenkins, and custom solutions.</li>
+<li>QR code scanning: Scan the provided QR code to access a free whitepaper on automating mobile deployment processes.</li>
+</ul>
+<h2 id="mfe-production-gotchas-and-thing-you-should-prepare-bruce-zhang-ng-conf-2023">MFE Production Gotchas, and thing you should prepare | Bruce Zhang | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oHVweuiqJwY">https://www.youtube.com/watch?v=oHVweuiqJwY</a></p>
+<ul>
+<li>Transcript from a conference discusses learning microfrontend architecture (MFE) and its benefits.</li>
+<li>MFE breaks applications into smaller, reusable modules.</li>
+<li>Common issues mentioned include network errors, remote app handling, and circular dependencies.</li>
+<li>Tips for fixing issues with MFE: use ESM format, fix component undefined errors, and optimize performance using service workers, prefetching, and preloading.</li>
+<li>MFE improves application scalability, maintainability, and flexibility for distributed teams.</li>
+</ul>
+<h2 id="lightweight-architectures-with-angulars-latest-innovations-manfred-steyer-ng-conf-2023">Lightweight Architectures with Angular's Latest Innovations | Manfred Steyer | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-PRgw9exL-8">https://www.youtube.com/watch?v=-PRgw9exL-8</a></p>
+<ul>
+<li>Lightweight Angular Architecture: Standalone components, Sheriff (access restriction), and custom Standalone APIs.</li>
+<li>Mosaic approach: Use simple tools to compose complex applications.</li>
+<li>Key features: Lazy loading, routing parameter configuration, lazy routing, functional guards, asynchronous State Management, and signal-based communication.</li>
+<li>Benefits: Easily reach The Sweet Spot engineering through modularity and reusability.</li>
+</ul>
+<h2 id="introducing-the-identity-guardians-auth-tokens-in-a-flash-alisa-duncan-ng-conf-2023">Introducing the Identity Guardians - Auth tokens in a flash! | Alisa Duncan | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=cj7vGdRjzOo">https://www.youtube.com/watch?v=cj7vGdRjzOo</a></p>
+<ul>
+<li>Identity Guardians is an authentication and authorization solution for Angular applications.</li>
+<li>It uses OAuth 2.0 and OpenID Connect (OIDC) standards, with an extra identity layer.</li>
+<li>The OIDC certified library handles the OAuth handshake and authorization server process.</li>
+<li>Three tokens are returned: access token, ID token, and refresh token.</li>
+<li>Access token is used for authorization; Interceptor ensures it's not sent to unsafe origins.</li>
+<li>ID token contains standard identity information and can be used for authentication.</li>
+<li>Refresh token extends the life of the authentication by allowing the user to log in again without reauthorizing.</li>
+<li>Use industry-recognized standards, OAuth 2.0 and OIDC, and an OIDC certified library for maximum protection.</li>
+</ul>
+<h2 id="go-reactive-with-angular-signals-deborah-kurata-ng-conf-2023">Go Reactive with Angular Signals | Deborah Kurata | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VhIkDQ1TWl8">https://www.youtube.com/watch?v=VhIkDQ1TWl8</a></p>
+<ul>
+<li>Discussed using signals for reactivity in web applications.</li>
+<li>Signals provide a way to notify consumers when values change without needing to subscribe like observables.</li>
+<li>Computed signals create new signals based on other signals, allowing recomputation and memoization for improved performance.</li>
+<li>Interoperability between signal and RxJS is possible through observable interop features.</li>
+<li>Signal services can be injected using dependency injection in Angular to manage data flow.</li>
+<li>Event handlers can still be used alongside signals for user actions, but computed signals are more reactive.</li>
+<li>Computed state data can help avoid static page titles and replace event-based solutions with signal frameworks.</li>
+</ul>
+<h2 id="fun-with-feature-flags-brooke-avery-preston-lamb-ng-conf-2023">Fun with Feature Flags | Brooke Avery &amp; Preston Lamb | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=yGCSPtwTFdc">https://www.youtube.com/watch?v=yGCSPtwTFdc</a></p>
+<ul>
+<li>Importance of feature flags in application development</li>
+<li>Feature flag types: service, guard directive, and flagging</li>
+<li>Benefits of feature flags include ease of control, testing, debugging, and continuous deployment</li>
+<li>Triangular pennant programming as an example of threesided flag implementation</li>
+<li>Using feature flags in Stewarts comic book store website for selectively displaying features based on user conditions</li>
+</ul>
+<h2 id="fine-tuning-your-angular-workflow-with-nx-beyond-the-cli-juri-strumpflohner-ng-conf-2023">Fine-Tuning Your Angular Workflow with Nx: Beyond the CLI | Juri Strumpflohner | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=g_al2o54JL0">https://www.youtube.com/watch?v=g_al2o54JL0</a></p>
+<ol>
+<li>Transcript overview: A conference talk about NX, a toolkit for web development.</li>
+<li>NX improves developer experience with features like caching, optimized CI pipelines, and customizable workspaces.</li>
+<li>NX console extension helps manage projects, generating files, and running tasks efficiently.</li>
+<li>Annex workspace provides customization options and integration with other tools like Angular CLI and Webpack.</li>
+<li>NGX is a package for configuring project settings in the NX workspace.</li>
+<li>NXvite is an executor that builds specifically for Analog.js, making it easier to use.</li>
+<li>Annex console extension helps with local generator compilation and publishing to npm registries.</li>
+<li>Angular schematic and NX generators have compatibility issues due to slight differences in versions.</li>
+<li>Plugin development and dedicated sections in documentation offer deeper insights into various tools.</li>
+</ol>
+<h2 id="delighting-users-with-performant-apps-mike-hartington-ng-conf-2023">Delighting users with performant apps | Mike Hartington | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SoEOk_q0_xI">https://www.youtube.com/watch?v=SoEOk_q0_xI</a></p>
+<ul>
+<li>A team built a music app with various features.</li>
+<li>They faced issues with web performance, particularly with shadows and animations.</li>
+<li>A flip animation technique was used to improve performance.</li>
+<li>Craig developed a library to analyze album artwork for dominant colors.</li>
+<li>Web workers were introduced to handle image processing without affecting the main app's speed.</li>
+<li>The team successfully completed the project with an amazing UI, rich contextual information, and great performance.</li>
+</ul>
+<h2 id="custom-rxjs-operators-are-standing-by-act-now-chris-perko-ng-conf-2023">Custom RxJS Operators are Standing By! Act Now! | Chris Perko | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dG1-WNDGqWA">https://www.youtube.com/watch?v=dG1-WNDGqWA</a></p>
+<ul>
+<li>Introducing Chris Perco, a Senior Engineer at Hero Devs.</li>
+<li>Co-organizer of the Angular Community Meetup and frequent speaker.</li>
+<li>Custom operator in RxJS: simplifying complex code with reusability.</li>
+<li>Understanding operators as higher order functions.</li>
+<li>Creating custom operators for specific use cases.</li>
+<li>Example: Double operator, a simplified version of Map function.</li>
+<li>Pokemon themed app built using Angular Material and RxJS.</li>
+<li>Autocomplete component with debounce and throttle implementation.</li>
+<li>Marble testing: a way to visualize and test Observable behavior.</li>
+<li>Refactoring components for better readability and maintainability.</li>
+<li>Writing custom operators in a modular manner for easy maintenance.</li>
+</ul>
+<h2 id="craigs-angularrust-spectacular-brought-to-you-by-rust-eze-craig-spence-ng-conf-2023">Craig's Angular/Rust Spectacular (brought to you by Rust-eze) | Craig Spence | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=GHZ3rKoP7xA">https://www.youtube.com/watch?v=GHZ3rKoP7xA</a></p>
+<ul>
+<li>Craig presents a simulation project in Rust and Typescript languages.</li>
+<li>Rust offers better performance, memory management, and type safety than Typescript.</li>
+<li>He demonstrates an optimized simulation rendering using Rust's terminal renderer.</li>
+<li>To integrate Rust with the web browser, he suggests WebAssembly (Wasm) which is a binary code standard to run in the browser.</li>
+<li>The final step involves compiling the Rust code into Wasm and integrating it with the Typescript application.</li>
+<li>This results in significant performance improvements for the simulation rendering process, making Lightning McQueen happy.</li>
+</ul>
+<h2 id="clean-up-your-old-angular-apps-stephen-fluin-ng-conf-2023">Clean Up Your Old Angular Apps! | Stephen Fluin | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=kXH7lVhut2E">https://www.youtube.com/watch?v=kXH7lVhut2E</a></p>
+<ul>
+<li>Whirlwind tour of Angular updates</li>
+<li>Migration process with 32 steps for updating apps</li>
+<li>Use NPM version 16, avoid legacy peer depth issues</li>
+<li>Apply strictness and create new projects for better compatibility</li>
+<li>Utilize force to update dependencies carefully</li>
+<li>Run clean commits regularly</li>
+<li>Consider creating a brand new project for Angular v16</li>
+<li>Keep up with updates as they improve the ecosystem</li>
+</ul>
+<h2 id="build-trust-with-your-users-workshop-brian-love-mike-ryan-ng-conf-2023">Build Trust with Your Users Workshop | Brian Love &amp; Mike Ryan | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lpua8gHQqgQ">https://www.youtube.com/watch?v=lpua8gHQqgQ</a></p>
+<ul>
+<li>SLOs (Service Level Objectives) help define reliability for web apps by setting measurable targets.</li>
+<li>They provide a shared understanding and anchor conversation about service reliability.</li>
+<li>SLOs can be used to measure and improve the performance of web applications, acting as a common language between teams.</li>
+<li>Error budgets are utilized to quantify errors and allow for flexibility in error handling.</li>
+<li>Reliability Targets should be set based on real user experience data.</li>
+<li>Polaris is an AI-powered tool that helps measure web app performance, providing real-time insights into website performance and incident management. It also offers personalized site reliability advice using AI.</li>
+</ul>
+<h2 id="auxiliary-routes-the-ant-man-of-angular-ankita-sood-ng-conf-2023">Auxiliary Routes - the Ant-Man of Angular | Ankita Sood | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ANgGbeAbvP0">https://www.youtube.com/watch?v=ANgGbeAbvP0</a></p>
+<ul>
+<li>Discussed Angular and its sub-products in relation to Marvel characters.</li>
+<li>Introduced Backroute, a page routing solution for web apps.</li>
+<li>Explained how it works with Marvel examples.</li>
+<li>Focused on consistent user experience across components.</li>
+<li>Highlighted the use of skip location change to simplify navigation.</li>
+<li>Emphasized maintaining a clear URL structure.</li>
+<li>Discussed adding features like chat consistently.</li>
+<li>Aimed for a consistent user experience in detail panels and apps.</li>
+</ul>
+<h2 id="angular-across-the-stack-with-analog-brandon-roberts-ng-conf-2023">Angular Across the Stack with Analog | Brandon Roberts | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=sbiONrVyHY4">https://www.youtube.com/watch?v=sbiONrVyHY4</a></p>
+<ul>
+<li>Speaker introduces themselves and talks about various tools, frameworks, and projects they're involved in.</li>
+<li>Mentioned the importance of integration between different frameworks and tools to improve developer experience.</li>
+<li>Highlights Angular's strengths and its ecosystem, including server-side rendering, static site generation, API routing, and server data fetching.</li>
+<li>Talks about Angular's meta frameworks like NextJS, Remix, Astro, and Solid JS.</li>
+<li>Emphasizes the need for faster ways to build applications by using Angular's file-based routing and server-side rendering features.</li>
+<li>Discusses the importance of integrating APIs within frameworks.</li>
+<li>Introduces a new project called Analog, an open-source tool that aims to expand the Angular ecosystem and provide better integration across different platforms.</li>
+<li>Encourages contributions from the community, including sponsoring the project for further development.</li>
+</ul>
+<h2 id="thinking-outside-the-box-taking-your-lob-apps-to-the-next-level-dan-wahlin-ng-conf-2023">Thinking Outside the Box: Taking Your LOB Apps to the Next Level | Dan Wahlin | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=TZnMTICby5E">https://www.youtube.com/watch?v=TZnMTICby5E</a></p>
+<ol>
+<li>Discussed the importance of building apps that focus on organizational data, communication, and AI integration.</li>
+<li>Demonstrated using web components to integrate search functionality for files across different platforms like Microsoft 365, Google Workspace, and OneDrive.</li>
+<li>Showcased a live calling app using Twilio and Azure Communication Services.</li>
+<li>Highlighted the need for prompt engineering in AI models and provided tips on creating effective prompts.</li>
+<li>Mentioned the importance of maintaining security and privacy while working with AI systems.</li>
+</ol>
+<h2 id="a-monorepo-cant-save-you-from-your-own-corporate-dysfunction-isaac-mann-ng-conf-2023">A Monorepo Can't Save You From Your Own Corporate Dysfunction | Isaac Mann | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Ix63AaS41dU">https://www.youtube.com/watch?v=Ix63AaS41dU</a></p>
+<ul>
+<li>Foreign speaker discusses different characters and their roles in a company:</li>
+<li>Looney devs: Creative developers, but can cause issues with code organization.</li>
+<li>Night high standard: Strict reviewers who focus on code quality.</li>
+<li>Sneetches: Employees who value status and want to protect it at all costs.</li>
+<li>Monorepo Man: Uses NX, a tool for managing large codebases and improving team collaboration.</li>
+<li>Multiple repo strategy: Separate repositories for different teams or projects.</li>
+<li>Interpersonal issues: Important to address in order to create a productive work environment.</li>
+<li>Balance between technical solutions and interpersonal solutions to build a better team culture and improve app development.</li>
+</ul>
+<h2 id="do-more-using-github-ai-and-vs-code-john-papa-ng-conf-2023">Do More using GitHub, AI, and VS Code | John Papa | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=u2A0gTew31Q">https://www.youtube.com/watch?v=u2A0gTew31Q</a></p>
+<ul>
+<li>Transcript from a conference discusses the importance of collaboration and AI in software development.</li>
+<li>GitHub Copilot is highlighted as an efficient tool for developers.</li>
+<li>The transcript showcases various features such as chat, code completion, and refactoring assistance.</li>
+<li>The speaker emphasizes that AI in development will continue to evolve and improve efficiency.</li>
+</ul>
+<h2 id="angular-team-panel-ng-conf-2023">Angular Team Panel | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RlQZxr2jxGc">https://www.youtube.com/watch?v=RlQZxr2jxGc</a></p>
+<ul>
+<li>Discussions around Angular's future, features, and improvements.</li>
+<li>Focus on signal library, Standalone components, and performance optimizations.</li>
+<li>Mention of potential AI involvement in development tools.</li>
+<li>Emphasis on the importance of community contributions and documentation.</li>
+<li>Updates on Angular Material, CDK, and CLI developments.</li>
+<li>Discussions around server-side rendering, hydration, and module federation.</li>
+<li>Highlights on signal integration with streaming, SSR, and micro frontends.</li>
+<li>Importance of learning observables for easier onboarding.</li>
+<li>Need for better documentation and guidance on Angular's learning curve.</li>
+</ul>
+<h2 id="faster-apps-with-angular-ssr-mark-thompson-jessica-janiuk-ng-conf-2023">Faster apps with Angular SSR | Mark Thompson &amp; Jessica Janiuk | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fMrUh9Nuw8A">https://www.youtube.com/watch?v=fMrUh9Nuw8A</a></p>
+<ul>
+<li>Mark discusses Angular Hydration, a new feature in version 16.</li>
+<li>It helps with server-side rendering and improves performance by transferring state between servers.</li>
+<li>The process involves serialization, annotation, and DOM manipulation.</li>
+<li>There's incremental enablement for Hydration and HTTP caching.</li>
+<li>Lazy loading routes can be hydrated later.</li>
+<li>Developer Preview allows testing improvements in large contentful paint (LCP) by 45%.</li>
+<li>Future enhancements include deferred loading, internationalization support, and post-hydration cleanup.</li>
+<li>Version 16 provides the latest goodness for apps.</li>
+</ul>
+<h2 id="superpowers-with-signals-emma-twersky-alex-rickabaugh-ng-conf-2023">Superpowers with Signals | Emma Twersky &amp; Alex Rickabaugh |  ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=cv8u6k1MTfE">https://www.youtube.com/watch?v=cv8u6k1MTfE</a></p>
+<ul>
+<li>Foreign Music, favorite animal shrimp</li>
+<li>Talk about granularity in Angular applications</li>
+<li>Build a superhero character generator app using signal</li>
+<li>Create a superhero service for storing data and updating metrics</li>
+<li>Use computed signals for fine-grained updates</li>
+<li>Leverage change detection for performance benefits</li>
+<li>Discuss the importance of ownership and component logic</li>
+<li>Live coding session to demonstrate Angular application building</li>
+</ul>
+<h2 id="angular-keynote-minko-gechev-jeremy-elbourn-ng-conf-2023">Angular Keynote | Minko Gechev &amp; Jeremy Elbourn | ng-conf 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=yUDhlR73qiU">https://www.youtube.com/watch?v=yUDhlR73qiU</a></p>
+<ul>
+<li>NG Conf keynote focused on past, present and future of Angular.</li>
+<li>Performance improvements through optimized JavaScript virtual machine and fine-grained reactivity model (Signal).</li>
+<li>Hydration feature for faster client rendering.</li>
+<li>Server-side rendering and deployment options with Firebase integration.</li>
+<li>New features like deferred loading and directive composition API.</li>
+<li>Improved developer experience via better control flow syntax, improved router configuration, and auto import functionality.</li>
+<li>Continued efforts to make Angular more performant, easier to use, and compatible across different platforms.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

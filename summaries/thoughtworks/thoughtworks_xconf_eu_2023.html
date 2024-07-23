@@ -1,0 +1,3946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/thoughtworks/thoughtworks_xconf_eu_2023.html">
+      
+      
+        <link rel="prev" href="../strangeloop/strange_loop_2023.html">
+      
+      
+        <link rel="next" href="../usenix/usenix_atc_2023_v2.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>xconf - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#last-call-for-responsible-tech-alexandre-goedert-and-martin-ter-horst" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              xconf
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="thoughtworks_xconf_eu_2023.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#last-call-for-responsible-tech-alexandre-goedert-and-martin-ter-horst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last call for Responsible Tech – Alexandre Goedert and Martin ter Horst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-knowledge-graph-with-the-natural-history-museum-to-work-as-a-taxonomic-equivalence-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a knowledge graph with the Natural History Museum to work as a taxonomic equivalence engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-zig-and-carbon-hype-hope-or-hell-programming-languages-desiree-santos-and-michael-fait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rust, zig and carbon: Hype, hope or hell programming languages? – Desiree Santos and Michael Fait
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socially-responsible-ai-practical-tools-for-robust-design-jesse-mccrosky" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socially responsible AI: Practical tools for robust design – Jesse McCrosky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taming-the-cloud-sprawl-kief-morris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taming the cloud sprawl – Kief Morris
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preventing-disaster-with-data-testing-real-life-examples-and-best-practices-anna-andrea-lagutina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing disaster with data testing: Real-life examples and best practices – Anna Andrea Lagutina
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-the-internet-a-better-place-with-coding-for-accessibility-larissa-gunther" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make the internet a better place - with coding for accessibility – Larissa Günther
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-in-a-complex-data-migration-a-system-refactoring-story-jose-pech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability in a complex data migration: A system refactoring story – Jose Pech
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-engineering-myths-misconceptions-and-facts-alexandra-lovin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile engineering myths, misconceptions and facts – Alexandra Lovin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generative-modeling-for-recipe-generation-success-stories-without-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generative modeling for recipe generation: Success stories without ChatGPT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-commune-in-the-ivory-tower-a-new-approach-to-architecture-andrew-harmel-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      A commune in the ivory tower: A new approach to architecture – Andrew Harmel-Law
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-bmw-stays-on-the-fast-track-by-building-the-connected-ai-platform-for-digital-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      How BMW stays on the fast track by building the Connected AI Platform for digital products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-secure-software-zero-trust-delivery-pipelines-jim-gumbley" class="md-nav__link">
+    <span class="md-ellipsis">
+      The art of secure software: Zero-trust delivery pipelines – Jim Gumbley
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-will-evolutionary-architecture-evolve-rebecca-parsons" class="md-nav__link">
+    <span class="md-ellipsis">
+      How will Evolutionary Architecture evolve?  – Rebecca Parsons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xconf-europe-2023-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      XConf Europe 2023 highlights
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#last-call-for-responsible-tech-alexandre-goedert-and-martin-ter-horst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last call for Responsible Tech – Alexandre Goedert and Martin ter Horst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-knowledge-graph-with-the-natural-history-museum-to-work-as-a-taxonomic-equivalence-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a knowledge graph with the Natural History Museum to work as a taxonomic equivalence engine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-zig-and-carbon-hype-hope-or-hell-programming-languages-desiree-santos-and-michael-fait" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rust, zig and carbon: Hype, hope or hell programming languages? – Desiree Santos and Michael Fait
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socially-responsible-ai-practical-tools-for-robust-design-jesse-mccrosky" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socially responsible AI: Practical tools for robust design – Jesse McCrosky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taming-the-cloud-sprawl-kief-morris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taming the cloud sprawl – Kief Morris
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preventing-disaster-with-data-testing-real-life-examples-and-best-practices-anna-andrea-lagutina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing disaster with data testing: Real-life examples and best practices – Anna Andrea Lagutina
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-the-internet-a-better-place-with-coding-for-accessibility-larissa-gunther" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make the internet a better place - with coding for accessibility – Larissa Günther
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-in-a-complex-data-migration-a-system-refactoring-story-jose-pech" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observability in a complex data migration: A system refactoring story – Jose Pech
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-engineering-myths-misconceptions-and-facts-alexandra-lovin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile engineering myths, misconceptions and facts – Alexandra Lovin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generative-modeling-for-recipe-generation-success-stories-without-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generative modeling for recipe generation: Success stories without ChatGPT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-commune-in-the-ivory-tower-a-new-approach-to-architecture-andrew-harmel-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      A commune in the ivory tower: A new approach to architecture – Andrew Harmel-Law
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-bmw-stays-on-the-fast-track-by-building-the-connected-ai-platform-for-digital-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      How BMW stays on the fast track by building the Connected AI Platform for digital products
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-secure-software-zero-trust-delivery-pipelines-jim-gumbley" class="md-nav__link">
+    <span class="md-ellipsis">
+      The art of secure software: Zero-trust delivery pipelines – Jim Gumbley
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-will-evolutionary-architecture-evolve-rebecca-parsons" class="md-nav__link">
+    <span class="md-ellipsis">
+      How will Evolutionary Architecture evolve?  – Rebecca Parsons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xconf-europe-2023-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      XConf Europe 2023 highlights
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>xconf</h1>
+
+<h2 id="last-call-for-responsible-tech-alexandre-goedert-and-martin-ter-horst">Last call for Responsible Tech – Alexandre Goedert and Martin ter Horst</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aemyehDDU-g">https://www.youtube.com/watch?v=aemyehDDU-g</a></p>
+<ul>
+<li>Discussed the importance of responsible technology in future society</li>
+<li>Mentioned two extreme views: utopian and dystopian, with a need for balance between them</li>
+<li>Introduced the concept of Donut Economy, which aims to create a more sustainable economy</li>
+<li>Highlighted the complexity of modern software development and the need for diverse skillsets, like data scientists and platform engineers</li>
+<li>Emphasized the role of responsible technology in creating better products and services with ethical considerations</li>
+<li>Discussed tools such as Tarot Card Tech, Ethical Explorer, and Consequence Scanning to help tackle potential risks</li>
+<li>Called for more awareness around these topics within the tech community</li>
+</ul>
+<h2 id="building-a-knowledge-graph-with-the-natural-history-museum-to-work-as-a-taxonomic-equivalence-engine">Building a knowledge graph with the Natural History Museum to work as a taxonomic equivalence engine</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3CcSRygfVgk">https://www.youtube.com/watch?v=3CcSRygfVgk</a></p>
+<ul>
+<li>Discussed issues with taxonomy databases in the US and UK</li>
+<li>Used Knowledge Graph to solve the problem by modeling two different taxonomies into a single graph</li>
+<li>Developed an equivalence engine to find closest node matches between taxonomies and infer new knowledge across the graph</li>
+<li>Deployed the solution using Docker containers for efficient data loading and querying</li>
+<li>Aimed to uncover new links in data, enhance data quality, and provide 360-degree views of datasets through Knowledge Graph</li>
+</ul>
+<h2 id="rust-zig-and-carbon-hype-hope-or-hell-programming-languages-desiree-santos-and-michael-fait">Rust, zig and carbon: Hype, hope or hell programming languages? – Desiree Santos and Michael Fait</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=HX5gIW5aesE">https://www.youtube.com/watch?v=HX5gIW5aesE</a></p>
+<ol>
+<li>Rust - A new experimental browser engine from Mozilla in 2006, with the first version published in 2015. It's a high-performance language for system-level programming.</li>
+<li>Zig - Introduced by Andrew Kelly in 2017, it aims to provide strong memory safety and performance similar to C with modern features like generics.</li>
+<li>Carbon - A new experimental project backed by Google, aiming to be the successor of C. It provides seamless bi-directional operability, but still faces challenges in generating code for the latest C standard.</li>
+<li>Rust and Zig have gained popularity among developers due to their focus on performance, memory safety, and modern features. Carbon is an experimental project with potential but hasn't yet proven itself as a successor to C.</li>
+</ol>
+<h2 id="socially-responsible-ai-practical-tools-for-robust-design-jesse-mccrosky">Socially responsible AI: Practical tools for robust design – Jesse McCrosky</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=a5Fi1z0mEm4">https://www.youtube.com/watch?v=a5Fi1z0mEm4</a></p>
+<ol>
+<li>Importance of responsible AI: Understanding the impact of technology on society, ensuring transparency and accountability in AI systems.</li>
+<li>Metrics and transparency: Useful metrics for evaluating AI performance, fairness, and transparency.</li>
+<li>Design thinking: Incorporate design principles to create more understandable and explainable AI models.</li>
+<li>Regulatory frameworks: Create guidelines and policies that promote responsible AI development and usage.</li>
+<li>Collaboration between stakeholders: Engage with civil society, academia, regulators, and industry to build a better understanding of the ethical implications of AI systems.</li>
+<li>Education and awareness: Promote AI literacy among users, developers, and policymakers to ensure responsible decision-making.</li>
+</ol>
+<h2 id="taming-the-cloud-sprawl-kief-morris">Taming the cloud sprawl – Kief Morris</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NjE3CopsjtI">https://www.youtube.com/watch?v=NjE3CopsjtI</a></p>
+<ul>
+<li>The speaker discussed the importance of composable infrastructure in modern software development.</li>
+<li>Composable infrastructure involves separating concerns, creating separate environments, and aligning with user needs.</li>
+<li>This approach helps reduce technical debt, improve operational quality, and make infrastructure more cost-effective.</li>
+<li>In a multi-environment scenario, it's crucial to have composable infrastructure for different regions or customers while maintaining low cost ownership.</li>
+<li>A well-designed infrastructure product enables teams to focus on their core competencies without worrying about underlying platform management.</li>
+<li>Standardization and governance are key in providing consistent services across the organization.</li>
+<li>Monitoring plays a significant role in optimizing infrastructure costs, ensuring resource utilization, and maintaining service quality.</li>
+<li>By building composable infrastructure, organizations can achieve higher efficiency, faster time to market, and better business outcomes.</li>
+</ul>
+<h2 id="preventing-disaster-with-data-testing-real-life-examples-and-best-practices-anna-andrea-lagutina">Preventing disaster with data testing: Real-life examples and best practices – Anna Andrea Lagutina</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uuI4DhsR9JM">https://www.youtube.com/watch?v=uuI4DhsR9JM</a></p>
+<ul>
+<li>Importance of testing in data science and software engineering.</li>
+<li>Examples of disasters due to lack of proper testing: Mars Climate Orbiter, deadly doctor study, Zillow's algorithm error.</li>
+<li>Test driven development (TDD) applied to data analysis.</li>
+<li>Library recommendations for TDD in data analysis: tdda, Great Expectations, DBT.</li>
+<li>Showing an example of using a TDD library to test superhero data files.</li>
+<li>The need for investing time in testing prototypes and early development stages.</li>
+<li>Encouraging junior developers to write tests to improve understanding.</li>
+<li>Discussion about the balance between testing and development time.</li>
+</ul>
+<h2 id="make-the-internet-a-better-place-with-coding-for-accessibility-larissa-gunther">Make the internet a better place - with coding for accessibility – Larissa Günther</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=u5qazvYmGOg">https://www.youtube.com/watch?v=u5qazvYmGOg</a></p>
+<ul>
+<li>Make internet better: Ensure accessibility</li>
+<li>Use browser and test different interactions (mouse, keyboard, screen readers)</li>
+<li>Properly use HTML semantic elements for accessibility</li>
+<li>Automated testing tools can help but are not perfect</li>
+<li>Testing should include manual testing with different inputs (keyboard, mouse, assistive technology)</li>
+<li>Ensure automated tests cover all aspects of accessibility</li>
+<li>Adopt an accessible approach when building new components or websites</li>
+</ul>
+<h2 id="observability-in-a-complex-data-migration-a-system-refactoring-story-jose-pech">Observability in a complex data migration: A system refactoring story – Jose Pech</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=txhomDsG44g">https://www.youtube.com/watch?v=txhomDsG44g</a></p>
+<ul>
+<li>Observability is a key concept in modern software systems.</li>
+<li>It helps with troubleshooting, release strategy, and feature building.</li>
+<li>Monitoring and observability have different goals: monitoring provides insight into an application while observability allows for understanding the system's internal state.</li>
+<li>Observability tools help teams fix issues efficiently and introduce change confidently.</li>
+<li>In a real-life example, a big European company needed to migrate from Legacy Event Bus to new payment processing flow.</li>
+<li>The strategy involved data validation, adding metrics, and switching connections while minimizing downtime.</li>
+<li>Observability helped discover overlapping events, ensuring no event was lost during the migration process.</li>
+</ul>
+<h2 id="mobile-engineering-myths-misconceptions-and-facts-alexandra-lovin">Mobile engineering myths, misconceptions and facts – Alexandra Lovin</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8oENafVPfhk">https://www.youtube.com/watch?v=8oENafVPfhk</a></p>
+<ul>
+<li>Mobile apps are crucial in today's digital world.</li>
+<li>Cross-platform development is a popular approach, but it has its challenges.</li>
+<li>Modularity and scalability are essential for mobile app success.</li>
+<li>Maintaining backward compatibility and handling corner cases is vital.</li>
+<li>Collaboration between product, design, and service teams is crucial.</li>
+<li>Instant deployment and remote control of app behavior can help manage updates.</li>
+</ul>
+<h2 id="generative-modeling-for-recipe-generation-success-stories-without-chatgpt">Generative modeling for recipe generation: Success stories without ChatGPT</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=j59awirF_cM">https://www.youtube.com/watch?v=j59awirF_cM</a></p>
+<ul>
+<li>Overview of generative AI and its applications in various fields.</li>
+<li>Case study: using generative models to create new food products by optimizing taste, cost, and constraints.</li>
+<li>Challenges faced in real-world systems include data scarcity, multiple objectives, and human resistance to automation.</li>
+<li>Benefits of an AI augmented system include efficient data collection, knowledge sharing, and increased success rates.</li>
+<li>Generalization of the approach to other industries like perfume development and new material research.</li>
+</ul>
+<h2 id="a-commune-in-the-ivory-tower-a-new-approach-to-architecture-andrew-harmel-law">A commune in the ivory tower: A new approach to architecture – Andrew Harmel-Law</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fjQ8H3ZKN5s">https://www.youtube.com/watch?v=fjQ8H3ZKN5s</a></p>
+<ol>
+<li>The speaker discusses the challenges of software architecture and how it affects decision-making processes in teams.</li>
+<li>They introduce the idea of Architectural Advice Process (AAP) as a way to help make better decisions by involving all affected parties, seeking advice from experts, and ensuring alignment between various teams.</li>
+<li>ADRs (Architectural Decision Records) are used to document and communicate architectural decisions, making them transparent and traceable for future reference.</li>
+<li>The speaker shares their experiences in writing books and creating training courses related to software architecture and decision-making processes.</li>
+<li>They emphasize the importance of trust, communication, and collaboration among team members to create a healthy environment where everyone can contribute to the success of the project.</li>
+</ol>
+<h2 id="how-bmw-stays-on-the-fast-track-by-building-the-connected-ai-platform-for-digital-products">How BMW stays on the fast track by building the Connected AI Platform for digital products</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lWLosXjSEJk">https://www.youtube.com/watch?v=lWLosXjSEJk</a></p>
+<ol>
+<li>Connect Platform: Enables sharing of infrastructure and data across BMW departments for various use cases, ensuring privacy through dedicated non-production environments.</li>
+<li>Architecture: Utilizes Terraform for infrastructure provisioning, Helm for deployment management, and Kubernetes for cluster management.</li>
+<li>Onboarding Process: Includes a checklist to ensure platform stability and adaptability to specific use cases.</li>
+<li>Migration Strategy: Focuses on migrating existing solutions onto the Connect Platform while promoting its features.</li>
+<li>Machine Learning Journey: Offers various tools and resources for data scientists, including Cube Flow, Jupyter Notebooks, and machine learning model deployment.</li>
+<li>Collaboration: Encourages working together to optimize processes and create efficient solutions using the Connect Platform.</li>
+<li>Cloud Native Foundation Incubator: Highlights how companies like AWS can help with managed services and cost-effective solutions for big data processing.</li>
+</ol>
+<h2 id="the-art-of-secure-software-zero-trust-delivery-pipelines-jim-gumbley">The art of secure software: Zero-trust delivery pipelines – Jim Gumbley</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=PC0V4i0fJS0">https://www.youtube.com/watch?v=PC0V4i0fJS0</a></p>
+<ul>
+<li>Importance of a secure software delivery pipeline</li>
+<li>Understanding network and dependency vulnerabilities</li>
+<li>Zero trust approach: Verify trust, don't assume trust</li>
+<li>Least privilege: Granular access control for different environments</li>
+<li>Breach readiness: Prepare for worst-case scenarios</li>
+<li>Asset awareness: Understand the impact of security breaches on your system</li>
+<li>Risk-based thinking: Adapt to changing threats and evolving environments</li>
+<li>Continuous improvement: Monitor, analyze, and learn from incidents</li>
+<li>Infrastructure isolation: Protect production environments with strict access controls</li>
+<li>Zero trust pipeline: Achieve continuous verification and control through automation</li>
+</ul>
+<h2 id="how-will-evolutionary-architecture-evolve-rebecca-parsons">How will Evolutionary Architecture evolve?  – Rebecca Parsons</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=_hfoJYLakzo">https://www.youtube.com/watch?v=_hfoJYLakzo</a></p>
+<ol>
+<li>Evolutionary architecture focuses on guided incremental change across multiple dimensions.</li>
+<li>Emphasis on adaptability and continuous improvement through practices like continuous delivery.</li>
+<li>Platform thinking can help in handling various business models, infrastructure, and API layers.</li>
+<li>Dynamic Fitness functions can assist in maintaining architectural characteristics while evolving.</li>
+<li>Artificial intelligence (AI) may aid in testing, compliance, and automation.</li>
+<li>Augmented reality (AR), virtual reality (VR), and autonomous vehicles could bring new challenges to existing architecture approaches.</li>
+<li>Continued innovation in technology will shape the future of software development.</li>
+</ol>
+<h2 id="xconf-europe-2023-highlights">XConf Europe 2023 highlights</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Sv_Nxh-InYY">https://www.youtube.com/watch?v=Sv_Nxh-InYY</a></p>
+<ul>
+<li>Music adds uniqueness to Xcon.</li>
+<li>Practitioners share experiences and build solutions on stage.</li>
+<li>Conference circuit helps people learn and grow.</li>
+<li>Participants work together daily, sharing knowledge.</li>
+<li>Xcon is special as it offers continuous learning opportunities.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

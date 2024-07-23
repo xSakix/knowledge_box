@@ -1,0 +1,5777 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/ng_conf_2022.html">
+      
+      
+        <link rel="prev" href="../java/road_to_21_mistral.html">
+      
+      
+        <link rel="next" href="ng_conf_2023_neuralchat.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>ng conf 2022 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ng conf 2022
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ng_conf_2022.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standalone Components: The Motivation | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-team-keynote-minko-gechev-sarah-drasner-madleina-scheidegger-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Team Keynote | Minko Gechev, Sarah Drasner, Madleina Scheidegger | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Angular Team Keynote | Minko Gechev, Sarah Drasner, Madleina Scheidegger | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-a-design-review-10-years-later-jeremy-elbourn-alex-rickabaugh-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular: A Design Review 10 Years Later | Jeremy Elbourn &amp; Alex Rickabaugh | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxjs-from-scratch-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxJs from Scratch | Alain Chautard | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-based-micro-frontends-with-module-federation-manfred-steyer-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular based Micro frontends with module federation | Manfred Steyer | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-validation-done-right-ward-bell-ng-cof-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Validation Done Right | Ward Bell | ng-cof 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safer-forms-with-strict-types-dylan-hunn-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safer Forms with Strict Types | Dylan Hunn | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxjs-best-practices-arent-always-black-and-white-deborah-kurata-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxJS Best Practices Aren't Always Black and White | Deborah Kurata | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-tdd-like-you-never-seen-before-shai-reznik-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular TDD Like You Never Seen Before | Shai Reznik | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blazing-7-core-principles-of-fast-angular-application-ady-ngom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      B.L.A.Z.I.N.G. - 7 core principles of fast Angular application | Ady Ngom | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-and-why-nx-20-reasons-in-20-minutes-erick-slack-michael-madsen-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      What and Why nx  20 reasons in 20 minutes | Erick Slack &amp; Michael Madsen | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#become-a-content-projection-artist-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Become a Content Projection Artist | Alain Chautard | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standalone Components  The Motivation | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-is-important-zach-arend-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility! is! important! | Zach Arend &amp; Emma Twersky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-optimization-best-practices-with-angular-kara-erickson-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Optimization Best Practices with Angular | Kara Erickson | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micro-frontends-and-the-multiverse-of-frameworks-adrian-iskandar-espinosa-caballero-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro frontends and the multiverse of Frameworks | Adrian Iskandar Espinosa Caballero | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-web-applications-slow-and-what-to-do-about-it-misko-hevery-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are web applications slow, and what to do about it | Misko Hevery | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-keynote-mark-thompson-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Keynote | Mark Thompson &amp; Emma Twersky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angulars-future-wout-ngmodules-architectures-wstandalone-components-manfred-steyer-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular's Future w/out NgModules Architectures w/Standalone Components| Manfred Steyer| ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#just-one-more-change-a-developers-story-for-pushing-angular-to-the-cloud-john-papa-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Just One More Change A Developer's Story for Pushing Angular to the Cloud | John Papa | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deciphering-the-secrets-of-blockchain-with-angular-stephen-fluin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deciphering the secrets of blockchain with angular | Stephen Fluin | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-management-at-scale-wngrx-brandon-roberts-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Management at Scale w/NgRx | Brandon Roberts | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework-dan-wahlin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solving the Puzzle of Real-Time Collaboration using the Fluid Framework | Dan Wahlin | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tslint-to-eslint-in-5-minutes-james-henry-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      TSLint to ESLint in 5 minutes | James Henry | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-greatest-mystery-is-realtime-with-angular-nestjs-and-websockets-ely-lucas-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Greatest Mystery is Realtime with Angular, NestJS, and websockets! | Ely Lucas | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theres-safety-in-angular-alisa-duncan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      There's Safety in Angular | Alisa Duncan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-meta-programming-from-0-to-100-daniel-ostrovsky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typescript meta programming from 0 to 100 | Daniel Ostrovsky | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typescript meta programming from 0 to 100 | Daniel Ostrovsky | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ag-grid-niall-crosby-stephen-cooper-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      AG Grid | Niall Crosby &amp; Stephen Cooper | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-dan-wahlin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Dan Wahlin | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifying-deep-angular-forms-with-di-equipped-custom-components-rafael-mestre-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplifying deep angular forms with di equipped custom components | Rafael Mestre | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partially-zoneless-performance-tuning-without-big-bang-refactoring-michael-hladky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partially Zoneless   Performance tuning without big bang refactoring | Michael Hladky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cypress-for-angular-devs-hands-on-workshop-jordan-powell-ely-lucas-n-g-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cypress for angular devs hands on workshop | Jordan Powell &amp; Ely Lucas |  n-g conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-context-about-host-context-ankita-sood-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Context about Host Context | Ankita Sood | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Context about Host Context | Ankita Sood | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Summary:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-points_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-once-run-anywhere-with-an-angular-pwa-michael-dowden-maritine-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write once, run anywhere with an angular PWA | Michael Dowden &amp; Maritine Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-management-techniques-and-family-therapy-kate-sky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Management Techniques and Family Therapy | Kate Sky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-let-strangers-design-my-slides-using-ngrx-component-store-mike-ryan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      I Let Strangers Design My Slides using NgRx Component Store | Mike Ryan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endbridge-migrate-from-protractor-to-cypress-in-less-than-a-day-joe-eames-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      EndBridge: Migrate from Protractor to Cypress in Less Than a Day! | Joe Eames | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-proof-your-company-by-effectively-scaling-engineering-jennifer-wadella-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Proof your company by effectively scaling engineering | Jennifer Wadella | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oaydaby-aamy-sainre9l-tart-wait-what-jessica-janiuk-joey-perrott-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAyDaBy AAm=/y SAinRe9L TArT, wait what? | Jessica Janiuk &amp; Joey Perrott | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxwut-kim-maida-sam-julien-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxWut | Kim Maida &amp; Sam Julien | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testable-angular-forms-martine-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testable Angular Forms | Martine Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-kate-sky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Kate Sky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shit-our-site-is-down-lets-build-a-culture-of-reliability-brian-love-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shit, our Site is Down! Let's build a culture of reliability | Brian Love | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ngrx-feature-creator-marko-stanimirovic-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      NgRx Feature Creator | Marko Stanimirovic | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tale-tell-code-lara-newsom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tale Tell Code | Lara Newsom | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-code-when-leaving-your-angular-application-preston-lamb-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Code When Leaving Your Angular Application | Preston Lamb | Ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-sarah-drasner-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Sarah Drasner | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-john-papa-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | John Papa | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Emma Twersky  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alain Chautard  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-play-a-game-craig-spence-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeTS play a game | Craig Spence | ng-conf-2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-from-protractor-to-cypress-e2e-in-under-5-minutes-jordan-powell-n-g-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating from Protractor to Cypress E2E in Under 5 Minutes | Jordan Powell  | n-g conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-minko-gechev-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Minko Gechev | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-down-to-get-ahead-michael-callaghan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slow Down to Get Ahead | Michael Callaghan | ng-conf- 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-ankita-sood-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Ankita Sood | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-jeremy-elbourn-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Jeremy Elbourn| ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-wagner-maciel-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Wagner Maciel | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alfredo-perez-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alfredo Perez  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-pawel-kozlowski-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-brian-love-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Brian Love | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-kristiyan-kostadinov-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Kristiyan Kostadinov | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-mark-thompson-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Mark Thompson | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-daniel-ostrovsky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Daniel Ostrovsky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-jennifer-wadella-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Jennifer Wadella | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-andrew-scott-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Andrew Scott | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-lara-newsome-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Lara Newsome | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-doug-parker-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Doug Parker | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-ady-ngom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Ady Ngom | ng-conf 2022 |
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-jordan-powell-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Jordan Powell | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-madleina-scheidegger-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Madleina Scheidegger | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-christina-brink-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Christina Brink | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-miles-malerba-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Miles Malerba | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-james-henry-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | James Henry | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alisa-duncan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alisa Duncan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-michael-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Michael Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-michael-callaghan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Michael Callaghan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standalone Components: The Motivation | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-team-keynote-minko-gechev-sarah-drasner-madleina-scheidegger-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular Team Keynote | Minko Gechev, Sarah Drasner, Madleina Scheidegger | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Angular Team Keynote | Minko Gechev, Sarah Drasner, Madleina Scheidegger | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-a-design-review-10-years-later-jeremy-elbourn-alex-rickabaugh-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular: A Design Review 10 Years Later | Jeremy Elbourn &amp; Alex Rickabaugh | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxjs-from-scratch-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxJs from Scratch | Alain Chautard | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-based-micro-frontends-with-module-federation-manfred-steyer-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular based Micro frontends with module federation | Manfred Steyer | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-validation-done-right-ward-bell-ng-cof-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Validation Done Right | Ward Bell | ng-cof 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safer-forms-with-strict-types-dylan-hunn-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safer Forms with Strict Types | Dylan Hunn | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxjs-best-practices-arent-always-black-and-white-deborah-kurata-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxJS Best Practices Aren't Always Black and White | Deborah Kurata | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-tdd-like-you-never-seen-before-shai-reznik-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular TDD Like You Never Seen Before | Shai Reznik | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blazing-7-core-principles-of-fast-angular-application-ady-ngom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      B.L.A.Z.I.N.G. - 7 core principles of fast Angular application | Ady Ngom | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-and-why-nx-20-reasons-in-20-minutes-erick-slack-michael-madsen-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      What and Why nx  20 reasons in 20 minutes | Erick Slack &amp; Michael Madsen | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#become-a-content-projection-artist-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Become a Content Projection Artist | Alain Chautard | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standalone Components  The Motivation | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-is-important-zach-arend-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility! is! important! | Zach Arend &amp; Emma Twersky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-optimization-best-practices-with-angular-kara-erickson-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Optimization Best Practices with Angular | Kara Erickson | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micro-frontends-and-the-multiverse-of-frameworks-adrian-iskandar-espinosa-caballero-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Micro frontends and the multiverse of Frameworks | Adrian Iskandar Espinosa Caballero | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-web-applications-slow-and-what-to-do-about-it-misko-hevery-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why are web applications slow, and what to do about it | Misko Hevery | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-keynote-mark-thompson-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Keynote | Mark Thompson &amp; Emma Twersky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angulars-future-wout-ngmodules-architectures-wstandalone-components-manfred-steyer-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular's Future w/out NgModules Architectures w/Standalone Components| Manfred Steyer| ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#just-one-more-change-a-developers-story-for-pushing-angular-to-the-cloud-john-papa-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Just One More Change A Developer's Story for Pushing Angular to the Cloud | John Papa | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deciphering-the-secrets-of-blockchain-with-angular-stephen-fluin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deciphering the secrets of blockchain with angular | Stephen Fluin | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-management-at-scale-wngrx-brandon-roberts-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Management at Scale w/NgRx | Brandon Roberts | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework-dan-wahlin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solving the Puzzle of Real-Time Collaboration using the Fluid Framework | Dan Wahlin | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tslint-to-eslint-in-5-minutes-james-henry-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      TSLint to ESLint in 5 minutes | James Henry | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-greatest-mystery-is-realtime-with-angular-nestjs-and-websockets-ely-lucas-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Greatest Mystery is Realtime with Angular, NestJS, and websockets! | Ely Lucas | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theres-safety-in-angular-alisa-duncan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      There's Safety in Angular | Alisa Duncan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-meta-programming-from-0-to-100-daniel-ostrovsky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typescript meta programming from 0 to 100 | Daniel Ostrovsky | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typescript meta programming from 0 to 100 | Daniel Ostrovsky | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ag-grid-niall-crosby-stephen-cooper-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      AG Grid | Niall Crosby &amp; Stephen Cooper | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-dan-wahlin-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Dan Wahlin | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifying-deep-angular-forms-with-di-equipped-custom-components-rafael-mestre-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplifying deep angular forms with di equipped custom components | Rafael Mestre | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partially-zoneless-performance-tuning-without-big-bang-refactoring-michael-hladky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partially Zoneless   Performance tuning without big bang refactoring | Michael Hladky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cypress-for-angular-devs-hands-on-workshop-jordan-powell-ely-lucas-n-g-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cypress for angular devs hands on workshop | Jordan Powell &amp; Ely Lucas |  n-g conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-context-about-host-context-ankita-sood-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Context about Host Context | Ankita Sood | ng-conf 2022
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Context about Host Context | Ankita Sood | ng-conf 2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Summary:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-points_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-once-run-anywhere-with-an-angular-pwa-michael-dowden-maritine-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write once, run anywhere with an angular PWA | Michael Dowden &amp; Maritine Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-management-techniques-and-family-therapy-kate-sky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Management Techniques and Family Therapy | Kate Sky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-let-strangers-design-my-slides-using-ngrx-component-store-mike-ryan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      I Let Strangers Design My Slides using NgRx Component Store | Mike Ryan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endbridge-migrate-from-protractor-to-cypress-in-less-than-a-day-joe-eames-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      EndBridge: Migrate from Protractor to Cypress in Less Than a Day! | Joe Eames | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-proof-your-company-by-effectively-scaling-engineering-jennifer-wadella-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Proof your company by effectively scaling engineering | Jennifer Wadella | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oaydaby-aamy-sainre9l-tart-wait-what-jessica-janiuk-joey-perrott-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAyDaBy AAm=/y SAinRe9L TArT, wait what? | Jessica Janiuk &amp; Joey Perrott | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rxwut-kim-maida-sam-julien-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      RxWut | Kim Maida &amp; Sam Julien | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testable-angular-forms-martine-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testable Angular Forms | Martine Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-kate-sky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Kate Sky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shit-our-site-is-down-lets-build-a-culture-of-reliability-brian-love-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shit, our Site is Down! Let's build a culture of reliability | Brian Love | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ngrx-feature-creator-marko-stanimirovic-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      NgRx Feature Creator | Marko Stanimirovic | ng- conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tale-tell-code-lara-newsom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tale Tell Code | Lara Newsom | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-code-when-leaving-your-angular-application-preston-lamb-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Code When Leaving Your Angular Application | Preston Lamb | Ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-sarah-drasner-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Sarah Drasner | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-john-papa-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | John Papa | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-emma-twersky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Emma Twersky  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alain-chautard-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alain Chautard  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-play-a-game-craig-spence-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeTS play a game | Craig Spence | ng-conf-2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-from-protractor-to-cypress-e2e-in-under-5-minutes-jordan-powell-n-g-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating from Protractor to Cypress E2E in Under 5 Minutes | Jordan Powell  | n-g conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-minko-gechev-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Minko Gechev | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-down-to-get-ahead-michael-callaghan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slow Down to Get Ahead | Michael Callaghan | ng-conf- 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-ankita-sood-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Ankita Sood | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-jeremy-elbourn-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Jeremy Elbourn| ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-wagner-maciel-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Wagner Maciel | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alfredo-perez-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alfredo Perez  | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-pawel-kozlowski-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Pawel Kozlowski | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-brian-love-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Brian Love | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-kristiyan-kostadinov-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Kristiyan Kostadinov | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-mark-thompson-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Mark Thompson | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-daniel-ostrovsky-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Daniel Ostrovsky | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-jennifer-wadella-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Jennifer Wadella | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-andrew-scott-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Andrew Scott | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-lara-newsome-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Lara Newsome | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-doug-parker-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Doug Parker | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-ady-ngom-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Ady Ngom | ng-conf 2022 |
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-jordan-powell-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Jordan Powell | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-madleina-scheidegger-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Madleina Scheidegger | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-christina-brink-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Christina Brink | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-angular-team-miles-malerba-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the Angular Team | Miles Malerba | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-james-henry-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | James Henry | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-alisa-duncan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Alisa Duncan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-michael-dowden-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Michael Dowden | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-to-know-the-2022-ng-conf-speakers-michael-callaghan-ng-conf-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get to Know the 2022 ng-conf Speakers | Michael Callaghan | ng-conf 2022
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ng conf 2022</h1>
+
+<h2 id="standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022">Standalone Components: The Motivation | Pawel Kozlowski | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=hnVckmM6GZk">https://www.youtube.com/watch?v=hnVckmM6GZk</a></p>
+<ul>
+<li>Introducing Standalone components in Angular 14</li>
+<li>Motivation: Improve developer experience, eliminate confusion around NG Models and energy models</li>
+<li>Benefits of Standalone components:<ul>
+<li>Smaller subset of components</li>
+<li>Easier compiler work</li>
+<li>Clearer dependencies</li>
+</ul>
+</li>
+<li>Importing Standalone components directly using JavaScript imports</li>
+<li>Preserving the existing Angular ecosystem and compatibility with existing applications</li>
+<li>Interoperability between NG Models and Standalone components</li>
+<li>Possible syntax changes in future versions of Angular</li>
+<li>Continuous conversation and feedback from the community for further improvements</li>
+</ul>
+<p><strong>Summary:</strong>
+* Introducing Standalone Components: Improve developer experience, eliminate confusion around NG Models and energy models.
+  * Benefits: Smaller subset of components, easier compiler work, clearer dependencies.
+  * Importing: Directly using JavaScript imports.
+  * Ecosystem: Preserving the existing Angular ecosystem and compatibility with existing applications.
+  * Interoperability: Between NG Models and Standalone Components.
+  * Future Changes: Possible syntax changes in future versions of Angular.
+  * Community Engagement: Continuous conversation and feedback from the community for further improvements.</p>
+<h2 id="angular-team-keynote-minko-gechev-sarah-drasner-madleina-scheidegger-ng-conf-2022">Angular Team Keynote | Minko Gechev, Sarah Drasner, Madleina Scheidegger | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=CABHcf1gCbg">https://www.youtube.com/watch?v=CABHcf1gCbg</a></p>
+<ul>
+<li>Overview of Angular's past and present</li>
+<li>Introduction of new features like Standalone components, TypeScript 4.1 support, and improved error messages</li>
+<li>Focus on developer experience and performance improvements</li>
+<li>Partnership with Aurora team to improve core web vitals and optimize build pipelines</li>
+<li>Ramping up partnership with Firebase for deployment and hosting</li>
+<li>Improvements in image directive and build optimization</li>
+<li>Expansion of the Angular ecosystem through community contributions and partnerships</li>
+<li>Future direction and upcoming features</li>
+<li>Work on server-side rendering, partial hydration, and reactivity improvements</li>
+<li>Collaboration with the Chrome DevTools team for better debugging experience and stack trace analysis</li>
+<li>Continued focus on accessibility, component improvement, and documentation enhancements</li>
+</ul>
+<h3 id="summary">Summary:</h3>
+<ul>
+<li>Overview of Angular's past and present<ul>
+<li>Introduction of new features like Standalone components, TypeScript 4.1 support, and improved error messages</li>
+</ul>
+</li>
+<li>Focus on developer experience and performance improvements<ul>
+<li>Partnership with Aurora team to improve core web vitals and optimize build pipelines</li>
+<li>Ramping up partnership with Firebase for deployment and hosting</li>
+<li>Improvements in image directive and build optimization</li>
+<li>Expansion of the Angular ecosystem through community contributions and partnerships</li>
+</ul>
+</li>
+<li>Future direction and upcoming features<ul>
+<li>Work on server-side rendering, partial hydration, and reactivity improvements</li>
+<li>Collaboration with the Chrome DevTools team for better debugging experience and stack trace analysis</li>
+<li>Continued focus on accessibility, component improvement, and documentation enhancements</li>
+</ul>
+</li>
+</ul>
+<h2 id="angular-a-design-review-10-years-later-jeremy-elbourn-alex-rickabaugh-ng-conf-2022">Angular: A Design Review 10 Years Later | Jeremy Elbourn &amp; Alex Rickabaugh | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IY-QOz4oLCE">https://www.youtube.com/watch?v=IY-QOz4oLCE</a></p>
+<ul>
+<li>
+<p>10-year retrospective of Angular</p>
+<ul>
+<li>Fundamental aspects: automatic Global change detection, unidirectional data flow, use of selectors, component RxJS fact, and embrace of compilation</li>
+<li>Design choices that led to tradeoffs in performance, accessibility, and developer experience</li>
+<li>Evolution of Angular's design philosophy<ul>
+<li>Role of Zone.js and its impact on the framework's efficiency</li>
+<li>Future of Angular: Ivy and potential improvements in typescript integration</li>
+</ul>
+</li>
+<li>Importance of community feedback and how it has influenced Angular's development</li>
+</ul>
+</li>
+<li>
+<p>No context provided for additional points.</p>
+</li>
+</ul>
+<h2 id="rxjs-from-scratch-alain-chautard-ng-conf-2022">RxJs from Scratch | Alain Chautard | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=nQrMgNIvqxM">https://www.youtube.com/watch?v=nQrMgNIvqxM</a></p>
+<ul>
+<li>RxJS is a library for reactive programming in JavaScript, allowing developers to work with asynchronous data streams and events efficiently.</li>
+<li>An Observable represents a sequence of zero or more values over time, emitting values synchronously or asynchronously, errors, or completion signals.</li>
+<li>RxJS operators are functions that transform or manipulate observables, providing over 120 operators for filtering, mapping, concatenating, and combining operations.</li>
+<li>A Subject is a special type of Observable that can both emit values and accept new Observers, useful for creating shared state between components or services.</li>
+<li>A BehaviorSubject always emits the latest value when a new Observer subscribes, making it ideal for storing and sharing state data.</li>
+<li>A ReplaySubject can replay the last N values whenever a new Observer subscribes, which is useful for caching and reusing previous values in an application.</li>
+<li>In an exercise, you create a custom observable using a service to manage country selection and display current countries on the screen. You use the Subject class to emit values from the service and implement two different operators (map and filter) to transform and manipulate the observable sequence.</li>
+</ul>
+<h2 id="angular-based-micro-frontends-with-module-federation-manfred-steyer-ng-conf-2022">Angular based Micro frontends with module federation | Manfred Steyer | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=CDKK6FVvqvs">https://www.youtube.com/watch?v=CDKK6FVvqvs</a></p>
+<ul>
+<li>Speaker: Joe Weems, focusing on Angular Enterprise environment</li>
+<li>Topics:</li>
+<li>Static and Dynamic Federation in Micro Frontends<ul>
+<li>Module Federation concept</li>
+<li>Sharing library data between applications</li>
+<li>Combining different Frameworks and framework versions</li>
+</ul>
+</li>
+<li>Overcoming challenges in Micro Frontends<ul>
+<li>Managing different application themes</li>
+<li>Decision order and technology stack</li>
+<li>Scaling the development team and process</li>
+</ul>
+</li>
+<li>Useful tools:</li>
+<li>Webpack</li>
+<li>Angular CLI</li>
+<li>NPM</li>
+<li>Iframes</li>
+<li>Real-world examples: Shell and Micro Front End applications</li>
+<li>Importance of metadata in micro frontends</li>
+<li>Opt-in sharing feature for better control</li>
+<li>Demonstration of a shared authentication library between multiple micro frontends</li>
+<li>Frankenstein's monster metaphor for combining different parts of an application</li>
+<li>Wrapper components to abstract differences between frameworks</li>
+<li>Example of loading and integrating React and different versions of Angular applications within the same shell</li>
+</ul>
+<h2 id="form-validation-done-right-ward-bell-ng-cof-2022">Form Validation Done Right | Ward Bell | ng-cof 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=EMUAtQlh9Ko">https://www.youtube.com/watch?v=EMUAtQlh9Ko</a></p>
+<ul>
+<li>NG Conf 2023 will take place in Salt Lake City, Utah on June 14-15.</li>
+<li>Joe Weems' talk focuses on "Form Validation Done Right".</li>
+<li>He emphasizes the importance of type safety and discusses a validation theme throughout his talk.</li>
+<li>The need for clear and concise code is highlighted for form validation, avoiding unnecessary complexity.</li>
+<li>Writing complex validations and ensuring correct form validation are discussed as challenges.</li>
+<li>Validating models at different levels (field, form, domain) is important, with effective exposure of these validations.</li>
+<li>A "Model Validation" approach involves creating a validation engine and reusable validation rules.</li>
+<li>Unit tests for validation rules should be written and integrated into an application.</li>
+<li>The difference between client-side and server-side validations is emphasized, with the need for a unified approach.</li>
+<li>A "Validation Suite" can handle both client-side and server-side validations.</li>
+<li>Challenges of integrating validation rules into an application using Angular's FormControl and NGModel directives are discussed.</li>
+<li>Writing a "Validation Scope Directive" simplifies the process of connecting form controls with validation rules.</li>
+<li>Reusable components and avoiding boilerplate code when building complex forms is important.</li>
+<li>A "Widget Component" can be used to simplify the process of writing complex forms.</li>
+</ul>
+<h2 id="safer-forms-with-strict-types-dylan-hunn-ng-conf-2022">Safer Forms with Strict Types | Dylan Hunn | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Z-vwuG_szVk">https://www.youtube.com/watch?v=Z-vwuG_szVk</a></p>
+<ul>
+<li>Introduction to Angular 14's typed form<ul>
+<li>Key benefits of using a typed form: explicit State Management, compile time error catching, improved autocomplete and code completion</li>
+</ul>
+</li>
+<li>Differences between value type and control type in forms</li>
+<li>New features and improvements in Angular 14 for typed forms: nonnullable field, optional keys, record and array types, and the FormBuilder API<ul>
+<li>Nonnullable field: ensures that a form field cannot be empty or null</li>
+<li>Optional keys: allows for optional properties in form groups and controls</li>
+<li>Record and array types: supports more complex data structures in forms</li>
+<li>FormBuilder API: provides a more intuitive way to create and manage form controls and groups</li>
+</ul>
+</li>
+<li>Future plans for improving typed forms in Angular</li>
+</ul>
+<h2 id="rxjs-best-practices-arent-always-black-and-white-deborah-kurata-ng-conf-2022">RxJS Best Practices Aren't Always Black and White | Deborah Kurata | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rQTSMbeqv7I">https://www.youtube.com/watch?v=rQTSMbeqv7I</a></p>
+<ul>
+<li>Use declarative approach with RxJS for easy composition and communication between components.</li>
+<li>Divide an application into action streams, emit notifications when actions occur, and react to these notifications.</li>
+<li>Best Practices:</li>
+<li>Always use switchMap for mapping observables.</li>
+<li>Use mergeMap when the order of emissions doesn't matter.</li>
+<li>Use forkJoin when you want to combine multiple async operations and wait for all of them to complete before emitting the final array.</li>
+<li>Error Handling: Don't forget to handle errors by catching and handling them using catchError or handleError operators.</li>
+<li>Avoid Nested Subscriptions: Instead of nesting subscriptions, use higher-order mapping operators inside your HTTP requests to automatically manage inner observables' subscriptions and unsubscriptions.</li>
+<li>Use Async Pipe: Use the async pipe to automatically subscribe and unsubscribe to observables in templates, ensuring that you don't create memory leaks by forgetting to unsubscribe.</li>
+</ul>
+<h2 id="angular-tdd-like-you-never-seen-before-shai-reznik-ng-conf-2022">Angular TDD Like You Never Seen Before | Shai Reznik | ng- conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=KHaeVaSkhIE">https://www.youtube.com/watch?v=KHaeVaSkhIE</a></p>
+<ul>
+<li>NG Conf 2023 in Salt Lake City, Utah</li>
+<li>Joe Weems presents on effective Angular testing and TDD (Test Driven Development)<ul>
+<li>Focuses on the balance of confidence and efficiency in testing</li>
+<li>Introduces Jasmine Singer Single (JSS) for single action tests<ul>
+<li>Demonstrates writing tests using TDD and JSS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Highlights active retrieval to retain knowledge</li>
+<li>Encourages collaboration, practice, and iteration in testing</li>
+<li>Shares tips on refactoring code while maintaining test coverage<ul>
+<li>Emphasizes the value of humor and memorable experiences in learning</li>
+</ul>
+</li>
+</ul>
+<h2 id="blazing-7-core-principles-of-fast-angular-application-ady-ngom-ng-conf-2022">B.L.A.Z.I.N.G. - 7 core principles of fast Angular application | Ady Ngom | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Q865k5L5wMk">https://www.youtube.com/watch?v=Q865k5L5wMk</a></p>
+<ul>
+<li>NGConf 2023 in Salt Lake City, Utah on June 14-15</li>
+<li>Talk about ancient Egyptian nilometer and its relevance to modern engineering</li>
+<li>Discussion of web performance, budgets, and tooling<ul>
+<li>Presentation of a performance budget template</li>
+<li>Emphasis on lazy loading for efficient resource management</li>
+<li>Importance of using source of truth across departments when implementing performance budgets</li>
+</ul>
+</li>
+<li>Mention of the LCP (Largest Contentful Paint) metric as part of Core Web Vitals</li>
+<li>Brief overview of Angular's performance checklist and its importance in optimizing web applications</li>
+<li>Discussion of the Zone concept in Angular, including its role in change detection<ul>
+<li>Demonstration of nonblocking techniques for improving web performance</li>
+</ul>
+</li>
+<li>Explanation of preconnect, prefetch, and preload strategies for resource optimization</li>
+<li>Live demo showcasing the impact of performance optimizations on application load times</li>
+</ul>
+<h2 id="what-and-why-nx-20-reasons-in-20-minutes-erick-slack-michael-madsen-ng-conf-2022">What and Why nx  20 reasons in 20 minutes | Erick Slack &amp; Michael Madsen | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aWCdXRrZN_M">https://www.youtube.com/watch?v=aWCdXRrZN_M</a></p>
+<ul>
+<li>NG Conf 2023 featured a discussion on NX, a Next Generation build system</li>
+<li>Michael Madsen and Eric Slack presented the benefits of using monorepos with NX, including efficiency, scalability, and standardization</li>
+<li>Granular library concept helps maintain focused, single-purpose libraries within a monorepo</li>
+<li>One repo rule ensures easy tracking and management of dependencies across applications and libraries</li>
+<li>Package lock files in monorepos help maintain consistent versions across applications and libraries</li>
+<li>NX supports multiple frameworks and languages, making it versatile for large organizations</li>
+<li>Discoverability feature allows developers to easily search and navigate through codebases</li>
+<li>Intelligent build system with distributed caching optimizes build processes and saves time</li>
+<li>Affected command feature helps identify which parts of the codebase are impacted by changes</li>
+<li>NX's modern tooling, including schematics for code generation and custom lint rules, streamlines development processes</li>
+<li>Standardization across repositories ensures consistency and ease of collaboration</li>
+<li>NX console extension offers a GUI alternative to command line interfaces</li>
+<li>Federation-friendly deployment allows modules to be deployed independently while still maintaining connections within the monorepo structure</li>
+<li>NX's vibrant community, extensive documentation, and open-source projects make it an attractive choice for developers.</li>
+</ul>
+<h2 id="become-a-content-projection-artist-alain-chautard-ng-conf-2022">Become a Content Projection Artist | Alain Chautard | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-XyMpynvHC8">https://www.youtube.com/watch?v=-XyMpynvHC8</a></p>
+<ul>
+<li>Introduced himself and explained his experience with Angular.</li>
+<li>Discussed the concept of content projection in Angular.</li>
+<li>Explained how to create a reusable component using Angular's Content Projection feature.</li>
+<li>Showcased different examples of content projection, including single and multiple NG content directives, and dynamic content projection with NG template and NG container.</li>
+<li>Demonstrated how to use the multi-slot content projection technique for even more reusability.</li>
+<li>Explained how to create a tab component using Angular's Content Child decorator and passed template references as parameters.</li>
+<li>Showcased the final exercise, where he created a custom directive to select a specific tab based on its name attribute.</li>
+<li>Discussed the concept of accessing context (host component) from within a child component.</li>
+<li>Concluded by emphasizing the importance of toolkits and content production in building reusable components with Angular.</li>
+</ul>
+<h2 id="standalone-components-the-motivation-pawel-kozlowski-ng-conf-2022_1">Standalone Components  The Motivation | Pawel Kozlowski | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=JQ6at3-Dh4k">https://www.youtube.com/watch?v=JQ6at3-Dh4k</a></p>
+<ul>
+<li>NG Conf 2023 will take place in Salt Lake City, Utah from June 14th to 15th.</li>
+<li>The conference will feature speakers and talks related to Angular development.</li>
+<li>In 2022, the team published a design proposal for making antibody receptional like a great detailed discussion based on initial feedback. (no context)</li>
+<li>The implementation of angular 14 introduced set Standalone apis, changing the way developers write component structure in an application.</li>
+<li>Pavel from the Angular team discussed the motivation behind the project and provided code examples to illustrate progress.</li>
+<li>The goal is to make the NG model optional, answering questions about roles and consequences of using it.</li>
+<li>Standalone projects are being developed to address confusing bits without sacrificing good parts of Angular.</li>
+<li>The team is working on making the CLI more ergonomic, focusing on the default experience for new application engineers.</li>
+<li>The project aims to simplify the API surface and improve productivity by managing dependencies explicitly.</li>
+<li>The plan is to review the entire API surface in version 15 and make it stable.</li>
+<li>The team is considering using a working language service to help with importing Standalone components, making the Imports array more manageable.</li>
+<li>There's a possibility of introducing a new syntax for Angular templates to better handle control flow directives.</li>
+<li>The goal is to create a joyful touring experience and improve the overall developer experience in Angular applications.</li>
+</ul>
+<h2 id="accessibility-is-important-zach-arend-emma-twersky-ng-conf-2022">Accessibility! is! important! | Zach Arend &amp; Emma Twersky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=t1r7-QbkfZM">https://www.youtube.com/watch?v=t1r7-QbkfZM</a></p>
+<ul>
+<li>Zach's passion for accessibility</li>
+<li>Frameworks cannot guarantee accessibility, but they can provide builtin solutions to help get there.</li>
+<li>Guardrails and prioritizing first party built-in accessibility:</li>
+<li>Ally: an accessibility tool that helps developers improve the accessibility of their web applications.</li>
+<li>NG updates: constant improvements in Angular's accessibility features.</li>
+<li>Building accessible applications with Angular:</li>
+<li>Framework guardrails:<ul>
+<li>Primitives: building blocks for creating web experiences.</li>
+<li>Linting and extended diagnostics: tools that help catch and fix accessibility issues early on.</li>
+</ul>
+</li>
+<li>First party localization support: high performance, native API-based solutions for localizing applications.</li>
+<li>High contrast mode: a feature that allows users to switch between standard and high contrast color schemes.<ul>
+<li>Windows high contrast mode: a built-in Windows feature that enhances the visual appearance of user interface elements for better readability.</li>
+</ul>
+</li>
+<li>Color preference accessibility:</li>
+<li>Force color API: a tool that detects and applies forced color modes, such as high contrast or grayscale, to web applications.</li>
+<li>Components and guardrails:</li>
+<li>Component vetted compatibility: ensuring components are compatible with screen readers and other assistive technologies.<ul>
+<li>Angular Material support: a collection of high-quality, accessible UI components for building web applications.</li>
+</ul>
+</li>
+<li>Bug fixes and improvements:</li>
+<li>Accessibility bug fixes: fixing issues that affect the accessibility of web applications.</li>
+<li>Date picker component: a highly customizable, accessible date picker component that can be used in various applications.</li>
+<li>The importance of testing and continuous improvement:</li>
+<li>Testing specific user flows: ensuring that all aspects of an application's functionality are accessible to users with disabilities.</li>
+<li>Updating documentation: regularly updating accessibility documentation to reflect the latest improvements and features.</li>
+</ul>
+<h2 id="image-optimization-best-practices-with-angular-kara-erickson-ng-conf-2022">Image Optimization Best Practices with Angular | Kara Erickson | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zKQRG8l1OOI">https://www.youtube.com/watch?v=zKQRG8l1OOI</a></p>
+<ul>
+<li>Introduced Image Directive for Angular</li>
+<li>Partnership with Google's Chrome team to improve web performance, specifically focusing on Largest Contentful Paint (LCP) metric</li>
+<li>Demonstrated the impact of using Image Directive in a real-world scenario with Lands End as a partner</li>
+<li>Improvements made in the directive:</li>
+<li>Preconnect hint for LCP images</li>
+<li>Built-in image letter system</li>
+<li>Addition of priority attribute and preconnect tag</li>
+<li>Use of modern image formats (AVIF) to reduce file size</li>
+<li>Responsive image sizing using raw Source set</li>
+<li>Acknowledged the need for further improvements, such as automating certain tasks and incorporating picture tag feature</li>
+<li>Requested feedback from developers and encouraged them to test the directive in their applications</li>
+</ul>
+<h2 id="micro-frontends-and-the-multiverse-of-frameworks-adrian-iskandar-espinosa-caballero-ng-conf-2022">Micro frontends and the multiverse of Frameworks | Adrian Iskandar Espinosa Caballero | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oX7N3Pyo-T8">https://www.youtube.com/watch?v=oX7N3Pyo-T8</a></p>
+<ul>
+<li>NG Conf 2023 introduces a new architecture for implementing micro frontend solutions</li>
+<li>The architecture is called "Micro Frontend Multiverse Frameworks"</li>
+<li>It allows dividing and conquering applications using micro apps, independent codebases, and deployment</li>
+<li>Encourages single responsibility teams</li>
+<li>Demonstrates a demo combining various frameworks (Angular, React, Vue, Stencil) into one application</li>
+<li>Uses web components to encapsulate custom elements and styles</li>
+<li>Explains how Model Federation can help break apart code for better privacy controls and granular access to user data</li>
+<li>Discusses the advantages of using a shared library across applications for common problems like authentication, analytics, and internationalization features</li>
+<li>Mentions that this architecture allows for easier hiring of developers due to smaller codebases and learning curves</li>
+<li>Uses NX mono repo technology to facilitate configuration and build process simplification</li>
+</ul>
+<h2 id="why-are-web-applications-slow-and-what-to-do-about-it-misko-hevery-ng-conf-2022">Why are web applications slow, and what to do about it | Misko Hevery | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ICH5EIQXZNE">https://www.youtube.com/watch?v=ICH5EIQXZNE</a></p>
+<ul>
+<li>NG Conf 2023 will take place in Salt Lake City, Utah on June 14-15.</li>
+<li>Mishko CTO of Builder IO discussed web application startup performance and the impact of JavaScript at the conference.</li>
+<li>Google Core Web Vitals are important metrics for website performance.</li>
+<li>Ecommerce websites often have poor performance due to slow response times, which can lead to lost sales.</li>
+<li>The top 50 eCommerce websites mostly have red or yellow scores on Google Page Speed Lighthouse.</li>
+<li>Image optimization and CSS optimization can improve website performance, but JavaScript optimization is often overlooked.</li>
+<li>Moving third-party code (like analytics scripts) from the main thread to a web worker can improve website performance.</li>
+<li>First-party code produced by different frameworks can have varying impacts on website performance.</li>
+<li>Big O notation helps understand how the amount of work scales with input size.</li>
+<li>Server-side prerendering and resumable frameworks can help improve website performance, especially for interactive applications.</li>
+<li>Wiz, Marco, and other upcoming frameworks are focusing on reasonability and fast startup times.</li>
+</ul>
+<h2 id="community-keynote-mark-thompson-emma-twersky-ng-conf-2022">Community Keynote | Mark Thompson &amp; Emma Twersky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3Mnp2WYGrVA">https://www.youtube.com/watch?v=3Mnp2WYGrVA</a></p>
+<ul>
+<li>Keynote:</li>
+<li>Ampleyne Seneca (Angular Developer Engineer) discussed the growth of the Angular Community, showcasing its projects and contributions.</li>
+<li>Mark Thompson (Senior Developer Engineer):</li>
+<li>Discussed the strong partnership between Google and the Angular Community.</li>
+<li>Mentioned that the Community Keynote will feature a Partner Update, which will highlight recent achievements and future updates.</li>
+<li>Mike Ryan (Director Devrel, Ionic Framework):</li>
+<li>Talked about the growth of the Ionic Framework and its partnership with the Angular Community.</li>
+<li>Introduced new features in Ionic 6, including support for Angular 14 and the Capacitor plugin.</li>
+<li>Mike Ryan (Director Devrel, ngrx):</li>
+<li>Introduced the latest version of ngrx, focusing on simplified action creation and official ESLint rules.</li>
+<li>Talked about future updates, including a standalone CLI and improved connect API.</li>
+<li>Anna Boca (NativeScript Developer Advocate):</li>
+<li>Discussed the growth of the NativeScript Community and its partnership with the Angular Community.</li>
+<li>Showcased recent projects, such as Universal Plant Services' mobile app built using Angular and NativeScript.</li>
+<li>Jeff Cross (Cofounder &amp; CEO, Narwhal):</li>
+<li>Talked about the history of NX and how it supports different Frameworks, including Angular.</li>
+<li>Introduced NX Cloud, which provides distributed computation caching and helps reduce build times.</li>
+<li>Joe Eames (Principal Engineer, RxJS):</li>
+<li>Discussed the latest version of RxJS and its performance improvements.</li>
+<li>Talked about future updates, including support for async iterators and observables in Web Workers.</li>
+</ul>
+<h2 id="angulars-future-wout-ngmodules-architectures-wstandalone-components-manfred-steyer-ng-conf-2022">Angular's Future w/out NgModules Architectures w/Standalone Components| Manfred Steyer| ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IU-mms6CMGs">https://www.youtube.com/watch?v=IU-mms6CMGs</a></p>
+<ul>
+<li>NG Conf 2023: June 14-15, Salt Lake City</li>
+<li>Standalone Component: No need for an <code>app.module.ts</code>; bootstrap a standalone component and provide providers directly.</li>
+<li>Routing &amp; Lazy Loading: Use the new router configuration to directly point to lazy-loaded routes without needing entry modules.</li>
+<li>Structuring Applications: Use folder peril, where each feature has its own directory with a barrel file for public API exporting.</li>
+<li>NX Workspace: A way to subdivide large applications and maintain an overview while preventing coupling between features.</li>
+<li>Dependency Graph &amp; Library Constraints: NX generates a dependency graph and enforces constraints on libraries, ensuring that they can only access what they're supposed to.</li>
+</ul>
+<h2 id="just-one-more-change-a-developers-story-for-pushing-angular-to-the-cloud-john-papa-ng-conf-2022">Just One More Change A Developer's Story for Pushing Angular to the Cloud | John Papa | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=XKmOQKXPz1g">https://www.youtube.com/watch?v=XKmOQKXPz1g</a></p>
+<ul>
+<li>Demonstrates building and deploying an Angular web application using various tools and services</li>
+<li>Developer uses Github Dev for live editing, VS Code Insiders for local development, Docker Containers with Azure Static Web Apps for cloud deployment</li>
+<li>Pair programming with Github Copilot, creating pull requests, and using GitHub Actions for CI/CD</li>
+<li>Builds an application in a Code Space environment, runs it locally, and deploys it to the cloud</li>
+<li>Highlights the ease of use and features provided by Azure Static Web Apps, including staging environments and free tier options</li>
+</ul>
+<p>Here's a summary of the demonstration:</p>
+<ul>
+<li>The developer showcases building an Angular web application using Github Dev for live editing, VS Code Insiders for local development, Docker Containers with Azure Static Web Apps for cloud deployment. They also use pair programming with Github Copilot, create pull requests, and utilize GitHub Actions for CI/CD.</li>
+<li>The demonstration includes building an application in a Code Space environment, running it locally, and deploying it to the cloud. It highlights the ease of use and features provided by Azure Static Web Apps, including staging environments and free tier options.</li>
+</ul>
+<h2 id="deciphering-the-secrets-of-blockchain-with-angular-stephen-fluin-ng-conf-2022">Deciphering the secrets of blockchain with angular | Stephen Fluin | ng- conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=bhdQobn1aJs">https://www.youtube.com/watch?v=bhdQobn1aJs</a></p>
+<ul>
+<li>NG Conf 2023 in Salt Lake City, Utah</li>
+<li>Introduced blockchain concepts and their applications in software engineering</li>
+<li>Discussed the need to understand developer's perspective on blockchain technology</li>
+<li>Explained how NFTs work using a simple GIF example</li>
+<li>Emphasized that blockchains are built systems where programs run across shared compute environments</li>
+<li>Highlighted that blockchain technology secures itself through autonomous, decentralized execution of smart contracts</li>
+<li>Mentioned the importance of trust in traditional software development and how it's different in blockchain</li>
+<li>Shared examples of security breaches and their financial impact on users</li>
+<li>Demonstrated building a simple smart contract web app using Angular and Remix IDE</li>
+<li>Explained the concept of VRF (Verifiable Random Function) to ensure fairness in decentralized applications</li>
+<li>Showcased a live demo of a blockchain-based raffle system, where users could enter and get picked fairly</li>
+<li>Encouraged the audience to explore and learn more about blockchain development tools and frameworks</li>
+</ul>
+<h2 id="state-management-at-scale-wngrx-brandon-roberts-ng-conf-2022">State Management at Scale w/NgRx | Brandon Roberts | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=o5iHh6cBPsU">https://www.youtube.com/watch?v=o5iHh6cBPsU</a></p>
+<ul>
+<li>Brandon Roberts, a Google Developer Expert and Ngrx maintainer, shares his experience working on a large-scale enterprise project.</li>
+<li>The project involved managing an AngularJS application spanning multiple business units and consolidating it using ngrx.</li>
+<li>Challenges included:</li>
+<li>Managing change detection</li>
+<li>Tracking data effectively</li>
+<li>Maintaining good action hygiene</li>
+<li>Brandon emphasizes the importance of using ngrx to manage state across components, services, and stores.</li>
+<li>He also highlights the benefits of using circular dependencies, feature libraries, and consistent practices for testing and refactoring code.</li>
+<li>The project eventually fed back into the Ngrx project, with lessons learned and improvements made.</li>
+<li>Brandon is excited about working on a new full-stack meta framework called AnalogJS and encourages others to contribute to the project.</li>
+</ul>
+<h2 id="solving-the-puzzle-of-real-time-collaboration-using-the-fluid-framework-dan-wahlin-ng-conf-2022">Solving the Puzzle of Real-Time Collaboration using the Fluid Framework | Dan Wahlin | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4UTqBqwN6Mw">https://www.youtube.com/watch?v=4UTqBqwN6Mw</a></p>
+<ul>
+<li>NG Conf 2023 will take place in Salt Lake City, Utah on June 14th and 15th.</li>
+<li>The speaker discusses collaboration as a buzzword and its application using the Fluid Framework.</li>
+<li>He presents a real-time collaborative todo list app built with Angular and how the Fluid Framework helps sync data across multiple clients.</li>
+<li>The concept of "shared map" is introduced, which is crucial for synchronizing data in the Fluid Framework.</li>
+<li>Websockets are mentioned as a tool for real-time communication between clients and servers.</li>
+<li>Azure Fluid Relay, a service facilitating collaboration in web apps, is discussed.</li>
+<li>The speaker highlights how the Fluid Framework enables developers to build collaborative applications without server code.</li>
+<li>He shares his experience of building a real-time collaborative todo list app using the Fluid Framework and its benefits for data synchronization.</li>
+<li>Autodesk's use of the Fluid Framework in their VR applications demonstrates its versatility across various scenarios.</li>
+</ul>
+<h2 id="tslint-to-eslint-in-5-minutes-james-henry-ng-conf-2022">TSLint to ESLint in 5 minutes | James Henry | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fsr6CFqqsLc">https://www.youtube.com/watch?v=fsr6CFqqsLc</a></p>
+<ul>
+<li>NG Conf 2023 talk on June 14-15 in Salt Lake City, Utah will cover TS link deprecation and migration to ESLint.</li>
+<li>The speaker will provide an alternative solution using Angular ESLint.</li>
+<li>New approach involves removing the NG Lint Builder implementation in Angular 13.</li>
+<li>The talk will demonstrate the migration process from TSLint to ESLint using a project example.</li>
+<li>The discussion will cover the structure of an Angular CLI project and a library project called Libby.</li>
+<li>The speaker will install the "ng add angular eslint" schematic package and run the "ng generate" command.</li>
+<li>They'll use the "ng run ngg" command to transform the project from TSLint to ESLint.</li>
+<li>The talk will discuss the recommended ESLint config for Angular projects and how it can fit into a five-minute presentation.</li>
+<li>The speaker will demonstrate setting up the eslintrc.json file at both the root level and the project level, as well as extending it like TS lint.</li>
+<li>They'll show how to change the ESLint config and run a full lint check on the project.</li>
+<li>Lastly, they'll demonstrate how to rapidly convert the entire project from TSLint to ESLint while removing any unnecessary dependencies.</li>
+</ul>
+<h2 id="the-greatest-mystery-is-realtime-with-angular-nestjs-and-websockets-ely-lucas-ng-conf-2022">The Greatest Mystery is Realtime with Angular, NestJS, and websockets! | Ely Lucas | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=x_2loCZ2u_8">https://www.youtube.com/watch?v=x_2loCZ2u_8</a></p>
+<ul>
+<li>Use of Websockets for real-time applications</li>
+<li>Overview of HTTP polling, long polling, and Server Sent Events (SSE)</li>
+<li>Introduction to Websockets: bidirectional communication, full duplex, event-driven architecture</li>
+<li>Tools used: Angular, Socket.io, NestJS (Node-based web framework), TypeScript</li>
+<li>Use Cases for Websockets: serving web pages, replacing HTTP APIs, caching data, error handling</li>
+<li>Building a chat application using Websockets and NestJS</li>
+<li>Client-side: Angular</li>
+<li>Server-side: NestJS with Socket.io</li>
+<li>Creating services (chat service) to handle state data and persistence</li>
+<li>Implementing Gateway in NestJS to handle websocket connections, communication between client and server</li>
+<li>Using decorators and lifecycle methods in NestJS for routing and handling socket events</li>
+<li>Building chat rooms and user management features using Socket.io and NestJS</li>
+</ul>
+<h2 id="theres-safety-in-angular-alisa-duncan-ng-conf-2022">There's Safety in Angular | Alisa Duncan | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NRg-rsMEdQs">https://www.youtube.com/watch?v=NRg-rsMEdQs</a></p>
+<ul>
+<li>NG Conf 2023 in Salt Lake City, Utah on June 14th and 15th</li>
+<li>Topic: "Security in Angular Applications" by Melissa Duncan (Senior Developer Advocate at OCTA)</li>
+<li>Importance of security in web applications, especially with Open Web Application Security Project (OWASP) top 10 vulnerabilities</li>
+<li>Focus on two key vulnerabilities: broken access control and injection attacks (including cross-site scripting)</li>
+<li>Demonstration of how a simple comment feature can be exploited in an application due to poor data hygiene and lack of input validation/sanitization</li>
+<li>Explanation of how Angular's built-in security mechanisms help prevent these issues by automatically escaping values, incorporating them using interpolation, and providing sanitization methods</li>
+<li>Discussion on the importance of using Angular constructs for property binding, interpolation, and input validation to ensure safety in applications</li>
+<li>Brief mention of how to handle situations where you might need to bypass Angular security measures, but doing so can be risky and should only be done with a legitimate reason</li>
+<li>Introduction to OAuth vulnerabilities, specifically broken access control, and the importance of implementing proper authentication and authorization mechanisms in applications</li>
+<li>Demonstration of how Angular's HTTP Client XSRF module can help protect against CSRF attacks by automatically sending a CSRF token with API requests</li>
+<li>Emphasis on the need to implement robust access control measures in applications, including the use of route guards, lazy loading modules, and structural directives for permissioning schemas</li>
+</ul>
+<h2 id="typescript-meta-programming-from-0-to-100-daniel-ostrovsky-ng-conf-2022">Typescript meta programming from 0 to 100 | Daniel Ostrovsky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=xCsnRQOScrQ">https://www.youtube.com/watch?v=xCsnRQOScrQ</a></p>
+<ul>
+<li>Daniel Ostrovsky, a 20-year industry veteran, will speak on Meta Programming at the NG Conf 2023.</li>
+<li>He will discuss how to use TypeScript for advanced techniques like dependency injection and reflection.</li>
+<li>Dependency Injection is a design pattern that allows developers to create loosely coupled code by injecting dependencies into objects.</li>
+<li>Reflection is a feature in TypeScript that enables runtime type checking and metadata retrieval.</li>
+<li>He will provide examples of how to use these techniques to build complex applications using Angular and other frameworks.</li>
+<li>He will also share his personal experiences working with large-scale web applications at Goh, a company that specializes in taking care of publishers' websites.</li>
+<li>The talk will be based on real-life code examples and will demonstrate how to use TypeScript and Angular to build scalable and maintainable applications.</li>
+</ul>
+<h3 id="summary_1">Summary:</h3>
+<ul>
+<li>Daniel Ostrovsky, an experienced industry veteran, will speak at NG Conf 2023 about Meta Programming.</li>
+<li>He'll discuss using TypeScript for advanced techniques like Dependency Injection and Reflection.</li>
+<li>Dependency Injection is a design pattern that helps create loosely coupled code by injecting dependencies into objects.</li>
+<li>Reflection enables runtime type checking and metadata retrieval in TypeScript.</li>
+<li>Ostrovsky will provide examples of using these techniques to build complex applications with Angular and other frameworks.</li>
+<li>He'll share his experiences working on large-scale web apps at Goh, a company specializing in publisher websites.</li>
+<li>The talk will be based on real-life code examples and demonstrate how to use TypeScript and Angular for scalable, maintainable applications.</li>
+</ul>
+<h2 id="ag-grid-niall-crosby-stephen-cooper-ng-conf-2022">AG Grid | Niall Crosby &amp; Stephen Cooper | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4dhBnvgb5H0">https://www.youtube.com/watch?v=4dhBnvgb5H0</a></p>
+<ul>
+<li>Nile Crosby, AG Grid creator and sponsor, speaks at ngConf</li>
+<li>50% of Angular developers use AG grid in their projects</li>
+<li>New features include:</li>
+<li>Integrated charts: allows users to chart data within the grid</li>
+<li>Club Rows: a new feature that allows grouping of rows for easy comparison and analysis</li>
+<li>AG Grid has expanded its team, including Stephen Cooper, an Angular expert</li>
+<li>Upcoming changes to the component will include:</li>
+<li>Strict typing support</li>
+<li>Full IV (Initialization Value) support</li>
+<li>A two-hour workshop on setting up and customizing AG grid will be held by Brian and Mike during the conference.</li>
+</ul>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-dan-wahlin-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Dan Wahlin | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Kr_KaM19Hko">https://www.youtube.com/watch?v=Kr_KaM19Hko</a></p>
+<ul>
+<li>Background: Started with Basic in high school, transitioned to engineering and programming after being introduced to the internet.</li>
+<li>Known Programming Languages: Pearl, VB6, C++, Java, JavaScript, TypeScript, SQL databases.</li>
+<li>Favorite Tech: C#, Visual Basic 3.6, ASP Classic, React.</li>
+<li>Challenges in Angular: Learning terminology and concepts, especially for newer developers.</li>
+<li>Memorable NGConf Moment: Giving his first talk at the conference after being convinced by Aaron Frost.</li>
+<li>Current Role: Working on a collaboration framework called Fluid Framework, which focuses on true web-based collaboration in JavaScript apps.</li>
+</ul>
+<h2 id="simplifying-deep-angular-forms-with-di-equipped-custom-components-rafael-mestre-ng-conf-2022">Simplifying deep angular forms with di equipped custom components | Rafael Mestre | ng- conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=nZI4Gra_FsM">https://www.youtube.com/watch?v=nZI4Gra_FsM</a></p>
+<ul>
+<li>Rafael Mestre, a senior software engineer from Puerto Rico, shares his journey of becoming a software engineer and how he learned to handle complex forms in Angular.</li>
+<li>He emphasizes the importance of using dependency injection (DI) for managing dependencies between objects in an application.</li>
+<li>Rafael talks about using the Entity Pattern for creating decoupled, reusable components.</li>
+<li>He encourages developers to use typed directives and form group names for ensuring type safety and flexibility.</li>
+<li>The Control Container pattern is useful for managing forms with nested fields and dynamic content.</li>
+<li>Rafael highlights that Angular continues to evolve and improve, with better developer experiences (DX) on the horizon.</li>
+<li>He recommends exploring library resources like the Angular repo, guides, and videos to improve skills in working with forms.</li>
+</ul>
+<h2 id="partially-zoneless-performance-tuning-without-big-bang-refactoring-michael-hladky-ng-conf-2022">Partially Zoneless   Performance tuning without big bang refactoring | Michael Hladky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=or8aoOdOsHk">https://www.youtube.com/watch?v=or8aoOdOsHk</a></p>
+<ul>
+<li>NG Conf 2023 will be held in Salt Lake City, Utah from June 14th to 15th.</li>
+<li>The speaker discusses the importance of performance optimization and scalability in Angular applications.</li>
+<li>Focus on understanding runtime performance, especially long tasks, using flame charts.</li>
+<li>Introduce a toolset called RX Angular Open Source Repository for better developer experience.</li>
+<li>Discuss Angular's change detection mechanism, component tree, dirty marking, and rendering.</li>
+<li>Explain the concept of Zone, its purpose, and how it works with asynchronous APIs.</li>
+<li>Showcase a demo of a large-scale Angular application and its performance improvements.</li>
+<li>Present new ways to optimize change detection, local State Management, and rendering using structural directives like pushpap and rx4.</li>
+<li>Discuss the concept of concurrent rendering in Angular, which helps smooth interactions and prevent frame drops.</li>
+<li>Introduce a fully zoneless approach for better performance and scalability.</li>
+</ul>
+<h2 id="cypress-for-angular-devs-hands-on-workshop-jordan-powell-ely-lucas-n-g-conf-2022">Cypress for angular devs hands on workshop | Jordan Powell &amp; Ely Lucas |  n-g conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QYtonSoCIyc">https://www.youtube.com/watch?v=QYtonSoCIyc</a></p>
+<ul>
+<li>Introducing Cyprus: An end-to-end and component testing solution for JavaScript applications</li>
+<li>Demonstration of Cyprus features:<ul>
+<li>Time traveling snapshots</li>
+<li>Automatic waiting for element existence</li>
+<li>Component test creation using Cypress schematic</li>
+<li>Migrating from Protractor to Cyprus using the Cypress migrator tool</li>
+</ul>
+</li>
+<li>Hands-on Workshop with Cyprus</li>
+<li>Cloning the Cypress repo and running npm install</li>
+<li>Three parts of the workshop:<ol>
+<li>Introduction to Cyprus and its features</li>
+<li>Migrating an application using Protractor to Cyprus</li>
+<li>Demonstrating component testing with Cyprus</li>
+</ol>
+</li>
+<li>Migrating from Protractor to Cyprus using the Cypress migrator tool</li>
+<li>Installing the Cypress schematic and running the command to create an end-to-end test</li>
+<li>Using the Cypress migrator tool to convert a Protractor test to a Cypress test</li>
+<li>Running the converted Cypress test using the Cyprus CLI</li>
+<li>Reviewing the documentation for the Cypress migrator tool and running the command to create a new Cypress test from a Protractor test</li>
+<li>Demonstrating component testing with Cyprus</li>
+<li>Launching Cypress and selecting the "Component Testing" option</li>
+<li>Setting up the necessary dependencies for component testing, including the Angular CLI and the @cypress/schematic package</li>
+<li>Creating a new component using the Angular CLI and running npm install to install its dependencies</li>
+<li>Using the Cypress CLI to start a new test file for the newly created component</li>
+<li>Writing a simple test for the component, including setting up the necessary fixture and specifying the behavior of the component's properties and methods</li>
+<li>Running the test using the Cypress CLI and observing the test results in the Cypress Test Runner</li>
+<li>Q&amp;A session with questions from attendees</li>
+</ul>
+<h2 id="quick-context-about-host-context-ankita-sood-ng-conf-2022">Quick Context about Host Context | Ankita Sood | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=tViltuKzruM">https://www.youtube.com/watch?v=tViltuKzruM</a></p>
+<ul>
+<li>NG Conf 2023 will be held in Salt Lake City, Utah on June 14th and 15th.</li>
+<li>Joe Weems is the host of a late-night TV show, morning show, and Angie's List host.</li>
+<li>Ankita is a frontend engineer at Deloitte Secure Work based in Austin, Texas.</li>
+</ul>
+<h3 id="summary_2">Summary:</h3>
+<ul>
+<li>NG Conf 2023 will take place on June 14th and 15th in Salt Lake City, Utah.</li>
+<li>Joe Weems hosts late-night TV shows, morning shows, and Angie's List.</li>
+<li>Ankita is a frontend engineer at Deloitte Secure Work in Austin, Texas.</li>
+</ul>
+<h3 id="key-points">Key Points:</h3>
+<ul>
+<li>NG Conf 2023 dates and location</li>
+<li>Joe Weems' hosting roles</li>
+<li>Ankita's professional background</li>
+</ul>
+<hr />
+<h3 id="detailed-summary">Detailed Summary:</h3>
+<ul>
+<li>Angular component architecture allows for versatile design and encapsulation modes.</li>
+<li>The View Encapsulation option emulates shadow DOM behavior, which empowers targeting actual DOM elements using CSS selectors consistently across browsers.</li>
+<li>Host context is a pseudo-selector that enables modifying content based on the parent component's context or state.</li>
+<li>An example of host context usage is assigning different classes to a card component depending on its parent group value.</li>
+<li>Host context can also be used to modify content display based on layout (column vs row).</li>
+<li>A popular use case for host context is passing a CSS selector as a theme class name to an Angular component, which then applies the specified theme.</li>
+</ul>
+<h3 id="key-points_1">Key Points:</h3>
+<ul>
+<li>Versatile design and encapsulation modes in Angular component architecture</li>
+<li>View Encapsulation and shadow DOM behavior</li>
+<li>Host context usage examples and popular use cases</li>
+</ul>
+<h2 id="write-once-run-anywhere-with-an-angular-pwa-michael-dowden-maritine-dowden-ng-conf-2022">Write once, run anywhere with an angular PWA | Michael Dowden &amp; Maritine Dowden | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=hqKjYRM9pZY">https://www.youtube.com/watch?v=hqKjYRM9pZY</a></p>
+<ul>
+<li>PWAs (Progressive Web Apps) are web applications built using modern web capabilities, including the ability to work offline or on low-quality internet connections.</li>
+<li>They can be installed on a user's device and run like an app from the home screen.</li>
+<li>To create a PWA, you need a service worker, which is a script that runs in the background of your web application, even when it's not open. The service worker helps to cache web content and serve it faster, especially on low-quality internet connections.</li>
+<li>Another important part of creating a PWA is adding a manifest file, which contains information about your app, such as its name, icon, and the type of screen it should run on (e.g., mobile or desktop).</li>
+<li>To test your PWA, you can use Chrome DevTools or Firefox DevTools, which allow you to simulate different types of devices and internet connections.</li>
+<li>One common issue with PWAs is dealing with icons for different devices and screen sizes. There are tools available that can help you create icons in the correct format and size for each device.</li>
+<li>To make your PWA work on iOS devices, you need to add specific icons and configuration files that are required by Apple's App Store guidelines.</li>
+<li>Adding an Angular Firebase service is important for handling authentication, data storage, and real-time updates in a PWA.</li>
+</ul>
+<h2 id="state-management-techniques-and-family-therapy-kate-sky-ng-conf-2022">State Management Techniques and Family Therapy | Kate Sky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=bSJtYNhAqwY">https://www.youtube.com/watch?v=bSJtYNhAqwY</a></p>
+<p>Error</p>
+<h2 id="i-let-strangers-design-my-slides-using-ngrx-component-store-mike-ryan-ng-conf-2022">I Let Strangers Design My Slides using NgRx Component Store | Mike Ryan | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=OCuz2aAtBBE">https://www.youtube.com/watch?v=OCuz2aAtBBE</a></p>
+<p>Error</p>
+<h2 id="endbridge-migrate-from-protractor-to-cypress-in-less-than-a-day-joe-eames-ng-conf-2022">EndBridge: Migrate from Protractor to Cypress in Less Than a Day! | Joe Eames | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=s67mDePPifQ">https://www.youtube.com/watch?v=s67mDePPifQ</a></p>
+<p>Error</p>
+<h2 id="future-proof-your-company-by-effectively-scaling-engineering-jennifer-wadella-ng-conf-2022">Future Proof your company by effectively scaling engineering | Jennifer Wadella | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=XFYMs78wTkA">https://www.youtube.com/watch?v=XFYMs78wTkA</a></p>
+<p>Error</p>
+<h2 id="oaydaby-aamy-sainre9l-tart-wait-what-jessica-janiuk-joey-perrott-ng-conf-2022">OAyDaBy AAm=/y SAinRe9L TArT, wait what? | Jessica Janiuk &amp; Joey Perrott | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=9UtwYGYkznc">https://www.youtube.com/watch?v=9UtwYGYkznc</a></p>
+<p>Error</p>
+<h2 id="rxwut-kim-maida-sam-julien-ng-conf-2022">RxWut | Kim Maida &amp; Sam Julien | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=tH2tmwF9RdE">https://www.youtube.com/watch?v=tH2tmwF9RdE</a></p>
+<p>Error</p>
+<h2 id="testable-angular-forms-martine-dowden-ng-conf-2022">Testable Angular Forms | Martine Dowden | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rWXWXWMy2lE">https://www.youtube.com/watch?v=rWXWXWMy2lE</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-kate-sky-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Kate Sky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=L6dgOQUeiW0">https://www.youtube.com/watch?v=L6dgOQUeiW0</a></p>
+<p>Error</p>
+<h2 id="shit-our-site-is-down-lets-build-a-culture-of-reliability-brian-love-ng-conf-2022">Shit, our Site is Down! Let's build a culture of reliability | Brian Love | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=_MgNvmxAJrk">https://www.youtube.com/watch?v=_MgNvmxAJrk</a></p>
+<p>Error</p>
+<h2 id="ngrx-feature-creator-marko-stanimirovic-ng-conf-2022">NgRx Feature Creator | Marko Stanimirovic | ng- conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=t69Hj1V9DuE">https://www.youtube.com/watch?v=t69Hj1V9DuE</a></p>
+<p>Error</p>
+<h2 id="the-tale-tell-code-lara-newsom-ng-conf-2022">The Tale Tell Code | Lara Newsom | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=PE1rUoQVnWk">https://www.youtube.com/watch?v=PE1rUoQVnWk</a></p>
+<p>Error</p>
+<h2 id="run-code-when-leaving-your-angular-application-preston-lamb-ng-conf-2022">Run Code When Leaving Your Angular Application | Preston Lamb | Ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=17XyV8iWThA">https://www.youtube.com/watch?v=17XyV8iWThA</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-sarah-drasner-ng-conf-2022">Get to Know the Angular Team | Sarah Drasner | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=26hLCSw7STw">https://www.youtube.com/watch?v=26hLCSw7STw</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-john-papa-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | John Papa | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3KZ7ZJ2xyaE">https://www.youtube.com/watch?v=3KZ7ZJ2xyaE</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-emma-twersky-ng-conf-2022">Get to Know the Angular Team | Emma Twersky  | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WmKi84JTQLY">https://www.youtube.com/watch?v=WmKi84JTQLY</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-alain-chautard-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Alain Chautard  | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aAf7W1nuWCA">https://www.youtube.com/watch?v=aAf7W1nuWCA</a></p>
+<p>Error</p>
+<h2 id="lets-play-a-game-craig-spence-ng-conf-2022">LeTS play a game | Craig Spence | ng-conf-2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Mge_8f94Jd8">https://www.youtube.com/watch?v=Mge_8f94Jd8</a></p>
+<p>Error</p>
+<h2 id="migrating-from-protractor-to-cypress-e2e-in-under-5-minutes-jordan-powell-n-g-conf-2022">Migrating from Protractor to Cypress E2E in Under 5 Minutes | Jordan Powell  | n-g conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=cpd8TUvNEYU">https://www.youtube.com/watch?v=cpd8TUvNEYU</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-minko-gechev-ng-conf-2022">Get to Know the Angular Team | Minko Gechev | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=LmBYqQmFtJY">https://www.youtube.com/watch?v=LmBYqQmFtJY</a></p>
+<p>Error</p>
+<h2 id="slow-down-to-get-ahead-michael-callaghan-ng-conf-2022">Slow Down to Get Ahead | Michael Callaghan | ng-conf- 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=UMcdrWi_vlk">https://www.youtube.com/watch?v=UMcdrWi_vlk</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-ankita-sood-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Ankita Sood | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=plAMq9lr2RY">https://www.youtube.com/watch?v=plAMq9lr2RY</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-jeremy-elbourn-ng-conf-2022">Get to Know the Angular Team | Jeremy Elbourn| ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NA1psZUQ1H4">https://www.youtube.com/watch?v=NA1psZUQ1H4</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-wagner-maciel-ng-conf-2022">Get to Know the Angular Team | Wagner Maciel | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=y5XKR_bFFr8">https://www.youtube.com/watch?v=y5XKR_bFFr8</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-alfredo-perez-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Alfredo Perez  | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NKS4_Y5z0Bs">https://www.youtube.com/watch?v=NKS4_Y5z0Bs</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-pawel-kozlowski-ng-conf-2022">Get to Know the Angular Team | Pawel Kozlowski | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fI_cof26TN0">https://www.youtube.com/watch?v=fI_cof26TN0</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-brian-love-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Brian Love | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=KS6GDgBxnyY">https://www.youtube.com/watch?v=KS6GDgBxnyY</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-kristiyan-kostadinov-ng-conf-2022">Get to Know the Angular Team | Kristiyan Kostadinov | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=hCVLV60tadQ">https://www.youtube.com/watch?v=hCVLV60tadQ</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-mark-thompson-ng-conf-2022">Get to Know the Angular Team | Mark Thompson | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=yNrfwnXtEKU">https://www.youtube.com/watch?v=yNrfwnXtEKU</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-daniel-ostrovsky-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Daniel Ostrovsky | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=JJOipy9O8Yw">https://www.youtube.com/watch?v=JJOipy9O8Yw</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-jennifer-wadella-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Jennifer Wadella | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4_yKlcspGkI">https://www.youtube.com/watch?v=4_yKlcspGkI</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-andrew-scott-ng-conf-2022">Get to Know the Angular Team | Andrew Scott | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=x8OxLm_cgKU">https://www.youtube.com/watch?v=x8OxLm_cgKU</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-lara-newsome-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Lara Newsome | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=wYoIi81llqw">https://www.youtube.com/watch?v=wYoIi81llqw</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-doug-parker-ng-conf-2022">Get to Know the Angular Team | Doug Parker | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uv3MZVH6d4k">https://www.youtube.com/watch?v=uv3MZVH6d4k</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-ady-ngom-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Ady Ngom | ng-conf 2022 |</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5nUT2q8TLZQ">https://www.youtube.com/watch?v=5nUT2q8TLZQ</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-jordan-powell-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Jordan Powell | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pVUvRN1rykg">https://www.youtube.com/watch?v=pVUvRN1rykg</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-madleina-scheidegger-ng-conf-2022">Get to Know the Angular Team | Madleina Scheidegger | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IKPC6TokM4U">https://www.youtube.com/watch?v=IKPC6TokM4U</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-christina-brink-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Christina Brink | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uTiBVpRrr2U">https://www.youtube.com/watch?v=uTiBVpRrr2U</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-angular-team-miles-malerba-ng-conf-2022">Get to Know the Angular Team | Miles Malerba | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=r-MlQQFRonc">https://www.youtube.com/watch?v=r-MlQQFRonc</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-james-henry-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | James Henry | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QBifvYONyvk">https://www.youtube.com/watch?v=QBifvYONyvk</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-alisa-duncan-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Alisa Duncan | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=r3R7nHx-NUI">https://www.youtube.com/watch?v=r3R7nHx-NUI</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-michael-dowden-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Michael Dowden | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VYprehMnPo8">https://www.youtube.com/watch?v=VYprehMnPo8</a></p>
+<p>Error</p>
+<h2 id="get-to-know-the-2022-ng-conf-speakers-michael-callaghan-ng-conf-2022">Get to Know the 2022 ng-conf Speakers | Michael Callaghan | ng-conf 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Y0wbheNUpTg">https://www.youtube.com/watch?v=Y0wbheNUpTg</a></p>
+<p>Error</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

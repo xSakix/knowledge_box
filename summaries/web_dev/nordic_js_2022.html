@@ -1,0 +1,4712 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/nordic_js_2022.html">
+      
+      
+        <link rel="prev" href="ng_conf_2023_neuralchat.html">
+      
+      
+        <link rel="next" href="reliable_web_summit_2021.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>nordic.js 2022 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nordicjs-2022-christophe-porteneuve-so-whats-new-in-es2025" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              nordic.js 2022
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="nordic_js_2022.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-christophe-porteneuve-so-whats-new-in-es2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Christophe Porteneuve - So, what’s new in ES2025?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-transcript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Transcript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-yuraima-estevez-lo-kim-evolving-your-design-system-through-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Yuraima Estevez &amp; Lo Kim - Evolving your Design System through Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-carly-litchfield-interviews-for-developers-by-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Carly Litchfield - Interviews for developers, by developers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-sara-vieira-from-blender-to-the-web-the-journey-of-a-3d-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Sara Vieira - From Blender to the Web - the Journey of a 3D Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-pierre-reimertz-what-the-web3-is-going-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Piérre Reimertz - What the web3 is going on?!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-ujjwal-sharma-multicore-javascript-past-present-and-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Ujjwal Sharma - Multicore JavaScript: Past, Present and Future
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-debbie-obrien-testing-web-applications-with-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Debbie O'Brien - Testing Web Applications with Playwright
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-emma-twersky-an-aria-of-aria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Emma Twersky - An aria of ARIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-liran-tal-let-me-show-you-how-react-applications-get-hacked-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Liran Tal - Let me show you how React applications get hacked in the real-world
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-christian-landgren-how-to-save-the-world-with-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Christian Landgren - How to save the world with JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-colin-ihrig-the-state-of-deno-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Colin Ihrig - The State of Deno 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-jessy-jordan-investing-in-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Jessy Jordan - Investing in Open-Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-jenn-creighton-now-and-then-debugging-async-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Jenn Creighton - Now and .then: Debugging Async JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-charlie-gerard-simple-jstures-can-go-a-long-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Charlie Gerard - Simple JStures can go a long way
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-matthias-le-brun-leveraging-algebraic-data-types-to-make-your-ui-rock-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Matthias Le Brun - Leveraging (algebraic data) types to make your UI rock solid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-tadeu-zagallo-javascript-vms-101" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Tadeu Zagallo - JavaScript VMs 101
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-emma-bostian-building-high-performing-cross-cultural-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Emma Bostian - Building High-Performing Cross-Cultural Teams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-feross-aboukhadijeh-whats-really-going-on-inside-your-node_modules-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Feross Aboukhadijeh - What's Really Going on Inside Your Node_Modules Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-tobias-ahlin-an-animated-journey-through-the-new-page-transition-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Tobias Ahlin - An Animated Journey through the new Page Transition API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-vitaly-friedman-boosting-web-performance-in-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Vitaly Friedman - Boosting Web Performance in 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-peter-lundberg-stop-wasting-time-waiting-on-build-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Peter Lundberg - Stop Wasting Time (waiting on build tools)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-benny-carlsson-getting-800-people-to-make-a-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Benny Carlsson - Getting 800 people to make a website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-eric-selin-cache-all-the-things-for-fast-and-simple-backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Eric Selin - Cache all the things for fast and simple backends
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-britta-evans-how-to-use-the-screen-reader-you-already-have-in-your-pocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Britta Evans - How to use the Screen Reader you already have in your pocket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-pierre-petersson-one-api-that-rules-them-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Pierre Petersson - One API that rules them all
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-anton-gunnarsson-css-is-awesome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Anton Gunnarsson - CSS is awesome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-ruy-adorno-advancing-the-nodejs-runtime-via-working-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Ruy Adorno - Advancing the Node.js runtime via Working Groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-abdul-ajetunmobi-js-rules-everything-around-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Abdul Ajetunmobi - JS Rules Everything Around me
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-christophe-porteneuve-so-whats-new-in-es2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Christophe Porteneuve - So, what’s new in ES2025?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-transcript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Transcript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-yuraima-estevez-lo-kim-evolving-your-design-system-through-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Yuraima Estevez &amp; Lo Kim - Evolving your Design System through Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-carly-litchfield-interviews-for-developers-by-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Carly Litchfield - Interviews for developers, by developers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-sara-vieira-from-blender-to-the-web-the-journey-of-a-3d-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Sara Vieira - From Blender to the Web - the Journey of a 3D Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-pierre-reimertz-what-the-web3-is-going-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Piérre Reimertz - What the web3 is going on?!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-ujjwal-sharma-multicore-javascript-past-present-and-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Ujjwal Sharma - Multicore JavaScript: Past, Present and Future
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-debbie-obrien-testing-web-applications-with-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Debbie O'Brien - Testing Web Applications with Playwright
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-emma-twersky-an-aria-of-aria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Emma Twersky - An aria of ARIA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-liran-tal-let-me-show-you-how-react-applications-get-hacked-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Liran Tal - Let me show you how React applications get hacked in the real-world
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-christian-landgren-how-to-save-the-world-with-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Christian Landgren - How to save the world with JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-colin-ihrig-the-state-of-deno-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Colin Ihrig - The State of Deno 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-jessy-jordan-investing-in-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Jessy Jordan - Investing in Open-Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-jenn-creighton-now-and-then-debugging-async-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Jenn Creighton - Now and .then: Debugging Async JS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-charlie-gerard-simple-jstures-can-go-a-long-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Charlie Gerard - Simple JStures can go a long way
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-matthias-le-brun-leveraging-algebraic-data-types-to-make-your-ui-rock-solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Matthias Le Brun - Leveraging (algebraic data) types to make your UI rock solid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-tadeu-zagallo-javascript-vms-101" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Tadeu Zagallo - JavaScript VMs 101
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-emma-bostian-building-high-performing-cross-cultural-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Emma Bostian - Building High-Performing Cross-Cultural Teams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-feross-aboukhadijeh-whats-really-going-on-inside-your-node_modules-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Feross Aboukhadijeh - What's Really Going on Inside Your Node_Modules Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-tobias-ahlin-an-animated-journey-through-the-new-page-transition-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Tobias Ahlin - An Animated Journey through the new Page Transition API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-vitaly-friedman-boosting-web-performance-in-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Vitaly Friedman - Boosting Web Performance in 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-peter-lundberg-stop-wasting-time-waiting-on-build-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Peter Lundberg - Stop Wasting Time (waiting on build tools)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-benny-carlsson-getting-800-people-to-make-a-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Benny Carlsson - Getting 800 people to make a website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-eric-selin-cache-all-the-things-for-fast-and-simple-backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Eric Selin - Cache all the things for fast and simple backends
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-britta-evans-how-to-use-the-screen-reader-you-already-have-in-your-pocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Britta Evans - How to use the Screen Reader you already have in your pocket
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-pierre-petersson-one-api-that-rules-them-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Pierre Petersson - One API that rules them all
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-anton-gunnarsson-css-is-awesome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Anton Gunnarsson - CSS is awesome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-ruy-adorno-advancing-the-nodejs-runtime-via-working-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Ruy Adorno - Advancing the Node.js runtime via Working Groups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nordicjs-2022-lightning-talk-abdul-ajetunmobi-js-rules-everything-around-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nordic.js 2022 • Lightning talk: Abdul Ajetunmobi - JS Rules Everything Around me
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>nordic.js 2022</h1>
+
+<h2 id="nordicjs-2022-christophe-porteneuve-so-whats-new-in-es2025">Nordic.js 2022 • Christophe Porteneuve - So, what’s new in ES2025?</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=FaQA0qU5e6o">https://www.youtube.com/watch?v=FaQA0qU5e6o</a></p>
+<h2 id="summary-of-transcript">Summary of Transcript</h2>
+<ul>
+<li>JavaScript language evolution overview</li>
+<li>ECMAScript standardization process</li>
+<li>Key features introduced in recent years<ul>
+<li>ES6, ES2015: arrow functions, let/const, classes, modules</li>
+<li>ES7, ES2016: exponentiation operator, async/await</li>
+<li>ES8, ES2017: Object.values(), Object.entries()</li>
+<li>ES9, ES2018: async generator functions, Promise.prototype.finally()</li>
+<li>ES10, ES2019: Array.prototype.flat(), String.prototype.padStart/padEnd()</li>
+<li>ES11, ES2020: BigInt, nullish coalescing operator (??), optional chaining (?.)</li>
+</ul>
+</li>
+<li>Current and future JavaScript features</li>
+<li>Optional chaining (?.)</li>
+<li>Named capture groups in regular expressions</li>
+<li>Static initializers for classes</li>
+<li>Private class fields with # prefix</li>
+<li>Promise.allSettled() method</li>
+<li>Array.prototype.findLastIndex() method</li>
+<li>Proposed features and&lt;|im_start|&gt;6 month timeline (2023)</li>
+<li>Temporal proposal (date/time library)<ul>
+<li>Moment.js, Luxon.js</li>
+</ul>
+</li>
+<li>Import assertions for JSON modules</li>
+<li>Decorators for classes</li>
+<li>Improved regular expression support</li>
+<li>Future features beyond 6 months timeline</li>
+<li>Immutable arrays</li>
+<li>Decorators for properties and methods</li>
+<li>Pattern matching in JavaScript</li>
+<li>Pipeline operator (|&gt;)</li>
+</ul>
+<h2 id="nordicjs-2022-yuraima-estevez-lo-kim-evolving-your-design-system-through-data">Nordic.js 2022 • Yuraima Estevez &amp; Lo Kim - Evolving your Design System through Data</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3ElDmqSGkmY">https://www.youtube.com/watch?v=3ElDmqSGkmY</a></p>
+<ul>
+<li>Introducing the speaker and their role at Shopify</li>
+<li>
+<p>Lo Im, Senior Frontend Developer at Shopify</p>
+</li>
+<li>
+<p>Briefly explaining what Shopify is</p>
+</li>
+<li>
+<p>Ecommerce platform that helps merchants sell products online to customers anywhere in the world</p>
+</li>
+<li>
+<p>Introducing Polaris Design System</p>
+</li>
+<li>
+<p>Created by Shopify back in 2017 as an internal tool for building apps and admin panels</p>
+</li>
+<li>
+<p>Discussing the growth of Polaris Design System</p>
+</li>
+<li>
+<p>Began with a focus on ecommerce but has since expanded to cover various aspects of the platform</p>
+</li>
+<li>
+<p>Explaining the challenges faced when scaling the design system</p>
+</li>
+<li>
+<p>Custom Solutions built using Polaris components made it difficult to implement sweeping changes across the admin panel</p>
+</li>
+<li>
+<p>Discussing the approach taken to address these challenges</p>
+</li>
+<li>
+<p>Focused on enabling sweeping changes in the admin panel by creating a comprehensive data dashboard that tracks design token usage and component coverage</p>
+</li>
+<li>
+<p>Highlighting the success of this approach</p>
+</li>
+<li>
+<p>Increased Polaris component coverage from 16% to 90% within one year</p>
+</li>
+<li>
+<p>Introducing the concept of "work inception"</p>
+</li>
+<li>
+<p>A process used by Shopify teams to identify and prioritize projects based on their potential impact on the platform</p>
+</li>
+<li>
+<p>Showcasing some examples of successful projects that have used data to drive decision making</p>
+</li>
+<li>Breakpoints: Identified and consolidated frequently used breakpoints across the admin panel, reducing the number from 300 to five</li>
+<li>
+<p>Typography: Analyzed typography usage across the platform and rebuilt the typography component to improve flexibility and coverage</p>
+</li>
+<li>
+<p>Introducing a new tool called "Polaris Migrator"</p>
+</li>
+<li>
+<p>A command-line interface that automates the process of migrating between different versions of the Polaris Design System, making it easier for developers to upgrade their apps and admin panels</p>
+</li>
+<li>
+<p>Discussing the future plans for the Polaris Design System</p>
+</li>
+<li>Continuing to expand coverage and improve flexibility while maintaining a strong focus on data-driven decision making</li>
+</ul>
+<h2 id="nordicjs-2022-carly-litchfield-interviews-for-developers-by-developers">Nordic.js 2022 • Carly Litchfield - Interviews for developers, by developers</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=MOtkGvbKqaA">https://www.youtube.com/watch?v=MOtkGvbKqaA</a></p>
+<ul>
+<li>Carly, a software engineer at Galileo Health, shares her experience and insights on the impact of traditional technical interviews in the hiring process.</li>
+<li>She mentions that traditional technical interviews can be stressful, time-consuming, and may discourage candidates from applying to certain companies.</li>
+<li>A study by Microsoft and North Carolina State University found that technical interviews are often structured poorly and can lead to poor candidate experiences.</li>
+<li>Carly suggests alternative interview methods such as take-home projects or pair programming exercises, which can help assess a candidate's skills more effectively and reduce the stress associated with traditional technical interviews.</li>
+<li>She also recommends allowing candidates to choose their preferred assessment method, so they can showcase their strengths better.</li>
+<li>Finally, she encourages companies to examine their current hiring processes and consider making changes that will make them more attractive to potential candidates.</li>
+</ul>
+<h2 id="nordicjs-2022-sara-vieira-from-blender-to-the-web-the-journey-of-a-3d-model">Nordic.js 2022 • Sara Vieira - From Blender to the Web - the Journey of a 3D Model</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ji6q_P-QY_E">https://www.youtube.com/watch?v=ji6q_P-QY_E</a></p>
+<ul>
+<li>Introduced himself and his background</li>
+<li>Discussed his experience with 3D modeling software Blender, highlighting its intimidating interface but its free and open-source nature.</li>
+<li>Demonstrated the basics of using Blender for 3D modeling, such as selecting objects and manipulating their properties.</li>
+<li>Explained the concept of a "blend file" and how it can be exported in various formats, including GLTF.</li>
+<li>Showcased how to use React and Reactive Fiber to integrate 3D models into web applications.</li>
+<li>Demonstrated how to animate 3D models using JavaScript and the Three.js library, as well as how to apply lighting effects and shadows.</li>
+<li>Discussed the differences between Eevee and Cycles rendering engines in Blender.</li>
+<li>Explained how to use the Frosting library to easily modify the appearance of a 3D model in real time.</li>
+<li>Showcased some advanced techniques for working with 3D models, such as applying contact shadows and using orbit controls.</li>
+<li>Concluded by discussing his personal journey learning 3D modeling and web development, and encouraged others to explore these fields as well.</li>
+</ul>
+<h2 id="nordicjs-2022-pierre-reimertz-what-the-web3-is-going-on">Nordic.js 2022 • Piérre Reimertz - What the web3 is going on?!</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8LdS8GNFu9E">https://www.youtube.com/watch?v=8LdS8GNFu9E</a></p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Pierre Ramez from HiFi Lab discusses web3, ethereum, and decentralized technology.</li>
+<li>He highlights the importance of open protocols, community-driven development, and read/write access in maintaining a decentralized ecosystem.</li>
+<li>He explains how gas is used as a form of payment for transactions on the blockchain, and how proof of stake can help reduce energy consumption.</li>
+<li>He demonstrates how to interact with ethereum wallets using tools like Rainbow Kit and Metamask, and how to create and deploy smart contracts using Solidity.</li>
+<li>He emphasizes the need for security measures when working with decentralized technology, and encourages users to stay informed about the latest developments in the field.</li>
+</ul>
+<h2 id="nordicjs-2022-ujjwal-sharma-multicore-javascript-past-present-and-future">Nordic.js 2022 • Ujjwal Sharma - Multicore JavaScript: Past, Present and Future</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pN1Ez6aDcSA">https://www.youtube.com/watch?v=pN1Ez6aDcSA</a></p>
+<ul>
+<li>Introduced himself and his work</li>
+<li>Talked about the purpose of JavaScript and its evolution over time</li>
+<li>Discussed the concept of concurrency and how it's important in modern computing</li>
+<li>Explained the difference between a web-like model and a thread-based model</li>
+<li>Mentioned that JavaScript has a variety of ways to handle asynchronous programming, including promises and async/await syntax</li>
+<li>Talked about the challenges of writing multithreaded code in JavaScript and how it's evolving with new proposals like vasm GC</li>
+<li>Discussed the importance of hardware utilization and how it affects JavaScript performance</li>
+<li>Explained that there are different ways to write concurrent code in JavaScript, such as using workers or sharing data between threads</li>
+<li>Talked about some of the challenges of writing multithreaded code in JavaScript, including synchronization issues and data races</li>
+<li>Mentioned that there are new proposals for improving JavaScript's support for concurrency, such as the thread-based model and the concurrent standard library</li>
+<li>Discussed how these new proposals could help developers write better multithreaded code in JavaScript</li>
+<li>Encouraged listeners to follow along with the progress of these proposals on GitHub</li>
+</ul>
+<h2 id="nordicjs-2022-debbie-obrien-testing-web-applications-with-playwright">Nordic.js 2022 • Debbie O'Brien - Testing Web Applications with Playwright</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Cjg545ew1q8">https://www.youtube.com/watch?v=Cjg545ew1q8</a></p>
+<ul>
+<li>Introduction of the speaker and his background.</li>
+<li>Explanation of Playwright, its features, and benefits.</li>
+<li>Demonstration of setting up and installing Playwright.</li>
+<li>Discussion on writing tests using Playwright and code generation.</li>
+<li>Testing across multiple domains, platforms, and devices.</li>
+<li>Visualization of test results using Trace Viewer.</li>
+<li>Component testing with Playwright.</li>
+<li>Importance of maintaining a healthy work-life balance and the role of Playwright in achieving it.</li>
+</ul>
+<h2 id="nordicjs-2022-emma-twersky-an-aria-of-aria">Nordic.js 2022 • Emma Twersky - An aria of ARIA</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=OMdpiiOP1HI">https://www.youtube.com/watch?v=OMdpiiOP1HI</a></p>
+<ul>
+<li>
+<p>Intro: The speaker starts by admitting they know little about music, but mentions their excitement for NordicJS and the fact that they work at Spotify. They share a fun fact about themselves being an avid listener of classical music on Spotify.</p>
+</li>
+<li>
+<p>Topic Introduction: The speaker introduces the topic of Aria in web development, specifically focusing on how to make websites more accessible using Aria attributes. They mention that they will be talking about both "Arya" and "Aria", despite them being different terms.</p>
+</li>
+<li>
+<p>Arya as a Web Pattern: The speaker discusses the concept of Arya as it relates to web development, describing it as a pattern used for making websites more accessible. They mention that they will be using a graph to illustrate how various attributes and roles fit together in an Arya-based system.</p>
+</li>
+<li>
+<p>Accessibility and Web Development: The speaker talks about the importance of accessibility in web development, highlighting how it can greatly impact user experience for people with disabilities. They mention that they will be discussing how to make websites more accessible using custom components and Aria attributes.</p>
+</li>
+<li>
+<p>Discussion on Aria Attributes: The speaker discusses the use of Aria attributes in web development, explaining how they can help improve accessibility by adding dynamic components behind the scenes. They also mention that these attributes can be added programmatically, which can make them more efficient to implement.</p>
+</li>
+<li>
+<p>The Importance of Testing and Linting: The speaker emphasizes the importance of testing and linting when working with Aria attributes, highlighting how they can help developers catch errors and ensure that their code is compliant with accessibility standards. They also mention that they will be discussing how to use Arya in conjunction with other tools and frameworks.</p>
+</li>
+<li>
+<p>The Use of Landmark Roles: The speaker discusses the concept of landmark roles in web development, explaining how they can help improve the overall structure and organization of a website. They mention that there are certain roles that should not be used, as they may conflict with other elements on the page.</p>
+</li>
+<li>
+<p>The Importance of Labeling: The speaker discusses the importance of labeling in web development, highlighting how it can help improve accessibility by providing clear and concise information about various elements on a website. They also mention that there are certain best practices that developers should follow when creating labels for their websites.</p>
+</li>
+<li>
+<p>The Use of Aria Labels: The speaker discusses the use of Aria labels in web development, explaining how they can help improve accessibility by providing additional information about various elements on a website. They also mention that there are certain best practices that developers should follow when creating Aria labels for their websites.</p>
+</li>
+<li>
+<p>The Importance of Capitalization: The speaker discusses the importance of capitalization in web development, highlighting how it can help improve accessibility by ensuring that labels and other elements are properly formatted. They also mention that there are certain best practices that developers should follow when creating capitalized labels for their websites.</p>
+</li>
+<li>
+<p>The Use of Aria Checked: The speaker discusses the use of Aria checked in web development, explaining how it can help improve accessibility by providing additional information about various elements on a website. They also mention that there are certain best practices that developers should follow when creating Aria checked attributes for their websites.</p>
+</li>
+<li>
+<p>The Importance of Alt Text: The speaker discusses the importance of alt text in web development, highlighting how it can help improve accessibility by providing additional information about various images on a website. They also mention that there are certain best practices that developers should follow when creating alt text for their websites.</p>
+</li>
+<li>
+<p>Conclusion and Recommendations: The speaker concludes their talk by discussing the importance of using Aria attributes correctly and efficiently in web development. They provide several recommendations for developers who want to improve accessibility on their websites, including testing their code thoroughly and following best practices when creating labels, alt text, and other elements.</p>
+</li>
+</ul>
+<h2 id="nordicjs-2022-liran-tal-let-me-show-you-how-react-applications-get-hacked-in-the-real-world">Nordic.js 2022 • Liran Tal - Let me show you how React applications get hacked in the real-world</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=xR9wjk0Fdb4">https://www.youtube.com/watch?v=xR9wjk0Fdb4</a></p>
+<ul>
+<li>Introduction to conference</li>
+<li>Presenter's background as a Developer Advocate</li>
+<li>Focus on security in React applications</li>
+<li>Demonstration of a CLI tool for handling Docker containers</li>
+<li>Discussion on npm package security and supply chain issues</li>
+<li>Presentation of an example application with security vulnerabilities</li>
+<li>Explanation of the importance of input validation, output encoding, and secure coding practices</li>
+<li>Live coding demonstrations to illustrate these concepts</li>
+<li>Brief discussion of the use of GitHub CoPilot for code assistance</li>
+<li>Demonstration of a tool for scanning npm packages for security vulnerabilities</li>
+<li>Conclusion and call to action for developers to stay vigilant about security in their projects</li>
+</ul>
+<h2 id="nordicjs-2022-christian-landgren-how-to-save-the-world-with-javascript">Nordic.js 2022 • Christian Landgren - How to save the world with JavaScript</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fmIFJxL8ub0">https://www.youtube.com/watch?v=fmIFJxL8ub0</a></p>
+<p><strong>Summary of Transcript (Markdown Style)</strong>
+- Importance of value and creating value in a changing world
+- Experimenting with different approaches to problem solving, including open source, virtual drones, and digital twins
+- The need for agile thinking and adaptability in the face of complex problems
+- Understanding the power dynamics between technology companies and society
+- Encouraging collaboration, communication, and learning from failure as key components of successful projects</p>
+<h2 id="nordicjs-2022-colin-ihrig-the-state-of-deno-2022">Nordic.js 2022 • Colin Ihrig - The State of Deno 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=iHjSJwDh8A4">https://www.youtube.com/watch?v=iHjSJwDh8A4</a></p>
+<ul>
+<li>Introduction to Deno<ul>
+<li>Deno is a JavaScript runtime built on Rust.</li>
+<li>It has a similar API and ecosystem to Node.js, but with performance improvements and modern features.</li>
+<li>Deno was introduced in 2018 by Colin Ehrig, an engineer at Node.js Foundation.</li>
+</ul>
+</li>
+<li>Growth of Deno<ul>
+<li>GitHub stars for Deno have been increasing since its introduction, catching up to Node.js in terms of popularity.</li>
+<li>The growth of Deno can be attributed to its similarity with Node.js and its focus on performance improvements.</li>
+</ul>
+</li>
+<li>Core Technologies behind Deno<ul>
+<li>Deno uses the V8 JavaScript engine for execution, which is also used by Node.js.</li>
+<li>It has a Rust-based runtime called "Deno core" that provides a minimalistic JavaScript runtime environment.</li>
+<li>The event loop and asynchronous I/O in Deno are similar to those in Node.js, but with some differences such as using the Tokyo library for TLS crypto instead of OpenSSL.</li>
+</ul>
+</li>
+<li>Architecture of Deno<ul>
+<li>Deno is built using a collection of Rust crates that provide various functionalities like networking, file system access, and cryptography.</li>
+<li>The Deno core crate provides the main runtime environment, while other crates like "Deno_ops" and "Deno_crypto" add additional functionality.</li>
+<li>Deno also has a CLI tool called "Deno-cli" that can be used to download and run Deno applications.</li>
+</ul>
+</li>
+<li>Dependency Management in Deno<ul>
+<li>Deno uses a package manager similar to npm, called "Denolian X".</li>
+<li>It supports import maps for loading dependencies and has a global cache system for storing compiled modules.</li>
+<li>Deno also provides a feature called "vendor production apps" which allows developers to pre-install their dependencies in the application package.</li>
+</ul>
+</li>
+<li>Standard Library in Deno<ul>
+<li>Deno has its own standard library that includes implementations of common JavaScript APIs like FS and HTTP.</li>
+<li>The standard library is maintained alongside the runtime and is updated with each new release.</li>
+</ul>
+</li>
+<li>Release Schedule of Deno<ul>
+<li>Deno follows a weekly patch release schedule for bug fixes, along with monthly minor releases for new features and improvements.</li>
+</ul>
+</li>
+<li>Features of Deno<ul>
+<li>Deno supports typescript out-of-the-box and has built-in tools like linters, formatters, and task runners.</li>
+<li>It also has a permission system that allows developers to control access to filesystem resources and network connections.</li>
+<li>Deno is compatible with many Node.js modules and provides support for testing and packaging applications.</li>
+</ul>
+</li>
+<li>Integrated Tool Chain in Deno<ul>
+<li>Deno comes with an integrated tool chain that includes tools like linters, formatters, bundlers, and test runners.</li>
+<li>It also has a built-in task runner called "Deno Task" which can be used to automate tasks like building and testing applications.</li>
+</ul>
+</li>
+<li>Permission System in Deno<ul>
+<li>Deno has a permission system that allows developers to control access to resources like filesystem, network, and subprocesses.</li>
+<li>This system provides granular control over resource access and helps prevent security vulnerabilities.</li>
+</ul>
+</li>
+<li>Nodejs Compatibility Layer in Deno<ul>
+<li>Deno provides a compatibility layer for running Node.js modules on its platform.</li>
+<li>This layer allows developers to use existing Node.js code without making any changes, but with some limitations due to differences between the two platforms.</li>
+</ul>
+</li>
+<li>Performance Improvements in Deno<ul>
+<li>Deno has made significant performance improvements over time, especially in areas like startup time and memory usage.</li>
+<li>It also provides a new HTTP server called "Flash" which offers better performance than previous servers like LLHTTP.</li>
+</ul>
+</li>
+<li>Deno Deploy<ul>
+<li>Deno Deploy is a service that allows developers to deploy their applications on a global network of edge servers.</li>
+<li>It currently supports 34 regions around the world and is growing continuously.</li>
+<li>Deno Deploy provides features like automatic deployment, real-time monitoring, and easy scaling for applications.</li>
+</ul>
+</li>
+</ul>
+<h2 id="nordicjs-2022-jessy-jordan-investing-in-open-source">Nordic.js 2022 • Jessy Jordan - Investing in Open-Source</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=J3miXGv4pPE">https://www.youtube.com/watch?v=J3miXGv4pPE</a></p>
+<ul>
+<li>Open Source Adoption: 95% of digital products use open source components.</li>
+<li>Benefits of Open Source: Shared development, reduced development time, and cost savings.</li>
+<li>Open Source Integration: Businesses adopt open source models to build applications faster and more efficiently.</li>
+<li>Investing in Open Source: Many investment opportunities exist within the open source space.</li>
+<li>Case Study: Maraxa, a software engineering company, uses open source tools for data engineering projects.</li>
+<li>The Importance of Contributing to Open Source: Passionate about open tech, the speaker has contributed to several open source communities and projects.</li>
+<li>The Evolution of Open Source: From Netscape's browser product to Mozilla Foundation, open source has grown significantly over time.</li>
+<li>Successful Business Models with Open Source: Companies like Red Hat, MongoDB, and Confluent have built successful businesses around open source products.</li>
+<li>Contributing to Home Source: The speaker shares their personal experience of contributing to the open source community and how it positively impacted their career.</li>
+<li>Benefits of Open Source for Individuals and Businesses: Learning opportunities, collaboration with smart people, and building a strong network within the industry.</li>
+</ul>
+<h2 id="nordicjs-2022-jenn-creighton-now-and-then-debugging-async-js">Nordic.js 2022 • Jenn Creighton - Now and .then: Debugging Async JS</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=KuD1SW-2lGA">https://www.youtube.com/watch?v=KuD1SW-2lGA</a></p>
+<ul>
+<li>Intro: Jen Craden talks about her love for meeting new people and how it helps with social anxiety.</li>
+<li>Talk focus: Debugging async JavaScript code, particularly the common pitfall of avoiding writing async code right from the start.</li>
+<li>Key points:<ul>
+<li>Importance of understanding asynchronous operations in JavaScript.</li>
+<li>Common mistakes made while debugging async code.</li>
+<li>Use of console logs and debuggers for debugging purposes.</li>
+<li>Understanding how promises work, especially in handling errors and rejections.</li>
+<li>The concept of async/await and its impact on error handling and readability.</li>
+<li>Tips for avoiding common mistakes while working with async code.</li>
+</ul>
+</li>
+<li>Summary: Jen Craden's talk focuses on the challenges of debugging asynchronous JavaScript code, highlighting common pitfalls and providing practical tips for improving one's understanding and debugging skills in this area.</li>
+</ul>
+<h2 id="nordicjs-2022-charlie-gerard-simple-jstures-can-go-a-long-way">Nordic.js 2022 • Charlie Gerard - Simple JStures can go a long way</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=67BsEXb7oBQ">https://www.youtube.com/watch?v=67BsEXb7oBQ</a></p>
+<ul>
+<li>
+<p>Introduction: The speaker introduces themselves as a Developer Advocate at Stripe. They talk about their work in creating educational resources, maintaining open-source sample code for integrating with Stripe's products, and conducting research on technological topics.</p>
+</li>
+<li>
+<p>Main Topic: The main topic of the talk is about using machine learning to create gesture recognition systems. The speaker explains how they have built a system that can detect different gestures using an Arduino board equipped with an accelerometer and gyroscope sensor. They also discuss how this system can be connected to a web application via Bluetooth, allowing for real-time prediction of gestures.</p>
+</li>
+<li>
+<p>Key Points:</p>
+</li>
+<li>The speaker emphasizes the importance of experimenting with different kinds of interaction and encourages developers to think beyond traditional input methods such as keyboards and mice.</li>
+<li>They explain how their gesture recognition system uses machine learning models trained on data collected from sensor readings. These models can be exported and imported between devices, making it easy to create custom gestures or train the system on new datasets.</li>
+<li>
+<p>The speaker demonstrates how their system can be integrated into web applications using JavaScript code that communicates with the Arduino board via Bluetooth. This allows for real-time prediction of gestures within the application.</p>
+</li>
+<li>
+<p>Demonstration: The speaker shows a live demo of their gesture recognition system in action, demonstrating how it can detect and classify different types of gestures such as waving and swiping. They also discuss some potential applications for this technology, such as creating fitness apps that track movement or building gesture-based payment systems.</p>
+</li>
+<li>
+<p>Conclusion: The speaker concludes their talk by expressing their enthusiasm for exploring new ways to interact with technology using machine learning and encouraging developers to think creatively about how they can apply these techniques in their own projects. They also mention some related technologies and projects that they have been working on, such as a Chrome extension that triggers IoT devices based on user gestures.</p>
+</li>
+</ul>
+<h2 id="nordicjs-2022-matthias-le-brun-leveraging-algebraic-data-types-to-make-your-ui-rock-solid">Nordic.js 2022 • Matthias Le Brun - Leveraging (algebraic data) types to make your UI rock solid</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4co_az7ipMA">https://www.youtube.com/watch?v=4co_az7ipMA</a></p>
+<h2 id="summary_1">Summary</h2>
+<ul>
+<li>Introduction to Algebraic Data Types (ADTs) and their practical applications in app development.</li>
+<li>Explanation of how ADTs help manage complex states in applications, particularly when dealing with asynchronous data.</li>
+<li>Discussion on the importance of good documentation and clear communication in using ADTs effectively.</li>
+<li>Mention of a specific open-source library called "ReasonML" that provides a JavaScript syntax for working with typescript and algebraic data types.</li>
+<li>Emphasis on the need to simplify complex concepts and tools when teaching others how to use them, especially in the context of app development.</li>
+</ul>
+<h2 id="nordicjs-2022-tadeu-zagallo-javascript-vms-101">Nordic.js 2022 • Tadeu Zagallo - JavaScript VMs 101</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RRcsiuL3H6Q">https://www.youtube.com/watch?v=RRcsiuL3H6Q</a></p>
+<ul>
+<li>
+<p>Introduction</p>
+<ul>
+<li>Speaker's background and passion for programming languages and virtual machines.</li>
+</ul>
+</li>
+<li>
+<p>History of JavaScript VMs (VMS)</p>
+<ul>
+<li>Brief history of JavaScript engines from KJS to modern V8, Chrome, and Firefox.</li>
+<li>Discussion on the competition between different browsers and their respective performance improvements in JavaScript execution.</li>
+</ul>
+</li>
+<li>
+<p>Components of a Modern VMS</p>
+<ul>
+<li>Overview of the four main tiers in a modern JavaScript VM: The Interpreter, Baseline compiler, DFG (Data Flow Graph) optimizing compiler, and FTL (Fastest Time to Long-term) high-performance compiler.</li>
+</ul>
+</li>
+<li>
+<p>How JavaScript Code Runs Faster</p>
+<ul>
+<li>Explanation of the different steps involved in executing a simple JavaScript function, including parsing, lexical analysis, syntactic analysis, and runtime execution.</li>
+<li>Discussion on how modern VMS use adaptive optimization techniques like inline caching, speculation, and adaptive recompilation to optimize code performance.</li>
+</ul>
+</li>
+<li>
+<p>Structure of Objects in JavaScript</p>
+<ul>
+<li>Explanation of the structure used by JavaScript engines to store object properties, including the use of hidden classes or "structures".</li>
+<li>Discussion on how these structures help improve performance by reducing expensive lookups and enabling fast property access.</li>
+</ul>
+</li>
+<li>
+<p>The Role of Compilers in VMS</p>
+<ul>
+<li>Overview of how compilers work within a modern JavaScript VM to transform source code into optimized machine code for faster execution.</li>
+</ul>
+</li>
+<li>
+<p>Future Directions in VMS Development</p>
+<ul>
+<li>Discussion on the ongoing competition between different browsers and their respective performance improvements, including benchmarking results and the impact of new compiler technologies like DFG and FTL.</li>
+</ul>
+</li>
+</ul>
+<h2 id="nordicjs-2022-emma-bostian-building-high-performing-cross-cultural-teams">Nordic.js 2022 • Emma Bostian - Building High-Performing Cross-Cultural Teams</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=KUuuI1PtpTw">https://www.youtube.com/watch?v=KUuuI1PtpTw</a></p>
+<ul>
+<li>Culture map: a tool to decode different cultures and facilitate cross-cultural communication.</li>
+<li>Communication Styles: High context (Asian countries) vs Low context (US, UK).</li>
+<li>Evaluating Performance: constructive criticism varies by culture.</li>
+<li>Decision Making Process: consensual vs top-down.</li>
+<li>Trust: task-based vs relationship-based.</li>
+<li>Time Perception: monochronic (linear time) vs polychronic (flexible time).</li>
+<li>Scheduling: linear scheduling vs fluid scheduling.</li>
+<li>Understanding culture is key to managing multicultural teams effectively and improving cross-cultural collaboration.</li>
+</ul>
+<h2 id="nordicjs-2022-feross-aboukhadijeh-whats-really-going-on-inside-your-node_modules-folder">Nordic.js 2022 • Feross Aboukhadijeh - What's Really Going on Inside Your Node_Modules Folder</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rEojm0UJyj8">https://www.youtube.com/watch?v=rEojm0UJyj8</a></p>
+<ul>
+<li>Open Source Modules and Supply Chain Attacks<ul>
+<li>Discussed the rise of supply chain attacks, particularly those targeting open source modules</li>
+<li>Mentioned that many organizations are now using over 100 packages in their applications</li>
+<li>Highlighted that dependency management has become a critical issue due to the growing number of third-party dependencies and the potential for malicious code to be introduced through these dependencies</li>
+<li>Discussed how the rise of cloud services, APIs, and open source software has changed the way developers write software, leading to an increase in the use of third-party dependencies</li>
+</ul>
+</li>
+<li>The Rise of Supply Chain Attacks<ul>
+<li>Defined supply chain attacks as cyber threats where attackers infiltrate a software vendor's network and introduce malicious code into their products or services</li>
+<li>Mentioned that this type of attack can compromise the software vendor's reputation and lead to legal liabilities for the organization</li>
+</ul>
+</li>
+<li>The Impact of Supply Chain Attacks on Open Source Modules<ul>
+<li>Discussed how the use of open source modules has changed over time, with developers now relying heavily on these modules to build their applications quickly and efficiently</li>
+<li>Highlighted that there is a significant amount of trust placed in the maintainers of open source modules, as they are responsible for ensuring that the code is secure and free from vulnerabilities</li>
+</ul>
+</li>
+<li>The Challenges of Securing Open Source Modules<ul>
+<li>Discussed how the rapid pace of software development can make it difficult to thoroughly review and audit open source modules before they are used in an application</li>
+<li>Mentioned that many organizations struggle with quickly updating dependencies when new vulnerabilities are discovered, as this can introduce additional risks into their applications</li>
+</ul>
+</li>
+<li>The Importance of Proactive Security Measures<ul>
+<li>Emphasized the importance of proactively monitoring and analyzing open source modules to identify potential security risks before they become a problem</li>
+<li>Discussed how tools like Socket can help developers and security teams work together to identify and address security issues in their applications</li>
+</ul>
+</li>
+<li>The Role of Developers in Securing Open Source Modules<ul>
+<li>Highlighted the importance of empowering developers to take an active role in securing their applications by providing them with the tools and resources they need to identify and address potential security risks</li>
+<li>Discussed how modern development practices, such as DevOps and Cloud services, can help developers work more efficiently and securely when building their applications</li>
+</ul>
+</li>
+</ul>
+<h2 id="nordicjs-2022-tobias-ahlin-an-animated-journey-through-the-new-page-transition-api">Nordic.js 2022 • Tobias Ahlin - An Animated Journey through the new Page Transition API</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=608RhJEKYsY">https://www.youtube.com/watch?v=608RhJEKYsY</a></p>
+<ul>
+<li>New Page Transition API: A draft CSS module that aims to make page transitions feel more intuitive and native.</li>
+<li>Drafted by a Design Engineer working on GitHub Rail App.</li>
+<li>The goal of the new Page Transition API is to work with both Single Page Applications (SPAs) and Multi-Page Applications (MPAs).</li>
+<li>It allows for smooth DOM changes and state animations in web applications.</li>
+<li>The API uses pseudoelements to capture before and after states, which are then animated using CSS.</li>
+<li>The speaker demonstrates a live demo of the new Page Transition API in action.</li>
+<li>The API is still in draft stage and the speaker encourages feedback and contributions via GitHub repositories.</li>
+<li>Future plans for the API include support for cross-origin quoting, which would allow for dynamic DOM changes across different websites.</li>
+</ul>
+<h2 id="nordicjs-2022-vitaly-friedman-boosting-web-performance-in-2022">Nordic.js 2022 • Vitaly Friedman - Boosting Web Performance in 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uqLl-Yew2o8">https://www.youtube.com/watch?v=uqLl-Yew2o8</a></p>
+<ul>
+<li>Introduction to the talk and speaker's background</li>
+<li>Speaker has been working in web performance for a long time</li>
+<li>
+<p>Talk is about recent developments and best practices in web performance optimization</p>
+</li>
+<li>
+<p>Importance of web performance optimization</p>
+</li>
+<li>Users expect fast websites, and slow websites can lead to lost business</li>
+<li>
+<p>Optimized websites have better search engine rankings and better user engagement</p>
+</li>
+<li>
+<p>Overview of the main points covered in the talk</p>
+</li>
+<li>Discussion of various tools and techniques for optimizing web performance</li>
+<li>
+<p>Examples of real-world projects and case studies</p>
+</li>
+<li>
+<p>Key takeaways from the talk</p>
+</li>
+<li>Use modern frameworks that are optimized for performance, like React and Vue.js</li>
+<li>Optimize images by using formats like Avif and WebP, and use responsive images to reduce file size</li>
+<li>Use lazy loading and preloading techniques to improve page load times</li>
+<li>Prioritize critical CSS and JavaScript to ensure they are loaded first</li>
+<li>Use service workers and caching strategies to improve offline performance and reduce network latency</li>
+<li>
+<p>Monitor web vitals using tools like Lighthouse and Chrome DevTools</p>
+</li>
+<li>
+<p>Discussion of specific techniques and tools</p>
+</li>
+<li>Use of the SSR vs CSR debate, and when to use each approach</li>
+<li>
+<p>Overview of the main points covered in the talk</p>
+<ul>
+<li>Discussion of various tools and techniques for optimizing web performance</li>
+<li>Examples of real-world projects and case studies</li>
+</ul>
+</li>
+<li>
+<p>Conclusion and final thoughts</p>
+</li>
+<li>Web performance optimization is an ongoing process, and it's important to stay up-to-date with new technologies and best practices</li>
+<li>Optimizing your website can lead to better user engagement and improved search engine rankings</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-peter-lundberg-stop-wasting-time-waiting-on-build-tools">Nordic.js 2022 • Lightning talk: Peter Lundberg - Stop Wasting Time (waiting on build tools)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Fl0yI6PEKoQ">https://www.youtube.com/watch?v=Fl0yI6PEKoQ</a></p>
+<ul>
+<li>Peter from Funnel IO introduces himself and talks about the importance of quick feedback loops, continuous improvement, and high performing teams.</li>
+<li>He highlights that response time to a user should ideally be less than 10 seconds.</li>
+<li>He emphasizes the importance of maintaining flow while working and how delays in development can lead to loss of attention and productivity.</li>
+<li>He talks about the challenges with large applications and long development cycles, and introduces eBuild as a solution that can significantly speed up the process.</li>
+<li>He mentions that using modern build tools like ES Build or SWC can help developers work faster and more efficiently.</li>
+<li>He shares an example of moving from Webpack to EBuild in a Node.js service, which resulted in significant improvements in performance and development speed.</li>
+<li>He also talks about the importance of hot module reloading and how it can make a huge difference in the development process by providing instant feedback on changes made.</li>
+<li>He encourages developers to continuously improve their workflows and tools, and suggests that modern build tool paradigms could be a valuable area for exploration.</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-benny-carlsson-getting-800-people-to-make-a-website">Nordic.js 2022 • Lightning talk: Benny Carlsson - Getting 800 people to make a website</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=tWmvk_Dx95Q">https://www.youtube.com/watch?v=tWmvk_Dx95Q</a></p>
+<ul>
+<li>Penny is a software developer from Gothenburg who started an open source website called "Oktoberfest" in 2018.</li>
+<li>The project aimed to be simple, without installation or complicated steps, and encouraged contributions from anyone.</li>
+<li>Contributors added various features like a countdown timer and even a snake game.</li>
+<li>Penny managed the repository, dealing with merge conflicts and closing issues.</li>
+<li>The website has received 397 stars on GitHub and has had 171 issues closed.</li>
+<li>It has over 800 contributors and has been fun to work on for Penny.</li>
+<li>The project also helped her grow professionally and personally, as well as fostering a sense of community.</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-eric-selin-cache-all-the-things-for-fast-and-simple-backends">Nordic.js 2022 • Lightning talk: Eric Selin - Cache all the things for fast and simple backends</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VLAuJO9ivOk">https://www.youtube.com/watch?v=VLAuJO9ivOk</a></p>
+<ul>
+<li>Eric talks about the challenges of caching dynamic content in HTTP requests.</li>
+<li>Two main problems are: </li>
+<li>Cache invalidation - based on time or maximum age, it can lead to unnecessary cache invalidations.</li>
+<li>First request after cache invalidation always creates a round trip to the server, making it slow.</li>
+<li>He's currently working on an order management system with a simple server for data read/write.</li>
+<li>The problem is that he cannot use HTTP caching due to API rate limits and network latency issues.</li>
+<li>His solution is to write a new reverse proxy that solves both problems:</li>
+<li>Cache invalidation - using the purge function of a favorite reverse proxy (not specified).</li>
+<li>Warm cache - writing a new reverse proxy to handle this.</li>
+<li>The idea is to mirror the system and resolve conflicts in a complex way, but it's still a simple system at its core.</li>
+<li>The benefits are:</li>
+<li>Regular HTTP headers can be used for updates.</li>
+<li>Content is always fresh without invalidating everything.</li>
+<li>Eric suggests using platforms that offer the best for HTTP parts and encourages web developers to do so. He also emphasizes open-sourcing ideas and efforts.</li>
+</ul>
+<h2 id="nordicjs-2022-britta-evans-how-to-use-the-screen-reader-you-already-have-in-your-pocket">Nordic.js 2022 • Britta Evans - How to use the Screen Reader you already have in your pocket</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Ggx-qYxD5dI">https://www.youtube.com/watch?v=Ggx-qYxD5dI</a></p>
+<ul>
+<li>Britta is a mobile developer, currently working on React Native.</li>
+<li>She emphasizes the importance of accessibility in app development beyond legal and ethical aspects.</li>
+<li>The primary focus of her talk is on screen reader accessibility.</li>
+<li>TalkBack is an Android built-in screen reader, and VoiceOver is for iOS.</li>
+<li>Navigation using a screen reader involves swiping left or right, double tapping the screen, and scrolling.</li>
+<li>In Android, three-finger gestures are used to switch apps, while in iOS, it's done with two rising tone sounds.</li>
+<li>Accessible elements are announced by their roles (button, header, etc.) and states (checked, unchecked, disabled).</li>
+<li>React Native has an accessible prop that can be used to group elements together.</li>
+<li>To enable screen readers on Android devices, go to the TalkBack settings; for iOS, go to Accessibility &gt; VoiceOver.</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-pierre-petersson-one-api-that-rules-them-all">Nordic.js 2022 • Lightning talk: Pierre Petersson - One API that rules them all</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=xEiqxTUVchk">https://www.youtube.com/watch?v=xEiqxTUVchk</a></p>
+<ul>
+<li>Introductory remarks about the evolution of technology and data</li>
+<li>Discussion on the challenges of working with relational databases in today's world</li>
+<li>Highlighting the need for flexibility, agility, and speed in implementing requirements</li>
+<li>Introduction to MongoDB as a solution for working with modern, multistructured data</li>
+<li>Explanation of the Document Model in MongoDB and its benefits</li>
+<li>Comparison between object programming languages and relational databases</li>
+<li>Conclusion: The promise of a unified API in MongoDB for handling different use cases</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-anton-gunnarsson-css-is-awesome">Nordic.js 2022 • Lightning talk: Anton Gunnarsson - CSS <em>is</em> awesome</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uo3px1L3H70">https://www.youtube.com/watch?v=uo3px1L3H70</a></p>
+<ul>
+<li>Anthony from Empire Digital presents a lightning talk on CSS.</li>
+<li>Demonstrates how to use the HSL color function in CSS and apply it to form validation.</li>
+<li>Explains the concept of container queries, which allow styles to be applied based on the size of a parent element's content box.</li>
+<li>Shares an example of using a hash selector in CSS to interactively change the scale and opacity of a grid item.</li>
+<li>Discusses how to build a tab component entirely with CSS.</li>
+<li>Explains that counting child elements can be useful for certain styles, like dark mode toggles.</li>
+<li>Talks about container queries and their ability to style components based on the size of their parent's content box rather than the entire viewport.</li>
+<li>Shares an example of using a container query to apply a background color when the width of a container reaches a specific character count.</li>
+<li>Mentions that there are many creative uses for CSS, including building card components and other interactive elements.</li>
+<li>Encourages attendees to find resources like CodePen and GitHub to learn more about advanced CSS techniques.</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-ruy-adorno-advancing-the-nodejs-runtime-via-working-groups">Nordic.js 2022 • Lightning talk: Ruy Adorno - Advancing the Node.js runtime via Working Groups</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=csE5rFWj6IM">https://www.youtube.com/watch?v=csE5rFWj6IM</a></p>
+<ul>
+<li>Introduce Rio Dornu, Brazilian Canadian Node.js collaborator and releaser</li>
+<li>Autonomous groups in Node.js called 'working groups' need at least 3 people to start</li>
+<li>Core working group is the hardest part with a steep learning curve</li>
+<li>Working groups can be project-based (like building a system) or strategic (planning for the future of Node.js)</li>
+<li>Release working group is responsible for deciding release schedules and handling CI failures</li>
+<li>Package maintenance working group helps maintain important packages in the ecosystem</li>
+<li>Tooling group focuses on improving developer support and runtime tools</li>
+<li>Argument parser, a recent big win from this group</li>
+<li>Participation encouraged through recurring meetings and joining the Node.js slack channel</li>
+</ul>
+<h2 id="nordicjs-2022-lightning-talk-abdul-ajetunmobi-js-rules-everything-around-me">Nordic.js 2022 • Lightning talk: Abdul Ajetunmobi - JS Rules Everything Around me</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=LWXRGuWodHc">https://www.youtube.com/watch?v=LWXRGuWodHc</a></p>
+<ul>
+<li>Speaker's name: Abdul</li>
+<li>Occupation: Team bondage tooling and focus mainly on building tooling to make people use platform easier.</li>
+<li>Language preference: Swift, but also enjoys JavaScript</li>
+<li>Recent project example: Volume CLI typescript iOS push notification uploader (mostly JavaScript)</li>
+<li>Secret project: Can't disclose</li>
+<li>Familiar with Swift compiler and its nuances</li>
+<li>Feels freeing working with JavaScript compared to other languages</li>
+<li>Experience with yearly release cycles</li>
+<li>Disagrees with certain language points, but doesn't elaborate on what they are</li>
+<li>Closing statement: Focuses on making people's lives easier through technology, rather than being tied to a specific programming language.</li>
+</ul>
+<p>Summary: Abdul is a tooling developer who enjoys working with both Swift and JavaScript. He recently worked on a project involving volume CLI typescript iOS push notification uploader (mostly JavaScript). He has experience with the nuances of the Swift compiler and feels more freedom when working with JavaScript. He also has experience with yearly release cycles and disagrees with certain language points, but doesn't elaborate further. His closing statement emphasizes his focus on making people's lives easier through technology rather than being tied to a specific programming language.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

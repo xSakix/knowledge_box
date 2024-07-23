@@ -1,0 +1,4669 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_FE_v4.html">
+      
+      
+        <link rel="prev" href="goto_eda_2023.html">
+      
+      
+        <link rel="next" href="goto_programming_lang.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>frontend - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#turbopack-dx-matters-tobias-koppers-goto-2023" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              frontend
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="goto_FE_v4.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#turbopack-dx-matters-tobias-koppers-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turbopack: DX Matters • Tobias Koppers • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-of-storybook-7-gert-hengeveld-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      State of Storybook 7 • Gert Hengeveld • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-the-web-with-hyperlang-hypercli-mike-amundsen-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming the Web with HyperLANG &amp; HyperCLI • Mike Amundsen • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-developers-stephanie-stimac-sophie-freiermuth-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for Developers • Stephanie Stimac &amp; Sophie Freiermuth • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifying-dev-environments-with-the-right-tools-christian-heilmann-julian-wood-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplifying Dev Environments with the Right Tools • Christian Heilmann &amp; Julian Wood • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-tools-that-shouldnt-be-secrets-christian-heilmann-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Tools That Shouldn't Be Secrets • Christian Heilmann • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deno-the-javascript-runtime-for-the-serverless-era-ryan-dahl-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deno: The JavaScript Runtime for the Serverless Era • Ryan Dahl • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-psychology-of-ux-fabio-pereira-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Psychology of UX • Fabio Pereira • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-the-utopia-you-want-not-the-dystopia-youre-in-chris-atherton-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for the Utopia You Want, Not the Dystopia You're In • Chris Atherton • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#white-hat-attention-jacking-for-accessibility-fun-profit-chris-atherton-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      White-Hat Attention Jacking for Accessibility, Fun &amp; Profit • Chris Atherton • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-sjgar-stack-accelerated-our-digital-transformation-erik-ammerlaan-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the SJGAR Stack Accelerated Our Digital Transformation • Erik Ammerlaan • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-web-development-lose-the-right-direction-stefan-judis-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-micro-frontends-how-to-use-them-luca-mezzalira-lucas-dohmen-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Micro-Frontends &amp; How to Use Them • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-micro-frontends-luca-mezzalira-lucas-dohmen-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Micro-Frontends • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expert-talk-web-development-its-failures-kevlin-henney-stefan-judis-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expert Talk: Web Development &amp; Its Failures • Kevlin Henney &amp; Stefan Judis • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ideal-programming-language-richard-feldman-erik-doernenburg-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ideal Programming Language • Richard Feldman &amp; Erik Doernenburg • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-programming-for-pragmatists-richard-feldman-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Programming for Pragmatists • Richard Feldman • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessiblejs-jemima-abu-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      AccessibleJS • Jemima Abu • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explosive-velocity-with-a-modern-stack-tejas-kumar-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explosive Velocity with a Modern Stack • Tejas Kumar • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-performance-of-phoenix-liveview-geoffrey-lessel-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power &amp; Performance of Phoenix LiveView • Geoffrey Lessel • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svelte-web-app-development-reimagined-mark-volkmann-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Svelte - Web App Development Reimagined • Mark Volkmann • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-jamstack-book-brian-rinaldi-raymond-camden-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Jamstack Book • Brian Rinaldi &amp; Raymond Camden • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-web-development-lose-the-right-direction-stefan-judis-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP/3 Is Next Generation HTTP. Is It QUIC Enough? • Daniel Stenberg • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#going-static-in-a-dynamic-world-with-hasura-and-nuxtjs-debbie-obrien-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Going Static in a Dynamic World with Hasura and Nuxt.js • Debbie O'Brien • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-how-to-make-loveliness-bruce-lawson-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML: How to Make Loveliness • Bruce Lawson • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-graphql-without-writing-any-backend-code-uri-goldshtein-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adopt GraphQL without Writing any Backend Code • Uri Goldshtein • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature-flagging-its-all-about-the-data-dave-karow-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Feature Flagging: It's All About The Data • Dave Karow • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-architecture-with-aspnet-core-30-jason-taylor-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Architecture with ASP.NET Core 3.0 • Jason Taylor • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP/3 is next Generation HTTP. Is it QUIC enough? • Daniel Stenberg • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-really-dont-need-all-that-javascript-i-promise-stuart-langridge-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Really Don't Need All that JavaScript, I Promise • Stuart Langridge • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ux-tips-to-avoid-losing-users-attention-chris-atherton-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      UX Tips to Avoid Losing Users' Attention • Chris Atherton • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-apis-for-150-million-orders-michele-angioni-matt-fewer-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designing APIs for 150 Million Orders • Michele Angioni &amp; Matt Fewer • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devux-improving-developer-designer-collaboration-yu-ling-cheng-france-wang-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevUX: Improving Developer-Designer Collaboration • Yu Ling Cheng &amp; France Wang • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-future-of-machine-learning-javascript-asim-hussain-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Future of Machine Learning &amp; JavaScript • Asim Hussain • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#turbopack-dx-matters-tobias-koppers-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turbopack: DX Matters • Tobias Koppers • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-of-storybook-7-gert-hengeveld-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      State of Storybook 7 • Gert Hengeveld • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-the-web-with-hyperlang-hypercli-mike-amundsen-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming the Web with HyperLANG &amp; HyperCLI • Mike Amundsen • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-developers-stephanie-stimac-sophie-freiermuth-goto-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for Developers • Stephanie Stimac &amp; Sophie Freiermuth • GOTO 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplifying-dev-environments-with-the-right-tools-christian-heilmann-julian-wood-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplifying Dev Environments with the Right Tools • Christian Heilmann &amp; Julian Wood • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-tools-that-shouldnt-be-secrets-christian-heilmann-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Tools That Shouldn't Be Secrets • Christian Heilmann • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deno-the-javascript-runtime-for-the-serverless-era-ryan-dahl-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deno: The JavaScript Runtime for the Serverless Era • Ryan Dahl • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-psychology-of-ux-fabio-pereira-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Psychology of UX • Fabio Pereira • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-the-utopia-you-want-not-the-dystopia-youre-in-chris-atherton-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for the Utopia You Want, Not the Dystopia You're In • Chris Atherton • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#white-hat-attention-jacking-for-accessibility-fun-profit-chris-atherton-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      White-Hat Attention Jacking for Accessibility, Fun &amp; Profit • Chris Atherton • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-sjgar-stack-accelerated-our-digital-transformation-erik-ammerlaan-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the SJGAR Stack Accelerated Our Digital Transformation • Erik Ammerlaan • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-web-development-lose-the-right-direction-stefan-judis-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-micro-frontends-how-to-use-them-luca-mezzalira-lucas-dohmen-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Micro-Frontends &amp; How to Use Them • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-micro-frontends-luca-mezzalira-lucas-dohmen-goto-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Micro-Frontends • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expert-talk-web-development-its-failures-kevlin-henney-stefan-judis-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expert Talk: Web Development &amp; Its Failures • Kevlin Henney &amp; Stefan Judis • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ideal-programming-language-richard-feldman-erik-doernenburg-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ideal Programming Language • Richard Feldman &amp; Erik Doernenburg • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-programming-for-pragmatists-richard-feldman-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Programming for Pragmatists • Richard Feldman • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessiblejs-jemima-abu-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      AccessibleJS • Jemima Abu • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explosive-velocity-with-a-modern-stack-tejas-kumar-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explosive Velocity with a Modern Stack • Tejas Kumar • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-performance-of-phoenix-liveview-geoffrey-lessel-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power &amp; Performance of Phoenix LiveView • Geoffrey Lessel • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svelte-web-app-development-reimagined-mark-volkmann-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Svelte - Web App Development Reimagined • Mark Volkmann • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-jamstack-book-brian-rinaldi-raymond-camden-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Jamstack Book • Brian Rinaldi &amp; Raymond Camden • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#did-web-development-lose-the-right-direction-stefan-judis-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP/3 Is Next Generation HTTP. Is It QUIC Enough? • Daniel Stenberg • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#going-static-in-a-dynamic-world-with-hasura-and-nuxtjs-debbie-obrien-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Going Static in a Dynamic World with Hasura and Nuxt.js • Debbie O'Brien • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-how-to-make-loveliness-bruce-lawson-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML: How to Make Loveliness • Bruce Lawson • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adopt-graphql-without-writing-any-backend-code-uri-goldshtein-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adopt GraphQL without Writing any Backend Code • Uri Goldshtein • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-feature-flagging-its-all-about-the-data-dave-karow-goto-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Feature Flagging: It's All About The Data • Dave Karow • GOTO 2020
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-architecture-with-aspnet-core-30-jason-taylor-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean Architecture with ASP.NET Core 3.0 • Jason Taylor • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP/3 is next Generation HTTP. Is it QUIC enough? • Daniel Stenberg • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-really-dont-need-all-that-javascript-i-promise-stuart-langridge-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Really Don't Need All that JavaScript, I Promise • Stuart Langridge • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ux-tips-to-avoid-losing-users-attention-chris-atherton-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      UX Tips to Avoid Losing Users' Attention • Chris Atherton • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-apis-for-150-million-orders-michele-angioni-matt-fewer-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designing APIs for 150 Million Orders • Michele Angioni &amp; Matt Fewer • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devux-improving-developer-designer-collaboration-yu-ling-cheng-france-wang-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevUX: Improving Developer-Designer Collaboration • Yu Ling Cheng &amp; France Wang • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-future-of-machine-learning-javascript-asim-hussain-goto-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Future of Machine Learning &amp; JavaScript • Asim Hussain • GOTO 2019
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>frontend</h1>
+
+<h2 id="turbopack-dx-matters-tobias-koppers-goto-2023">Turbopack: DX Matters • Tobias Koppers • GOTO 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5wPCObSNY5Q">https://www.youtube.com/watch?v=5wPCObSNY5Q</a></p>
+<ol>
+<li>Vercel's Next.js aims to improve web application development, focusing on performance and developer experience.</li>
+<li>The team is working on optimizing the wepack compiler for better performance, especially in smaller and mid-range applications.</li>
+<li>To solve the problem of different environments (client-side and server-side code), a new tool called Turbo Pack will be developed to handle code for both environments.</li>
+<li>The challenge of configuring Next.js is being addressed by developing a more intuitive and user-friendly configuration system.</li>
+<li>A new architecture called "Turbo Engine" is being built, which uses incremental computation and graph building techniques to improve performance and build times.</li>
+<li>Turbo Engine will also support lazy loading and caching, allowing developers to optimize their applications based on usage patterns.</li>
+<li>The team is working on improving the developer experience by making the toolchain more efficient and easier to use.</li>
+<li>A new plugin system is being developed for Next.js, allowing developers to create custom plugins and extend the functionality of the framework.</li>
+<li>The team is also exploring ways to make Next.js more flexible and adaptable to different use cases and environments.</li>
+<li>Turbo Engine will incorporate a tracing and benchmarking infrastructure, providing developers with insights into their application's performance and behavior.</li>
+</ol>
+<h2 id="state-of-storybook-7-gert-hengeveld-goto-2023">State of Storybook 7 • Gert Hengeveld • GOTO 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=j6i0_CjhXxs">https://www.youtube.com/watch?v=j6i0_CjhXxs</a></p>
+<ol>
+<li>Keld Helmer-Petersen, a Staff Software Engineer at Chromatic (Storybook's company), presented his talk on improving UI development using Storybook workflow.</li>
+<li>He emphasized that Storybook is an industry standard for frontend development and that it helps with development, testing, documentation, and maintaining the UI.</li>
+<li>Keld shared some challenges in UI development, such as complex UIs, interconnected behavior, and data flow throughout apps.</li>
+<li>He explained how Storybook isolates components and allows developers to work on specific parts of the UI without affecting other components or the entire app.</li>
+<li>He demonstrated how Storybook helps with component organization by using a catalog of variants for each component.</li>
+<li>Keld highlighted that Storybook is used in various industries, including gaming (e.g., Age of Empires inside Storybook).</li>
+<li>He discussed recent updates to Storybook 7.0 and 7.1, which include significant workflow improvements and bug fixes.</li>
+<li>He showed how the Storybook framework can be customized using different styling options and viewpoints.</li>
+<li>Keld explained that Storybook can be used for testing and debugging components by simulating user behavior and running tests on individual components.</li>
+<li>He demonstrated how to use interaction testing in Storybook, which allows developers to test the functionality of a component when interacting with it.</li>
+<li>He discussed the use of the "play" function in Storybook, which helps run tests and interact with components during development.</li>
+<li>Keld mentioned that there is an integration between Storybook and CI tools like GitHub Actions, CircleCI, and Jenkins.</li>
+<li>He talked about the importance of documenting components using MDX format, which allows developers to mix Markdown text with rendered component code.</li>
+<li>He also discussed the use of Figma Integrations in Storybook, which helps designers see real-time live implementations of their designs within the Storybook interface.</li>
+<li>Finally, he touched upon the growing ecosystem around Storybook and how it has become a standard tool for frontend development teams.</li>
+</ol>
+<h2 id="programming-the-web-with-hyperlang-hypercli-mike-amundsen-goto-2023">Programming the Web with HyperLANG &amp; HyperCLI • Mike Amundsen • GOTO 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=vcjOzcxIBdY">https://www.youtube.com/watch?v=vcjOzcxIBdY</a></p>
+<ol>
+<li>Presentation about creating a tool called Hyper CLI using Python for web development tasks.</li>
+<li>Demonstration of using HTTP requests to interact with websites and APIs, focusing on RESTful services.</li>
+<li>Discussion of the benefits of using HTTP as an interface language due to its widespread adoption and flexibility.</li>
+<li>Introduction to the concept of a "service stack" for managing session data and interactions between different services.</li>
+<li>Brief mention of the history of programming languages, including COBOL, FORTRAN, C, Java, and C++.</li>
+<li>Introducing the concept of a DSL (Domain Specific Language) called Hyper Lang, designed to simplify web development tasks using HTTP requests.</li>
+<li>Demonstration of how to use Hyper Lang to interact with websites and APIs, including creating, updating, and deleting records in databases.</li>
+<li>Discussion of the challenges and opportunities presented by working with multiple services and APIs, including authentication, data manipulation, and error handling.</li>
+<li>Introduction to the concept of a "plugin" for extending Hyper Lang's functionality, using examples from OAuth 2.0 and custom math functions.</li>
+<li>Brief discussion of the future direction of Hyper CLI, including plans to improve its modularity, scalability, and documentation.</li>
+</ol>
+<h2 id="design-for-developers-stephanie-stimac-sophie-freiermuth-goto-2023">Design for Developers • Stephanie Stimac &amp; Sophie Freiermuth • GOTO 2023</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=6bDqpshjSpI">https://www.youtube.com/watch?v=6bDqpshjSpI</a></p>
+<ol>
+<li>Stephanie Stimac's new book, "Design Developers," aims to bridge the gap between design and development skills.</li>
+<li>The book covers design fundamentals, UX basics, user research, and visual design principles.</li>
+<li>Designers should learn basic coding and developers should understand design concepts to work effectively together.</li>
+<li>A well-rounded skill set is valuable in fast-paced startups and large companies alike.</li>
+<li>Stephanie emphasizes the importance of color theory, accessibility, and user testing in her book.</li>
+<li>The book provides a practical approach to designing websites and applications by applying design principles and techniques.</li>
+<li>Designers and developers should work together early in the product development process to create better products and avoid misunderstandings.</li>
+<li>Stephanie's career journey includes working as a designer, developer advocate, and product manager at Microsoft.</li>
+<li>The book "Design Developers" helps designers and developers understand each other's roles and collaborate more effectively.</li>
+</ol>
+<h2 id="simplifying-dev-environments-with-the-right-tools-christian-heilmann-julian-wood-goto-2022">Simplifying Dev Environments with the Right Tools • Christian Heilmann &amp; Julian Wood • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=o0bYu0HVjNU">https://www.youtube.com/watch?v=o0bYu0HVjNU</a></p>
+<ol>
+<li>Edge Browser's Principal Program Manager, Chris, discusses the current thinking in developer tools and browser technologies.</li>
+<li>The Edge team is focused on making development more efficient by reducing context switching between different tools.</li>
+<li>Visual Studio Code (VSC) is being used as a platform to build new developer tools inside the editor itself.</li>
+<li>VS Code extensions are being developed to provide better accessibility and localization options for developers.</li>
+<li>The goal is to make development more lightweight by breaking away from monolithic IDEs and focusing on smaller, interchangeable components.</li>
+<li>Chris mentions the growing popularity of cloud-based services and how developers are adapting their tools to work well with these platforms.</li>
+<li>He also discusses his experience working in different environments (like Linux) and how he has seen tools evolve over time.</li>
+<li>Chris highlights the importance of understanding and using the right tool for the job, rather than relying on a single IDE or platform.</li>
+<li>The idea of "lightweight thinking" is emphasized, with a focus on creating more efficient and simpler environments for developers to work in.</li>
+<li>He talks about how the Edge team is working to improve the user experience by making it easier for developers to find and use the tools they need.</li>
+<li>Chris also discusses his thoughts on the future of developer tools, including the potential for more advanced machine learning-based autocompletion features in IDEs.</li>
+<li>He believes that these advancements will help make development more accessible and efficient for all developers, regardless of their skill level or experience.</li>
+</ol>
+<h2 id="developer-tools-that-shouldnt-be-secrets-christian-heilmann-goto-2022">Developer Tools That Shouldn't Be Secrets • Christian Heilmann • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lz-nUdotdx4">https://www.youtube.com/watch?v=lz-nUdotdx4</a></p>
+<ol>
+<li>Developer tools are essential for web development, allowing developers to inspect and manipulate web pages in real-time.</li>
+<li>The speaker demonstrates various features of developer tools in Chrome and Edge browsers, such as the command menu, console, element tool, and device mode.</li>
+<li>Device mode simulates different devices and screen sizes, allowing developers to test responsiveness and design across various platforms.</li>
+<li>The speaker emphasizes the importance of understanding and utilizing developer tools for effective web development and problem-solving.</li>
+<li>Console logs are a powerful debugging tool, providing detailed information about website behavior and performance.</li>
+<li>Snippets are reusable code blocks that can be stored and shared among developers, streamlining common tasks and improving productivity.</li>
+<li>The speaker encourages developers to use developer tools as a learning resource, exploring features and functions in detail and experimenting with different settings and configurations.</li>
+</ol>
+<h2 id="deno-the-javascript-runtime-for-the-serverless-era-ryan-dahl-goto-2022">Deno: The JavaScript Runtime for the Serverless Era • Ryan Dahl • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VDKJ1rSj-NI">https://www.youtube.com/watch?v=VDKJ1rSj-NI</a></p>
+<ol>
+<li>Dino Project: A JavaScript-focused dream stack for serverless web development</li>
+<li>Web remains the primary medium for human information exchange</li>
+<li>JavaScript is crucial for both frontend and backend development, with modern tooling and libraries improving its usability</li>
+<li>Dream stack includes universal scripting language (JavaScript), minimal boilerplate, and small apps defined in single files</li>
+<li>Dino aims to simplify serverless web development by providing a comprehensive platform that supports JavaScript, TypeScript, and WebAssembly</li>
+<li>Dino emphasizes performance optimization, security, and cost-effectiveness for deploying applications worldwide</li>
+<li>Dino Deploy is a white-label, serverless edge runtime that allows developers to run JavaScript functions at the edge of the network</li>
+<li>Fresh, a web framework built on Dino, aims to provide an optimized, server-side rendering solution with minimal configuration and dependency management</li>
+<li>In a comparison with Create React App, Fresh app demonstrates significantly smaller size and faster load times due to its optimized architecture and use of modern tools</li>
+</ol>
+<h2 id="the-psychology-of-ux-fabio-pereira-goto-2022">The Psychology of UX • Fabio Pereira • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rf9Gh-VMvIk">https://www.youtube.com/watch?v=rf9Gh-VMvIk</a></p>
+<ol>
+<li>Psychology and technology play a crucial role in decision-making.</li>
+<li>Behavioral economics can help understand how people make decisions, including the influence of biases and nudges.</li>
+<li>Digital nudging is a powerful tool to guide people's choices in the digital world.</li>
+<li>The concept of a "digital citizen" involves understanding how technology influences our behavior and making conscious decisions.</li>
+<li>Ethics and morality are important considerations when designing technology, especially as it becomes more autonomous and interconnected.</li>
+<li>Technologies like wearables and AI-powered devices can help people make better decisions by providing data and insights.</li>
+<li>Attention management is a critical aspect of digital design, as it helps prevent users from becoming overwhelmed or distracted.</li>
+<li>Building better technology means creating experiences that enhance human lives while also respecting privacy and ethical considerations.</li>
+</ol>
+<h2 id="design-for-the-utopia-you-want-not-the-dystopia-youre-in-chris-atherton-goto-2022">Design for the Utopia You Want, Not the Dystopia You're In • Chris Atherton • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Q77GT8srcsQ">https://www.youtube.com/watch?v=Q77GT8srcsQ</a></p>
+<ol>
+<li>The speaker discusses the concept of dystopia and its relevance in tech design, drawing from personal interests and experiences.</li>
+<li>They mention various psychological theories and concepts such as attention span, learned helplessness, and behaviorism.</li>
+<li>The speaker highlights the role of technology in changing human behavior and how it can lead to a loss of agency or control.</li>
+<li>They emphasize the importance of user experience and design principles that prioritize empathy and mindfulness.</li>
+<li>The speaker talks about the challenges designers face when working with large organizations and the need for diverse teams to create inclusive products.</li>
+<li>They discuss the use of technology to manipulate attention and influence behavior, as well as the potential impact on democracy and societal values.</li>
+<li>Finally, the speaker encourages listeners to take action and make a positive impact in their own way, drawing inspiration from Greta Thunberg's activism.</li>
+</ol>
+<h2 id="white-hat-attention-jacking-for-accessibility-fun-profit-chris-atherton-goto-2022">White-Hat Attention Jacking for Accessibility, Fun &amp; Profit • Chris Atherton • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VwocXCyOieM">https://www.youtube.com/watch?v=VwocXCyOieM</a></p>
+<ol>
+<li>Attention is a finite resource that can be hijacked or lost easily.</li>
+<li>Cognitive load refers to the amount of working memory a task requires, which can impact attention span and capacity.</li>
+<li>Design elements such as animation, color, and layout can either attract or distract users' attention.</li>
+<li>Attention management is crucial in web design, especially for those with cognitive disabilities or impairments.</li>
+<li>Prioritizing content and using clear navigation can help guide users' attention effectively.</li>
+<li>Animation and motion can be used to capture attention, but should not overwhelm the user experience.</li>
+<li>Design systems can help maintain consistency and clarity in web design, which can improve attention management.</li>
+<li>Visual attention is often quicker and more efficient than auditory attention, especially for those using screen readers or other assistive technologies.</li>
+<li>Prioritizing content and designing for accessibility can help improve the user experience for all users, regardless of their abilities or needs.</li>
+</ol>
+<h2 id="how-the-sjgar-stack-accelerated-our-digital-transformation-erik-ammerlaan-goto-2022">How the SJGAR Stack Accelerated Our Digital Transformation • Erik Ammerlaan • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=V5zW3ig2lG8">https://www.youtube.com/watch?v=V5zW3ig2lG8</a></p>
+<ol>
+<li>Eric Ammerlaan from Nationale Nederlanden shares his journey of transforming the business using a simple technology stack</li>
+<li>The company started as an 11-country enterprise with a worth of over $30 billion, aiming for a 175-year transformation into a tech company</li>
+<li>A small innovation team was formed to create better engineering culture and deliver customer value faster</li>
+<li>The success factors include:</li>
+<li>Using a new technology stack that includes Javascript and serverless architecture</li>
+<li>Prioritizing speed, low cost, and security</li>
+<li>The Sugar Stack (Javascript + Serverless) was chosen as the primary technology stack due to its speed in development, flexibility, and scalability</li>
+<li>React front framework was adopted for its ease of use, ability to create cross-platform apps, and reusable components</li>
+<li>The platform team's main focus is on providing libraries, building frameworks, and supporting functional teams</li>
+<li>The functional teams are responsible for delivering features to customers quickly but may struggle with experimentation and innovation</li>
+<li>A strong engineering culture was fostered by empowering engineers to take ownership of projects, focusing on the customer journey, and encouraging collaboration and learning</li>
+<li>The use of a simple technology stack enabled the company to accelerate its digital transformation, empower teams, and build more innovative products</li>
+</ol>
+<h2 id="did-web-development-lose-the-right-direction-stefan-judis-goto-2021">Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3PmPkZJ22Cc">https://www.youtube.com/watch?v=3PmPkZJ22Cc</a></p>
+<ol>
+<li>Javascript ecosystem complexity</li>
+<li>Need for a balance between performance and user experience</li>
+<li>Importance of understanding web fundamentals (HTML, CSS, JS)</li>
+<li>The rise and fall of popular frontend frameworks (Angular 1, React 1, etc.)</li>
+<li>The impact of tools like Webpack and Babel on the ecosystem</li>
+<li>The role of developers in choosing the right technology stack for a project</li>
+<li>The importance of considering trade-offs when selecting technologies</li>
+<li>The need to prioritize user experience over trendy technologies</li>
+<li>The potential downsides of focusing too much on cutting-edge frameworks and tools</li>
+<li>The value of maintaining a good developer workflow and process</li>
+</ol>
+<h2 id="what-are-micro-frontends-how-to-use-them-luca-mezzalira-lucas-dohmen-goto-2022">What Are Micro-Frontends &amp; How to Use Them • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-thWgobMW_I">https://www.youtube.com/watch?v=-thWgobMW_I</a></p>
+<ol>
+<li>Microfrontends: An Introduction</li>
+<li>Motivation for exploring microfrontends</li>
+<li>Need to handle variety of devices and platforms</li>
+<li>Distributed teams working on different parts of the application</li>
+<li>Challenges in managing a monolithic codebase</li>
+<li>Key characteristics of distributed systems (like microservices and microfrontends)</li>
+<li>Independent deployment</li>
+<li>Organizational structure impacting architecture design</li>
+<li>Importance of independent deployment in microfrontends</li>
+<li>Reducing external dependencies between teams</li>
+<li>Benefits of a modular architecture for future applications</li>
+<li>Decision framework: Horizontal vs. Vertical split</li>
+<li>Horizontal split (multiple teams working on different views)</li>
+<li>Example: Homepage with multiple components from different teams</li>
+<li>Challenges in managing organizational structure and ensuring microfrontends work together</li>
+<li>Vertical split (one team responsible for a single view or feature)</li>
+<li>Easier to develop and maintain if the team has experience with single-page applications</li>
+<li>Differences between single-page applications and traditional web applications</li>
+<li>Interesting points about routing in vertical split microfrontends<ul>
+<li>Can happen on the client side (JS frameworks) or edge server (application shell)</li>
+</ul>
+</li>
+<li>Potential solutions for deploying application shell alongside microfrontends<ul>
+<li>Bluegreen deployment, Strangler pattern</li>
+</ul>
+</li>
+</ol>
+<h2 id="building-micro-frontends-luca-mezzalira-lucas-dohmen-goto-2022">Building Micro-Frontends • Luca Mezzalira &amp; Lucas Dohmen • GOTO 2022</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=DG9puFuUb7E">https://www.youtube.com/watch?v=DG9puFuUb7E</a></p>
+<ol>
+<li>Microfrontends are a way to divide a single-page application into smaller, independent applications called "microfrontends".</li>
+<li>The application shell is responsible for loading microfrontends and routing URLs.</li>
+<li>A challenge with microfrontends is that they may require different frameworks or libraries in each part.</li>
+<li>Module Federation is a webpack plugin that allows multiple microfrontends to be loaded into the same application, sharing dependencies.</li>
+<li>Iframes can also be used as a way to isolate different parts of an application, providing security benefits.</li>
+<li>Web components provide a way to create reusable, customizable UI components that can be shared across different microfrontends or applications.</li>
+<li>The concept of "evolutionary architecture" allows for the gradual evolution of an application's structure and components as business needs change over time.</li>
+<li>SSI (Server-Side Include) and ESI (Edge-Side Include) are technologies that allow server-side or edge-level inclusion of dynamic content into web pages, providing a way to compose pages from multiple independent parts.</li>
+<li>The concept of "self-contained systems" involves dividing a larger application into smaller, independent systems that can be developed and deployed separately, but still work together as part of the overall application.</li>
+<li>There are three main approaches to structuring backend services for microfrontends: service dictionary, API gateway, and BFF (Backend For Frontend). Each approach has its own benefits and trade-offs, depending on the specific needs of the application and organization.</li>
+</ol>
+<h2 id="expert-talk-web-development-its-failures-kevlin-henney-stefan-judis-goto-2021">Expert Talk: Web Development &amp; Its Failures • Kevlin Henney &amp; Stefan Judis • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=jQ0_bIVhkLk">https://www.youtube.com/watch?v=jQ0_bIVhkLk</a></p>
+<ol>
+<li>Kevlin Henney and Stefan Kevlin discuss the current state of web development, focusing on complexity, performance, and dependency management.</li>
+<li>They express concern about the impact of JavaScript's popularity on code complexity and performance.</li>
+<li>The speakers emphasize the importance of understanding dependencies and their implications for security, maintenance, and scalability.</li>
+<li>They highlight the need for developers to take responsibility for their decisions and consider trade-offs when choosing tools or frameworks.</li>
+<li>Kevlin Henney shares his experience with a failed startup screen and discusses the broader implications of broken user experiences on software development culture.</li>
+<li>Both speakers stress the importance of communication, collaboration, and learning from mistakes in order to improve the quality and efficiency of software development processes.</li>
+<li>They acknowledge that tooling plays a crucial role in helping developers make informed decisions and maintain code quality, but also emphasize the need for human judgment and interaction in the software development process.</li>
+</ol>
+<h2 id="the-ideal-programming-language-richard-feldman-erik-doernenburg-goto-2021">The Ideal Programming Language • Richard Feldman &amp; Erik Doernenburg • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=MPyUvtPFDSg">https://www.youtube.com/watch?v=MPyUvtPFDSg</a></p>
+<ol>
+<li>The ideal programming language would be domain-specific and have ergonomic type checking.</li>
+<li>Automatic memory management is important for large systems, but manual memory management allows more direct control and may be necessary for certain operating systems.</li>
+<li>Functional programming has a "subtractive" appeal, focusing on removing unnecessary complexity and features.</li>
+<li>A good language design would take inspiration from Rust's borrow checker and Elm's type system.</li>
+<li>A good concurrency model should be easy to use and built-in, such as the one found in Erlang.</li>
+<li>WebAssembly has potential for running compiled code across different platforms, but it may not significantly change the cultural momentum of JavaScript-based web development.</li>
+<li>Blazor and C# might gain traction in enterprise environments due to their ability to run on both servers and clients.</li>
+</ol>
+<h2 id="functional-programming-for-pragmatists-richard-feldman-goto-2021">Functional Programming for Pragmatists • Richard Feldman • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3n17wHe5wEw">https://www.youtube.com/watch?v=3n17wHe5wEw</a></p>
+<ol>
+<li>Functional Programming Pragmatist: Im Richard Feldman</li>
+<li>Pure functions and immutability are the focus of functional programming</li>
+<li>Advantages of pure functions include easier testing, debugging, and parallelization</li>
+<li>Caching and precomputation can improve performance in functional programming</li>
+<li>Functional programming languages often rely on higher-order functions, which allow for more abstraction and less mutable state</li>
+<li>Managed effects (like promises) are a way to handle asynchronous operations in imperative programming languages, but they can introduce complexity and side effects in pure functional programming</li>
+<li>Testing is easier with pure functions due to their predictability and lack of side effects</li>
+<li>Revising code is simpler with pure functions because there's no need to worry about mutable state or order of operations</li>
+<li>Debugging is more straightforward in pure functional programs, as there are fewer potential sources of error</li>
+<li>Ecosystem benefits of functional programming languages include strong tooling support and community-driven best practices</li>
+<li>Elm is an example of a functional programming language with a strong ecosystem that guarantees pure functions and enforces best practices through its compiler</li>
+</ol>
+<h2 id="accessiblejs-jemima-abu-goto-2021">AccessibleJS • Jemima Abu • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=9SFSJDIg4KE">https://www.youtube.com/watch?v=9SFSJDIg4KE</a></p>
+<ol>
+<li>Accessibility is important for everyone, including those with disabilities.</li>
+<li>Web accessibility involves considering navigation, auditory and visual cues, motor capabilities, and cognitive aspects.</li>
+<li>Writing accessible JavaScript involves using HTML semantics, setting CSS properties appropriately, and targeting specific elements with Javascript.</li>
+<li>Use the <code>aria-*</code> attributes to provide additional information about an element's purpose or state.</li>
+<li>Test your code for accessibility by manually navigating through it, using automated tools like Lighthouse and Wave, and testing with screen readers like ChromeVox and VoiceOver.</li>
+<li>Follow an accessibility checklist while writing code to ensure you don't miss any important aspects.</li>
+<li>Use semantic HTML elements instead of generic containers (e.g., use <code>&lt;button&gt;</code> instead of a <code>&lt;div&gt;</code>) to make your code more accessible.</li>
+<li>Consider keyboard navigation, including skip navigation links and tab index attributes, when designing your website's layout and functionality.</li>
+</ol>
+<h2 id="explosive-velocity-with-a-modern-stack-tejas-kumar-goto-2021">Explosive Velocity with a Modern Stack • Tejas Kumar • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=KTkyQ3z7M8w">https://www.youtube.com/watch?v=KTkyQ3z7M8w</a></p>
+<ol>
+<li>Focus on rapid development and deployment</li>
+<li>Use modern technologies like NextJS, Typescript, and Tailwind CSS for fast, predictable outcomes</li>
+<li>Auto-completion from TypeScript helps save time and catch errors early</li>
+<li>Incremental Static Regeneration (ISR) allows for efficient server-side rendering and caching</li>
+<li>Utilize cloud services like AWS, GCP, and Heroku to scale applications easily</li>
+<li>Outsourcing backend services like Hasura can help save time and money on database management</li>
+<li>Testing and iteration are key to rapidly improving product quality</li>
+</ol>
+<h2 id="the-power-performance-of-phoenix-liveview-geoffrey-lessel-goto-2021">The Power &amp; Performance of Phoenix LiveView • Geoffrey Lessel • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-Rl-26JJ6js">https://www.youtube.com/watch?v=-Rl-26JJ6js</a></p>
+<ol>
+<li>Phoenix Live View is a web framework built on Elixir that provides real-time HTML communication between server and client without requiring JavaScript.</li>
+<li>It uses WebSocket for server-client communication, providing an edge case for push HTML and saving bandwidth and user processing time.</li>
+<li>Phoenix Live View allows developers to create real-time form validation, instant feedback for users filling forms, and reusable HTML components on the server side.</li>
+<li>The framework provides live navigation, which does not send markup wirelessly unless required, thus saving bandwidth and improving user experience.</li>
+<li>Elixir's distributed, real-time nature allows Phoenix Live View to handle multiple web pages concurrently, providing a self-healing state for each component.</li>
+<li>The speaker demonstrates how to create a real-time stock update application using Phoenix Live View in an Elixir environment, showing how to handle errors and updates efficiently.</li>
+</ol>
+<h2 id="svelte-web-app-development-reimagined-mark-volkmann-goto-2021">Svelte - Web App Development Reimagined • Mark Volkmann • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4CGzFwHoD0A">https://www.youtube.com/watch?v=4CGzFwHoD0A</a></p>
+<ol>
+<li>Svelte: A lightweight, modern JavaScript framework for building fast, reactive web applications</li>
+<li>Key Features: Fast compilation, small bundle size, component-based architecture, reactive programming model</li>
+<li>Sapper: A full-stack Svelte framework for building web apps with server-side rendering and routing</li>
+<li>Sveltkit: A collection of libraries and tools for building Svelte applications, including a CLI, test utilities, and a storybook for visualizing components</li>
+<li>State Management: Svelte encourages managing state within single components using reactive statements, which automatically update the DOM when data changes</li>
+<li>Stores: A way to share data across multiple components by creating a global store that can be read or written from any component</li>
+<li>Testing: Svelte provides tools for testing components in isolation, such as storybook and Jest</li>
+<li>Mobile Apps: Svelt Native is a framework for building mobile apps using native platform APIs, with the same syntax and principles as web Svelte</li>
+<li>Developer Experience: Svelte emphasizes developer experience by providing intuitive tools, fast compilation times, and a concise, easy-to-understand syntax</li>
+</ol>
+<h2 id="the-jamstack-book-brian-rinaldi-raymond-camden-goto-2021">The Jamstack Book • Brian Rinaldi &amp; Raymond Camden • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=x0RoXonhldk">https://www.youtube.com/watch?v=x0RoXonhldk</a></p>
+<ol>
+<li>Brian Rinaldi and Ray Camden discuss their book, "The Jamstack Book."</li>
+<li>The term "Jamstack" was introduced in 2015 and has evolved since then.</li>
+<li>Key components of the Jamstack approach include static site generation, deployment through CDNs, and serverless functions.</li>
+<li>The authors agree that the Jamstack methodology offers flexibility and scalability compared to traditional server-based web development.</li>
+<li>They acknowledge that the line between "Jamstack" and other methods can be blurry as new technologies emerge.</li>
+<li>Ray Camden emphasizes the importance of the CICD process in deploying static websites using edge servers or CDNs.</li>
+<li>The authors discuss the growing complexity of Jamstack-based website development, including the introduction of distributed persistent rendering (DPR) and incremental static regeneration (ISR).</li>
+<li>They mention that larger companies are increasingly adopting the Jamstack approach to handle complex problems and large-scale websites.</li>
+<li>Both authors express excitement about the future of the technology and its potential to continue evolving and gaining mainstream adoption.</li>
+</ol>
+<h2 id="did-web-development-lose-the-right-direction-stefan-judis-goto-2020">Did We(b Development) Lose the Right Direction? • Stefan Judis • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=0Vtoblyq8fE">https://www.youtube.com/watch?v=0Vtoblyq8fE</a></p>
+<ol>
+<li>Javascript-based web development best practices</li>
+<li>Importance of performance and user experience</li>
+<li>Case study: Italian website outperforming modern websites built with popular frameworks</li>
+<li>Contentful's tech stack and focus on universal Javascript applications</li>
+<li>The impact of technology choices on a company's bottom line</li>
+<li>Evolution of frontend development roles and responsibilities</li>
+<li>The importance of fundamental knowledge in web development</li>
+<li>The role of Javascript in modern web development</li>
+<li>The benefits of focusing on user experience rather than technology choice</li>
+<li>The need for developers to be versatile in their skillset</li>
+</ol>
+<h2 id="http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2020">HTTP/3 Is Next Generation HTTP. Is It QUIC Enough? • Daniel Stenberg • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pUxyukqoXR4">https://www.youtube.com/watch?v=pUxyukqoXR4</a></p>
+<ol>
+<li><strong>Introduction to HTTP/3</strong></li>
+<li>HP (Hypertext Transfer Protocol) has evolved over time, with the latest version being HP/3.</li>
+<li><strong>HP/3 vs Previous Versions</strong> </li>
+<li>HP/3 is designed for better performance and security compared to its predecessors.</li>
+<li>It uses a new transport protocol called QUIC (Quick UDP Internet Connections) which is built on top of UDP instead of TCP.</li>
+<li>Unlike HTTP/2, HP/3 does not use multiplexing, instead it sends data in independent streams.</li>
+<li><strong>QUIC Protocol</strong> </li>
+<li>QUIC is a transport protocol designed to improve performance and security over the internet.</li>
+<li>It uses UDP as its base protocol and adds features like encryption, congestion control, and error recovery.</li>
+<li><strong>Key Features of HP/3</strong></li>
+<li>Improved Performance: QUIC eliminates the need for TCP's three-way handshake, allowing faster connection establishment.</li>
+<li>Security: All communication over QUIC is encrypted by default, providing better security than TCP or HTTP/2.</li>
+<li>Independent Streams: In HP/3, each request and response is sent as a separate stream, allowing for more efficient use of network resources.</li>
+<li><strong>Deployment Challenges</strong> </li>
+<li>Organizations may need to update their firewalls and network infrastructure to support QUIC traffic.</li>
+<li>Some ISPs still block UDP traffic due to its association with DDoS attacks.</li>
+<li><strong>Future of HP/3</strong> </li>
+<li>HP/3 is expected to become widely adopted in the coming years, as more browsers and servers implement support for it.</li>
+<li>It may also lead to the development of new application protocols that take advantage of QUIC's features.</li>
+</ol>
+<h2 id="going-static-in-a-dynamic-world-with-hasura-and-nuxtjs-debbie-obrien-goto-2020">Going Static in a Dynamic World with Hasura and Nuxt.js • Debbie O'Brien • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1j9DIX32GpY">https://www.youtube.com/watch?v=1j9DIX32GpY</a></p>
+<p>Error</p>
+<h2 id="html-how-to-make-loveliness-bruce-lawson-goto-2020">HTML: How to Make Loveliness • Bruce Lawson • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=L83LVfhTbzg">https://www.youtube.com/watch?v=L83LVfhTbzg</a></p>
+<ol>
+<li>The talk is about making the web more accessible and performant, with a focus on using HTML semantically and responsibly.</li>
+<li>The importance of writing good, clean HTML to ensure better performance and accessibility for all users, including those with disabilities.</li>
+<li>Avoid relying solely on JavaScript for functionality; use the right tool for the job.</li>
+<li>Use pattern-based design, such as the picture element, to create a more accessible web experience.</li>
+<li>Design for resilience and backwards compatibility, ensuring that websites work well even with slow connections or older browsers.</li>
+<li>The power of HTML lies in its ability to describe content semantically, which improves search engine results and user experiences.</li>
+<li>Use appropriate HTML tags instead of generic ones (like <code>div</code>) for better accessibility and maintainability.</li>
+<li>Screen readers and assistive technologies rely on landmarks (like headers and footers) to help users navigate websites more easily.</li>
+<li>Use Schema.org markup to provide more context and information about the content on your website, which can improve search engine visibility and user experience.</li>
+<li>Accessibility is not just for people with disabilities; it also benefits users without disabilities by improving usability, aesthetic appeal, and trustworthiness of websites.</li>
+</ol>
+<h2 id="adopt-graphql-without-writing-any-backend-code-uri-goldshtein-goto-2020">Adopt GraphQL without Writing any Backend Code • Uri Goldshtein • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1bJ_M_v-tso">https://www.youtube.com/watch?v=1bJ_M_v-tso</a></p>
+<ol>
+<li>Gradual adoption of graphical technology without writing backend code is important for large companies and existing environments.</li>
+<li>The presentation shared a master plan to introduce graphical technology in an organization.</li>
+<li>GraphQL is a powerful query language that enables developers to fetch exactly the data they need from APIs.</li>
+<li>A key benefit of using GraphQL is its ability to improve performance by reducing the number of requests needed to fetch data.</li>
+<li>The speaker introduced three techniques for gradually adopting graphical technology:<ul>
+<li>Technique 1: Start with a client-side application and introduce GraphQL server and frontend tools like Apollo and React Apollo.</li>
+<li>Technique 2: Use the Polar Link Rest technique to start introducing REST APIs in a practical way for the frontend, using Apollo Client and Type Architecture.</li>
+<li>Technique 3: Utilize GraphQL Mesh, which can automatically convert existing GraphQL schemas from different services into one graphical schema without affecting the source.</li>
+</ul>
+</li>
+<li>The speaker emphasized that these techniques can be used in any backend context and help developers move faster while focusing on frontend development.</li>
+</ol>
+<h2 id="advanced-feature-flagging-its-all-about-the-data-dave-karow-goto-2020">Advanced Feature Flagging: It's All About The Data • Dave Karow • GOTO 2020</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=f8XDvtfKWQE">https://www.youtube.com/watch?v=f8XDvtfKWQE</a></p>
+<ol>
+<li>Feature flags empower organizations to separate code and deployments</li>
+<li>Gradual rollouts are crucial for error mitigation, testing, and understanding the impact of a feature change</li>
+<li>Measurement is key: traditional metrics can be misleading when analyzing gradual rollouts</li>
+<li>Randomized controlled trials (RCTs) provide a more accurate method of attribution and causation analysis</li>
+<li>Experimentation platforms streamline the process of running controlled experiments, making it easier to measure the impact of feature changes in real-time</li>
+<li>A well-designed experimentation platform should include components such as targeting, data management, and distribution</li>
+<li>Effective data management involves normalizing and consolidating telemetry data from various sources</li>
+<li>Advanced features like randomized sticky courses ensure that users receive consistent experiences throughout the course of an experiment</li>
+<li>Comparative analysis tools help teams analyze and compare data distributions, enabling them to identify patterns and make informed decisions</li>
+<li>The use of statistical tests such as t-tests helps validate the significance of experimental results</li>
+<li>A robust management console simplifies the process of managing rollouts, access control, and reporting metrics</li>
+<li>Alerts can be used to detect anomalies in data distributions or unexpected behavior, allowing teams to quickly identify and resolve issues</li>
+<li>The Trustworthy Online Controlled Experiment (TOCE) book provides a comprehensive guide for creating effective online experiments</li>
+</ol>
+<h2 id="clean-architecture-with-aspnet-core-30-jason-taylor-goto-2019">Clean Architecture with ASP.NET Core 3.0 • Jason Taylor • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dK4Yb6-LxAk">https://www.youtube.com/watch?v=dK4Yb6-LxAk</a></p>
+<ol>
+<li>Clean Architecture: Domain-driven design approach with enterprise logic in domain layer, business logic in application layer, and external concerns in infrastructure layer.</li>
+<li>Dependency Inversion Principle (DIP): Infrastructure depends on abstractions, not concrete implementations.</li>
+<li>Repository Pattern: Provides a layer of abstraction for accessing data from the database.</li>
+<li>CQRS: Separates read and write operations to improve performance and scalability.</li>
+<li>Mediator: Defines a simple way to encapsulate how different objects interact with each other.</li>
+<li>Fluent API: Provides a more natural and concise syntax for configuration settings.</li>
+<li>AutoMapper: Automatically maps data between models.</li>
+<li>Aspnet Core Identity: Pre-built authentication system that can be used in applications.</li>
+<li>Presentation Infrastructure: Dependent on application layer to provide a consistent user interface.</li>
+<li>Unit Testing: Verifies individual components of the software work as expected.</li>
+<li>Integration Testing: Verifies that different parts of the software work together correctly.</li>
+<li>Open API: Defines a standard for describing APIs, making it easier to use and share them across different systems.</li>
+</ol>
+<h2 id="http3-is-next-generation-http-is-it-quic-enough-daniel-stenberg-goto-2019">HTTP/3 is next Generation HTTP. Is it QUIC enough? • Daniel Stenberg • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rlN4F1oyaRM">https://www.youtube.com/watch?v=rlN4F1oyaRM</a></p>
+<ol>
+<li>The speaker, Daniel Steinberg, talks about the history of HTTP and its evolution.</li>
+<li>He introduces the concept of HTTP/3 (also known as QUIC) and explains how it differs from previous versions of HTTP.</li>
+<li>HTTP/3 is designed to be faster, more reliable, and more secure than previous versions by using UDP instead of TCP for data transfer.</li>
+<li>The speaker discusses the challenges and complexities involved in implementing HTTP/3, including the need for new protocols and tools.</li>
+<li>He mentions that some major companies like Google, Facebook, and CloudFlare are already supporting or planning to support HTTP/3.</li>
+<li>The speaker also talks about other related technologies such as WebSockets, TLS 1.3, and DNS over HTTPS (DoH).</li>
+<li>Finally, he shares his thoughts on the future of HTTP/3 and its potential impact on the internet.</li>
+</ol>
+<h2 id="you-really-dont-need-all-that-javascript-i-promise-stuart-langridge-goto-2019">You Really Don't Need All that JavaScript, I Promise • Stuart Langridge • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rxlJRydqmk8">https://www.youtube.com/watch?v=rxlJRydqmk8</a></p>
+<ol>
+<li><strong>The Importance of Fast Web Performance</strong><ul>
+<li>First Meaningful Paint (FMP) is a crucial metric for assessing web performance.</li>
+<li>A 27,000-file React website with an 85MB HTML file took 1 hour and 28 minutes to fully load one tweet, highlighting the need for optimization.</li>
+<li><strong>The Impact of JavaScript on Web Performance</strong><ul>
+<li>Serving client-side JavaScript can slow down web apps.</li>
+<li>Server-side rendering is a more efficient approach than client-side rendering.
+<strong>Tactics to Improve Web Performance</strong></li>
+</ul>
+</li>
+<li><strong>Efficient Use of JavaScript and Libraries</strong><ul>
+<li>Avoid unnecessary JavaScript code.</li>
+<li>Minimize the use of libraries and frameworks.</li>
+<li><strong>The Benefits of Serving Lean Client-side Code</strong><ul>
+<li>Smaller file sizes lead to faster load times.</li>
+<li>Removing unneeded code can improve performance without sacrificing functionality.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Avoid Unnecessary Browser Requests</strong><ul>
+<li>Use treeshaking and bundling techniques to minimize the number of requests made by a webpage.</li>
+<li><strong>The Importance of Compression, Minification, and Bundling</strong><ul>
+<li>These techniques can help reduce the size of files served to users, improving overall site performance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Optimizing Availability</strong><ul>
+<li>A 2017 UK government study found that only 89% of people visiting a government website were able to load JavaScript enhancements.</li>
+<li><strong>The Importance of Progressive Enhancement</strong><ul>
+<li>Building websites with progressive enhancement in mind ensures that users who do not have the latest technology can still access and use the site.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Addressing User Experience Challenges</strong><ul>
+<li><strong>The Imported Cost of Complexity</strong><ul>
+<li>The complexity of modern web development can lead to poor user experiences, as developers may struggle to ensure that their websites work correctly on all devices.</li>
+</ul>
+</li>
+<li><strong>The Importance of Building for the Web First</strong><ul>
+<li>Developers should focus on building websites that are optimized for the web first and forend then consider adding additional features or functionality.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>The Benefits of Leveraging Existing Code</strong><ul>
+<li>Using existing code libraries and frameworks can help developers save time and effort, allowing them to build better websites more quickly.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>I hope this summary helps! It's based on the transcript provided in your question.</p>
+<h2 id="ux-tips-to-avoid-losing-users-attention-chris-atherton-goto-2019">UX Tips to Avoid Losing Users' Attention • Chris Atherton • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-pixBU3EJfU">https://www.youtube.com/watch?v=-pixBU3EJfU</a></p>
+<ol>
+<li>Attention is a key factor in user experience design and can be influenced by various factors such as visual weight, contrast, movement, and layout.</li>
+<li>Inattentional blindness occurs when people fail to notice unexpected changes or events in their environment due to focused attention on a specific task or object.</li>
+<li>Designing for cognitive difficulties like ADHD and bipolar disorder involves understanding the challenges these individuals face in managing their attention and resisting distractions.</li>
+<li>Reading comprehension can be hindered by factors such as low vision, contrast issues, and animations that distract from the text content.</li>
+<li>Sleep deprivation can negatively impact cognitive performance and attention span, making it more difficult for individuals to focus on tasks and process information effectively.</li>
+<li>Animation can be used to enhance user experience by guiding attention, providing feedback, and improving the overall visual appeal of a web page or application. However, care must be taken to ensure that animations do not distract from the main content or purpose of the interface.</li>
+</ol>
+<h2 id="designing-apis-for-150-million-orders-michele-angioni-matt-fewer-goto-2019">Designing APIs for 150 Million Orders • Michele Angioni &amp; Matt Fewer • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=OB0Pb-nd0g8">https://www.youtube.com/watch?v=OB0Pb-nd0g8</a></p>
+<ol>
+<li>Scuba (Scoober) is a food delivery service operating in multiple countries, experiencing rapid growth and needing to scale infrastructure efficiently.</li>
+<li>Domain Driven Design (DDD) is used as a strategy for designing software architecture that closely aligns with the business domain.</li>
+<li>The Scoober team decided to split their application into smaller, independent microservices, each dedicated to a specific subdomain within the IT landscape.</li>
+<li>Event Storming was used as a tool to help understand and design the different bounded contexts within the system.</li>
+<li>The team chose to use Kafka for message brokering, which allowed them to maintain consistent communication between services.</li>
+<li>They adopted a standardized format for event payloads, using the Pocket Change Event Standard.</li>
+<li>In order to ensure uniformity in handling user authentication and authorization, they implemented a role-based access control (RBAC) system.</li>
+<li>The team decided to use Octopus Deploy as their deployment automation tool, which helped them manage the release process for their microservices.</li>
+<li>They also made a conscious effort to document their API endpoints thoroughly and maintain consistent error handling across all services.</li>
+<li>The Scoober team is currently working on implementing a design system called "Snack" to help standardize and streamline the process of creating new UI components for their applications.</li>
+<li>The migration project towards a more modern, scalable tech stack has been broken down into smaller phases, with each phase focused on rebuilding specific sections of the application while gradually routing users to the new versions.</li>
+</ol>
+<h2 id="devux-improving-developer-designer-collaboration-yu-ling-cheng-france-wang-goto-2019">DevUX: Improving Developer-Designer Collaboration • Yu Ling Cheng &amp; France Wang • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uWIfnPc1wC0">https://www.youtube.com/watch?v=uWIfnPc1wC0</a></p>
+<ol>
+<li>Emphasize the importance of collaboration between designers and developers</li>
+<li>Share personal stories to illustrate challenges faced in traditional development processes</li>
+<li>Introduce a four-level VX collaboration model:<ul>
+<li>Ground Zero (siloed)</li>
+<li>Level 1 (basic move)</li>
+<li>Level 2 (efficiency, symbiosis)</li>
+<li>Level 3 (optimization)</li>
+</ul>
+</li>
+<li>Discuss the benefits of using tools like Figma and Zeppelin to streamline design processes and improve communication between designers and developers</li>
+<li>Encourage openness and transparency within teams to foster better collaboration and trust</li>
+<li>Share tips for effective team building, including breaking the ice, sharing vulnerabilities, and celebrating successes together</li>
+<li>Emphasize the importance of empathy and understanding in the design process, and how this can lead to better products and happier users</li>
+</ol>
+<h2 id="the-future-of-machine-learning-javascript-asim-hussain-goto-2019">The Future of Machine Learning &amp; JavaScript • Asim Hussain • GOTO 2019</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=vfmGII9mGmY">https://www.youtube.com/watch?v=vfmGII9mGmY</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

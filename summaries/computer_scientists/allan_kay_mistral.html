@@ -1,0 +1,4338 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/computer_scientists/allan_kay_mistral.html">
+      
+      
+        <link rel="prev" href="../devoxx/devoxx_cern_2023.html">
+      
+      
+        <link rel="next" href="donald_knuth_mistral.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Allan Kay - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#alan-kay-turing-lecture-with-dynamic-content" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Allan Kay
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="allan_kay_mistral.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-turing-lecture-with-dynamic-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Turing Lecture with dynamic content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crossroads-2017-alan-kay-keynote-education-that-takes-us-to-the-22nd-century" class="md-nav__link">
+    <span class="md-ellipsis">
+      CrossRoads 2017 | Alan Kay keynote - Education That Takes Us To The 22nd Century
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethinking-cs-education-alan-kay-crossroads-2015" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rethinking CS Education | Alan Kay, CrossRoads 2015
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-at-oopsla-1997-the-computer-revolution-hasnt-happened-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay at OOPSLA 1997 - The computer revolution hasnt happened yet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-interview-1990" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Interview (1990)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alan Kay Interview (1990)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-early-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact of Early Technologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personal-experiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Experiences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-computing-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution of Computing Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevance-to-architects-and-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance to Architects and Developers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovations-from-xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovations from Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missed-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missed Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflections-on-xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflections on Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-at-mit-eecs-1998-fall-semester-colloquium-series-vpri-834" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay at MIT-EECS 1998 Fall Semester Colloquium Series (VPRI 834)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-2013-interview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay, 2013: Interview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chi-2016-plenary-alan-kay-in-conversation-with-vishal-sikka" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHI 2016 Plenary: Alan Kay in conversation with Vishal Sikka
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-on-computer-science-degree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay on Computer Science Degree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-talk-at-bso-multimedia-group-1989-vpri-0351" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay talk at BSO MultiMedia Group 1989  (VPRI 0351)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpri-0843-alan-kay-segment" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPRI-0843 Alan Kay Segment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-apocrypha-of-the-history-of-the-personal-workstation-vpri-653" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Apocrypha of the History of the Personal Workstation (VPRI 653)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-2015-power-of-simplicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay, 2015: Power of Simplicity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-speaks-at-atlas-institute-university-of-colorado-boulder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Speaks at ATLAS Institute, University of Colorado Boulder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-making-progress-alan-kay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Making Progress — Alan Kay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-demos-grail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Demos GRaIL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cresstcon-16-alan-kay-keynote-the-best-way-to-predict-the-future-is-to-invent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRESSTCon '16 Alan Kay Keynote - The Best Way to Predict the Future is to Invent It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-software-engineering-still-an-oxymoron-alan-kay-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Software Engineering Still an Oxymoron? • Alan Kay • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-computer-revolution-hasnt-happened-yet-oopsla-97-keynote-vpri-0719" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Computer Revolution Hasn't Happened Yet OOPSLA 97 Keynote (VPRI 0719)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powersharing-alan-kay-1985" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerSharing Alan Kay (1985)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-turing-lecture-with-dynamic-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Turing Lecture with dynamic content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crossroads-2017-alan-kay-keynote-education-that-takes-us-to-the-22nd-century" class="md-nav__link">
+    <span class="md-ellipsis">
+      CrossRoads 2017 | Alan Kay keynote - Education That Takes Us To The 22nd Century
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rethinking-cs-education-alan-kay-crossroads-2015" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rethinking CS Education | Alan Kay, CrossRoads 2015
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-at-oopsla-1997-the-computer-revolution-hasnt-happened-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay at OOPSLA 1997 - The computer revolution hasnt happened yet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-interview-1990" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Interview (1990)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alan Kay Interview (1990)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-early-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact of Early Technologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personal-experiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Experiences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-computing-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolution of Computing Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevance-to-architects-and-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevance to Architects and Developers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovations-from-xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovations from Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missed-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missed Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflections-on-xerox-parc-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflections on Xerox PARC Lab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-at-mit-eecs-1998-fall-semester-colloquium-series-vpri-834" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay at MIT-EECS 1998 Fall Semester Colloquium Series (VPRI 834)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-2013-interview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay, 2013: Interview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chi-2016-plenary-alan-kay-in-conversation-with-vishal-sikka" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHI 2016 Plenary: Alan Kay in conversation with Vishal Sikka
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-on-computer-science-degree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay on Computer Science Degree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-talk-at-bso-multimedia-group-1989-vpri-0351" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay talk at BSO MultiMedia Group 1989  (VPRI 0351)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpri-0843-alan-kay-segment" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPRI-0843 Alan Kay Segment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-apocrypha-of-the-history-of-the-personal-workstation-vpri-653" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Apocrypha of the History of the Personal Workstation (VPRI 653)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-2015-power-of-simplicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay, 2015: Power of Simplicity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-speaks-at-atlas-institute-university-of-colorado-boulder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Speaks at ATLAS Institute, University of Colorado Boulder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-making-progress-alan-kay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Making Progress — Alan Kay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alan-kay-demos-grail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alan Kay Demos GRaIL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cresstcon-16-alan-kay-keynote-the-best-way-to-predict-the-future-is-to-invent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRESSTCon '16 Alan Kay Keynote - The Best Way to Predict the Future is to Invent It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-software-engineering-still-an-oxymoron-alan-kay-goto-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is Software Engineering Still an Oxymoron? • Alan Kay • GOTO 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-computer-revolution-hasnt-happened-yet-oopsla-97-keynote-vpri-0719" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Computer Revolution Hasn't Happened Yet OOPSLA 97 Keynote (VPRI 0719)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powersharing-alan-kay-1985" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerSharing Alan Kay (1985)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Allan Kay</h1>
+
+<h2 id="alan-kay-turing-lecture-with-dynamic-content">Alan Kay Turing Lecture with dynamic content</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aXC19T5sJ1U">https://www.youtube.com/watch?v=aXC19T5sJ1U</a></p>
+<ul>
+<li>The Turing Award is ACM's most prestigious technical award.</li>
+<li>Dr. Alan Kay, a Turing laureate, gave a lecture at the conference.</li>
+<li>Kay was instrumental in developing Smalltalk, an object-oriented programming language.</li>
+<li>He discussed his experiences in computing and the importance of simplicity in software engineering.</li>
+<li>Kay emphasized the need for a bridge between computer science and other fields like mathematics and physics.</li>
+<li>He mentioned the impact of influential figures such as Ivan Sutherland, Bob Taylor, and Marvin Minsky on his work.</li>
+<li>Kay also touched upon the importance of user interface design in computing education.</li>
+<li>He expressed his love for Lisp and parallelism, as well as his dislike for Intel and Motorola hardware.</li>
+<li>Kay concluded by discussing the importance of a constructible environment like Croquet for kids' learning.</li>
+</ul>
+<h2 id="crossroads-2017-alan-kay-keynote-education-that-takes-us-to-the-22nd-century">CrossRoads 2017 | Alan Kay keynote - Education That Takes Us To The 22nd Century</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=R1R2jH4PQEo">https://www.youtube.com/watch?v=R1R2jH4PQEo</a></p>
+<ul>
+<li>Alan Kay talks about his first encounter with Seymour Papert in the late 1960s and how it influenced his thinking about computing.</li>
+<li>Kay emphasizes the importance of fluency in learning new ideas, comparing it to learning calculus or becoming fluent in a language.</li>
+<li>He mentions that computing was initially used for scientific research but has since become an essential part of various industries and aspects of life.</li>
+<li>Kay discusses the challenges in education, particularly in teaching complex concepts like mathematics effectively.</li>
+<li>He advocates for a more integrated approach to learning, where different subjects are taught together in a more holistic way.</li>
+<li>Kay mentions his work on creating graphical user interfaces and using technology to simulate complex systems, such as cities.</li>
+<li>He also talks about the importance of understanding the history of scientific discoveries and how they have shaped our worldview.</li>
+<li>Kay reflects on the role of teachers in shaping students' minds and the need for a more effective educational system that caters to different learning styles and abilities.</li>
+<li>He discusses the potential of using object-oriented programming languages to teach complex concepts to children, like creating units or extending existing code.</li>
+<li>Kay mentions his work with Scratch, a programming language designed for children, and how it has been successful in engaging students and helping them learn essential skills.</li>
+<li>He also talks about the importance of understanding the underlying mechanisms of technology and science, rather than just focusing on the surface-level applications.</li>
+</ul>
+<h2 id="rethinking-cs-education-alan-kay-crossroads-2015">Rethinking CS Education | Alan Kay, CrossRoads 2015</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=N9c7_8Gp7gI">https://www.youtube.com/watch?v=N9c7_8Gp7gI</a></p>
+<ul>
+<li>Ellen makes a warning about unsupported criticism on the internet.</li>
+<li>She mentions the American dream and how it can be a trap, comparing it to training wheels on a bicycle.</li>
+<li>Training wheels don't actually help learn to ride a bike; they hinder the learning process.</li>
+<li>Marketers deal with people wanting large quantities of things like sugar, fat, and fantasy football.</li>
+<li>Donald Grant Brown's book "Human Universals" discusses humans' inherent wants in consumer society.</li>
+<li>The technological amplifier in modern society has made education more accessible but also politicized it.</li>
+<li>Behavioral economics is a field that studies how people make decisions, often revealing flawed thinking.</li>
+<li>Turing Award winner Alan Turing created the term "computer science."</li>
+<li>Computer science is a process, not just a collection of tools or languages.</li>
+<li>The Constitution is a social process that has shaped our computer systems.</li>
+<li>Design Thinking is a valuable approach to problem-solving and creating user interfaces.</li>
+<li>Computing and computer science are often seen as disturbing human beings, but they have the potential to create great things.</li>
+<li>The Xerox PARC research center produced many groundbreaking technologies that were not fully utilized or exploited.</li>
+<li>Montessori education emphasizes child-driven learning environments.</li>
+<li>Steve Jobs' influence on technology and education is significant, despite his lack of coding skills.</li>
+<li>Understanding the underlying unifying principles of different systems can lead to more effective problem-solving.</li>
+<li>The potential wealth created by technology is vast, but it requires a holistic approach to education and citizenship.</li>
+</ul>
+<h2 id="alan-kay-at-oopsla-1997-the-computer-revolution-hasnt-happened-yet">Alan Kay at OOPSLA 1997 - The computer revolution hasnt happened yet</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oKg1hTOQXoY">https://www.youtube.com/watch?v=oKg1hTOQXoY</a></p>
+<ul>
+<li>The speaker discusses the history of Smalltalk, a programming language developed at Xerox PARC in 1972.</li>
+<li>He mentions that he initially hesitated to give a historical talk but decided it might be interesting for computing enthusiasts.</li>
+<li>He describes the early days of Smalltalk and its unique features, such as real-time FM synthesis and the use of the term "hacker."</li>
+<li>He discusses the importance of architecture in modern operating systems and how the concept has evolved over time.</li>
+<li>The speaker uses a metaphor of a doghouse to illustrate the potential for exponential growth in complex structures, such as cathedrals or modern operating systems.</li>
+<li>He touches on the history of data abstraction and early attempts at creating high-level programming languages.</li>
+<li>The speaker criticizes the complexity of HTML and the browser wars between Microsoft and Netscape.</li>
+<li>He discusses the influence of Simula, a pre-1961 operating system developed by the Air Force, on the development of object-oriented programming (OOP).</li>
+<li>He mentions his own experiences with early OOP concepts and the challenges of understanding them at the time.</li>
+<li>The speaker discusses the importance of encapsulation in computer science and how it has evolved over time.</li>
+<li>He criticizes the complexity of modern programming languages, such as C and Java, and their negative impact on programmers.</li>
+<li>He expresses his belief that the future of computing lies in universal interface languages and automation.</li>
+</ul>
+<h2 id="alan-kay-interview-1990">Alan Kay Interview (1990)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=275FQ9koAw8">https://www.youtube.com/watch?v=275FQ9koAw8</a></p>
+<p>The speaker discusses the historical relationship between computing, literacy, and user interfaces.</p>
+<ul>
+<li>The printing press revolutionized information dissemination and increased literacy rates.</li>
+<li>Martin Luther's German Bible translation accelerated the spread of literacy and the rise of the printing industry.</li>
+<li>Computing's invention was compared to the printing press due to its impact on processing and manipulating data.</li>
+</ul>
+<h3 id="impact-of-early-technologies">Impact of Early Technologies</h3>
+<ul>
+<li>User interface design was influenced by early technologies like the Alto workstation and X Window System.</li>
+<li>Intuitive design and human cognitive abilities have been crucial considerations in user interface development.</li>
+</ul>
+<h3 id="personal-experiences">Personal Experiences</h3>
+<ul>
+<li>The speaker shares experiences working on projects such as the SmallTalk machine and Xerox Star workstation.</li>
+</ul>
+<h3 id="evolution-of-computing-hardware">Evolution of Computing Hardware</h3>
+<ul>
+<li>Miniaturization of components has significantly influenced user interfaces and graphical displays.</li>
+<li>Understanding human cognition is essential for creating effective user interfaces.</li>
+</ul>
+<h3 id="relevance-to-architects-and-developers">Relevance to Architects and Developers</h3>
+<ul>
+<li>Historical context informs architectural and development decisions regarding user interfaces and graphical displays.</li>
+<li>Intuitive design and human cognitive abilities are crucial considerations in creating effective user interfaces.</li>
+<li>Staying informed about emerging technologies is essential for designing cutting-edge solutions.</li>
+</ul>
+<h3 id="xerox-parc-lab">Xerox PARC Lab</h3>
+<ul>
+<li>In the late 1960s, Xerox demonstrated an advanced computer system with a graphical user interface, mouse, and local area network.</li>
+<li>IBM and Apple later released similar products, but Xerox missed commercializing their innovations.</li>
+</ul>
+<h3 id="innovations-from-xerox-parc-lab">Innovations from Xerox PARC Lab</h3>
+<ul>
+<li>The lab produced groundbreaking technologies like Ethernet, laser printers, and the first graphical user interface.</li>
+<li>An open environment fostered collaboration and innovation.</li>
+</ul>
+<h3 id="missed-opportunities">Missed Opportunities</h3>
+<ul>
+<li>Despite these achievements, Xerox executives struggled to commercialize some ideas.</li>
+<li>The Macintosh computer, influenced by Xerox PARC research, revolutionized the personal computing industry in 1984.</li>
+</ul>
+<h3 id="reflections-on-xerox-parc-lab">Reflections on Xerox PARC Lab</h3>
+<ul>
+<li>The speaker reflects on the lab's impact on modern computing and laments missed opportunities for Xerox to capitalize on its innovations.</li>
+</ul>
+<h2 id="alan-kay-at-mit-eecs-1998-fall-semester-colloquium-series-vpri-834">Alan Kay at MIT-EECS 1998 Fall Semester Colloquium Series (VPRI 834)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=BUud1gcbS9k">https://www.youtube.com/watch?v=BUud1gcbS9k</a></p>
+<ul>
+<li>Alan Kay gave a talk at ECS colloquium in 1982.</li>
+<li>He mentioned his background, including work on Sketchpad and Smalltalk.</li>
+<li>Discussed the impact of computers on various fields and industries.</li>
+<li>Emphasized the importance of creativity and recursion in computer science.</li>
+<li>Mentioned challenges in software development, such as scalability and complexity.</li>
+<li>Talked about the influence of Xerox Park and the potential of object-oriented programming.</li>
+<li>Discussed the role of graphics and multimedia in computing.</li>
+<li>Criticized the limitations of commercialization in the field.</li>
+</ul>
+<h2 id="alan-kay-2013-interview">Alan Kay, 2013: Interview</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NY6XqmMm4YA">https://www.youtube.com/watch?v=NY6XqmMm4YA</a></p>
+<ul>
+<li>The speaker discusses the importance of technology and its role in human creation, art, and collaboration.</li>
+<li>Xerox PARC is mentioned as a pioneering lab for technological innovation, with significant contributions to graphical user interfaces, object-oriented programming, and networking.</li>
+<li>The speaker reflects on the evolution of technology and its impact on society, noting both successes and failures.</li>
+<li>The role of funding and collaboration in technological advancement is emphasized.</li>
+<li>The speaker shares personal experiences from Xerox PARC and the challenges faced during its early days.</li>
+<li>The importance of taking risks and embracing change is highlighted.</li>
+<li>The impact of Xerox PARC on the technology industry and society as a whole is discussed, including the creation of new paradigms and industries.</li>
+</ul>
+<h2 id="chi-2016-plenary-alan-kay-in-conversation-with-vishal-sikka">CHI 2016 Plenary: Alan Kay in conversation with Vishal Sikka</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=S6JC_W9F8-g">https://www.youtube.com/watch?v=S6JC_W9F8-g</a></p>
+<ul>
+<li>Allison introduces Vishal Sikka, a CEO who has made significant contributions to the field of technology and society.</li>
+<li>Vishal shares his vision for the future of computing, focusing on collaboration and improving human interaction with technology.</li>
+<li>He discusses his work at Infosys and the importance of collaboration in driving innovation.</li>
+<li>Vishal mentions Doug Engelbart's influence on his thinking and the need for a more collaborative approach to research and development.</li>
+<li>He talks about the impact of nonprofit organizations, particularly the Infosys Foundation, in promoting education and scientific research.</li>
+<li>Vishal discusses the importance of long-term investment in startups and the role of foundations in fostering innovation.</li>
+<li>The conversation touches on the challenges of balancing incremental improvements with paradigm-shifting innovations.</li>
+<li>They also discuss the influence of cultural learning and the need to reform education to better accommodate different learning styles.</li>
+</ul>
+<h2 id="alan-kay-on-computer-science-degree">Alan Kay on Computer Science Degree</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Lb-cKVxmVGk">https://www.youtube.com/watch?v=Lb-cKVxmVGk</a></p>
+<ul>
+<li>The speaker emphasizes the importance of mastering an existing discipline in computing.</li>
+<li>Undergraduate, master's, and PhD degrees are mentioned as ways to achieve this mastery.</li>
+<li>Mastering a field such as physics, electrical engineering, or mathematics is considered beneficial.</li>
+<li>The speaker uses "playing air guitar computing" as a metaphor for not truly understanding the subject matter.</li>
+</ul>
+<h2 id="alan-kay-talk-at-bso-multimedia-group-1989-vpri-0351">Alan Kay talk at BSO MultiMedia Group 1989  (VPRI 0351)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ySBEIsIa1Ag">https://www.youtube.com/watch?v=ySBEIsIa1Ag</a></p>
+<ul>
+<li>The speaker discusses the importance of understanding human interaction and communication in computer design.</li>
+<li>Alan Kay, a computer scientist, believes that computers should allow for optimal openness to enable better human-computer interaction.</li>
+<li>Kay mentions his interest in designing whole interactions, focusing on mind, work, body, and visual sensory ability capture symbolically.</li>
+<li>He laments the sabbatical year of Elaine Schmitt, who struggled with computer use due to a lack of interest and writing skills.</li>
+<li>The speaker notes that computers have made people long-time points in finding something they'd like, as they often require artificial reading and understanding.</li>
+<li>Kay expresses his wish to allow people to communicate without becoming professionals or needing to become interested in the underlying technology.</li>
+<li>He mentions his admiration for Alan Turing, who drew aesthetic feelings from mathematics and physics while playing the violin.</li>
+<li>The speaker discusses how computers have extended our ability to manipulate things and extend goal structures between people.</li>
+<li>Mainframe computers came along but didn't resemble either tool or agent, making communication difficult.</li>
+<li>Douglas Engelbart's 1968 system felt intimate as it allowed direct interaction with information.</li>
+<li>The speaker discusses the importance of understanding human experience and comparing it to technology, such as books and calculators.</li>
+<li>He mentions the transition from mainframe computers to desktop computers and the impact on data work and letter number interfaces.</li>
+<li>The speaker touches upon the Macintosh's role in making computing more accessible and user-friendly through 2D graphics and fonts.</li>
+<li>He discusses the importance of understanding human mind problems, such as unity and perception, in designing effective user interfaces.</li>
+</ul>
+<h2 id="vpri-0843-alan-kay-segment">VPRI-0843 Alan Kay Segment</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=0Rin0fCE9nM">https://www.youtube.com/watch?v=0Rin0fCE9nM</a></p>
+<ul>
+<li>A man describes his experience of being inspired by Jules Verne's Captain Nemo and the music from "20,000 Leagues Under the Sea."</li>
+<li>He was particularly influenced by the composition in D Minor and the sea captain hat.</li>
+<li>This encounter occurred during a modern-day version of the story, where he met Alan Kay, a world-class computer scientist and musician.</li>
+<li>The man was fascinated by Fantasia, which inspired many of his ideas.</li>
+<li>He was particularly moved by the "The Sorcerer's Apprentice" sequence in Fantasia.</li>
+<li>Alan Kay, who was like a wizard in the Atari Corporation, shared his knowledge and fueled the development of the company with his brilliant ideas.</li>
+<li>The man visited Atari headquarters in Brentwood, California, where he learned about the operating system Alto and its artificial intelligence capabilities.</li>
+<li>Alan Kay's mission was to put intelligence everywhere and create a mind-churning synthesis idea like a layer of music playing beautifully and daringly.</li>
+<li>The man admired Alan Kay's approach to learning and designing, which often involved constructing things in extremely difficult ways.</li>
+</ul>
+<h2 id="the-apocrypha-of-the-history-of-the-personal-workstation-vpri-653">The Apocrypha of the History of the Personal Workstation (VPRI 653)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8HQqZ2iVuwo">https://www.youtube.com/watch?v=8HQqZ2iVuwo</a></p>
+<ul>
+<li>Alan K is talking about the importance of a personal workstation in shaping the way we think and design.</li>
+<li>He mentions that he's been inspired by various people, including Gordon Bell and Bob Barton.</li>
+<li>He emphasizes the significance of Advanced System Design and his mentor Dave Evans.</li>
+<li>Alan K shares an anecdote about a failed communication attempt at Xerox PARC.</li>
+<li>He tried to explain an idea but was denied by an executive, who thought it was ridiculous.</li>
+<li>This experience motivated him to start giving demos right away and focusing on clear communication.</li>
+<li>Alan K discusses the importance of understanding the context and environment in which technology is developed.</li>
+<li>He mentions that Xerox PARC was far from corporate headquarters, leading to unique challenges.</li>
+<li>He also talks about his experience with a high-risk project and the importance of taking risks.</li>
+</ul>
+<h2 id="alan-kay-2015-power-of-simplicity">Alan Kay, 2015: Power of Simplicity</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NdSD07U5uBs">https://www.youtube.com/watch?v=NdSD07U5uBs</a></p>
+<ul>
+<li>A vendor is trying to sell an idea to a group of people.</li>
+<li>He plans to put the idea in front of them during lunch, at a reasonable time.</li>
+<li>He might use a third party to help present the idea if it's important.</li>
+<li>The idea is about simplifying complexity in software corporations, which could potentially save them money and improve their systems.</li>
+<li>The speaker mentions that legacy software written decades ago is still being used, despite being obsolete and costing more than newer solutions.</li>
+<li>He suggests that CIOs need to understand the importance of higher-level languages and how they can help corporations adapt to changing technology.</li>
+<li>The speaker discusses the history of astronomy as a metaphor for dealing with complexity in software development.</li>
+<li>He mentions that finding simplicity is crucial, even if it requires rewriting old code or adopting new techniques.</li>
+<li>The speaker discusses the challenges of scaling and distributing control in large organizations and the importance of a unified vision.</li>
+<li>He highlights the role of research and innovation in driving progress and the need for a long-term perspective.</li>
+<li>He mentions the impact of government policies on business and the importance of understanding the true cost of technology.</li>
+<li>The speaker discusses the importance of user interface design and the potential for future technologies like Hana to improve efficiency.</li>
+<li>He emphasizes the need for exquisite skills to make meaningful progress in technology and the importance of collaboration between experts.</li>
+</ul>
+<h2 id="alan-kay-speaks-at-atlas-institute-university-of-colorado-boulder">Alan Kay Speaks at ATLAS Institute, University of Colorado Boulder</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=nOrdzDaPYV4">https://www.youtube.com/watch?v=nOrdzDaPYV4</a></p>
+<ul>
+<li>Phil Despres from Atlas Institute talks about the importance of radical creativity and interdisciplinary thinking in invention.</li>
+<li>He mentions Alan Kay as a polymath who influenced technology through his vision and technical expertise.</li>
+<li>Alan Kay is an American computer scientist known for his work on object-oriented programming, graphical user interfaces, and the Dynabook concept.</li>
+<li>Kay's ideas were influential in the development of modern computing, including the Macintosh computer and the iPad.</li>
+<li>Despres discusses how technology visionaries and polymaths like Alan Kay have shaped our world by combining deep understanding with creativity.</li>
+<li>He emphasizes the importance of collaboration, interdisciplinary learning, and a willingness to explore new ideas in fostering innovation.</li>
+</ul>
+<h2 id="keynote-making-progress-alan-kay">Keynote: Making Progress — Alan Kay</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=9MqVfzxAp6A">https://www.youtube.com/watch?v=9MqVfzxAp6A</a></p>
+<ul>
+<li>Dr. Alan Kay, a pioneer in programming language design and modern GUI development, gave a keynote speech at the Pinnacle 21 conference.</li>
+<li>He discussed the importance of clean data pipelines for smooth clinical trial submissions between sponsors and health authorities to bring lifesaving medicine to patients faster.</li>
+<li>Kay emphasized his enthusiasm for the technical community in Philadelphia and thanked them for their support.</li>
+<li>He shared his career experience, mentioning his work on early software projects and his admiration for Leonardo da Vinci's inventive mind.</li>
+<li>Kay discussed the challenges of writing software, especially during the early days of computing when resources were limited and computers were not yet powerful enough to handle complex tasks.</li>
+<li>He highlighted the importance of error handling and fault tolerance in software engineering, using the example of the 1202 error during the Apollo moon landing.</li>
+<li>Kay emphasized the need for simplicity and system design in software engineering, as well as the importance of understanding the context of the problem to make informed decisions.</li>
+<li>He mentioned his work on the first interactive higher level language (Fortran) and the role of Xerox PARC in shaping modern computing.</li>
+<li>Kay talked about the challenges of scaling computing systems and the importance of system thinking in software engineering.</li>
+<li>He highlighted the importance of understanding user interfaces and access control in software design, mentioning the need for more efficient gesture-based systems.</li>
+<li>Kay expressed his admiration for Brett Victor, a renowned user interface designer, and emphasized the importance of intellectual curiosity and continuous learning in software development.</li>
+</ul>
+<h2 id="alan-kay-demos-grail">Alan Kay Demos GRaIL</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QQhVQ1UG6aM">https://www.youtube.com/watch?v=QQhVQ1UG6aM</a></p>
+<ul>
+<li>The speaker describes a window control that allows for direct interaction with information.</li>
+<li>They mention the ability to draw a box and recognize the next character, suggesting an early form of selection tool.</li>
+<li>The system recognized menus and always looked directly at the user, creating a more personal experience.</li>
+<li>The speaker was impressed by the system's ability to change without issuing commands in a modeless environment.</li>
+<li>They felt a high degree of intimacy with the user interface, which they found remarkable for 1968.</li>
+</ul>
+<h2 id="cresstcon-16-alan-kay-keynote-the-best-way-to-predict-the-future-is-to-invent-it">CRESSTCon '16 Alan Kay Keynote - The Best Way to Predict the Future is to Invent It</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=yVw42wWZWrg">https://www.youtube.com/watch?v=yVw42wWZWrg</a></p>
+<ul>
+<li>Alan Kay, president of the Viewpoint Research Institute, reflects on the second day of a large academic gathering.</li>
+<li>He discusses the importance of education and its moral obligation, commercial incentive, practical side, and academic esoteric interest.</li>
+<li>Kay mentions his experience with ARPA, Xerox PARC, and the Macintosh project.</li>
+<li>He emphasizes the need for a vision and mission to guide educational innovation.</li>
+<li>Kay discusses the importance of understanding the history of education and the limitations of human cognitive capacity.</li>
+<li>He criticizes the focus on rote learning and the lack of emphasis on critical thinking and creativity in education.</li>
+</ul>
+<h2 id="is-software-engineering-still-an-oxymoron-alan-kay-goto-2021">Is Software Engineering Still an Oxymoron? • Alan Kay • GOTO 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=D43PlUr1x_E">https://www.youtube.com/watch?v=D43PlUr1x_E</a></p>
+<ul>
+<li>Fraben contacted the ID conference last year for a keynote talk, but he wasn't particularly happy with his previous software engineering talk.</li>
+<li>He believes that software engineering is an oxymoron and that it's more about crafting and designing than just making or repairing things.</li>
+<li>He uses examples of historical structures like the Akashi Straight Bridge and the Empire State Building to illustrate the importance of engineering principles in various fields.</li>
+<li>He discusses the evolution of engineering, including its relationship with science, mathematics, and technology.</li>
+<li>He mentions the importance of understanding both the hardness and softness of engineering and how they interact.</li>
+<li>He talks about the challenges of designing large systems like Facebook and Boeing 737 Max autopilot.</li>
+<li>He discusses the importance of having a good understanding of state management in software engineering.</li>
+<li>He mentions Doug Engelbart's work on augmenting human intellect and how it has influenced modern computing.</li>
+<li>He talks about the importance of integrating science, math, and engineering to create better systems.</li>
+<li>He discusses the challenges of designing complex systems like autonomic computing and the need for a complete system thinking approach.</li>
+<li>He mentions the importance of understanding cognitive biases in software development and the need to avoid them.</li>
+<li>He talks about the importance of having a deep understanding of both the technical and human aspects of engineering.</li>
+<li>He emphasizes the need for continuous learning and improvement in the field of engineering.</li>
+</ul>
+<h2 id="the-computer-revolution-hasnt-happened-yet-oopsla-97-keynote-vpri-0719">The Computer Revolution Hasn't Happened Yet OOPSLA 97 Keynote (VPRI 0719)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aYT2se94eU0">https://www.youtube.com/watch?v=aYT2se94eU0</a></p>
+<ul>
+<li>Speaker discusses the history of Smalltalk, a programming language developed in the late 1970s.</li>
+<li>He mentions how it was influenced by Xerox PARC and the concept of "happy hackers."</li>
+<li>The speaker shares his personal connection to Smalltalk and its significance in computer science.</li>
+<li>He discusses the importance of understanding the historical context, as well as the impact of Smalltalk on modern computing.</li>
+<li>Mentions the role of Alan Kay, Ivan Sutherland, and others in the development of Smalltalk.</li>
+<li>Discusses the idea of "object-oriented programming" and its influence on modern software design.</li>
+<li>Speaks about the evolution of computing from simple mechanisms to complex systems.</li>
+<li>Refers to the metaphor of a cathedral as an analogy for the growth of software systems.</li>
+<li>Talks about the importance of understanding the history of programming languages and their impact on current technology.</li>
+<li>Makes references to various historical figures, books, and events in computer science.</li>
+</ul>
+<h2 id="powersharing-alan-kay-1985">PowerSharing Alan Kay (1985)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=K4_eL-Y4bAA">https://www.youtube.com/watch?v=K4_eL-Y4bAA</a></p>
+<ul>
+<li>The speaker, Charles Mann, is welcoming viewers to the Powersharing Series, which originally began as an audio cassette series in 1982 and has since been digitized and archived online.</li>
+<li>The series covers the history of personal computing, focusing on the early days of development and the philosophical differences between IBM's approach and Apple's graphically oriented user interface.</li>
+<li>Dr. Alan Kay is introduced as a principal figure in the development of the graphically oriented user interface.</li>
+<li>The speaker discusses the importance of user interaction in computer design, mentioning Ivan Sutherland's Sketchpad system as an influential early example.</li>
+<li>The speaker reflects on the evolution of computing and how it has affected various industries, including education and business.</li>
+<li>The speaker touches upon the idea that technology can sometimes be a double-edged sword, with potential benefits and drawbacks.</li>
+<li>The Powersharing Series is available for purchase in digital format, including a flash drive edition and a website subscription.</li>
+<li>The speaker encourages viewers to donate recordings and add their own contributions to the series.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

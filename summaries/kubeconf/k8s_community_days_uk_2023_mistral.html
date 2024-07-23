@@ -1,0 +1,4747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/kubeconf/k8s_community_days_uk_2023_mistral.html">
+      
+      
+        <link rel="prev" href="kubeconf_utrecht_2023.html">
+      
+      
+        <link rel="next" href="k8s_community_days_uk_2022_mistral.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Community days UK 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#effortless-mutual-authentication-with-cilium-liz-rice" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Community days UK 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="k8s_community_days_uk_2023_mistral.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effortless-mutual-authentication-with-cilium-liz-rice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effortless Mutual Authentication with Cilium | Liz Rice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mastering-enterprise-complexity-with-service-mesh-a-case-study-critical-evaluation-shweta-vohra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mastering Enterprise Complexity with Service Mesh: A Case Study &amp; Critical Evaluation | Shweta Vohra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-tricks-to-improve-your-productivity-and-reduce-your-frustration-with-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 tricks to improve your productivity and reduce your frustration with Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-empathy-is-your-superpower-kunal-kushwaha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Empathy is your Superpower | Kunal Kushwaha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-ebpf-revolutionising-kubernetes-sidecars-and-beyond-ayesha-kaleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring eBPF: Revolutionising Kubernetes Sidecars and Beyond | Ayesha Kaleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-and-a-half-years-of-building-our-kubernetes-platform-lessons-learned-along-the-way-maryam-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three And A Half Years Of Building Our Kubernetes Platform: Lessons Learned Along The Way | Maryam T
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admission-controllers-the-good-the-bad-the-ugly-nic-vermande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admission controllers: the good, the bad, the ugly | Nic Vermande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-need-for-speed-performance-benchmarks-for-hpc-and-ai-workloads-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Need for Speed - performance benchmarks for HPC and AI workloads in Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theres-no-i-in-kubernetes-why-kubernetes-security-is-a-team-sport-malavika-balachandran-tadeusz" class="md-nav__link">
+    <span class="md-ellipsis">
+      There’s no i in Kubernetes: Why Kubernetes Security is a Team Sport | Malavika Balachandran Tadeusz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-day-in-the-life-of-an-oss-maintainer-patrick-stephens" class="md-nav__link">
+    <span class="md-ellipsis">
+      A day in the life of an OSS maintainer | Patrick Stephens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhooks-whats-the-worst-that-could-happen-marcus-noble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhooks - what's the worst that could happen? | Marcus Noble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-argocd-at-scale-for-1000-applications-saeid-bostandoust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running ArgoCD at scale for 1000+ applications | Saeid Bostandoust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fly-me-to-the-moon-punch-cards-supercomputers-and-kubernetes-kat-cosgrove" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fly Me to the Moon: Punch cards, Supercomputers, and Kubernetes | Kat Cosgrove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-engineering-is-not-about-tech-francesca-carta-nicolo-cambiaso-erizzo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Engineering Is Not About Tech | Francesca Carta &amp; Nicolò Cambiaso Erizzo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-workloads-know-who-they-are-attestation-restriction-enforcement-in-kubernetes-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Workloads Know Who They A.R.E: Attestation, Restriction &amp; Enforcement in Kubernetes &amp; Beyond
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knative-serverless-for-aiml-applications-ian-lawson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knative Serverless for AI/ML Applications | Ian Lawson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cultivate-belonging-in-your-open-source-community-jennifer-riggins" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Cultivate Belonging in Your Open Source Community | Jennifer Riggins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unleashing-the-power-of-ai-in-kubernetes-through-k8sgpt-alex-jones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unleashing the Power of AI in Kubernetes through K8sGPT | Alex Jones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cluster-by-cluster-key-moments-in-the-cloud-native-ecosystem-anais-urlichs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster by Cluster: Key Moments in the Cloud Native Ecosystem | Anaïs Urlichs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-discussion-the-future-of-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel Discussion: The Future of Open Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-mlsec-securing-ai-in-space-andrew-martin-francesco-beltramini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes MLSec: Securing AI in space | Andrew Martin &amp; Francesco Beltramini
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-frontend-engineering-to-cloud-native-lessons-learned-from-a-beginner-shedrack-akintayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Frontend Engineering to Cloud Native: Lessons Learned from a Beginner | Shedrack Akintayo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebpf-and-kubernetes-better-together-observability-and-security-with-tetragon-anna-james" class="md-nav__link">
+    <span class="md-ellipsis">
+      eBPF and Kubernetes — Better Together! Observability and Security with Tetragon | Anna &amp; James
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-ska-science-with-loki-john-garbutt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering SKA science with LOKI | John Garbutt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateways-of-power-building-your-own-service-mesh-miles-bryant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateways of power: building your own service mesh | Miles Bryant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smarter-than-your-average-sbom-matt-jarvis-andrew-martin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smarter than your average SBOM ! | Matt Jarvis &amp; Andrew Martin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-up-online-multiplayer-leveraging-kubernetes-for-game-server-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering Up Online Multiplayer: Leveraging Kubernetes for Game Server Optimisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquisitions-assimilation-and-alignment-toby-jackson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acquisitions, Assimilation and Alignment | Toby Jackson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-systems-of-trust-for-software-dan-lorenc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling Systems of Trust for Software | Dan Lorenc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-the-platform-empathy-gap-applying-product-management-to-platform-engineering-cat-morris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bridging the Platform Empathy Gap: Applying Product Management to Platform Engineering | Cat Morris
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-secret-life-of-kubernetes-containers-rory-mccune" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Secret Life of Kubernetes Containers | Rory McCune
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#effortless-mutual-authentication-with-cilium-liz-rice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effortless Mutual Authentication with Cilium | Liz Rice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mastering-enterprise-complexity-with-service-mesh-a-case-study-critical-evaluation-shweta-vohra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mastering Enterprise Complexity with Service Mesh: A Case Study &amp; Critical Evaluation | Shweta Vohra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-tricks-to-improve-your-productivity-and-reduce-your-frustration-with-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 tricks to improve your productivity and reduce your frustration with Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-empathy-is-your-superpower-kunal-kushwaha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Empathy is your Superpower | Kunal Kushwaha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-ebpf-revolutionising-kubernetes-sidecars-and-beyond-ayesha-kaleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring eBPF: Revolutionising Kubernetes Sidecars and Beyond | Ayesha Kaleem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-and-a-half-years-of-building-our-kubernetes-platform-lessons-learned-along-the-way-maryam-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three And A Half Years Of Building Our Kubernetes Platform: Lessons Learned Along The Way | Maryam T
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admission-controllers-the-good-the-bad-the-ugly-nic-vermande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admission controllers: the good, the bad, the ugly | Nic Vermande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-need-for-speed-performance-benchmarks-for-hpc-and-ai-workloads-in-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Need for Speed - performance benchmarks for HPC and AI workloads in Kubernetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theres-no-i-in-kubernetes-why-kubernetes-security-is-a-team-sport-malavika-balachandran-tadeusz" class="md-nav__link">
+    <span class="md-ellipsis">
+      There’s no i in Kubernetes: Why Kubernetes Security is a Team Sport | Malavika Balachandran Tadeusz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-day-in-the-life-of-an-oss-maintainer-patrick-stephens" class="md-nav__link">
+    <span class="md-ellipsis">
+      A day in the life of an OSS maintainer | Patrick Stephens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhooks-whats-the-worst-that-could-happen-marcus-noble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhooks - what's the worst that could happen? | Marcus Noble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-argocd-at-scale-for-1000-applications-saeid-bostandoust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running ArgoCD at scale for 1000+ applications | Saeid Bostandoust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fly-me-to-the-moon-punch-cards-supercomputers-and-kubernetes-kat-cosgrove" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fly Me to the Moon: Punch cards, Supercomputers, and Kubernetes | Kat Cosgrove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-engineering-is-not-about-tech-francesca-carta-nicolo-cambiaso-erizzo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Engineering Is Not About Tech | Francesca Carta &amp; Nicolò Cambiaso Erizzo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-workloads-know-who-they-are-attestation-restriction-enforcement-in-kubernetes-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Workloads Know Who They A.R.E: Attestation, Restriction &amp; Enforcement in Kubernetes &amp; Beyond
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knative-serverless-for-aiml-applications-ian-lawson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knative Serverless for AI/ML Applications | Ian Lawson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cultivate-belonging-in-your-open-source-community-jennifer-riggins" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Cultivate Belonging in Your Open Source Community | Jennifer Riggins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unleashing-the-power-of-ai-in-kubernetes-through-k8sgpt-alex-jones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unleashing the Power of AI in Kubernetes through K8sGPT | Alex Jones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cluster-by-cluster-key-moments-in-the-cloud-native-ecosystem-anais-urlichs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cluster by Cluster: Key Moments in the Cloud Native Ecosystem | Anaïs Urlichs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-discussion-the-future-of-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel Discussion: The Future of Open Source
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-mlsec-securing-ai-in-space-andrew-martin-francesco-beltramini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubernetes MLSec: Securing AI in space | Andrew Martin &amp; Francesco Beltramini
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-frontend-engineering-to-cloud-native-lessons-learned-from-a-beginner-shedrack-akintayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Frontend Engineering to Cloud Native: Lessons Learned from a Beginner | Shedrack Akintayo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightning-talk-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lightning talk 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebpf-and-kubernetes-better-together-observability-and-security-with-tetragon-anna-james" class="md-nav__link">
+    <span class="md-ellipsis">
+      eBPF and Kubernetes — Better Together! Observability and Security with Tetragon | Anna &amp; James
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-ska-science-with-loki-john-garbutt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering SKA science with LOKI | John Garbutt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateways-of-power-building-your-own-service-mesh-miles-bryant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateways of power: building your own service mesh | Miles Bryant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smarter-than-your-average-sbom-matt-jarvis-andrew-martin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smarter than your average SBOM ! | Matt Jarvis &amp; Andrew Martin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-up-online-multiplayer-leveraging-kubernetes-for-game-server-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powering Up Online Multiplayer: Leveraging Kubernetes for Game Server Optimisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquisitions-assimilation-and-alignment-toby-jackson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acquisitions, Assimilation and Alignment | Toby Jackson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-systems-of-trust-for-software-dan-lorenc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling Systems of Trust for Software | Dan Lorenc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-the-platform-empathy-gap-applying-product-management-to-platform-engineering-cat-morris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bridging the Platform Empathy Gap: Applying Product Management to Platform Engineering | Cat Morris
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-secret-life-of-kubernetes-containers-rory-mccune" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Secret Life of Kubernetes Containers | Rory McCune
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Community days UK 2023</h1>
+
+<h2 id="effortless-mutual-authentication-with-cilium-liz-rice">Effortless Mutual Authentication with Cilium | Liz Rice</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=0t_lhV0fvQ8">https://www.youtube.com/watch?v=0t_lhV0fvQ8</a></p>
+<ul>
+<li>Liz Rice discussing "Effortless Mutual Authentication with Cilium"</li>
+<li>Combines EBPF and Psyllium networking plugin for Kubernetes</li>
+<li>EBPF allows customizing kernel behavior, including network stack</li>
+<li>Mutual authentication often achieved using Mutual TLS</li>
+<li>Celium provides network security features based on EBPF</li>
+<li>Demonstrates controlling traffic flow using labels and policies in Celium</li>
+<li>Transparent encryption in Celium encrypts traffic between nodes</li>
+<li>Next Generation Mutual Authentication with Celium uses endpoint handshake protocol for identity verification</li>
+<li>Spiffy generates certificates for endpoints, allowing mutual authentication without encryption</li>
+<li>Demonstration shows dropping packets that don't match policy rules and authentication required packets being allowed.</li>
+</ul>
+<h2 id="mastering-enterprise-complexity-with-service-mesh-a-case-study-critical-evaluation-shweta-vohra">Mastering Enterprise Complexity with Service Mesh: A Case Study &amp; Critical Evaluation | Shweta Vohra</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1qr57Oh8EQg">https://www.youtube.com/watch?v=1qr57Oh8EQg</a></p>
+<ul>
+<li>Shweta Vohra, software architect with two decades of experience, shares her learning from designing Enterprise Solutions using Service Mesh</li>
+<li>Agenda: Service Mesh introduction, Enterprise case study, Building a decision-making framework</li>
+<li>Service Mesh definition: Invisible infrastructure layer that makes communication efficient between microservices, decouples communication concern from application business logic</li>
+<li>Major features of Service Mesh: Connectivity control, Security, Observability, Resiliency, Extensibility</li>
+<li>Connectivity control: Enables communication between services, service discovery, load balancing, retries, traffic control</li>
+<li>Security: Authentication, authorization, encryption policy enforcement</li>
+<li>Observability: Distributed tracing, telemetry, visibility into system health</li>
+<li>Resiliency: Fault injection, dark releases, circuit breakers</li>
+<li>Extensibility: Interoperability with different technologies and platforms</li>
+<li>Enterprise case study: Telecom industry's hybrid cloud environment, need for modernization, service mesh identified to enable communication between services across infrastructure</li>
+<li>Service Mesh challenges: Complexity, interoperability, inefficient service discovery, connectivity challenges, limited observability, security concerns</li>
+<li>Service Mesh benefits: Global control plane, easier policy regulation, traffic management, improved observability, simplified architecture.</li>
+</ul>
+<h2 id="lightning-talk-1">Lightning talk 1</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=2IdJiATvAB4">https://www.youtube.com/watch?v=2IdJiATvAB4</a></p>
+<ul>
+<li>Observability can be expensive and difficult</li>
+<li>Tip for managing observability: create use cases, define use case without unnecessary data, ensure psychological safety, and adopt a use case-driven approach</li>
+<li>Store logs in associated storage based on performance requirements</li>
+<li>Use tail sampling to save money by storing only necessary data</li>
+<li>Adhere to the YAGNI (You Aren't Gonna Need It) principle</li>
+<li>Store metrics efficiently instead of full documents or logs</li>
+<li>Understand your use case and data thoroughly before implementing solutions</li>
+<li>Archive old data to save costs and improve performance</li>
+<li>Use open telemetry and configuration-driven pipelines for cost optimization.</li>
+</ul>
+<h2 id="11-tricks-to-improve-your-productivity-and-reduce-your-frustration-with-kubernetes">11 tricks to improve your productivity and reduce your frustration with Kubernetes</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5eVhR7XtA-c">https://www.youtube.com/watch?v=5eVhR7XtA-c</a></p>
+<ul>
+<li>Tiffany Jigan and Jerome Petazzoni, developers at VMware, discussing 11 tricks to improve productivity and reduce frustration with Kubernetes</li>
+<li>Running a local cluster with multiple nodes for testing and development (Docker Desktop, Kind, Minikube)</li>
+<li>Using Cude CTX and NS to easily switch between contexts and namespaces</li>
+<li>Waiting for specific conditions before creating resources or deployments</li>
+<li>Using Json paths to get specific field values instead of using generic selectors</li>
+<li>Setting timeouts and monitoring deployment progress with tools like kubectl and fzf</li>
+<li>Using K9s for visual representation of cluster status</li>
+<li>Patching configurations without re-creating resources</li>
+<li>Labeling columns to see important information at a glance</li>
+<li>Changing service account assignments for specific deployments</li>
+<li>Setting resource requests with one-liners</li>
+<li>Watching events with kubectl and JQ</li>
+<li>Transforming JSON data using tools like nixer</li>
+<li>Generating images with Fly instead of writing Dockerfiles and pushing to a registry</li>
+<li>Support for multiple architectures in Nixer is not yet fully developed.</li>
+</ul>
+<p>Some of these tricks include using local clusters for testing, using Cude CTX and NS to easily switch contexts and namespaces, waiting for specific conditions before creating resources or deployments, using Json paths to get specific field values, setting timeouts and monitoring deployment progress with tools like kubectl and fzf, patching configurations without re-creating resources, labeling columns to see important information at a glance, changing service account assignments for specific deployments, setting resource requests with one-liners, watching events with kubectl and JQ, and transforming JSON data using tools like nixer. Other tricks include generating images with Fly instead of writing Dockerfiles and pushing to a registry. However, it should be noted that Nixer's support for multiple architectures is not yet fully developed.</p>
+<h2 id="developer-empathy-is-your-superpower-kunal-kushwaha">Developer Empathy is your Superpower | Kunal Kushwaha</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5zuDTNkeXww">https://www.youtube.com/watch?v=5zuDTNkeXww</a></p>
+<ul>
+<li>Kunal Kushwaha: Developer Empathy is your Superpower</li>
+<li>Workshop presentation for developers</li>
+<li>Discussed the importance of empathy in software development</li>
+<li>Struggled with technical and non-technical issues, team communication, and user engagement</li>
+<li>Favorite restaurant recommendation for London</li>
+<li>Experience as a developer manager and the need for empathy in leadership</li>
+<li>Empathy is crucial in preventing confirmation bias, curse knowledge, hindsight bias, and availability bias</li>
+<li>Importance of creating personas, active listening, and diversity in teams</li>
+<li>Efficiency within teams: empathy helps resolve conflicts, build trust, improve communication, and boost creativity</li>
+<li>Empathy during the COVID-19 pandemic: practicing perspective taking and providing support to teammates</li>
+<li>Examples of empathetic leaders understanding imposter syndrome and providing reasonable support</li>
+<li>Importance of documenting good code, readable code, simple logic, and good naming conventions.</li>
+</ul>
+<h2 id="exploring-ebpf-revolutionising-kubernetes-sidecars-and-beyond-ayesha-kaleem">Exploring eBPF: Revolutionising Kubernetes Sidecars and Beyond | Ayesha Kaleem</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=63KQT5xDIrU">https://www.youtube.com/watch?v=63KQT5xDIrU</a></p>
+<ul>
+<li>eBPF (Extended Berkeley Packet Filter) is a technology that allows running sandbox programs in the Linux kernel without changing its source code.</li>
+<li>It enables custom code to take advantage of kernel resources, like network packet filtering and observability, without rebooting the system.</li>
+<li>Originally created for TCP dump filtering, eBPF has expanded beyond networking into various domains such as security and performance optimization.</li>
+<li>eBPF programs are event-driven and can attach to kernel events (function entry/exit points or trace points) and user probes.</li>
+<li>They are typically written in C or Python using tools like BCC (BPF Compiler Collection) or Clang.</li>
+<li>The JIT (Just-In-Time) compiler optimizes eBPF bytecode for the specific instruction set of the target system.</li>
+<li>eBPF Maps are essential, as they help store state and share data between eBPF programs running inside the Linux kernel or user space.</li>
+<li>Commonly used eBPF map types include hash maps and arrays.</li>
+<li>Writing an eBPF program requires some knowledge of the Linux kernel and its APIs but offers significant advantages like resource utilization, networking security, observability, and performance improvements.</li>
+<li>Various projects using eBPF include Cilium, Isovalent's Tetragon, Falco, KRON, Bumblebee, Kio, Linkerd, and many others.</li>
+<li>Service mesh solutions like Istio, Consul Connect, and Envoy have adopted eBPF technology for advanced features like networking security, observability, and performance improvements.</li>
+<li>eBPF can be used to add functionality to the Linux kernel that was previously implemented in user space, like L7 traffic management, authentication, authorization, tracing, and reliability.</li>
+<li>The sidecar model is still relevant even with the rise of eBPF technology since it offers additional benefits beyond what eBPF alone can provide.</li>
+<li>eBPF does not limit service mesh solutions; it can work alongside them to provide better resource utilization, networking security, observability, and performance improvements.</li>
+</ul>
+<h2 id="three-and-a-half-years-of-building-our-kubernetes-platform-lessons-learned-along-the-way-maryam-t">Three And A Half Years Of Building Our Kubernetes Platform: Lessons Learned Along The Way | Maryam T</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ADK8Vd5WNZU">https://www.youtube.com/watch?v=ADK8Vd5WNZU</a></p>
+<ul>
+<li>Maran Tavakoli, cloud engineer at Relux Solutions in Finland, has been working on building a Kubernetes platform for their company for the past three and a half years.</li>
+<li>The project began in late 2019 with an internal development team migrating workloads to Kubernetes due to its obvious advantages.</li>
+<li>In early 2020, multiple development teams started using the platform, but there were challenges such as managing service identities and configuration files.</li>
+<li>A major incident occurred when a change was made to managed identity, which caused issues for several teams and required a rollback.</li>
+<li>In mid-2020, the team decided to unify the Kubernetes platform within the company and use Terraform to manage configurations.</li>
+<li>The team grew throughout 2021, with more development teams and environments added, as well as improvements like versioning and automation.</li>
+<li>In late 2021, the team started using a service mesh and deploying applications in isolated namespaces for better security.</li>
+<li>In early 2022, the project became more mature, with additional features being added to support different team requirements.</li>
+<li>Some challenges included implementing automated testing, managing access rights, and optimizing costs.</li>
+<li>The team also had to deal with a major incident when a test environment was deleted by accident, leading to a significant downtime.</li>
+<li>In late 2022, the team introduced start-stop automation for development clusters and changed the release strategy to monthly instead of bi-weekly.</li>
+<li>Some future plans include improving the testing strategy, implementing global load balancing, and adding a web application firewall.</li>
+</ul>
+<h2 id="admission-controllers-the-good-the-bad-the-ugly-nic-vermande">Admission controllers: the good, the bad, the ugly | Nic Vermande</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=BYw3wbuUHvY">https://www.youtube.com/watch?v=BYw3wbuUHvY</a></p>
+<ul>
+<li>Speaker is Nick Vermande, working in software development and Kubernetes community for six years</li>
+<li>Topic: Admission Controllers - The Good, The Bad, The Ugly</li>
+<li>Admission controller enforces governance within a Kubernetes cluster</li>
+<li>Two types of admission controllers: static (compiled part) and dynamic (API server sends admission request to webhook server)</li>
+<li>Important design decisions when building an admission controller include security compliance, PSP/PSA, resource management, and custom logic</li>
+<li>Mutating admission webhooks validate or modify objects in the cluster before they are deployed</li>
+<li>Dynamic admission controllers build and run outside of the cluster</li>
+<li>Building a custom admission controller: need to consider educational purposes, troubleshooting, external APIs (like Marvel API), and whether it's necessary</li>
+<li>Certificates are required for TLS communication between components in an admission controller setup</li>
+<li>The process of creating a mutating webhook involves creating a configuration, handling the handler function, extracting request data, interacting with external APIs, and encoding responses</li>
+<li>Important considerations when implementing admission reviews include best practices, timeouts, and security.</li>
+</ul>
+<h2 id="the-need-for-speed-performance-benchmarks-for-hpc-and-ai-workloads-in-kubernetes">The Need for Speed - performance benchmarks for HPC and AI workloads in Kubernetes</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=D7eazRekwE8">https://www.youtube.com/watch?v=D7eazRekwE8</a></p>
+<ul>
+<li>Matt from a HPC consultancy with 7-year experience in cloud HPC, focuses on applying expertise to cloud native workloads using OpenStack and Kubernetes</li>
+<li>Discusses the importance of performance benchmarking for both infrastructure providers and application developers in the context of HPC and AI workloads</li>
+<li>Mentioned use cases include Loki, an active upstream contributor project in the Cloud Native Computing Foundation (CNCF), and Volcano Batch Scheduler</li>
+<li>Benchmarking is important to understand hardware performance, optimize infrastructure, and identify misconfigurations affecting performance</li>
+<li>Discusses benchmarking in Kubernetes using Cube Perf and the benefits of using a kubernetes operator for defining and executing performance benchmarks</li>
+<li>Mentions testing networking (bandwidth and latency), CPU, storage, and GPUs as key areas for benchmarking</li>
+<li>Specific tools mentioned include Fio for CP per test, OpenFOAM for computational fluid dynamics software, and a Nvidia GPU microbenchmark using AlexNet image classification model</li>
+<li>Discusses the importance of testing hardware offloads and RDMA (Remote Direct Memory Access) for high performance computing workloads in Kubernetes environments.</li>
+<li>Mentions the use of real Nick inside open stack VM and kubernetes pod, and the need for RDMA support and optimization in Kubernetes clusters for RDMA-enabled applications like MPI.</li>
+<li>Discusses the importance of optimizing network traffic and reducing encapsulation in Kubernetes networks using tools like iperf3 and VXLAN.</li>
+<li>Mentions that RDMA can offer low latency and high bandwidth, making it ideal for HPC workloads</li>
+<li>Mentions that Cube Perf is a simple tool that can be used to create benchmark yaml files to test different storage classes in Kubernetes.</li>
+<li>Discusses the importance of testing performance at scale and examining file system consistency locking behavior when scaling kubernetes pods.</li>
+<li>Discusses the importance of using representative workloads, like OpenFOAM for computational fluid dynamics software, to assess cluster performance.</li>
+<li>Mentions the need to test GPUs in a Kubernetes environment for machine learning applications and the use of tools like Nvidia GPU operator and device plugins.</li>
+<li>Discusses the importance of testing network performance, particularly with large message sizes, in MPI applications running on Kubernetes clusters.</li>
+<li>Encourages attendees to get involved in open source projects to find and fix bugs in Kubernetes.</li>
+</ul>
+<h2 id="theres-no-i-in-kubernetes-why-kubernetes-security-is-a-team-sport-malavika-balachandran-tadeusz">There’s no i in Kubernetes: Why Kubernetes Security is a Team Sport | Malavika Balachandran Tadeusz</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=DD8ikOs-EPg">https://www.youtube.com/watch?v=DD8ikOs-EPg</a></p>
+<ul>
+<li>Malavika Balachandran, product manager at IG and Calico, speaks on Kubernetes security being a team sport</li>
+<li>Challenges in Cloud security include network security and collaboration</li>
+<li>Three types of engineers responsible for Kubernetes security: developers, DevOps, and security engineers</li>
+<li>Developers deploy applications quickly but may overlook security; DevOps keep the platform running smoothly, and security teams ensure application code and platform are secure while not controlling them directly</li>
+<li>Collaboration is key to effective security in a Kubernetes environment</li>
+<li>Shifting security left is important, but can be challenging with alert fatigue and managing vulnerabilities</li>
+<li>Calico is a popular tool for network security in Kubernetes environments with 1 million clusters and 50,000 organizations using it</li>
+<li>Network security, runtime monitoring, threat defense are key components of Cloud security programs</li>
+<li>Calico policy is widely used for Kubernetes network security but not all organizations use it effectively</li>
+<li>Calico policy provides features like policy ordering, which makes collaboration easier among developers, platform engineers, and security analysts</li>
+<li>Network policies allow fine-grained control over pod communication in a Kubernetes environment.</li>
+</ul>
+<h2 id="a-day-in-the-life-of-an-oss-maintainer-patrick-stephens">A day in the life of an OSS maintainer | Patrick Stephens</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=GCOcqA9u38E">https://www.youtube.com/watch?v=GCOcqA9u38E</a></p>
+<ul>
+<li>The speaker is an open source maintainer for Fluent Bit, an observability agent used in public clouds and enterprise solutions.</li>
+<li>Fluent Bit is a mature project started in 2014 that processes various inputs and sends outputs to different destinations. It supports collecting logs, metrics, and traces.</li>
+<li>The speaker works for Calpia, the company behind Fluent Bit, where they focus on encouraging contributions from companies.</li>
+<li>Contribution areas include documentation, testing, CI/CD, and engagement in the community.</li>
+<li>The speaker advocates that contributing to open source projects, even indirectly, benefits both the contributor and the community.</li>
+<li>They have been maintaining open source software for several years and previously worked in defense and infrastructure roles.</li>
+<li>They started working on Fluent Bit in 2017 when they joined the Calpia team and began interacting with the community through blog posts.</li>
+<li>They aim to make using Fluent Bit straightforward and user-friendly, focusing on the user perspective rather than implementation details.</li>
+<li>The speaker spends a lot of time in Slack, helping people answer questions, review PRs, and triaging issues.</li>
+<li>They also spend time writing blog posts, giving presentations, and conducting training sessions.</li>
+<li>They have solved various problems reported by users, often involving Docker images or different formats.</li>
+<li>Contributing to Fluent Bit has helped the speaker learn new tech and build relationships with people in the community.</li>
+<li>They encourage companies to contribute to open source projects, citing benefits like gaining expertise and improving their products.</li>
+</ul>
+<h2 id="webhooks-whats-the-worst-that-could-happen-marcus-noble">Webhooks - what's the worst that could happen? | Marcus Noble</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=GFMnC1a7bFk">https://www.youtube.com/watch?v=GFMnC1a7bFk</a></p>
+<ul>
+<li>Marcus Noble, platform engineer at Giant Swarm, discussing risks of webhooks in Kubernetes</li>
+<li>Webhooks are powerful features in Kubernetes for validating, mutating, and converting configurations</li>
+<li>Validating admission policy, a type of webhook, enforces rules on API requests and admissions</li>
+<li>Risks of using webhooks include misconfiguration, malicious attacks, and unavailable control plane</li>
+<li>Misconfigurations can lead to cluster issues, such as incorrect content types or redirects</li>
+<li>Malicious webhooks can cause denial of service (DoS) attacks or inject unwanted resources</li>
+<li>Unavailable control plane can make it difficult to upgrade, monitor, or roll back webhooks</li>
+<li>Best practices for using webhooks include proper deployment, monitoring, and error handling</li>
+<li>Webhooks can be used for policy enforcement, such as enforcing enterprise rules or best practices within a cluster</li>
+<li>Example of preventing security exploits using webhooks: the Log4j vulnerability</li>
+<li>Potential risks of webhooks include burden on development and operation, potential errors and unintended consequences.</li>
+</ul>
+<h2 id="running-argocd-at-scale-for-1000-applications-saeid-bostandoust">Running ArgoCD at scale for 1000+ applications | Saeid Bostandoust</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=H3T-Nkxdywg">https://www.youtube.com/watch?v=H3T-Nkxdywg</a></p>
+<ul>
+<li>The speaker, Saeid Bostandoust, works as a kubernetes architect and director of software engineering at CBR, a construction building real estate company. He prefers using open source technologies and contributes to Argo CD and other open source projects.</li>
+<li>Agenda: Discussing running Argo CD at scale for 1000 applications, looking into Argo CD architecture, deploying 1000 applications without optimization, tuning Argo CD for 1000 applications, and deployment patterns.</li>
+<li>Argo CD Architecture: Includes application controller, notification controller, application set controller, redish main component, system repo server, and cluster components.</li>
+<li>Without optimization, deploying 1000 applications using Argo CD took a long time and caused the application controller to get restarted multiple times due to high load.</li>
+<li>Tuning Argo CD: Needed to increase application controller replicas, distribute application controllers across environments, optimize dependency management, and configure cache settings.</li>
+<li>Deployment Patterns: Discussed using one repository per microservice, Helm charts, and deploying multiple applications from a single repository.</li>
+<li>Challenges encountered during deploying 1000 applications included slow manifest generation, memory usage, and network latency.</li>
+<li>Solutions: Included optimizing manifest size, parallelizing manifest generation, increasing fetching timeout, and using web hooks instead of reconciliation time.</li>
+<li>Other optimizations included reducing maximum manifest size, using plugins, optimizing Helm chart deployment, and managing repositories effectively.</li>
+</ul>
+<h2 id="fly-me-to-the-moon-punch-cards-supercomputers-and-kubernetes-kat-cosgrove">Fly Me to the Moon: Punch cards, Supercomputers, and Kubernetes | Kat Cosgrove</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Pe9V1hG4LUQ">https://www.youtube.com/watch?v=Pe9V1hG4LUQ</a></p>
+<ul>
+<li>Kat Cosgrove, lead developer advocate at Dell, discusses the origins and concepts of Kubernetes</li>
+<li>Kubernetes is a relatively new cloud-native technology that aims to reduce complexity in managing containerized applications</li>
+<li>Origins of Kubernetes predate DevOps and infrastructure as code, with virtualization being a significant challenge since the dawn of computing</li>
+<li>Core Concepts of Kubernetes include an abstraction layer built on top of another abstraction layer, solving previously difficult problems</li>
+<li>Virtualization has evolved over the decades, from hardware to operating system level virtualization, and Kubernetes relies on a variety of virtualization techniques</li>
+<li>The origins of time sharing and virtual memory date back to the 1950s and 60s, with the first patent for multiprogramming filed in 1959</li>
+<li>IBM played a significant role in virtualization and time sharing, with the development of mainframes and virtual memory systems like System/360 and CP40</li>
+<li>Unix operating system began developing containerization concepts in the late 70s, leading to modern container technologies like Docker and Kubernetes</li>
+<li>The timeline of virtualization and containerization diverged around 2008, with the release of tools like LXC and systemd</li>
+<li>Docker, released in 2013, popularized container technology by making it more approachable, user-friendly, and ubiquitous</li>
+<li>Kubernetes was announced as an open-source project in 2014 and has since become a foundational technology in the cloud-native landscape.</li>
+</ul>
+<h2 id="lightning-talk-5">Lightning talk 5</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Qlfl1DCC2SI">https://www.youtube.com/watch?v=Qlfl1DCC2SI</a></p>
+<ul>
+<li>The speaker wants to talk about the platform orchestration pattern, which was recently highlighted on Thoughtworks Tech Radar.</li>
+<li>Platform orchestration goes beyond traditional platform services by providing additional features.</li>
+<li>It is important for organizations to consider buying versus building when it comes to platform services.</li>
+<li>Building internally can differentiate a business in the market, but requires engineering time and resources.</li>
+<li>Next generation platform orchestrators provide managed services with self-service discovery and collaboration capabilities.</li>
+<li>The speaker mentions challenges with managing complex infrastructure and bad developer experiences as reasons for considering platform orchestration.</li>
+</ul>
+<h2 id="platform-engineering-is-not-about-tech-francesca-carta-nicolo-cambiaso-erizzo">Platform Engineering Is Not About Tech | Francesca Carta &amp; Nicolò Cambiaso Erizzo</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SEMUBJ78Lm0">https://www.youtube.com/watch?v=SEMUBJ78Lm0</a></p>
+<ul>
+<li>Francesca Carta and Nicolo Erizzo discuss the importance of organizational change in platform engineering</li>
+<li>Platform engineering involves implementing reusable tools, self-service capabilities, and automating infrastructure operations to improve developer experience and productivity</li>
+<li>The goal is to create a frictionless environment where developers can produce valuable software with minimal overhead</li>
+<li>Every technological change involves organizational change, and technology must adapt to the organization, not the other way around</li>
+<li>Common pitfalls in platform engineering include lack of political capital, misaligned expectations, internal competition, and balance between trade-offs like freedom and standardization</li>
+<li>Successful platform adoption requires effective communication, consensus building, and a focus on developer experience and collaboration</li>
+<li>Three case studies illustrate different approaches to platform engineering: a small digital native startup, a global manufacturing company, and a multinational system integrator.</li>
+<li>The first story is about a small engineering organization focusing on efficient collaboration between teams.</li>
+<li>The second story is about a large industrial organization building an internal platform as a strategic pillar.</li>
+<li>The third story is about a multinational system integrator taking an unexpected approach by throwing away their initial platform and adopting a new one.</li>
+<li>To summarize, the key takeaways from the talk are:<ul>
+<li>Platform engineering is about providing better self-service developer experiences.</li>
+<li>Technology and organization must be closely connected.</li>
+<li>Effective communication, consensus building, and change management are crucial for successful platform adoption.</li>
+<li>Common pitfalls include misaligned expectations, lack of political capital, internal competition, and balance between trade-offs like freedom and standardization.</li>
+</ul>
+</li>
+</ul>
+<h2 id="secure-workloads-know-who-they-are-attestation-restriction-enforcement-in-kubernetes-beyond">Secure Workloads Know Who They A.R.E: Attestation, Restriction &amp; Enforcement in Kubernetes &amp; Beyond</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=TAwY2LXCils">https://www.youtube.com/watch?v=TAwY2LXCils</a></p>
+<ul>
+<li>The speaker, Land Mua, is a senior developer advocate at Kubernetes AWS and CNCF Ambassador</li>
+<li>The session is about securing workloads in complex, heterogeneous environments like Kubernetes and beyond</li>
+<li>The speaker shares a memory from working on a digital product with numerous integrations and the challenges of juggling multiple security identity models</li>
+<li>Modern systems consist of many distributed, heterogeneous services, making security a major concern</li>
+<li>Attestation is a standard mechanism for issuing digital IDs to workloads to establish trust between them</li>
+<li>Spiffy is an open-source security framework that supports universal issuance and attestation of digital identities</li>
+<li>Restriction enforcement ensures that only authorized workloads can communicate with each other within a trust domain</li>
+<li>Open Policy Agent (OPA) is used for policy enforcement based on dynamic rules and Rego language.</li>
+</ul>
+<h2 id="knative-serverless-for-aiml-applications-ian-lawson">Knative Serverless for AI/ML Applications | Ian Lawson</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=UWkPkT8R5wc">https://www.youtube.com/watch?v=UWkPkT8R5wc</a></p>
+<ul>
+<li>Ian Lawson, Red Hat developer advocate with AI/ML background</li>
+<li>Discussed the concept of "unintelligent" AI and the evolution of rule-based systems (genetics, mimetics)</li>
+<li>Introduced K Native and its use in building serverless, event-driven AI applications</li>
+<li>Highlighted the benefits of K Native such as zero resource consumption and autoscaling based on concurrency and request per second</li>
+<li>Described how K Native extends Kubernetes with CRDs (Custom Resource Definitions) for services and configurations</li>
+<li>Demonstrated a simple example of using a K Native serving service to handle events and trigger actions in an AI system using Neurons and grid connect.</li>
+</ul>
+<h2 id="lightning-talk-4">Lightning talk 4</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WQz5cbojxPI">https://www.youtube.com/watch?v=WQz5cbojxPI</a></p>
+<ul>
+<li>Steve Jud from Jet Stack Consult, Kubernetes consultancy</li>
+<li>Spends a lot of time assessing client clusters in audits</li>
+<li>Webinar topic: Making Kubernetes clusters more secure</li>
+<li>Principle 1: Least privilege - don't use cluster admin role for everyone</li>
+<li>Principle 2: Control plane access - keep API behind Bastion or VPN, enable authentication</li>
+<li>Principle 3: Workload isolation using Network Policy</li>
+<li>Principle 4: Secrets management - use services like Secrets Manager or Hashicorp Vault</li>
+<li>Principle 5: Alternative to Helm for managing secrets with Helm templates and custom manifests</li>
+<li>Principle 6: Certificate management - Jet Stack C manager for easier certificate handling instead of manual processes.</li>
+</ul>
+<h2 id="how-to-cultivate-belonging-in-your-open-source-community-jennifer-riggins">How to Cultivate Belonging in Your Open Source Community | Jennifer Riggins</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=YUY3GjhY0UE">https://www.youtube.com/watch?v=YUY3GjhY0UE</a></p>
+<ul>
+<li>Open source communities have a diversity problem, with underrepresentation of women and people of color</li>
+<li>Statistically, only 4% of open source contributors are women and nonbinary individuals</li>
+<li>People from marginalized backgrounds often face barriers to entry in open source, such as lack of technical skills or representation</li>
+<li>Voluntary work in open source projects is a major issue for those who cannot afford to contribute for free</li>
+<li>Open Source companies rely on open source projects, but single maintainers put them at risk of burning out and creating a pay-to-contribute culture</li>
+<li>Women and people of color often feel isolated and unwelcome in open source communities</li>
+<li>Lack of clear code conduct and enforcement can lead to toxic environments</li>
+<li>Open Source Community Health analytics is a project that aims to measure the health of open source communities and provide resources for improvement</li>
+<li>To attract and retain diverse talent, open source projects should have clear pathways to leadership, enforce code conduct, and create welcoming and inclusive environments</li>
+<li>Open source projects can use tools like self-defined apps and AI to make the contribution process more accessible and streamlined for newcomers</li>
+<li>Mentoring and formalized mentorship programs are important for creating a supportive community and addressing the isolation felt by underrepresented individuals.</li>
+</ul>
+<h2 id="unleashing-the-power-of-ai-in-kubernetes-through-k8sgpt-alex-jones">Unleashing the Power of AI in Kubernetes through K8sGPT | Alex Jones</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=aKVDMh2ha98">https://www.youtube.com/watch?v=aKVDMh2ha98</a></p>
+<ul>
+<li>Alex Jones is a principal engineer at AWS, discussing the power of AI in Kubernetes</li>
+<li>He mentions his background in machine learning and fascination with AI since childhood</li>
+<li>He discusses how AI is being used in various industries, including insurance underwriting and medicine</li>
+<li>He talks about the importance of pattern recognition, prediction, and prognostication in Kubernetes</li>
+<li>He mentions the challenges of diagnosing issues in Kubernetes and the potential for AI to help</li>
+<li>He mentions his experience with using GPT-3 for analyzing Kubernetes clusters and generating reports</li>
+<li>He discusses the potential for AI to simplify tasks, improve observability, and automate workflows in Kubernetes.</li>
+</ul>
+<h2 id="lightning-talk-6">Lightning talk 6</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=bJBkjOvlVIc">https://www.youtube.com/watch?v=bJBkjOvlVIc</a></p>
+<ul>
+<li>Speaker went to CUBCon China and shared their experience</li>
+<li>Originally from Argentina, has lived in London for 12 years, felt like a completely different place</li>
+<li>Works at Diag, a cloud native staff company</li>
+<li>Friend Alexa works at Bloomberg building a platform for data scientists using Open Source tools</li>
+<li>Saw presentations on various technologies like Kubernetes, Apache OpenWhisk, Dapper, and more</li>
+<li>Surprised by interaction with Chinese developers and their dedication to platform engineering</li>
+<li>Saw an open function project that brought different projects together to build a specific use case</li>
+<li>Impressed by the architectural diagram of the project and how it combined Open Source tools from the West</li>
+<li>Talked about K native autoscaling and Dapper, which allows developers to connect APIs with infrastructure in a resilient way without needing to know the underlying infrastructure.</li>
+<li>Mentioned working on a book tutorial for an open source project in the CNCF repository.</li>
+</ul>
+<h2 id="cluster-by-cluster-key-moments-in-the-cloud-native-ecosystem-anais-urlichs">Cluster by Cluster: Key Moments in the Cloud Native Ecosystem | Anaïs Urlichs</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=brVemuiJMb0">https://www.youtube.com/watch?v=brVemuiJMb0</a></p>
+<ul>
+<li>Anais Urlichs talks about her experience with the cloud native ecosystem and introduces schema theory</li>
+<li>In 2013, companies were moving towards cloud computing and containerization</li>
+<li>Google developed Kubernetes as a response to manage containerized applications</li>
+<li>Docker introduced a simpler way to deploy applications using containers</li>
+<li>In 2014, the first version of Kubernetes was released as open source</li>
+<li>Cloud Native Computing Foundation (CNCF) was formed to provide governance and foster growth in the ecosystem</li>
+<li>Prometheus was created to address monitoring needs in containerized environments</li>
+<li>Helm was developed to manage Kubernetes resources declaratively</li>
+<li>GitHub became a hub for the cloud native community with many projects graduating from incubation</li>
+<li>The CNCF has grown to include over 1500 companies and 13,000 contributors</li>
+<li>Flux CD and GitOps principles have emerged as new ways to deploy resources</li>
+<li>Operators have been developed to automate tasks in Kubernetes clusters</li>
+<li>Celium was added to provide network security for Kubernetes</li>
+<li>The CNCF has a global Ambassador Network to help spread awareness and knowledge about cloud native technologies.</li>
+</ul>
+<h2 id="lightning-talk-2">Lightning talk 2</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dR5T2qNAuCs">https://www.youtube.com/watch?v=dR5T2qNAuCs</a></p>
+<ul>
+<li>Introduced himself as Lewis, Solutions Architect and organizer of the event</li>
+<li>Shared that he wasn't a book author or git connoisseur but had experience with career advice</li>
+<li>Expressed frustration about receiving generic answers to career questions and not finding value in others' journeys</li>
+<li>Encouraged learning Git, Markdown, and writing code as starting points for those getting into the industry</li>
+<li>Advised persistence and taking initiative to become a knowledge owner</li>
+<li>Discussed the importance of networking and sharing opportunities with others</li>
+<li>Shared a lesson learned about not being afraid to fail and allowing others to take chances</li>
+<li>Mentioned sponsoring someone's ticket to a conference as an opportunity to help those starting in the industry</li>
+<li>Expressed nerves about giving the talk but found value in meeting new people and learning from them</li>
+<li>Encouraged asking for consent before approaching new contacts.</li>
+</ul>
+<h2 id="panel-discussion-the-future-of-open-source">Panel Discussion: The Future of Open Source</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=kE5o4_Ed3pU">https://www.youtube.com/watch?v=kE5o4_Ed3pU</a></p>
+<ul>
+<li>Panel discussion on the future of Open Source with Paula Kennedy, Daniel Bryant, Alex Chirop, and Lawrence Dallachy moderated by Liz Rice</li>
+<li>Discussion started with a question about whether we have reached "Peak Open Source" based on a statistic that 90% of software is open source</li>
+<li>Some panelists think open source is changing the way software is developed and business models are evolving</li>
+<li>Others feel open source is not going anywhere and there will always be a need for it</li>
+<li>Discussion touched on topics such as reuse, open core business models, social contracts, innovation, and IP protection in Open Source projects</li>
+<li>Some concerns were raised about the fragmentation of licenses and the potential impact on community contributions</li>
+<li>The role of foundations in Open Source software was also discussed, with some panelists expressing their support for the Foundations' efforts to encourage collaboration and funding.</li>
+</ul>
+<h2 id="kubernetes-mlsec-securing-ai-in-space-andrew-martin-francesco-beltramini">Kubernetes MLSec: Securing AI in space | Andrew Martin &amp; Francesco Beltramini</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lZv2a1kjdC8">https://www.youtube.com/watch?v=lZv2a1kjdC8</a></p>
+<ul>
+<li>Introduction: Andrew Martin and Francesco Beltramini talk about securing AI systems in the context of Kubernetes MLSec</li>
+<li>Background: Both speakers have experience in security engineering, with a focus on cloud native technologies and AI</li>
+<li>AI Ecosystem: Overview of different types and levels of AI, focusing on machine learning and its lifecycle</li>
+<li>ML Security Challenges: Discussion of potential threats and risks in the ML ecosystem, especially in the context of Kubernetes</li>
+<li>Threat Modeling: Importance of threat modeling to identify risks and mitigate them in ML systems</li>
+<li>Specific Use Case: Analyzing a hypothetical satellite communications company (Company X) and its AI-based system</li>
+<li>Security Challenges for Company X: Discussion of various threats, including data poisoning, model degradation, and supply chain attacks</li>
+<li>Mitigation Strategies: Suggestions for securing ML systems, such as data signing, access control, and parameter security</li>
+<li>Conclusion: Emphasis on the importance of a thorough understanding of the ML ecosystem and threat modeling to ensure secure implementation and deployment.</li>
+</ul>
+<h2 id="from-frontend-engineering-to-cloud-native-lessons-learned-from-a-beginner-shedrack-akintayo">From Frontend Engineering to Cloud Native: Lessons Learned from a Beginner | Shedrack Akintayo</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=m6_4vt8gu8g">https://www.youtube.com/watch?v=m6_4vt8gu8g</a></p>
+<ul>
+<li>Shedrack Akintayo: Frontend Engineering to Cloud Native - Lessons Learned from a Beginner</li>
+<li>Transitioned from frontend engineering to Cloud native due to curiosity and interest in DevOps</li>
+<li>Cloud native philosophy: building and running scalable applications using cloud-based service delivery model</li>
+<li>Benefits: increased efficiency, cost reduction, reliability, resilience, and high availability</li>
+<li>Containerization: lightweight, isolates software in particular environments, portability</li>
+<li>Container runtimes: Docker, LXC, OCI, Kubernetes</li>
+<li>Kubernetes: prominent container orchestration platform, manages container run within a cluster, load balancing, scaling, rolling updates, and rollbacks</li>
+<li>Serverless: executes applications without managing servers, AWS Lambda, Celium (CNI), Calico, Flannel</li>
+<li>APF (eBPF): technology to extend kernel capabilities without changing the source code</li>
+<li>CNCF: Cloud Native Computing Foundation, fosters adoption of cloud native principles and ecosystem.</li>
+</ul>
+<p>Summary:</p>
+<ul>
+<li>Shedrack Akintayo shared his journey from frontend engineering to learning Cloud native technologies as a beginner.</li>
+<li>Cloud native philosophy focuses on building and running scalable applications using cloud-based services and infrastructure.</li>
+<li>Key benefits include increased efficiency, cost reduction, reliability, resilience, and high availability.</li>
+<li>Containerization is important for creating lightweight, isolatable, portable deployments.</li>
+<li>Container runtimes like Docker, LXC, OCI, and Kubernetes help manage container deployment and execution.</li>
+<li>Kubernetes is a popular container orchestration platform that manages containers within a cluster, ensures desired states, provides load balancing, and handles scaling and rolling updates.</li>
+<li>Serverless technologies enable running applications without managing servers directly.</li>
+<li>APF (eBPF) extends kernel capabilities to enhance observability and networking performance.</li>
+<li>CNCF is an organization that helps drive adoption of cloud native principles and fosters a vendor-neutral ecosystem.</li>
+</ul>
+<h2 id="lightning-talk-3">Lightning talk 3</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=mNvP2S7mCOA">https://www.youtube.com/watch?v=mNvP2S7mCOA</a></p>
+<ul>
+<li>Drew is discussing Pod Security Standard for Kubernetes newbies</li>
+<li>Three types of policies: Unrestricted, Baseline, and Restricted</li>
+<li>Enforcing security standards with Pod Security Admission Controller</li>
+<li>Policies can be set at the cluster or namespace level</li>
+<li>Violation of policy results in pod rejection or logging</li>
+<li>Engine X container requires privileged mode and must have a label to deploy</li>
+<li>Removing default security context from deployment causes errors</li>
+<li>Avoid privilege escalation and dropping unnecessary capabilities</li>
+<li>Use Open Policy Agent or other tools like Cerno or Warden for additional security.</li>
+</ul>
+<h2 id="ebpf-and-kubernetes-better-together-observability-and-security-with-tetragon-anna-james">eBPF and Kubernetes — Better Together! Observability and Security with Tetragon | Anna &amp; James</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oU7dPKoVfm4">https://www.youtube.com/watch?v=oU7dPKoVfm4</a></p>
+<ul>
+<li>Anna and James present on eBPF and Kubernetes with a focus on the Tetragon project</li>
+<li>Anna introduces herself as an observability engineer at Valent and previously worked on network observability projects</li>
+<li>James introduces himself as a senior solutions architect who has worked on upstreaming the Kubernetes project and is a former release lead for Kubernetes 124</li>
+<li>Tetragon is designed to solve security, policy enforcement, and monitoring problems in Kubernetes using eBPF</li>
+<li>eBPF programs can be loaded into the Linux kernel without recompiling or using a particular language</li>
+<li>Tetragon is fully kubernetes native, meaning it's aware of pods and namespaces within the cluster</li>
+<li>Process execution: Tetragon allows for monitoring process clusters and network visibility without using CNI (Calico Networking Ingress)</li>
+<li>eBPF maps are used to store state and improve observability by providing context data and correlating different events</li>
+<li>Tetragon can be used for process and file operation observation within the cluster</li>
+<li>Security Context: Tetragon helps manage security policies and access control within the Kubernetes cluster, even in privileged pods</li>
+<li>Network monitoring: Tetragon enables network monitoring with tracing policies that define which hook points to monitor, such as TCP connect, close, and send messages</li>
+<li>Tetragon is deeply integrated with Kubernetes and allows for filtering of kubernetes metadata using namespace, port selector, and label selectors.</li>
+<li>Tetragon code can be found on GitHub.</li>
+</ul>
+<h2 id="powering-ska-science-with-loki-john-garbutt">Powering SKA science with LOKI | John Garbutt</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oqe5X_vcyxk">https://www.youtube.com/watch?v=oqe5X_vcyxk</a></p>
+<ul>
+<li>John Garbett, ex-Citrix employee, now works on OpenStack and HPC Cloud for the Square Kilometer Array (SKA) project</li>
+<li>SKA is an international collaboration to build a telescope array that can scan the sky faster than any current observatory</li>
+<li>The telescope will generate massive amounts of data, requiring advanced computing infrastructure</li>
+<li>Garbett started working on the project in 2017 as a consultant for Cambridge University</li>
+<li>SKA consists of two telescopes: one in Australia (50-250 MHz sensitive) and one in South Africa (97 dish, 130 antenna)</li>
+<li>Each telescope will generate 8 terabit seconds of data per day, requiring advanced data processing and storage capabilities</li>
+<li>The project aims to process data in real-time, globally, using a distributed computing system</li>
+<li>Loki is an open infrastructure solution for making local bare metal machines dynamic and part of the SKA computing infrastructure</li>
+<li>OpenStack and Kubernetes are being used to make the supercomputer more agile and reconfigurable</li>
+<li>The project requires a significant investment in computing resources and collaboration between academia and industry.</li>
+</ul>
+<h2 id="gateways-of-power-building-your-own-service-mesh-miles-bryant">Gateways of power: building your own service mesh | Miles Bryant</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=qcIrvj20d0o">https://www.youtube.com/watch?v=qcIrvj20d0o</a></p>
+<ul>
+<li>Mile Bryant, tech lead at Monzo, discusses building their own service mesh</li>
+<li>Monzo is a digital bank in the UK with advanced money management features and over 5 million customers</li>
+<li>In 2015, they had a simple product architecture but decided to use microservices for extensibility and scalability</li>
+<li>Challenges of working with distributed systems: network unreliability, service discovery, observability</li>
+<li>Initial attempts at handling these challenges included using libraries like Finagle and RabbitMQ</li>
+<li>RabbitMQ was difficult to operate, especially in the Kubernetes environment</li>
+<li>Decided to use Link instead, which provided a neat sidecar proxy with advanced features like service discovery and circuit breaking</li>
+<li>Later faced issues with scaling and security, leading them to upgrade to Envoy</li>
+<li>Envoy provided a more battle-tested solution for their needs, with a similar architecture and the added benefit of XDS aggregated service discovery</li>
+<li>New requirements led them to write custom code for Envoy and make it more complex</li>
+<li>Considering moving to a store-and-forward model for traffic control</li>
+<li>Benefits of building their own service mesh include enabling network policies and customization, but require a significant investment of time and resources.</li>
+</ul>
+<h2 id="smarter-than-your-average-sbom-matt-jarvis-andrew-martin">Smarter than your average SBOM ! | Matt Jarvis &amp; Andrew Martin</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rvsYnRxq0pU">https://www.youtube.com/watch?v=rvsYnRxq0pU</a></p>
+<ul>
+<li>Matt Jarvis and Andy Martin discuss Software Bill of Materials (SBOM) in the context of Cloud Native software</li>
+<li>SBOM is a structured data that describes the relationships between elements in software, similar to package repositories</li>
+<li>SBOM is important for managing supply chain security by providing standard, machine-readable information about dependencies and vulnerabilities</li>
+<li>SBOM can be generated at different points in the development process and contains various types of information such as licenses, publisher details, and vulnerability data</li>
+<li>There are tools like CycloneDX and OpenSSF that help create and enrich SBOMs</li>
+<li>Enriched SBOMs can include additional data from external sources, such as license information and security vulnerabilities</li>
+<li>SBOMs are crucial for ensuring trust in the software supply chain by verifying the authenticity of components and their dependencies.</li>
+</ul>
+<h2 id="powering-up-online-multiplayer-leveraging-kubernetes-for-game-server-optimisation">Powering Up Online Multiplayer: Leveraging Kubernetes for Game Server Optimisation</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=sBjvOTRIKBQ">https://www.youtube.com/watch?v=sBjvOTRIKBQ</a></p>
+<ul>
+<li>The speaker, a Solutions Architect at AWS, is discussing the optimization of game servers using Kubernetes.</li>
+<li>Game server architecture involves a central authority to manage game state and ensure fairness. Traditional game servers have challenges like scaling, latency, and cheating.</li>
+<li>Kubernetes can simplify the deployment and management of game servers by automating patching, scaling, and managing multiple instances in different regions for lowest latency.</li>
+<li>Persistent world games may require special considerations like memory checkpointing or externalizing state.</li>
+<li>High-performance games with high frame rates need to run close to the player for optimal performance, which can be achieved using edge servers and load balancing.</li>
+<li>Running a game server on Kubernetes eliminates management complexity, especially for large clusters and deployments across multiple regions.</li>
+<li>The speaker demonstrates using Carpenter (Kubernetes autoscaler) to manage resources efficiently, scaling based on demand and optimizing instance size for specific workloads.</li>
+<li>Agonas is used to manage game servers as a fleet, providing features like node selection, patching, and releasing updates automatically.</li>
+<li>The speaker deploys an example racing game using Kubernetes and shows how it can be scaled and managed efficiently with Carpenter and Agonas.</li>
+<li>Key benefits of running a game server on Kubernetes include automated deployment, scalability, resilience, cost efficiency, and the ability to run on different architectures like Arm processors.</li>
+</ul>
+<h2 id="acquisitions-assimilation-and-alignment-toby-jackson">Acquisitions, Assimilation and Alignment | Toby Jackson</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uGZ1oDAM9MI">https://www.youtube.com/watch?v=uGZ1oDAM9MI</a></p>
+<ul>
+<li>Toby Jackson, Reliability Engineering Lead at Future PLC, shares his experiences of team health and acquisitions in the technology industry over the last decade</li>
+<li>Success depends on a healthy team with minimal politics, confusion, and consistent feedback</li>
+<li>Team formed in Bath, England, started as a small group of engineers working together, sharing infrastructure and war stories</li>
+<li>Acquisitions brought new challenges and cultural differences, requiring rebuilding and evolving the team to embrace new opportunities</li>
+<li>Two distinct engineering teams merged, operating under different tools and vendors, which required aligning and simplifying</li>
+<li>Embraced Kubernetes and set default practices for simplification</li>
+<li>Trust and empathy are crucial in remote and distributed teams, especially during acquisitions</li>
+<li>Regular meetings, personal stories, and retrospectives help build trust and collaboration</li>
+<li>Blameless culture and shared accountability are important in a healthy SRE team</li>
+<li>Inconsistency is a challenge for the future of SRE, requiring common friction points to be identified and addressed</li>
+<li>Human interaction and collaboration are essential in building a successful, innovative team.</li>
+</ul>
+<p>Overall, Toby Jackson discusses his experiences with team health during acquisitions and how trust, empathy, consistency, and collaboration have played a role in creating high-performing teams. He emphasizes the importance of addressing cultural differences, simplifying processes, and fostering an inclusive environment for success.</p>
+<h2 id="scaling-systems-of-trust-for-software-dan-lorenc">Scaling Systems of Trust for Software | Dan Lorenc</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=vtxOS90LGlA">https://www.youtube.com/watch?v=vtxOS90LGlA</a></p>
+<ul>
+<li>Dan Lorenc discusses the issue of trust in open source software, particularly in the context of cloud native ecosystems</li>
+<li>Implicit trust placed on open source code and maintainers is a concern as attackers have started targeting vulnerabilities</li>
+<li>Regulators are noticing the danger and crafting regulations, creating friction</li>
+<li>Trust systems in place for open source are not working at scale, especially in cloud native ecosystems</li>
+<li>Discussion of the history of trust in computing, starting with the early 1980s and Linux distributions</li>
+<li>The story of Ken Thompson's paper "Reflections on Trusting Trust" and the back door in Bell Labs compiler is mentioned</li>
+<li>Debian distribution's approach to building trust through curation and verification is discussed</li>
+<li>The shift towards secure package distribution and cryptographic signing is mentioned</li>
+<li>Modern programming language ecosystems, such as Python, have different trust models and face different challenges</li>
+<li>In the cloud native ecosystem, there are multiple layers of trust to consider, including Docker and Helm</li>
+<li>Open source software security incidents are handled better than closed source software, but there are still challenges</li>
+<li>Lack of a tamper-proof seal and curation are two major issues in open source trust</li>
+<li>Solutions like Sigstore and scaling package managers are being explored to address these issues.</li>
+</ul>
+<h2 id="bridging-the-platform-empathy-gap-applying-product-management-to-platform-engineering-cat-morris">Bridging the Platform Empathy Gap: Applying Product Management to Platform Engineering | Cat Morris</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=yH0rhSyZsqQ">https://www.youtube.com/watch?v=yH0rhSyZsqQ</a></p>
+<ul>
+<li>Cat Morris shared her experience attending a conference where she attended a platform engineering and product management room</li>
+<li>She was surprised to hear developers express frustration and resentment towards platform engineers, who they saw as unable to understand their needs and provide clear guardrails</li>
+<li>Morris identified with this as she had once been a frustrated developer working on a platform team</li>
+<li>She realized that the source of the empathy gap between platform engineers and developers was due to a lack of understanding and communication</li>
+<li>Morris proposes three hypotheses for why the empathy gap exists:</li>
+<li>DevOps platform engineering created the empathy gap by prioritizing automation over developer experience</li>
+<li>The larger empathy gap leads to lower platform adoption and slower development</li>
+<li>Platforms with low adoption are doomed to fail</li>
+<li>She suggests that product managers can bridge the gap by focusing on the application developer user, adopting a Northstar metric to measure adoption, and prioritizing the needs of developers.</li>
+<li>Morris emphasizes the importance of understanding the needs of developers and providing them with the right level of abstraction and configurability to get their jobs done efficiently and effectively.</li>
+<li>She also highlights the need for platforms to be usable, consistent, self-service, and predictable in order to encourage adoption.</li>
+<li>Morris concludes by emphasizing the importance of closing the empathy gap between platform engineers and developers to build successful platforms.</li>
+</ul>
+<h2 id="the-secret-life-of-kubernetes-containers-rory-mccune">The Secret Life of Kubernetes Containers | Rory McCune</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zByo74nx-Ak">https://www.youtube.com/watch?v=zByo74nx-Ak</a></p>
+<ul>
+<li>Rory McCune, senior security advocate at DataDog, discusses the secret life of Kubernetes containers</li>
+<li>Background: McCune is a former security pentester and focuses on container security in Kubernetes</li>
+<li>Goal: To provide useful information for debugging, troubleshooting, and designing new containerized applications</li>
+<li>Container basics: Containers are like Docker, used to deploy and scale applications without needing detailed knowledge of what's happening at a low level</li>
+<li>Isolation: Containers are isolated from the host system, preventing random processes from starting and resolving library version dependency problems</li>
+<li>Namespaces and cgroups: Linux features not specifically designed for containers but used by Docker and Kubernetes to isolate processes and resources</li>
+<li>File systems: Containers have their own file systems, allowing interaction using tools like Cube Cuttle and proc</li>
+<li>Networking: Containers can share namespaces and use proxy servers like Cube Proxy for handling network traffic</li>
+<li>Flexibility: Containers are flexible and allow for various ways to interact with components, including API server, scheduler, ETD (Container Runtime Interface), and runC</li>
+<li>Debugging: Tools like nerdctl and chat GPT can be used for container debugging, and understanding underlying container technology is crucial for troubleshooting</li>
+<li>AI: McCune briefly touches on using AI tools like chat GPT to generate code and interact with container APIs</li>
+<li>Security: Containers have security benefits such as isolation and control over access to the API server and SD (Container Storage Interface) cluster, but also potential vulnerabilities if not configured properly.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

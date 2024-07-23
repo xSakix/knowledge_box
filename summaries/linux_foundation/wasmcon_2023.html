@@ -1,0 +1,5101 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/linux_foundation/wasmcon_2023.html">
+      
+      
+        <link rel="prev" href="oss.eu.2023.html">
+      
+      
+        <link rel="next" href="../linux_plumbers/linux_plumbers_2023.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>WASM conf 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wasm-gc-what-exactly-is-it-and-why-i-should-care-ivan-mikushin-vmware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WASM conf 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="wasmcon_2023.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-gc-what-exactly-is-it-and-why-i-should-care-ivan-mikushin-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm GC: What Exactly Is It (and Why I Should Care) - Ivan Mikushin, VMware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-toolchain-for-webassembly-components-guy-bedford-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Toolchain for WebAssembly Components - Guy Bedford, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wasi-os-isolation-with-communication-wasm-style-dan-gohman-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      The WASI OS - Isolation with Communication, Wasm style - Dan Gohman, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-components-for-every-language-kyle-brown-singlestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm Components for Every Language - Kyle Brown, SingleStore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-wasm-applications-with-docker-angel-m-de-miguel-meana-vmware-justin-cormack-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop Wasm Applications with Docker - Angel M De Miguel Meana, VMware &amp; Justin Cormack, Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedding-wasm-in-the-future-chris-woods-siemens-technology-usa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding WASM in the Future - Chris Woods, Siemens Technology USA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-webassembly-first-os-an-adventure-into-the-unorthodox-dan-phillips-loophole-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a WebAssembly-first OS – An Adventure Into the Unorthodox - Dan Phillips, Loophole Labs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-the-android-context-hub-runtime-environment-chre-nanoapps-in-webassembly-mingqiu-sun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop the Android Context Hub Runtime Environment (CHRE) Nanoapps in WebAssembly - Mingqiu Sun
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-get-owned-by-dependencies-how-firefox-uses-wasm-to-protect-itself-from-shravan-narayan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't Get Owned by Dependencies: How Firefox Uses Wasm to Protect Itself from... - Shravan Narayan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bringing-ai-to-the-heterogeneous-edge-with-webassembly-onnx-francisco-cabrera-ralph-squillace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bringing AI to the Heterogeneous Edge with WebAssembly &amp; ONNX - Francisco Cabrera &amp; Ralph Squillace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-wasm-to-improve-quality-and-flexibility-of-the-api-plugin-ecosystem-rohan-deshpande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leveraging WASM to Improve Quality and Flexibility of the API Plugin Ecosystem... - Rohan Deshpande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-ai-and-webassembly-angel-m-de-miguel-meana-vmware-michael-yuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with AI and WebAssembly - Angel M De Miguel Meana, VMware &amp; Michael Yuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning-in-fastlys-computeedge-andrew-brown-intel-matthew-tamayo-rios-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine Learning in Fastly's Compute@Edge - Andrew Brown, Intel &amp; Matthew Tamayo-Rios, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unraveling-the-magic-of-two-hot-trends-larry-carvalho-radu-matei-aparna-sinha-tyler-mcmullen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unraveling the Magic of Two Hot Trends... - Larry Carvalho, Radu Matei, Aparna Sinha, Tyler McMullen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wasi-standards-and-the-component-model-transforming-application-liam-randall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WASI Standards and the Component Model: Transforming Application... - Liam Randall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-when-wasm-meets-cyber-physical-systems-a-discussion-of-webassembly-in-emily-ruppel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: When Wasm Meets Cyber-Physical Systems: A Discussion of WebAssembly in... - Emily Ruppel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-what-is-a-component-and-why-luke-wagner-distinguished-engineer-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: What is a Component (and Why)? - Luke Wagner, Distinguished Engineer, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-charting-a-wasm-landscape-chris-aniszczyk-chief-technology-officer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Charting a Wasm Landscape - Chris Aniszczyk, Chief Technology Officer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-welcome-opening-remarks-michelle-dhanani-principal-software-engineer-founding-member" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Welcome &amp; Opening Remarks - Michelle Dhanani, Principal Software Engineer &amp; Founding Member
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-how-webassembly-can-power-the-new-wave-of-serverless-ai-radu-matei" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: How WebAssembly can Power the New Wave of Serverless AI - Radu Matei
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wedge-project-edge-ai-enabled-by-wasm-tatsuya-kato-ceo-dan-dumitriu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WEdge Project: Edge AI enabled by Wasm - Tatsuya Kato, CEO &amp; Dan Dumitriu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-are-we-componentized-yet-bailey-hayes-engineering-director-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Are We Componentized Yet? - Bailey Hayes, Engineering Director, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-welcome-back-michelle-dhanani-principal-software-engineer-founding-member-fermyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Welcome Back - Michelle Dhanani, Principal Software Engineer &amp; Founding Member, Fermyon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-webassembly-in-a-containerized-world-brendan-burns-corporate-vice-president-azure-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WebAssembly in a Containerized World - Brendan Burns, Corporate Vice President, Azure OSS..
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-deploy-wasm-on-the-edge-brendan-irvine-broque-product-manager-cloudflare-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Deploy WASM on the Edge - Brendan Irvine-Broque, Product Manager, Cloudflare Workers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wasm-from-the-inside-out-a-journey-through-the-impact-of-webassembly-in-saul-cabrera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Wasm from the Inside Out: A Journey Through the Impact of WebAssembly in... - Saúl Cabrera
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing-your-sandbox-leveraging-hypervisors-for-webassembly-security-danilo-dan-chiarlone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing Your Sandbox: Leveraging Hypervisors for WebAssembly Security - Danilo (Dan) Chiarlone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-correctness-in-wasmtime-nick-fitzgerald-bytecode-alliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security and Correctness in Wasmtime - Nick Fitzgerald, Bytecode Alliance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-discussion-browsers-wasm-ryan-hunt-conrad-watt-adam-klein-david-degazio-bailey-hayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel Discussion: Browsers &amp; Wasm - Ryan Hunt, Conrad Watt, Adam Klein, David Degazio, Bailey Hayes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-in-wasm-a-glimpse-into-the-future-of-shared-libraries-carl-sverre-amplify-partners" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite in Wasm: A Glimpse into the Future of Shared Libraries - Carl Sverre, Amplify Partners
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unleashing-the-power-of-wasm-revolutionizing-database-scalability-and-application-rj-atwal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unleashing the Power of WASM: Revolutionizing Database Scalability and Application... - RJ Atwal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-model-the-final-abstraction-taylor-thomas-liam-randall-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Model: The Final Abstraction - Taylor Thomas &amp; Liam Randall, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-kubernetes-native-or-what-else-an-enterprise-architecture-debrief-sean-isom-ex-adobe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm, Kubernetes, Native, or What Else? An Enterprise Architecture Debrief - Sean Isom, ex-Adobe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-wazero-to-wazhero-an-introduction-to-wazero-for-gophers-and-other-species-edoardo-vacchi" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Wazero to Wazhero: An Introduction to Wazero for Gophers and Other Species - Edoardo Vacchi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-your-backend-like-a-cdn-with-wasm-brooks-townsend-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying Your Backend Like a CDN With Wasm - Brooks Townsend, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#untangle-that-spaghetti-code-make-dreamy-fettuccine-instead-taylor-thomas-bailey-hayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Untangle That Spaghetti Code; Make Dreamy Fettuccine Instead - Taylor Thomas &amp; Bailey Hayes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-wasi-cloud-core-for-a-spin-jiaxiao-zhou-microsoft-joel-dice-fermyon-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taking WASI-Cloud-Core for a Spin - Jiaxiao Zhou, Microsoft &amp; Joel Dice, Fermyon Technologies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-the-architecture-divide-how-hardware-limits-wasm-and-how-we-can-do-better-tal-garfinkel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bridging the Architecture Divide: How Hardware Limits Wasm, and How We Can Do Better - Tal Garfinkel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlinwasm-today-and-tomorrow-zalim-bashorov-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kotlin/Wasm: Today and Tomorrow - Zalim Bashorov, JetBrains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-a-linux-just-for-wasm-andrew-randall-ralph-squillace-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build a Linux Just for Wasm! - Andrew Randall &amp; Ralph Squillace, Microsoft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-componentize-py-a-tool-for-packaging-python-apps-as-components-joel-dice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing Componentize-Py: A Tool for Packaging Python Apps as Components - Joel Dice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapr-enabled-wasm-microservices-michael-yuan-wasmedge-yaron-schneider-diagrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dapr-Enabled Wasm Microservices - Michael Yuan, WasmEdge &amp; Yaron Schneider, Diagrid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management-for-wasm-components-daniel-macovei-jaf-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Management for Wasm Components - Daniel Macovei, JAF Labs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-buzz-about-green-tech-webassemblys-impact-on-carbon-footprint-reduction-christoph-voigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Buzz About Green Tech: WebAssembly's Impact on Carbon Footprint Reduction - Christoph Voigt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doing-server-side-webassembly-the-hard-way-liam-crilly-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doing Server Side WebAssembly the Hard Way - Liam Crilly, NGINX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piercing-the-veil-of-webassembly-in-production-benjamin-eckel-dylibso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Piercing the Veil of WebAssembly in Production - Benjamin Eckel, Dylibso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inside-the-wizard-research-engine-ben-titzer-carnegie-mellon-university" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inside the Wizard Research Engine - Ben Titzer, Carnegie Mellon University
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-a-wasi-host-for-visual-studio-code-dirk-baumer-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a WASI Host for Visual Studio Code - Dirk Bäumer, Microsoft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-in-bytefaas-past-present-and-future-wilson-wang-bytedance" class="md-nav__link">
+    <span class="md-ellipsis">
+      WASM in ByteFaaS, Past, Present, and Future - Wilson Wang, ByteDance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-gc-what-exactly-is-it-and-why-i-should-care-ivan-mikushin-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm GC: What Exactly Is It (and Why I Should Care) - Ivan Mikushin, VMware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-toolchain-for-webassembly-components-guy-bedford-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Toolchain for WebAssembly Components - Guy Bedford, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wasi-os-isolation-with-communication-wasm-style-dan-gohman-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      The WASI OS - Isolation with Communication, Wasm style - Dan Gohman, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-components-for-every-language-kyle-brown-singlestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm Components for Every Language - Kyle Brown, SingleStore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-wasm-applications-with-docker-angel-m-de-miguel-meana-vmware-justin-cormack-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop Wasm Applications with Docker - Angel M De Miguel Meana, VMware &amp; Justin Cormack, Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedding-wasm-in-the-future-chris-woods-siemens-technology-usa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding WASM in the Future - Chris Woods, Siemens Technology USA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-webassembly-first-os-an-adventure-into-the-unorthodox-dan-phillips-loophole-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a WebAssembly-first OS – An Adventure Into the Unorthodox - Dan Phillips, Loophole Labs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-the-android-context-hub-runtime-environment-chre-nanoapps-in-webassembly-mingqiu-sun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop the Android Context Hub Runtime Environment (CHRE) Nanoapps in WebAssembly - Mingqiu Sun
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-get-owned-by-dependencies-how-firefox-uses-wasm-to-protect-itself-from-shravan-narayan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't Get Owned by Dependencies: How Firefox Uses Wasm to Protect Itself from... - Shravan Narayan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bringing-ai-to-the-heterogeneous-edge-with-webassembly-onnx-francisco-cabrera-ralph-squillace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bringing AI to the Heterogeneous Edge with WebAssembly &amp; ONNX - Francisco Cabrera &amp; Ralph Squillace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leveraging-wasm-to-improve-quality-and-flexibility-of-the-api-plugin-ecosystem-rohan-deshpande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leveraging WASM to Improve Quality and Flexibility of the API Plugin Ecosystem... - Rohan Deshpande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-ai-and-webassembly-angel-m-de-miguel-meana-vmware-michael-yuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with AI and WebAssembly - Angel M De Miguel Meana, VMware &amp; Michael Yuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning-in-fastlys-computeedge-andrew-brown-intel-matthew-tamayo-rios-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine Learning in Fastly's Compute@Edge - Andrew Brown, Intel &amp; Matthew Tamayo-Rios, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unraveling-the-magic-of-two-hot-trends-larry-carvalho-radu-matei-aparna-sinha-tyler-mcmullen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unraveling the Magic of Two Hot Trends... - Larry Carvalho, Radu Matei, Aparna Sinha, Tyler McMullen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wasi-standards-and-the-component-model-transforming-application-liam-randall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WASI Standards and the Component Model: Transforming Application... - Liam Randall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-when-wasm-meets-cyber-physical-systems-a-discussion-of-webassembly-in-emily-ruppel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: When Wasm Meets Cyber-Physical Systems: A Discussion of WebAssembly in... - Emily Ruppel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-what-is-a-component-and-why-luke-wagner-distinguished-engineer-fastly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: What is a Component (and Why)? - Luke Wagner, Distinguished Engineer, Fastly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-charting-a-wasm-landscape-chris-aniszczyk-chief-technology-officer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Charting a Wasm Landscape - Chris Aniszczyk, Chief Technology Officer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-welcome-opening-remarks-michelle-dhanani-principal-software-engineer-founding-member" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Welcome &amp; Opening Remarks - Michelle Dhanani, Principal Software Engineer &amp; Founding Member
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-how-webassembly-can-power-the-new-wave-of-serverless-ai-radu-matei" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: How WebAssembly can Power the New Wave of Serverless AI - Radu Matei
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wedge-project-edge-ai-enabled-by-wasm-tatsuya-kato-ceo-dan-dumitriu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WEdge Project: Edge AI enabled by Wasm - Tatsuya Kato, CEO &amp; Dan Dumitriu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-are-we-componentized-yet-bailey-hayes-engineering-director-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Are We Componentized Yet? - Bailey Hayes, Engineering Director, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-welcome-back-michelle-dhanani-principal-software-engineer-founding-member-fermyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Welcome Back - Michelle Dhanani, Principal Software Engineer &amp; Founding Member, Fermyon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-webassembly-in-a-containerized-world-brendan-burns-corporate-vice-president-azure-oss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: WebAssembly in a Containerized World - Brendan Burns, Corporate Vice President, Azure OSS..
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-deploy-wasm-on-the-edge-brendan-irvine-broque-product-manager-cloudflare-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Deploy WASM on the Edge - Brendan Irvine-Broque, Product Manager, Cloudflare Workers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keynote-wasm-from-the-inside-out-a-journey-through-the-impact-of-webassembly-in-saul-cabrera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keynote: Wasm from the Inside Out: A Journey Through the Impact of WebAssembly in... - Saúl Cabrera
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandboxing-your-sandbox-leveraging-hypervisors-for-webassembly-security-danilo-dan-chiarlone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sandboxing Your Sandbox: Leveraging Hypervisors for WebAssembly Security - Danilo (Dan) Chiarlone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-correctness-in-wasmtime-nick-fitzgerald-bytecode-alliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security and Correctness in Wasmtime - Nick Fitzgerald, Bytecode Alliance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-discussion-browsers-wasm-ryan-hunt-conrad-watt-adam-klein-david-degazio-bailey-hayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel Discussion: Browsers &amp; Wasm - Ryan Hunt, Conrad Watt, Adam Klein, David Degazio, Bailey Hayes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-in-wasm-a-glimpse-into-the-future-of-shared-libraries-carl-sverre-amplify-partners" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite in Wasm: A Glimpse into the Future of Shared Libraries - Carl Sverre, Amplify Partners
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unleashing-the-power-of-wasm-revolutionizing-database-scalability-and-application-rj-atwal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unleashing the Power of WASM: Revolutionizing Database Scalability and Application... - RJ Atwal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-model-the-final-abstraction-taylor-thomas-liam-randall-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Model: The Final Abstraction - Taylor Thomas &amp; Liam Randall, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-kubernetes-native-or-what-else-an-enterprise-architecture-debrief-sean-isom-ex-adobe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wasm, Kubernetes, Native, or What Else? An Enterprise Architecture Debrief - Sean Isom, ex-Adobe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-wazero-to-wazhero-an-introduction-to-wazero-for-gophers-and-other-species-edoardo-vacchi" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Wazero to Wazhero: An Introduction to Wazero for Gophers and Other Species - Edoardo Vacchi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-your-backend-like-a-cdn-with-wasm-brooks-townsend-cosmonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying Your Backend Like a CDN With Wasm - Brooks Townsend, Cosmonic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#untangle-that-spaghetti-code-make-dreamy-fettuccine-instead-taylor-thomas-bailey-hayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Untangle That Spaghetti Code; Make Dreamy Fettuccine Instead - Taylor Thomas &amp; Bailey Hayes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-wasi-cloud-core-for-a-spin-jiaxiao-zhou-microsoft-joel-dice-fermyon-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taking WASI-Cloud-Core for a Spin - Jiaxiao Zhou, Microsoft &amp; Joel Dice, Fermyon Technologies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-the-architecture-divide-how-hardware-limits-wasm-and-how-we-can-do-better-tal-garfinkel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bridging the Architecture Divide: How Hardware Limits Wasm, and How We Can Do Better - Tal Garfinkel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlinwasm-today-and-tomorrow-zalim-bashorov-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kotlin/Wasm: Today and Tomorrow - Zalim Bashorov, JetBrains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-build-a-linux-just-for-wasm-andrew-randall-ralph-squillace-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's Build a Linux Just for Wasm! - Andrew Randall &amp; Ralph Squillace, Microsoft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-componentize-py-a-tool-for-packaging-python-apps-as-components-joel-dice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing Componentize-Py: A Tool for Packaging Python Apps as Components - Joel Dice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapr-enabled-wasm-microservices-michael-yuan-wasmedge-yaron-schneider-diagrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dapr-Enabled Wasm Microservices - Michael Yuan, WasmEdge &amp; Yaron Schneider, Diagrid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management-for-wasm-components-daniel-macovei-jaf-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Management for Wasm Components - Daniel Macovei, JAF Labs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-buzz-about-green-tech-webassemblys-impact-on-carbon-footprint-reduction-christoph-voigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Buzz About Green Tech: WebAssembly's Impact on Carbon Footprint Reduction - Christoph Voigt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doing-server-side-webassembly-the-hard-way-liam-crilly-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doing Server Side WebAssembly the Hard Way - Liam Crilly, NGINX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piercing-the-veil-of-webassembly-in-production-benjamin-eckel-dylibso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Piercing the Veil of WebAssembly in Production - Benjamin Eckel, Dylibso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inside-the-wizard-research-engine-ben-titzer-carnegie-mellon-university" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inside the Wizard Research Engine - Ben Titzer, Carnegie Mellon University
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-a-wasi-host-for-visual-studio-code-dirk-baumer-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a WASI Host for Visual Studio Code - Dirk Bäumer, Microsoft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasm-in-bytefaas-past-present-and-future-wilson-wang-bytedance" class="md-nav__link">
+    <span class="md-ellipsis">
+      WASM in ByteFaaS, Past, Present, and Future - Wilson Wang, ByteDance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>WASM conf 2023</h1>
+
+<h2 id="wasm-gc-what-exactly-is-it-and-why-i-should-care-ivan-mikushin-vmware">Wasm GC: What Exactly Is It (and Why I Should Care) - Ivan Mikushin, VMware</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ndJP-vmZFYk">https://www.youtube.com/watch?v=ndJP-vmZFYk</a></p>
+<ul>
+<li>Ivan Mikushin from VMware discussing WebAssembly Garbage Collector (Wasm GC)</li>
+<li>Wasm GC needed due to popularity of languages requiring garbage collection like JavaScript, Java, Python, Go, etc.</li>
+<li>Wasm GC proposal adds Heap type with subtypes and recursive types, index type, new instructions, and shorthand notations.</li>
+<li>Heap memory is used for garbage collection and managed data in WebAssembly.</li>
+<li>Three disjoint hierarchies in WebAssembly: functional type, external type, and aggregate type.</li>
+<li>30 new instructions added to support garbage collection.</li>
+<li>Compilers supporting WebAssembly garbage collection are coming soon for popular languages.</li>
+<li>WebAssembly runtime controls memory management using Heap.</li>
+<li>Garbage collector ensures that unreferenced data is automatically freed.</li>
+<li>WebAssembly uses a 32-bit integer, and i31 refers to an unboxed scalar type.</li>
+<li>Rust uses automatic memory management with borrow checker instead of garbage collection.</li>
+<li>Different languages have different memory models, and some require garbage collection.</li>
+<li>Compiler knows exactly where memory is allocated in WebAssembly, unlike Rust.</li>
+<li>Chrome V8 engine has already implemented Wasm GC support, and other projects are working on it.</li>
+<li>Kotlin is expected to get Wasm GC support soon.</li>
+</ul>
+<h2 id="javascript-toolchain-for-webassembly-components-guy-bedford-fastly">JavaScript Toolchain for WebAssembly Components - Guy Bedford, Fastly</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ChBGAZRU1qs">https://www.youtube.com/watch?v=ChBGAZRU1qs</a></p>
+<ul>
+<li>Guy Bedford discusses integrating WebAssembly (WASM) components into the JavaScript ecosystem</li>
+<li>Three ways to run JavaScript in a browser: CommonJS, native modules, and ES modules</li>
+<li>Goal is to have WASM embedded like a JavaScript module with minimal glue code</li>
+<li>ebuild is a modern build tool that can run WASM along with JavaScript</li>
+<li>Ebuild uses static analysis to instantiate WASM modules at build time, reducing the need for glue code</li>
+<li>Component model provides first-class embeddability and execution environment ability for WASM modules</li>
+<li>WebAssembly Module System (WASI) enables interoperability between JavaScript and WASM components</li>
+<li>JRR file is used to convert a component to an ES module interface, allowing custom instantiation and transpilation</li>
+<li>The demo shows using the ChaRay library, which can be built for WASM and run in the browser with minimal glue code.</li>
+</ul>
+<h2 id="the-wasi-os-isolation-with-communication-wasm-style-dan-gohman-fastly">The WASI OS - Isolation with Communication, Wasm style - Dan Gohman, Fastly</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=97jw9v2dRaw">https://www.youtube.com/watch?v=97jw9v2dRaw</a></p>
+<ul>
+<li>Dan Gohman discussing WASI OS design philosophy, focusing on isolation and communication</li>
+<li>Operating systems (OS) have personalities, underlying implementation affects their design</li>
+<li>Unix philosophy emphasizes loose coupling, human interactivity, and modularity</li>
+<li>Isolation and communication are opposing concepts in computing: isolation ensures non-conflicting processes, while communication allows them to work together</li>
+<li>Early computers had limited access control, no virtualization or internet, so trust was implicit</li>
+<li>Unix pipelines (a Unix feature) allow for interprocess communication through a pipeline of connected programs</li>
+<li>WASM (WebAssembly) is a modern technology that isolates and communicates components (programs), similar to the Unix philosophy</li>
+<li>WASI OS, a new operating system built with WASM, aims to provide fine-grained resource handling, contextual name resolution, and efficient code accessing</li>
+<li>Streams are a fundamental concept in WASI OS, allowing for easy data transfer between processes and improving performance and scalability</li>
+<li>The design of WASI OS prioritizes small illusions (limited virtualization), default deny security, and contextual name resolution for composability</li>
+<li>WASI OS also supports loose coupling through import/export, making it easier to write programs that work together.</li>
+</ul>
+<h2 id="wasm-components-for-every-language-kyle-brown-singlestore">Wasm Components for Every Language - Kyle Brown, SingleStore</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IqehHuPYUSc">https://www.youtube.com/watch?v=IqehHuPYUSc</a></p>
+<ul>
+<li>Kyle Brown from SingleStore discusses making Wasm components for every language</li>
+<li>Two main points: making a component for every language and making different languages work together</li>
+<li>Components are structured as modules with import/export abstractions</li>
+<li>Components contain a module and can be instantiated like links</li>
+<li>Component model is layered on top of core WebAssembly, allowing the expression of complicated semantics</li>
+<li>To create a component, one writes code at the component level, which is then lowered to core WebAssembly</li>
+<li>Interface type modules are used for linking components together</li>
+<li>The Wasm toolchain can parse and call the binary component directly</li>
+<li>Creating business logic in assembly language directly is time-consuming and not practical for most use cases</li>
+<li>Runtime wrapping is an alternative approach, where the tool generates bindings to adapt types between languages</li>
+<li>Precompiled runtimes like SpiderMonkey are used for JavaScript components</li>
+<li>Snapshotting improves startup speed by preinitializing component state</li>
+<li>The binding generation process can generate errors if type mismatches occur</li>
+<li>Components can be composed by importing and instantiating them together, creating a graph of components</li>
+<li>Lifting and lowering are needed to convert data between components with different representations</li>
+<li>Tower Wansum is a tool that allows for component drag-and-drop composition using open source tools.</li>
+</ul>
+<h2 id="develop-wasm-applications-with-docker-angel-m-de-miguel-meana-vmware-justin-cormack-docker">Develop Wasm Applications with Docker - Angel M De Miguel Meana, VMware &amp; Justin Cormack, Docker</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=xPO3-TOZxW0">https://www.youtube.com/watch?v=xPO3-TOZxW0</a></p>
+<ul>
+<li>Angel M. De Miguel Meana and Justin Cormack discuss the intersection of Docker and WebAssembly (WASM)</li>
+<li>WASM allows for portable, sandboxed applications that can run anywhere with a consistent environment</li>
+<li>Containers and WASM share similarities in providing a consistent runtime environment and security isolation</li>
+<li>WASM is a binary instruction format that compiles code from languages like C, C++, and Rust into a single binary</li>
+<li>WASM runs on a virtual machine that provides a structured sandbox with namespaced isolation</li>
+<li>Containers and WASM can be used together to create portable applications with interchangeable benefits</li>
+<li>WASM containers are smaller in size compared to traditional containers as they don't require an operating system layer</li>
+<li>Docker Hub and GitHub Registries offer pre-built WASM container images for various interpreted languages like Python, Ruby, and PHP</li>
+<li>The use of a shim API allows WASM containers to run alongside traditional containers in the same environment</li>
+<li>Kubernetes benefits from using WASM containers as they are smaller and easier to manage in a cluster.</li>
+</ul>
+<h2 id="embedding-wasm-in-the-future-chris-woods-siemens-technology-usa">Embedding WASM in the Future - Chris Woods, Siemens Technology USA</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=LuiuA_v8X2Y">https://www.youtube.com/watch?v=LuiuA_v8X2Y</a></p>
+<ul>
+<li>Chris Woods, an industrial researcher at Siemens Technology USA, discusses the future of embedding WebAssembly (wasm) in various industries.</li>
+<li>Wasm is a portable, low-level code format that can be embedded in software and hardware systems, similar to traditional embedded systems.</li>
+<li>Wasm has been successful in the embedded space, with examples like Amazon Prime Video and Disney Plus using it for cross-device support.</li>
+<li>Wasm provides portability, allowing code to run on various platforms without modification, and isolation, preventing unintended access to memory or system resources.</li>
+<li>RL box is a web assembly tool that allows compiling libraries into wasm format with controlled memory access, ensuring sandboxing and security.</li>
+<li>The Acorn Archimedes computer from the 1980s, which was designed to be an embedded system with a custom processor and low power consumption, serves as an inspiration for wasm's potential success in the embedded world.</li>
+<li>Siemens is exploring the use of wasm in its various industries, including power systems, medical equipment, transportation, and industrial automation.</li>
+<li>The increasing importance of cybersecurity and the need to manage code updates in a distributed environment make web assembly an appealing solution for managing large-scale infrastructure.</li>
+<li>WebAssembly's portability and ability to run on multiple platforms with minimal modification make it a de facto standard for developing software, especially as hardware becomes increasingly complex.</li>
+<li>The webassembly community is actively contributing to its development and implementation, with subgroups focusing on both the browser world and non-browser applications.</li>
+<li>WebAssembly's performance, particularly in handling deeply nested data structures, can be improved through optimizations like component model function calls and memory isolation.</li>
+<li>Researchers are exploring new technologies like Cherry Capability to enhance wasm's security and performance.</li>
+<li>The standardization of webassembly is important for ensuring interoperability across various suppliers and maintaining compatibility with older runtimes.</li>
+<li>WebAssembly's potential in the embedded space includes its use in industrial automation, control systems, and microcontrollers.</li>
+<li>Bosch is proposing a potential way forward for wasm in the embedded space by targeting a subset of the web assembly specification for specific use cases, like automation.</li>
+<li>Wasm's role in the future of software development requires balancing the needs of developers and users, as well as addressing challenges like debugging and performance optimization.</li>
+</ul>
+<h2 id="building-a-webassembly-first-os-an-adventure-into-the-unorthodox-dan-phillips-loophole-labs">Building a WebAssembly-first OS – An Adventure Into the Unorthodox - Dan Phillips, Loophole Labs</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=mQ58pLT8YQ4">https://www.youtube.com/watch?v=mQ58pLT8YQ4</a></p>
+<ul>
+<li>Dan Phillips talks about building a WebAssembly-first OS at Loophole Labs</li>
+<li>Goal is to create an approachable, general-purpose OS with minimal dependencies</li>
+<li>Discusses history of operating systems and influence from Unix and Plan 9</li>
+<li>WebAssembly redefines OS primitives like process management and memory management</li>
+<li>Mentions prior art projects like Nebula, Quasar, and the Gvisor project</li>
+<li>Experimenting with a system layer using the Gvisor project and a virtual file system</li>
+<li>Discusses potential benefits of WebAssembly for reducing syscalls and improving performance.</li>
+</ul>
+<h2 id="develop-the-android-context-hub-runtime-environment-chre-nanoapps-in-webassembly-mingqiu-sun">Develop the Android Context Hub Runtime Environment (CHRE) Nanoapps in WebAssembly - Mingqiu Sun</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=qyNu30eYsFg">https://www.youtube.com/watch?v=qyNu30eYsFg</a></p>
+<ul>
+<li>Mingqiu Sun is talking about developing Android Context Hub Runtime Environment (CHRE) Nanoapps using WebAssembly</li>
+<li>CHRE is a resource-constrained environment within the Android phone, responsible for managing embedded devices and specific tasks</li>
+<li>Challenge: moving existing Nano apps to webassembly, which requires converting data types and addressing memory issues</li>
+<li>Benefits of webassembly for Nano apps include a larger developer community, improved security, and easier portability across different platforms</li>
+<li>Google is building the CHRE environment but it's not open to developers yet</li>
+<li>Current MCUs used in Nano apps have non-standard architectures, which can make development challenging</li>
+<li>Use of webassembly allows for a more modular and linear memory-based system, reducing the need for complex pointer manipulation</li>
+<li>Solutions to common challenges include static assertions to ensure identical data structures and wrapper functions to facilitate communication between CHRE and native apps.</li>
+</ul>
+<h2 id="dont-get-owned-by-dependencies-how-firefox-uses-wasm-to-protect-itself-from-shravan-narayan">Don't Get Owned by Dependencies: How Firefox Uses Wasm to Protect Itself from... - Shravan Narayan</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=r7DZm5tHEeo">https://www.youtube.com/watch?v=r7DZm5tHEeo</a></p>
+<ul>
+<li>The speaker discusses the motivation and challenges of using WebAssembly (Wasm) in Firefox to sandbox libraries and protect against memory safety issues.</li>
+<li>Traditional methods for defending against native code vulnerabilities, such as ASLR, stack canaries, and CFI mitigations, are no longer effective against sophisticated attacks.</li>
+<li>The idea of isolating libraries using Wasm was first introduced in academia decades ago but only made practical with modern tools like the RL box framework.</li>
+<li>Firefox is a large, complex application written primarily in C++ with many dependencies on C libraries, which can introduce memory safety issues.</li>
+<li>Decoupling and sandboxing these libraries using Wasm allows for better isolation and easier integration into Firefox without introducing significant performance or engineering costs.</li>
+<li>The process involves compiling the library to Wasm, modifying Firefox to use the isolated version, and dealing with interprocess communication and data marshalling challenges.</li>
+<li>The RL box framework simplifies this process by automating many of the low-level details and providing a compositional sandboxing solution that can hide the complexity from developers.</li>
+<li>The talk covers some practical experiences deploying RL box in Firefox, including challenges with performance optimization, platform compatibility, and memory management.</li>
+<li>Ongoing research and development in Wasm security and tooling are continuing to make it a more effective and efficient solution for sandboxing libraries in production applications.</li>
+</ul>
+<h2 id="bringing-ai-to-the-heterogeneous-edge-with-webassembly-onnx-francisco-cabrera-ralph-squillace">Bringing AI to the Heterogeneous Edge with WebAssembly &amp; ONNX - Francisco Cabrera &amp; Ralph Squillace</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=c9E9lr6YVp4">https://www.youtube.com/watch?v=c9E9lr6YVp4</a></p>
+<ul>
+<li>Francisco Cabrera and Ralph Squillace discussing bringing AI to the Edge using WebAssembly and ONNX</li>
+<li>Working with Azure, specifically Kubernetes Edge, seeing various use cases for AI at the edge including:</li>
+<li>Industrial scenarios: welding detection, predictive maintenance, visual AI for zone determination and alarm creation</li>
+<li>Medical vertical: vision AI for diagnosis assistance</li>
+<li>Retail: customer pattern analysis and order preparation</li>
+<li>Challenges in Edge Computing include resource constraints, heterogeneous environments, cost, connectivity, and security</li>
+<li>WebAssembly allows for faster function execution, unified architecture compilation, improved security, and a unified AI framework (ONNX)</li>
+<li>Demonstration of using ONNX with a simple SqueezeNet model for image classification</li>
+<li>Onyx runtime supports Rust, FFmpeg, and various backends including OpenVINO and TensorFlow Lite</li>
+<li>Future plans include WASI support, larger model compatibility, and evolving the proposal to address AGI problems.</li>
+</ul>
+<h2 id="leveraging-wasm-to-improve-quality-and-flexibility-of-the-api-plugin-ecosystem-rohan-deshpande">Leveraging WASM to Improve Quality and Flexibility of the API Plugin Ecosystem... - Rohan Deshpande</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3fbgMzt6_4Q">https://www.youtube.com/watch?v=3fbgMzt6_4Q</a></p>
+<ul>
+<li>Rohan Deshpande, managing director and senior engineer at Goldman Sachs, discusses improving API productivity by supercharging APIs using WebAssembly (WASM)</li>
+<li>Goldman Sachs API platform serves millions of requests per day with a focus on developer productivity</li>
+<li>Traditional API plugins are typically developed in C++ or Lua and can be time-consuming to build and integrate</li>
+<li>WASM offers efficient execution, portability, and the ability to reuse code across multiple engines</li>
+<li>Goldman Sachs began experimenting with WASM for an account number reduction plugin, achieving 83% test coverage and reducing compilation time</li>
+<li>Challenges include integrating WASM modules into existing web engines like Envoy and Nginx, and performance tuning</li>
+<li>Benefits of using WASM include faster development cycles, code reuse, and improved security through isolation</li>
+<li>Goldman Sachs has converted 55 plugins to WASM-based implementation and plans to continue the conversion process.</li>
+</ul>
+<h2 id="getting-started-with-ai-and-webassembly-angel-m-de-miguel-meana-vmware-michael-yuan">Getting Started with AI and WebAssembly - Angel M De Miguel Meana, VMware &amp; Michael Yuan</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=sxz-MxMNmRY">https://www.youtube.com/watch?v=sxz-MxMNmRY</a></p>
+<ul>
+<li>Michael Yuan and Angel M. De Miguel Meana discuss getting started with AI and WebAssembly</li>
+<li>Demonstration of object detection using Rust running in WebAssembly</li>
+<li>Benefits of using WebAssembly for AI include: zero Python dependency, easy deployment, portability across CPU and GPU architectures, and interacting with underlying hardware features through the host function</li>
+<li>WebAssembly runtime started in 2019 and allows separation of inference application life from interface, enabling adaptation to different backends</li>
+<li>Watermatch supports multiple machine learning frameworks including TensorFlow, PyTorch, OpenCV, and others through its plugin mechanism</li>
+<li>Supports popular image processing libraries like MediaPipe and OpenCV for preprocessing and postprocessing tasks</li>
+<li>Larger models may require more memory, which can be addressed by using the WasmCE specification to directly copy models from disk into inference frameworks</li>
+<li>Preprocessing and postprocessing functions can be implemented using Rust and the host function for efficient computation</li>
+<li>The ecosystem around WebAssembly AI is growing with improvements to the chain, multilanguage support, and collaboration between companies like VMware and Swati.ai</li>
+<li>Wasm provides a simple way to run large language models on personal laptops without the need for extensive preprocessing or installation of tools.</li>
+</ul>
+<h2 id="machine-learning-in-fastlys-computeedge-andrew-brown-intel-matthew-tamayo-rios-fastly">Machine Learning in Fastly's Compute@Edge - Andrew Brown, Intel &amp; Matthew Tamayo-Rios, Fastly</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dpOG5YnXDpM">https://www.youtube.com/watch?v=dpOG5YnXDpM</a></p>
+<ul>
+<li>Andrew Brown from Intel and Matthew Tamayo-Rios from Fastly discuss using machine learning inside WebAssembly</li>
+<li>Wasm's potential to transform various industries through AI, including text generation, image recognition, and video generation</li>
+<li>Challenges with previous approaches to running machine learning models in WebAssembly: performance and security</li>
+<li>Introduced Waz DNN, a system interface for webassembly modules that improves performance for machine learning inference</li>
+<li>History of proposals and implementations for integrating machine learning frameworks in WebAssembly</li>
+<li>The need for a function service that simplifies deployment, user experience, and security for scalable machine learning models on the edge</li>
+<li>Performance improvements through decoupling model life cycles from fast request handling</li>
+<li>Model size limitations and the need to run larger models elsewhere</li>
+<li>Managing the model's life cycle and optimizing caching behavior in Fastly</li>
+<li>Changes to WebAssembly specification, including async host APIs and process isolation for better performance and security</li>
+<li>Demonstration of a smaller image classification model using OpenVINO back end in Wazi NN.</li>
+</ul>
+<h2 id="unraveling-the-magic-of-two-hot-trends-larry-carvalho-radu-matei-aparna-sinha-tyler-mcmullen">Unraveling the Magic of Two Hot Trends... - Larry Carvalho, Radu Matei, Aparna Sinha, Tyler McMullen</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RDPosMJ3SuE">https://www.youtube.com/watch?v=RDPosMJ3SuE</a></p>
+<ul>
+<li>The panelists, Larry Carvalho (moderator), Radu Matei, Aparna Sinha, and Tyler McMullen, discuss the future of generative AI and its applications.</li>
+<li>Generative AI is a technology that allows models to create new content, such as text, images, or code.</li>
+<li>The panelists discuss the use cases for generative AI in various industries, including healthcare, legal, finance, and retail.</li>
+<li>They also touch on the importance of explainability and avoiding hallucination in generative AI models.</li>
+<li>Radu Matei talks about the intersection of distributed systems and generative AI, and how webassembly can be used to run untrusted plugins in a secure way.</li>
+<li>Aparna Sinha discusses her experience investing in generative AI startups and the potential for the technology to transform various business models.</li>
+<li>Tyler McMullen talks about the importance of low latency and privacy in generative AI applications, particularly in healthcare and other regulated industries.</li>
+<li>The panelists also touch on the role of large language models in generative AI and the potential for open source and proprietary data to be used in training these models.</li>
+<li>They discuss the potential for webassembly to handle the requirements of new platforms and run generative AI workloads efficiently across multiple types of hardware.</li>
+<li>The panelists express their excitement about the opportunities presented by generative AI and the potential for it to transform industries and create new business models.</li>
+</ul>
+<h2 id="keynote-wasi-standards-and-the-component-model-transforming-application-liam-randall">Keynote: WASI Standards and the Component Model: Transforming Application... - Liam Randall</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zvDTNrJYnMw">https://www.youtube.com/watch?v=zvDTNrJYnMw</a></p>
+<ul>
+<li>Liam Randall, CEO of Cosmonic, talks about the WebAssembly Component Model</li>
+<li>He mentions his background in webassembly and Wasm Day event</li>
+<li>The component model is a Docker moment for the ecosystem</li>
+<li>CNCF WasmCloud project now supports webassembly component model</li>
+<li>WebAssembly has two specifications: module and executable</li>
+<li>WebAssembly components are like Lego blocks, allowing freed application architecture</li>
+<li>WASM Cloud focuses on freeing application architecture from tight coupling</li>
+<li>Demonstration using QR code to deploy a simple webassembly component</li>
+<li>WebAssembly is ready for prime time and can handle complex infrastructure needs</li>
+<li>Problems in regulated industries like Telco, Energy Systems, Financial Services, and Transportation are solved by the webassembly component model</li>
+<li>Orchestrating webassembly components with machine learning and edge cloud is possible</li>
+<li>Raise abstraction and work together to make webassembly better.</li>
+</ul>
+<h2 id="keynote-when-wasm-meets-cyber-physical-systems-a-discussion-of-webassembly-in-emily-ruppel">Keynote: When Wasm Meets Cyber-Physical Systems: A Discussion of WebAssembly in... - Emily Ruppel</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1d4I7hwgxuk">https://www.youtube.com/watch?v=1d4I7hwgxuk</a></p>
+<ul>
+<li>Emily Ruppel, research scientist at Bosch, discusses the intersection of WebAssembly (Wasm) and cyber-physical systems</li>
+<li>Cyber-physical systems are made up of microcontrollers and actuators interacting in the physical world with tight real-time deadlines</li>
+<li>Bosch builds a variety of devices categorized as cyber-physical systems, including drills, dishwashers, and cars</li>
+<li>The challenge is to simplify networked safety-critical applications with virtualization using Wasm</li>
+<li>Wasm offers ultra-lightweight virtualization that covers the hardware platform throughout the rest of the software stack</li>
+<li>Bosch research uses Wasm in both the automotive domain and industrial factory automation domains</li>
+<li>Challenges include large collaboration, international partnerships, vendor compatibility, and maintaining safety and real-time guarantees</li>
+<li>Wasm can potentially streamline automotive software by fully decoupling programming language, application, scheduler, driver, and operating system</li>
+<li>The Silverline architecture leverages Wasm to achieve flexibility and uniformity throughout the network in industrial automation systems.</li>
+</ul>
+<h2 id="keynote-what-is-a-component-and-why-luke-wagner-distinguished-engineer-fastly">Keynote: What is a Component (and Why)? - Luke Wagner, Distinguished Engineer, Fastly</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=tAACYA1Mwv4">https://www.youtube.com/watch?v=tAACYA1Mwv4</a></p>
+<ul>
+<li>Luke Wagner, Distinguished Engineer at Fastly, explains the concept of a "component" in the context of WebAssembly (Wasm)</li>
+<li>Wasm is a binary instruction format with a stack-based virtual machine that provides portability and determinism through control flow integrity and subprocess sandboxing</li>
+<li>Use cases for Wasm include deploying large code bases, offloading compute-intensive tasks from JavaScript, and exploring alternative models for distributed computing like serverless and edge computing</li>
+<li>Components are a compositional module that allows for sharing machine code runtime, linkable modules, and binding generation across languages</li>
+<li>Reusing code across language boundaries is difficult with existing package registries and transitive dependencies, so Wasm's component model provides a solution by allowing different packages to be compiled into separate Wasm modules linked together</li>
+<li>The component model enables modularity without requiring microservices and allows for low-overhead cross-module calls using ASM sandboxing and linkable modules</li>
+<li>Virtual platform layering is another use case for components, as it provides strong isolation and efficient memory usage through a virtual file system and shared code development across teams.</li>
+</ul>
+<h2 id="keynote-charting-a-wasm-landscape-chris-aniszczyk-chief-technology-officer">Keynote: Charting a Wasm Landscape - Chris Aniszczyk, Chief Technology Officer</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=HGWj1dsDkrc">https://www.youtube.com/watch?v=HGWj1dsDkrc</a></p>
+<ul>
+<li>Chris Aniszczyk, CTO of CNCF, speaks about the growing interest and innovation in WebAssembly (Wasm) outside of the cloud native community</li>
+<li>Wasm is experiencing an innovation cycle similar to container technology with multiple runtimes and specs</li>
+<li>Early adopters include BBC, Disney, Amazon, Bosch, Goldman Sachs, and many startups</li>
+<li>The Wasm ecosystem is still in its early stages but evolving quickly</li>
+<li>Announcement of the open sourcing of a WebAssembly report covering various use cases and what's attracting developers to Wasm</li>
+<li>CNCF has commissioned the first Wasm landscape website (wasm-land.org) for tracking projects and companies using Wasm</li>
+<li>The Wasm landscape will be regularly updated through an annual survey</li>
+<li>Announcement of the creation of a Wasm working group within CNCF.</li>
+</ul>
+<h2 id="keynote-welcome-opening-remarks-michelle-dhanani-principal-software-engineer-founding-member">Keynote: Welcome &amp; Opening Remarks - Michelle Dhanani, Principal Software Engineer &amp; Founding Member</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=00p5ZJrI0DQ">https://www.youtube.com/watch?v=00p5ZJrI0DQ</a></p>
+<ul>
+<li>Michelle Dhanani, Principal Software Engineer and Founding Member at Fermion, welcomes everyone to the inaugural event</li>
+<li>Grateful for support from sponsors: Cloud Native Computing Foundation (Diamond), Cosmonic, Midokura, Microsoft Azure (Platinum)</li>
+<li>Thanks to program committee members and reviewers</li>
+<li>Reminds attendees to check their schedules using badge QR code and mentions onsite reception and networking opportunities</li>
+<li>Reminds everyone about event code of conduct: treat each other with respect and professionalism</li>
+<li>Encourages attendees to share ideas, collaborate, and network.</li>
+</ul>
+<h2 id="keynote-how-webassembly-can-power-the-new-wave-of-serverless-ai-radu-matei">Keynote: How WebAssembly can Power the New Wave of Serverless AI - Radu Matei</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8KMcd2X0JcM">https://www.youtube.com/watch?v=8KMcd2X0JcM</a></p>
+<ul>
+<li>Radu Matei, CTO and co-founder of Fermian, speaks about how WebAssembly is powering the new wave of serverless AI.</li>
+<li>Fermian started as a goal to build a new kind of computing platform with WebAssembly as the underlying runtime.</li>
+<li>Traditional application developers face challenges integrating AI infrastructure due to high costs and cold start issues.</li>
+<li>WebAssembly moves compute closer to data, improving efficiency and reducing infrastructure costs by moving machine learning models closer to the GPU.</li>
+<li>Fermian Cloud now offers a serverless AI beta that provides a building block for integrating AI capabilities into serverless applications.</li>
+<li>The Fermian approach involves implementing a host to talk to different hardware acceleration devices like Cuda GPUs, M1 chips, etc.</li>
+<li>Fermian Serverless AI beta includes services like model loading API and database storage for building full stack applications with AI capabilities.</li>
+<li>WebAssembly components can be run locally and deployed in the cloud without changing the developer experience.</li>
+<li>Fermian takes a higher-level interface approach to implement hardware acceleration devices, making it easier for developers.</li>
+<li>The Fermian open source project is available to sign up for a preview at their booth.</li>
+</ul>
+<h2 id="keynote-wedge-project-edge-ai-enabled-by-wasm-tatsuya-kato-ceo-dan-dumitriu">Keynote: WEdge Project: Edge AI enabled by Wasm - Tatsuya Kato, CEO &amp; Dan Dumitriu</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=AOn9lWsZrJo">https://www.youtube.com/watch?v=AOn9lWsZrJo</a></p>
+<ul>
+<li>Tatsuya Kato (CEO, Midokura) and Dan Dumitriu (CTO, Midokura) introducing WEdge Project for Edge AI using Wasm</li>
+<li>Midokura is a Japanese IT industry company focused on Edge Computing and IoT since 2010</li>
+<li>Founded by former top management from the Sony semiconductor Solutions subsidiary</li>
+<li>Targeting solution provider for AI Developers, providing 80-year solution platform</li>
+<li>WEdge project born due to challenges in iot development: small memory constraints, lack of a secure environment for code execution, and diverse operating systems</li>
+<li>Goals: create an ecosystem with a plugin architecture, sandbox security isolation, and support for various languages like Python and C</li>
+<li>Consists of two parts: cloud side and agent side</li>
+<li>Cloud side runs alongside IoT platforms, providing REST APIs for developer interaction, AOT compilation, and different target device types</li>
+<li>Agent side wraps Wasm runtime and exposes native libraries, using an OS-agnostic realtime operating system like NuttX</li>
+<li>Provides sensor interfaces, communication modules, and various primitives for image processing and data storage</li>
+<li>WEdge Services APIs include sensor control, different communication types, and accelerator devices</li>
+<li>WEdge SDKs will support different languages, initially focusing on Python and TypeScript to address the challenge of polyglot development.</li>
+</ul>
+<h2 id="keynote-are-we-componentized-yet-bailey-hayes-engineering-director-cosmonic">Keynote: Are We Componentized Yet? - Bailey Hayes, Engineering Director, Cosmonic</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ReG2T-uMjQQ">https://www.youtube.com/watch?v=ReG2T-uMjQQ</a></p>
+<ul>
+<li>Bailey Hayes, Engineering Director at Cosmonic and member of the Bytecode Alliance, explores the question "Are We Componentized Yet?" in her talk</li>
+<li>Central Station is the top level component model for WebAssembly (WASM) ecosystem, with Wazzy Preview 2 being its current iteration</li>
+<li>WASM components have modular interfaces and are statically analyzable, enabling capability-safe interface definitions using a new IDL called wit</li>
+<li>Component models can be run in various environments, such as the WASI system interface or a webassembly HTTP proxy</li>
+<li>Bycode Alliance is working on building a standard for WASM component models and implementing it through different projects like wasm time, cargo component, Jayco, etc.</li>
+<li>TinyGo, Rust, and JavaScript are some of the guest languages that have tools for componentizing code using WASM</li>
+<li>There are ongoing efforts to make the WASM ecosystem more cohesive, including package management solutions like Warg and documentation initiatives</li>
+<li>TheComponentize World event is happening tomorrow for further discussion on the topic.</li>
+</ul>
+<h2 id="keynote-welcome-back-michelle-dhanani-principal-software-engineer-founding-member-fermyon">Keynote: Welcome Back - Michelle Dhanani, Principal Software Engineer &amp; Founding Member, Fermyon</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Hnw2LA0Pu4o">https://www.youtube.com/watch?v=Hnw2LA0Pu4o</a></p>
+<ul>
+<li>Michelle Dhanani, Principal Software Engineer and Founding Member of Fermyon, welcoming attendees to the final day of WasmCon</li>
+<li>Announces that there is a bite code Alliance componentize world hackathon taking place tomorrow, encourages attendance with a QR code to preregister</li>
+<li>Mentions that there is an event tonight at Lucky Strike with food, drinks, arcade games, and bowling, invites attendees to join.</li>
+</ul>
+<h2 id="keynote-webassembly-in-a-containerized-world-brendan-burns-corporate-vice-president-azure-oss">Keynote: WebAssembly in a Containerized World - Brendan Burns, Corporate Vice President, Azure OSS..</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=X6WEJOEfDoQ">https://www.youtube.com/watch?v=X6WEJOEfDoQ</a></p>
+<ul>
+<li>Brendan Burns, Corporate Vice President at Azure OSS and co-founder of Kubernetes, talks about WebAssembly in a containerized world</li>
+<li>He has a team working on WebAssembly since last December and wanted to understand its technology better</li>
+<li>Containers and WebAssembly compared: containers provide the kernel and run-time environment, WebAssembly is focused on code</li>
+<li>Inside a container image, we don't care about most things except for essentials like an HTTP client library or necessary code</li>
+<li>Container images can be quite large (17MB for a Go Caddy web server), but with WebAssembly, the size reduces dramatically</li>
+<li>WebAssembly enables building and pushing smaller containers each time a file is saved</li>
+<li>Shrinking image size is beneficial for development use cases</li>
+<li>Containers were designed in the 1970s, while WebAssembly is more suited for cloud-based, distributed systems and connecting kernel calls to the cloud</li>
+<li>Exciting opportunity is rethinking how code interacts with the kernel and cloud services in a WebAssembly sandbox</li>
+<li>WASI (WebAssembly System Interface) HTTP spec and other projects are ongoing efforts to bring the ability to run WebAssembly inside an orchestrator like Azure Kubernetes Service</li>
+<li>WebAssembly containers can still require writing code, but progress is being made in the community.</li>
+</ul>
+<p>Dev containers with WebAssembly support are a favorite for programming languages like Pascal, making it easier and quicker to get started.</p>
+<h2 id="keynote-deploy-wasm-on-the-edge-brendan-irvine-broque-product-manager-cloudflare-workers">Keynote: Deploy WASM on the Edge - Brendan Irvine-Broque, Product Manager, Cloudflare Workers</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=-3wKIfKHsB0">https://www.youtube.com/watch?v=-3wKIfKHsB0</a></p>
+<ul>
+<li>Brendan Irvine, Product Manager at Cloudflare Workers, discussing deploying WebAssembly (WASM) on the edge</li>
+<li>Cloudflare is a full stack serverless platform with global distribution, handling millions of requests per second</li>
+<li>Cloudflare Worker is a web interoperable runtime for running code at the network edge</li>
+<li>Worker RS is a Rust binding that makes it possible to write workers in Rust and run them on Cloudflare</li>
+<li>Bindgen is used to generate bindings, making the process of writing bindings less tedious and more portable</li>
+<li>Cloudflare Workers allow for building serverless applications with web interoperable technologies like APIs, WebGPU, etc.</li>
+<li>With WASM support in Cloudflare Workers, you can make interesting capabilities available as serverless functions</li>
+<li>Bindgen also allows publishing of specification definitions to move beyond language-specific bindings and make the process easier for developers</li>
+<li>Cloudflare is working on a new portable key-value store standard, excited about feedback from the worker community.</li>
+</ul>
+<h2 id="keynote-wasm-from-the-inside-out-a-journey-through-the-impact-of-webassembly-in-saul-cabrera">Keynote: Wasm from the Inside Out: A Journey Through the Impact of WebAssembly in... - Saúl Cabrera</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lw8MnQ1fkac">https://www.youtube.com/watch?v=lw8MnQ1fkac</a></p>
+<ul>
+<li>Saul Cabrera, staff developer at Shopify, giving a talk on the impact of WebAssembly (WASM) in Shopify's production environment</li>
+<li>Shopify introduced WASM for extending business logic and enabling complex interactions between merchants, buyers, and third-party developers</li>
+<li>Challenges to adopting WASM include high cost, difficulty understanding and debugging programs, and complicated guest host interaction</li>
+<li>Early attempts to adopt WASM in 2014 were unsuccessful due to performance and scalability concerns</li>
+<li>Benefits of WASM include faster execution, improved startup time, and the ability to run multiple languages on the same platform</li>
+<li>Shopify's adoption of WASM was driven by the need to handle increasing merchant-buyer interactions and to scale the platform</li>
+<li>WASM enabled synchronous execution of untrusted code and improved performance through a performant interpreter</li>
+<li>Challenges included preinitialization, linking modules, and handling dynamic languages</li>
+<li>Tools like Wiser and Javi have helped make the process of using WASM easier, with better debugging stories and component models alleviating many challenges.</li>
+</ul>
+<h2 id="sandboxing-your-sandbox-leveraging-hypervisors-for-webassembly-security-danilo-dan-chiarlone">Sandboxing Your Sandbox: Leveraging Hypervisors for WebAssembly Security - Danilo (Dan) Chiarlone</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=v1bI1eHVwAw">https://www.youtube.com/watch?v=v1bI1eHVwAw</a></p>
+<ul>
+<li>Dan Chiarlone from Microsoft discusses sandboxing and securing WebAssembly (WASM) using hypervisors</li>
+<li>Hyperlite project, a Microsoft initiative, leverages virtual machine managers (hypervisors) to execute untrusted third-party code safely</li>
+<li>WASM is an excellent sandboxing technology for public clouds due to its resource and memory isolation, but it may not be enough for some use cases</li>
+<li>Binary security and host security are important aspects of WASM security</li>
+<li>Buffer overflow vulnerabilities exist in native binary code and can be exploited even in WASM; prevention methods like stack smashing protection and page execution protection are necessary</li>
+<li>Memory safety is crucial to prevent malicious input from crashing or corrupting the program, and Rust, a memory-safe language, can help</li>
+<li>The hypervisor provides an additional layer of security by isolating modules, preventing them from accessing each other's memory, and controlling resource usage (e.g., halting execution)</li>
+<li>Modern hypervisors support snapshotting and rollback, allowing quick recovery in case of a security incident</li>
+<li>Hyperlight demo showcasing the use of hypervisors to run 2,000 micro VMs with improved isolation and performance for web applications.</li>
+</ul>
+<h2 id="security-and-correctness-in-wasmtime-nick-fitzgerald-bytecode-alliance">Security and Correctness in Wasmtime - Nick Fitzgerald, Bytecode Alliance</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=FFPoOR_5urw">https://www.youtube.com/watch?v=FFPoOR_5urw</a></p>
+<ul>
+<li>Nick Fitzgerald from Wasmtime at Bytecode Alliance discusses security and correctness in Wasmtime</li>
+<li>Wasmtime is a safe implementation language for WebAssembly (WASM) that helps extend applications without sacrificing performance</li>
+<li>WASM has historically had memory safety bugs, which Wasmtime aims to help prevent through Rust's type system and careful implementation</li>
+<li>Wasmtime's runtime provides strong isolation, but it can't fully prevent all attacks, such as malicious dependencies or recursive user input</li>
+<li>Cargo vet is a tool used by Mozilla to manually review third-party libraries before use in Firefox</li>
+<li>Wasmtime uses cargo vet and other security measures to help ensure the safety of embedded WASM applications</li>
+<li>Wasmtime's instantiation process is fast, allowing for temporal isolation and continuous fuzzing for security testing</li>
+<li>Crane Lift is a tool used by Wasmtime for instruction selection, optimization, and formal verification of correctness</li>
+<li>Differential fuzzing and formally verified versions of the interpreter are used to test and find bugs in WASM engines like V8</li>
+<li>Wasmtime's collaboration with Verifiable Rust (verasm) and ongoing formal verification efforts aim to improve security assurance.</li>
+</ul>
+<h2 id="panel-discussion-browsers-wasm-ryan-hunt-conrad-watt-adam-klein-david-degazio-bailey-hayes">Panel Discussion: Browsers &amp; Wasm - Ryan Hunt, Conrad Watt, Adam Klein, David Degazio, Bailey Hayes</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=x6X2-UUxEZM">https://www.youtube.com/watch?v=x6X2-UUxEZM</a></p>
+<ul>
+<li>The panelists discuss WebAssembly (Wasm) and its role in browsers.</li>
+<li>Wasm is a binary instruction format for the web that allows running code at near-native speed.</li>
+<li>The Baseline compiler is used to quickly compile Wasm code and starts the process, but it's not always the fastest.</li>
+<li>Mozilla's wasmgc project allows managing memory like Kotlin and Java in Wasm, making use of a garbage collector.</li>
+<li>There are ongoing efforts to bring new languages like Rust and C++ to Wasm, which will expand its capabilities.</li>
+<li>The panelists talk about the challenges of implementing WebAssembly in browsers and the importance of interoperability and partnerships with language toolchains.</li>
+<li>Stack switching is a potential future improvement for Wasm that would allow more efficient multitasking.</li>
+<li>Other areas of focus for improving Wasm include linear memory, tail call optimization, and multithreading.</li>
+<li>The panelists discuss the importance of community engagement and open collaboration in driving the development of WebAssembly.</li>
+</ul>
+<h2 id="sqlite-in-wasm-a-glimpse-into-the-future-of-shared-libraries-carl-sverre-amplify-partners">SQLite in Wasm: A Glimpse into the Future of Shared Libraries - Carl Sverre, Amplify Partners</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=oLYda9jmNpk">https://www.youtube.com/watch?v=oLYda9jmNpk</a></p>
+<ul>
+<li>The speaker is excited about offline first applications and SQLite in WebAssembly (Wasm)</li>
+<li>Offline first applications are designed to function effectively without an internet connection and synchronize state mutations locally with a server when reconnected</li>
+<li>SQLite is a local database that fits well for offline first apps due to its data model and asynchronous design</li>
+<li>Building an offline first application involves dealing with complex problems such as conflict resolution and time management</li>
+<li>The speaker decided to build a collaborative, eventually consistent, synchronized database browser using SQLite in Wasm</li>
+<li>He chose SQL sync architecture for its simplicity and the fact that it can be easily ported between different client and server environments</li>
+<li>SQL sync uses a single SQLite instance running on the server that provides global ordering of mutations, while clients optimistically execute local state changes and replicate them back to the server</li>
+<li>Git is used as an inspiration for handling conflict resolution, with each client maintaining its own local state and the server providing an authoritative state that all clients eventually converge towards</li>
+<li>The speaker found success in compiling SQLite to Wasm using the Emscripten toolchain and was able to build a fully functional reducer library using Rust</li>
+<li>He used a reactor-style model for query execution in Wasm, allowing users to run queries and see results in real time even when offline.</li>
+</ul>
+<h2 id="unleashing-the-power-of-wasm-revolutionizing-database-scalability-and-application-rj-atwal">Unleashing the Power of WASM: Revolutionizing Database Scalability and Application... - RJ Atwal</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IDCS_b7UF0o">https://www.youtube.com/watch?v=IDCS_b7UF0o</a></p>
+<ul>
+<li>RJ Atwal, founding engineer at Mother Duck, talks about unleashing the power of WebAssembly (WASM) in databases</li>
+<li>Database industry's core technology hasn't changed significantly since 80s and 90s</li>
+<li>Traditional databases have a component-wise structure and are difficult to scale</li>
+<li>WASM allows for running code at the edge, which can improve performance and scalability by reducing data transfer</li>
+<li>WASM databases like DrB embed the entire database in the browser or on the edge server</li>
+<li>UDFs (User Defined Functions) have been a limitation of traditional databases due to security concerns and optimization tradeoffs</li>
+<li>WASM databases allow for running UDFs written in various languages without compromising SQL expressiveness and optimizations</li>
+<li>WASM databases like Blossom, embedded in PostgreSQL or Edge SQLite, enable client-side encryption and progressive rendering for fast queries</li>
+<li>Hybrid execution models using both traditional SQL and WASM components can improve performance and reduce network traffic</li>
+<li>The future of WASM databases includes seamless integration with existing technology stacks, improved optimization, and more efficient data management.</li>
+</ul>
+<h2 id="component-model-the-final-abstraction-taylor-thomas-liam-randall-cosmonic">Component Model: The Final Abstraction - Taylor Thomas &amp; Liam Randall, Cosmonic</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WrGRxs_n2z0">https://www.youtube.com/watch?v=WrGRxs_n2z0</a></p>
+<ul>
+<li>Taylor Thomas and Liam Randall from Cosmonic discuss non-functional requirements and the component model in WebAssembly</li>
+<li>Component Model allows for reusable, composable code and gives developers back control of their lives by reducing boilerplate code</li>
+<li>The problem with free open source libraries is that they can become complex and difficult to maintain, leading to wasted time</li>
+<li>Virtualization and containerization have helped alleviate some of these problems by allowing for better resource utilization and separation of concerns</li>
+<li>WebAssembly component model provides a way to export and import components, which click together and run without the need for a shared operating system or runtime</li>
+<li>Components can be composed together using interfaces, providing flexibility and powerful functionality while reducing attack surface area</li>
+<li>WebAssembly also allows for easier API decomposition and application boundary definition, enabling faster iteration and development</li>
+<li>The goal is to build complex applications easily and distribute them anywhere in the world, with components running on different systems and orchestrated by WasmCloud</li>
+<li>Component Model is a key part of Cosmonic's Watson Cloud application runtime and has been in development for several years</li>
+<li>Demonstration of a simple application using WebAssembly components running on different systems, with requests being routed and processed quickly and efficiently.</li>
+</ul>
+<h2 id="wasm-kubernetes-native-or-what-else-an-enterprise-architecture-debrief-sean-isom-ex-adobe">Wasm, Kubernetes, Native, or What Else? An Enterprise Architecture Debrief - Sean Isom, ex-Adobe</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3woiH9OSt1A">https://www.youtube.com/watch?v=3woiH9OSt1A</a></p>
+<ul>
+<li>Sean Isom discussing the importance of flexible architecture and how WebAssembly (Wasm) can help build better applications.</li>
+<li>Bad architecture is inflexible and may ultimately cost more in the long run, as it can prevent adaptation to changing business requirements.</li>
+<li>Kubernetes versus Wasm debate: Kubernetes offers stability but may introduce additional complexity for small companies or projects without the need for it. Wasm allows for isolation of code and flexibility to run on various devices with different form factors.</li>
+<li>WebAssembly enables sharing modules, linear memory usage, and unbundling dependencies within specific components, making it easier to isolate business logic and manage dependencies.</li>
+<li>Using an example of serverless functions like AWS Lambda, Wasm can help reduce dependency management burden and shift dynamic responsibilities to the runtime environment.</li>
+<li>WebAssembly in Kubernetes: Leverage existing infrastructure by running chunk code everywhere, enable interoperability with other components, and provide service level isolation within namespaces.</li>
+<li>Flexibility benefits include being able to run code on various devices and form factors, as well as reducing dependency management and maintaining a smaller codebase.</li>
+<li>Use cases for WebAssembly include image processing, edge computing, procedural content generation, and machine learning inference, where the ability to run code closer to the user can increase performance and reduce latency.</li>
+<li>Wasm provides unique opportunities by allowing flexible deployment and runtime environments without sacrificing security or isolation guarantees.</li>
+</ul>
+<h2 id="from-wazero-to-wazhero-an-introduction-to-wazero-for-gophers-and-other-species-edoardo-vacchi">From Wazero to Wazhero: An Introduction to Wazero for Gophers and Other Species - Edoardo Vacchi</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=j09Svvvtd0E">https://www.youtube.com/watch?v=j09Svvvtd0E</a></p>
+<ul>
+<li>Eduardo Vacchi, from Tetrate, introduces Wazero, a Go project for running WebAssembly modules at build time</li>
+<li>Wazero is convenient for Go developers as it leverages the traditional Go toolchain and static linking</li>
+<li>Static linking allows for easy deployment and cross-compilation to various platforms</li>
+<li>However, drawbacks include complications with dynamic code loading and foreign function interfaces (FFI)</li>
+<li>Wazero provides an alternative to monolithic statically linked executables by isolating WebAssembly modules from the host code</li>
+<li>Wazero also supports cross-compiling to various platforms, including freeBSD and Plan 9</li>
+<li>Wazero's webassembly interpreter mode is the default compiler mode for go1.21 and above</li>
+<li>It provides performance benefits and security improvements by isolating WebAssembly modules from each other</li>
+<li>Wazero also supports ahead-of-time compilation for better performance on some platforms</li>
+<li>The project has been under development since 2020, with support from the Go community and contributions from external developers.</li>
+</ul>
+<h2 id="deploying-your-backend-like-a-cdn-with-wasm-brooks-townsend-cosmonic">Deploying Your Backend Like a CDN With Wasm - Brooks Townsend, Cosmonic</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=goinw_B8sZw">https://www.youtube.com/watch?v=goinw_B8sZw</a></p>
+<ul>
+<li>Brooks Townsend, lead software engineer at Cosmonic, discusses deploying backends like a CDN using WebAssembly (Wasm)</li>
+<li>CDNs distribute static content quickly, cheaply, reliably, and securely to users around the world</li>
+<li>CDNs are typically used for frontend applications but can also be used for backend static assets</li>
+<li>Distributing entire backends with CDNs can optimize long network requests and reduce cloud egress bandwidth costs</li>
+<li>WasmCloud is a project that enables deploying and distributing stateless backends using Wasm, without the need for containers or Kubernetes</li>
+<li>WasmCloud offers automatic load balancing, seamless compute mesh, and hot swappable capabilities</li>
+<li>Using WasmCloud to deploy a distributed application can minimize data size and distance across the network</li>
+<li>Demo of deploying a hobby application called "Fruit Joke" using WasmCloud and distributing it around CDN nodes for faster response times.</li>
+</ul>
+<h2 id="untangle-that-spaghetti-code-make-dreamy-fettuccine-instead-taylor-thomas-bailey-hayes">Untangle That Spaghetti Code; Make Dreamy Fettuccine Instead - Taylor Thomas &amp; Bailey Hayes</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Hrsi9F7VWHw">https://www.youtube.com/watch?v=Hrsi9F7VWHw</a></p>
+<ul>
+<li>Taylor Thomas and Bailey Hayes discuss untangling "spaghetti code" in software development</li>
+<li>They use the analogy of cooking to explain refactoring and simplifying complex applications</li>
+<li>Bailey mentions his experience with Rust, Go, and AWS Cloud technologies</li>
+<li>They talk about the challenges of managing dependencies and updating code in monolithic applications</li>
+<li>They highlight the benefits of using cloud-native architectures and Wasm Cloud for deploying components independently</li>
+<li>Taylor demonstrates building and deploying simple applications using Wasm Cloud, including a file server and credential service</li>
+<li>They discuss the importance of separating business logic from infrastructure and leveraging open source technologies.</li>
+</ul>
+<h2 id="taking-wasi-cloud-core-for-a-spin-jiaxiao-zhou-microsoft-joel-dice-fermyon-technologies">Taking WASI-Cloud-Core for a Spin - Jiaxiao Zhou, Microsoft &amp; Joel Dice, Fermyon Technologies</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=W-ubCAMAJQc">https://www.youtube.com/watch?v=W-ubCAMAJQc</a></p>
+<ul>
+<li>Joel Dice and Jiaxiao Zhou discussing WASI-Cloud-Core</li>
+<li>Motivation: Portable platform for cloud applications, decoupling business logic from platform concerns</li>
+<li>Key features of cloud-native applications: containerization, stronger security requirements, need common capabilities like key-value store, messaging, and SQL</li>
+<li>WASI-Cloud-Core as an accelerator for cloud-native trends: language neutrality, sandbox support, linkable modules</li>
+<li>Comparison with MapReduce: simple interface, powerful distributed processing</li>
+<li>Goals of WASI-Cloud-Core: accessing key-value store, durability, exchanging event messages, blob storage, inbound/outbound HTTP requests, changing runtime configurations, and transaction management</li>
+<li>Use cases: serverless functions, web crawlers, microservices, multitenant scenarios, and edge environments</li>
+<li>Benefits: low startup latency, quick switching between workloads, minimal gap between average and peak load, and efficient use of resources.</li>
+</ul>
+<h2 id="bridging-the-architecture-divide-how-hardware-limits-wasm-and-how-we-can-do-better-tal-garfinkel">Bridging the Architecture Divide: How Hardware Limits Wasm, and How We Can Do Better - Tal Garfinkel</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RJcvNEeC1vw">https://www.youtube.com/watch?v=RJcvNEeC1vw</a></p>
+<ul>
+<li>Tal Garfinkel from UC San Diego discussing limitations and optimizations in WebAssembly (Wasm) and possible solutions using Hardware techniques.</li>
+<li>Current hardware isolation mechanisms, like Segmentation and Color Guard, provide performance benefits but have limitations in security, scalability, and compatibility.</li>
+<li>Segmentation:</li>
+<li>Page table-based memory protection has overhead and wasting space in Wasm.</li>
+<li>WebAssembly's poor man segmentation using compiler-given segmented memory model avoids Hardware overhead.</li>
+<li>Guard Regions can accelerate bounce checks but waste space.</li>
+<li>Color Guard:</li>
+<li>Hardware-assisted fault isolation extension enables faster and secure sharing of memory isolation with minimal overhead.</li>
+<li>Intel's Simple Set Extension targets addressing the Wasm problem, allowing for cool use cases like microsecond to nanosecond scale contract switches and high concurrency low latency Edge compute platforms.</li>
+<li>Limitations:</li>
+<li>Virtualization tax and wasification tax hinder performance in Wasm compared to native workloads.</li>
+<li>Specter safety limits scalability due to its basic math and 32-bit memory instance size.</li>
+<li>Guard Regions don't always get used efficiently and still require conditional bounce checks, which can be expensive.</li>
+<li>Optimizations:</li>
+<li>Segway is a clever trick using x86 segmentation for speed improvements in Wasm.</li>
+<li>Multiyear collaboration between Intel and researchers aims to overcome limitations with Next Generation processors.</li>
+<li>Hardware-assisted fault isolation provides fast and secure isolation without adding overhead.</li>
+<li>Future work:</li>
+<li>Support for several critical use cases, such as running unmodified native binaries and custom isolation systems like Uber cage.</li>
+<li>Provide compatibility with existing code architecture by using a simple notion of regions and explicit region types.</li>
+<li>Explicit data regions can improve performance and protect against Specter attacks while also supporting code regions and software CFI for native isolation.</li>
+</ul>
+<h2 id="kotlinwasm-today-and-tomorrow-zalim-bashorov-jetbrains">Kotlin/Wasm: Today and Tomorrow - Zalim Bashorov, JetBrains</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Zy2SrhV5ESA">https://www.youtube.com/watch?v=Zy2SrhV5ESA</a></p>
+<ul>
+<li>Zalim Bashorov from JetBrains has been working with Kotlin for 10 years, leading the team behind it</li>
+<li>Kotlin is a programming language developed by JetBrains, known for its safety features, static typing, and automatic memory management</li>
+<li>Kotlin supports multiple compilation targets including JVM, native, JavaScript, fiber assembly, and WebAssembly</li>
+<li>WebAssembly (Wasm) is important as it allows sharing code easily across platforms without writing platform-specific code</li>
+<li>Kotlin/Wasm has several experimental proposals such as exception handling, type function difference, and garbage collection</li>
+<li>The exception handling proposal introduces a dedicated section for storing name entities to improve debugging experience</li>
+<li>WebAssembly is useful for the language's entry into the time as it offers smaller binary size and better runtime performance</li>
+<li>Chrome provides better support for Kotlin/Wasm and makes it easier to set up and use in the browser</li>
+<li>Other popular browsers like Firefox also support Kotlin/Wasm but users need to turn it on manually</li>
+<li>The easiest way to try Kotlin/Wasm is by using online program playgrounds that provide code completion, debugging features, and embedded documentation.</li>
+<li>Predefined browser APIs can help get quick feedback and make typo corrections when writing Kotlin/Wasm code in the browser</li>
+<li>Kotlin/Wasm libraries like Kawasaki offer support for creating clean server applications with high frame rates</li>
+<li>Composable UI frameworks like Jetpack Compose make it easy to prototype and share UI components inside the browser.</li>
+<li>WebAssembly has great potential for server-side applications, especially in areas like Lambda functions, Edge Computing, and microservices.</li>
+<li>Kotlin/Wasm can be used outside of the browser but requires specific setup and support from browsers.</li>
+<li>Garbage collection and exception handling are important proposals for Kotlin/Wasm, with garbage collection being in the experimental phase and exception handling being in the proposal phase 4.</li>
+<li>The future of Kotlin/Wasm looks promising with continuous improvements and new features being added to enhance its capabilities.</li>
+</ul>
+<h2 id="lets-build-a-linux-just-for-wasm-andrew-randall-ralph-squillace-microsoft">Let's Build a Linux Just for Wasm! - Andrew Randall &amp; Ralph Squillace, Microsoft</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dEeLo-LKf88">https://www.youtube.com/watch?v=dEeLo-LKf88</a></p>
+<ul>
+<li>Andy and Ralph discuss the history of containers and the evolution of WebAssembly (Wasm)</li>
+<li>Wasm is moving towards a full native experience with improved UX, individual projects having smooth experiences, and industry-standard runtime environments</li>
+<li>Flatcar Linux is a community-driven project that can be used to build a Linux distribution specifically for Wasm</li>
+<li>The process involves creating an immutable image using tools like Flatcar, Docker, and QEMU, and deploying it with an automated update mechanism</li>
+<li>Flatcar Linux is inspired by Chromebooks and aims to provide quick updates and automatic rollbacks for fleet management</li>
+<li>The speakers demonstrate the process of baking a Wasm image using Flatcar and discuss various tools and concepts like ignition files, raw layer files, and system extension directories.</li>
+</ul>
+<h2 id="introducing-componentize-py-a-tool-for-packaging-python-apps-as-components-joel-dice">Introducing Componentize-Py: A Tool for Packaging Python Apps as Components - Joel Dice</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=PkAO17lmqsI">https://www.youtube.com/watch?v=PkAO17lmqsI</a></p>
+<ul>
+<li>Joel Dice, Principal Engineer at Firon, discussing Python integration with the WebAssembly ecosystem</li>
+<li>Previous vision of fulfilling polyglot promise of web assembly by supporting a wide variety of host environments, including Python</li>
+<li>Componentize-Py introduced to address packaging and running Python apps as components in WebAssembly</li>
+<li>Prior art solutions for targeting WebAssembly using Python already exist, such as Pyodide and Wasmtime</li>
+<li>Discusses static linking vs dynamic linking and the advantages of component linking in WebAssembly</li>
+<li>Componentize-Py allows for easier versioning, sandboxing, and isolation of third-party dependencies</li>
+<li>Comparison between Python and WebAssembly: WASM wants to create a better ecosystem by moving beyond legacy posix systems</li>
+<li>Componentize-Py uses a repository on GitHub with static dependency application dependencies, using components that are strictly enforced in a sandboxed environment</li>
+<li>Discusses the process of prelinking, generating bindings, and initialization in WebAssembly using Python.</li>
+</ul>
+<h2 id="dapr-enabled-wasm-microservices-michael-yuan-wasmedge-yaron-schneider-diagrid">Dapr-Enabled Wasm Microservices - Michael Yuan, WasmEdge &amp; Yaron Schneider, Diagrid</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=n_q8S4GbjOw">https://www.youtube.com/watch?v=n_q8S4GbjOw</a></p>
+<ul>
+<li>Dapper project: open-source framework for building microservices using Wasm and other runtimes</li>
+<li>Dapper helps developers focus on business logic while handling infrastructure concerns, such as database configuration, cache, stateful applications, event-driven systems, and more</li>
+<li>Supports various platforms like Kubernetes, AWS, Azure, and others</li>
+<li>Offers integrations with popular cloud services and open-source infrastructure services</li>
+<li>Provides a simple HTTP API for communication between microservices</li>
+<li>Allows running processes locally or in the cloud, even replacing databases and pub/sub systems with Dapper's features</li>
+<li>Improves performance through high-performance networking and non-blocking sockets</li>
+<li>Enhances security by applying authentication, rate limiting, and concurrency control transparently</li>
+<li>Supports various programming languages like Rust, Python, Go, and more</li>
+<li>Dapper is part of the CNCF landscape and has a large and growing community (&gt;3000 contributors) with a rapidly growing Discord channel</li>
+<li>Previously started as an adaptation for running microservices in Wasm, but now also helps with adoption by providing adapters and integrations</li>
+<li>Dapper is not just another layer on top of existing ecosystems; it matches the existing stack and improves productivity</li>
+<li>Some benefits over traditional cloud services include not requiring a client driver or container VM, supporting WebSocket and grpc interfaces, and offering built-in authentication and other features.</li>
+</ul>
+<h2 id="package-management-for-wasm-components-daniel-macovei-jaf-labs">Package Management for Wasm Components - Daniel Macovei, JAF Labs</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1QbfKzQgD0E">https://www.youtube.com/watch?v=1QbfKzQgD0E</a></p>
+<ul>
+<li>Danny Macovei from JAF Labs discusses package management for Wasm components</li>
+<li>Warg is a project by Sig Registries in the Bundle Alliance focused on creating a webassembly registry with cryptographic verifiability and federated characteristics</li>
+<li>Package managers are an integral part of development processes, enabling language neutrality and dependency tree analysis</li>
+<li>Interoperability between languages is a key benefit of Wasm components, allowing developers to leverage existing ecosystems</li>
+<li>The component model enables guest interaction and transitive dependencies through canonical APIs</li>
+<li>Component models work by importing one component into another and instantiating it multiple times with different arguments</li>
+<li>Locking components ensures that the same version is used across instances and prevents dependency conflicts</li>
+<li>Registry-aware runtimes can automatically manage dependencies and provide integrity checks, making production deployment safer</li>
+<li>Demonstration shows using handwritten Wasm components in JavaScript, Rust, and Zig to create a large bundled component through transitive dependencies</li>
+<li>Different programming languages have different maturity levels and tooling for creating components via various methods.</li>
+</ul>
+<h2 id="the-buzz-about-green-tech-webassemblys-impact-on-carbon-footprint-reduction-christoph-voigt">The Buzz About Green Tech: WebAssembly's Impact on Carbon Footprint Reduction - Christoph Voigt</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zi4d4Hu1HtY">https://www.youtube.com/watch?v=zi4d4Hu1HtY</a></p>
+<ul>
+<li>Christoph Voigt, co-founder of Liquid Reply, discusses the potential of WebAssembly for creating energy-efficient systems</li>
+<li>Underutilization of Kubernetes resources is a common issue leading to unnecessary carbon emissions</li>
+<li>WebAssembly offers several advantages including portability, performance, language independence, and security</li>
+<li>Energy efficiency is an emerging area where WebAssembly shines, particularly in serverless and IoT use cases</li>
+<li>A study shows that the choice of programming language and runtime environment can significantly impact energy consumption</li>
+<li>Rust, a low-level language, is one of the most energy-efficient languages for benchmarked applications</li>
+<li>WebAssembly's small binary size makes it an attractive choice for lightweight applications</li>
+<li>The performance of WebAssembly depends on the maturity of its compiler support and optimization features</li>
+<li>The runtime environment can also influence the energy consumption and performance of WebAssembly applications</li>
+<li>The green software foundation proposes a carbon footprint equation that considers both operational and embodied emissions.</li>
+<li>Energy efficiency should focus on reducing hardware requirements, optimizing energy supply, and minimizing idle time.</li>
+<li>Multitenancy in web assembly security profiles make ideal multi-tenancy scenarios given fully isolated applications.</li>
+<li>Serverless functions written in WebAssembly can save energy by utilizing hardware more efficiently and minimizing embodied emissions.</li>
+<li>WebAssembly's snapshotting functionality allows pre-initializing modules, improving startup latency and reducing energy consumption.</li>
+<li>Future work includes exploring the potential of using solar power for web assembly instances and serverless operating models.</li>
+</ul>
+<h2 id="doing-server-side-webassembly-the-hard-way-liam-crilly-nginx">Doing Server Side WebAssembly the Hard Way - Liam Crilly, NGINX</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=T8TcRGfGkEQ">https://www.youtube.com/watch?v=T8TcRGfGkEQ</a></p>
+<ul>
+<li>Liam Crilly talks about the evolution of web technology from Mosaic browser in the early 90s to the current day</li>
+<li>He mentions WebAssembly as a significant event that could empower the next wave of web applications</li>
+<li>Discusses the importance of HTTP context and how it has evolved over time</li>
+<li>Talks about the challenges and solutions for decoupling network layer and runtime in server-side web development with Nginx and WebAssembly.</li>
+</ul>
+<p>Some key points:</p>
+<ul>
+<li>Early graphical web brought a surge in content creation and consumption</li>
+<li>First web applications were simple, with guestbooks, counters, and form submissions</li>
+<li>HTTP evolution included the introduction of POST method, image tag, and query strings</li>
+<li>Early frameworks like Ruby on Rails made web development easier by providing rich user experiences without requiring complete reimplementation of backend logic</li>
+<li>WebAssembly allows for running application code directly in the browser without installing software</li>
+<li>Decoupling network layer and runtime can improve scalability and security.</li>
+</ul>
+<p>Liam's background:</p>
+<ul>
+<li>Worked at Nginx on server-side WebAssembly</li>
+<li>Started writing web applications in the 90s with a simple guestbook</li>
+<li>Mentioned using languages like PHP, Python, Ruby, and Go for web development over the years.</li>
+</ul>
+<h2 id="piercing-the-veil-of-webassembly-in-production-benjamin-eckel-dylibso">Piercing the Veil of WebAssembly in Production - Benjamin Eckel, Dylibso</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Dd2Ped1xFG0">https://www.youtube.com/watch?v=Dd2Ped1xFG0</a></p>
+<ul>
+<li>The talk is about observability in WebAssembly (Wasm) production environments</li>
+<li>Speaker Ben Eckel is from Delipso and has worked at Datadog, a monitoring and observability company</li>
+<li>Wasm adoption in production systems is increasing, but observability tools don't work well with it yet</li>
+<li>Traditional observability tools rely on agents or side processes to collect data, which isn't an option for Wasm due to its sandboxed environment</li>
+<li>Wasm has no unified way of accessing system resources like a clock or IPC layer, making it difficult to get Telemetry data</li>
+<li>To address this, the speaker suggests using language-level bindings and adapters to safely call observability libraries</li>
+<li>The goal is to make observability as efficient and quick as possible in Wasm environments, without affecting performance</li>
+<li>The speaker also mentions exploring the possibility of real-time configuration changes and automatic instrumentation for Wasm modules.</li>
+</ul>
+<h2 id="inside-the-wizard-research-engine-ben-titzer-carnegie-mellon-university">Inside the Wizard Research Engine - Ben Titzer, Carnegie Mellon University</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=HUB4WEcjEKI">https://www.youtube.com/watch?v=HUB4WEcjEKI</a></p>
+<ul>
+<li>Ben Ive, researcher at Carnegie Mellon University, talks about his research on Wizard, a webassembly-based research engine</li>
+<li>Webassembly: standardized compiled executable code, portable and can represent many contexts</li>
+<li>Background in Java VM implementation and optimization</li>
+<li>Focus on building a research engine with new capabilities and architecture</li>
+<li>Interest in webassembly due to its potential for new optimization techniques and flexibility</li>
+<li>Goals include improving debugging tools and observability for production VMs</li>
+<li>Exploring new runtime techniques and optimizations for webassembly</li>
+<li>Comparing Wizard to other virtual machines (V8, JVM) and considering the tradeoffs between observability and performance</li>
+<li>Discusses his paper on interpreter-based analysis techniques for webassembly, including probing and call profiling</li>
+<li>Plans to extend Wizard to support new languages and features.</li>
+</ul>
+<h2 id="implementing-a-wasi-host-for-visual-studio-code-dirk-baumer-microsoft">Implementing a WASI Host for Visual Studio Code - Dirk Bäumer, Microsoft</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=3GT4Z_8L2cg">https://www.youtube.com/watch?v=3GT4Z_8L2cg</a></p>
+<ul>
+<li>Dirk Bäumer, Microsoft employee with a long history in IDEs and editors</li>
+<li>Introducing implementation of WASM (WebAssembly System Interface) host for Visual Studio Code (VSCode)</li>
+<li>Goal: Run local files without installing VSCode, support multiple languages, and use the GitHub repository system</li>
+<li>Challenges: Local file execution, Python interpreter integration, and origin isolation</li>
+<li>Technologies used: Textmate grammars, WASM, VSI (Visual Studio Intellicode Services Interface)</li>
+<li>Preview of demo showing VSCode Dev Insider version running a Python script locally without the need for a server or Python interpreter installation</li>
+<li>Implementation involved mounting the workspace file system inside VSCode and using the Python interpreter within it</li>
+<li>Limitations: Current public preview has limitations around origin isolation, CPython build, and thread support</li>
+<li>Future plans: Improvements to Python interpreter, better threat support, and integration of other languages into VSCode Dev Insider.</li>
+</ul>
+<h2 id="wasm-in-bytefaas-past-present-and-future-wilson-wang-bytedance">WASM in ByteFaaS, Past, Present, and Future - Wilson Wang, ByteDance</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IfIaugj_3S8">https://www.youtube.com/watch?v=IfIaugj_3S8</a></p>
+<ul>
+<li>Wilson Wang from ByteDance discussing use of WebAssembly in ByteFast (ByteDance Fast Platform)</li>
+<li>Three parts: Legacy environment, current implementation, future research</li>
+<li>Legacy environment: Two types of functions - native and event-driven, container-based architecture</li>
+<li>Optimization in legacy environment: Continuous optimization, snapshotting, pooling, initialization</li>
+<li>Limitations of optimization: Cost, system call overhead, isolation</li>
+<li>Current implementation: Introduced lightweight WebAssembly worker, faster system, Gateway, agent, sandboxing, precompilation</li>
+<li>Future research: Next-generation assembly-based fast system, Weaver service for distributed computing.</li>
+<li>Weaver service components: Execution scheduling, execution, host calls, actor tasks</li>
+<li>Challenges in integration and rearchitecture: Building with Bazel, profile execution results, scaling task actors, improving throughput.</li>
+<li>Demonstration of WebAssembly function execution using Ray and demo of mobile inference using Western Match.</li>
+<li>Future work: Improvements to West Mount Ray, adding support for different languages (C++, Rust) and SDKs.</li>
+<li>Questions: Comparing container latency, handling larger data sizes, use cases for WebAssembly functions, integrating Rust with Western Match.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

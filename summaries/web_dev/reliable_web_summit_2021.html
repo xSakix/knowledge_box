@@ -1,0 +1,5266 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/reliable_web_summit_2021.html">
+      
+      
+        <link rel="prev" href="nordic_js_2022.html">
+      
+      
+        <link rel="next" href="../kubeconf/kubeconf_utrecht_2023.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>reliable web summit - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clean-code-is-no-longer-a-myth-karan-balkar-reliable-web-summit-2021" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              reliable web summit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="reliable_web_summit_2021.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clean-code-is-no-longer-a-myth-karan-balkar-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean code is no longer a myth | Karan Balkar | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainable-javascript-with-functional-patterns-luis-fernando-alvarez-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintainable JavaScript with Functional Patterns | Luis Fernando Alvarez | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dear-non-performant-app-nishu-goel-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dear non-performant app, | Nishu Goel | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-running-at-runtime-christoph-guttandin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep Running at Runtime | Christoph Guttandin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#betterer-incremental-improvement-craig-spence-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Betterer: Incremental Improvement | Craig Spence | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecting-for-accessibility-martine-dowden-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecting for Accessibility | Martine Dowden | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#climbing-to-the-top-of-the-lighthouse-with-scully-robert-willemelis-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Climbing to the top of the Lighthouse with Scully | Robert Willemelis | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-immutable-web-stephen-fluin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Immutable Web | Stephen Fluin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testable-architecture-in-angular-rainer-hahnekamp-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testable Architecture in Angular | Rainer Hahnekamp | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-component-harnesses-for-the-win-alain-chautard-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with Component Harnesses for the Win | Alain Chautard | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-new-web-stephen-fluin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The New Web | Stephen Fluin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3l-cs-three-level-components-technique-aziz-yazit-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      3L-C's- Three Level Components Technique | Aziz Yazit | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-dont-have-to-suffer-in-the-cloud-melissa-jurkoic-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users Don't have to Suffer in the Cloud | Melissa Jurkoic | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindblowing-google-pagespeed-scores-with-qwik-misko-hevery-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindblowing Google PageSpeed Scores with Qwik | Misko Hevery | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-web-ui-with-web-components-cory-rylan-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Performance Web UI with Web Components | Cory Rylan | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-is-king-how-contentful-and-caas-are-changing-aaron-ladage-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content is King: How Contentful and CaaS are Changing | Aaron Ladage | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoscaling-apps-without-supersizing-costs-lara-newsom-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoscaling Apps without Supersizing Costs | Lara Newsom | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-legend-of-zelda-hexagonal-architecture-you-jonathan-turner-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Legend of Zelda, Hexagonal Architecture &amp; You | Jonathan Turner | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-second-pair-of-eyes-with-visual-testing-colby-fayock-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Second Pair of Eyes with Visual Testing | Colby Fayock | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-resilient-serverless-applications-yan-cui-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Resilient Serverless Applications | Yan Cui | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-confidence-with-cypress-tests-rob-richardson-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaining Confidence with Cypress Tests | Rob Richardson | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-jest-testing-titbits-maria-korneeva-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular + Jest: Testing Titbits | Maria Korneeva | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-in-building-micro-front-ends-vishal-kumar-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges in Building Micro Front Ends| Vishal Kumar | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-code-is-a-balancing-act-jonathan-warrington-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Code is a Balancing Act | Jonathan Warrington | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-from-anywhere-with-github-codespaces-brigit-murtaugh-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop from Anywhere with GitHub Codespaces | Brigit Murtaugh | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfes-micro-frontends-with-module-federation-and-angular-manfred-steyer-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFEs , Micro-Frontends with Module Federation and Angular| Manfred Steyer | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#innovations-with-fast-web-components-rob-eisenberg-david-rickard-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovations with FAST Web Components | Rob Eisenberg &amp; David Rickard | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-more-fluid-pyramid-steve-upton-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      A More Fluid Pyramid | Steve Upton | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-cobol-to-node-with-devops-alejandro-mercado-pena-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Cobol to Node with DevOps | Alejandro Mercado Peña | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-the-worlds-a-staging-server-heidi-waterhouse-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      All the World's A Staging Server |Heidi Waterhouse | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-reliable-and-testable-code-with-typescript-doguhan-uluca-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crafting Reliable and Testable Code with TypeScript | Doguhan Uluca | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achieving-zero-fronted-crashes-in-production-josh-goldberg-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achieving Zero Fronted Crashes in Production | Josh Goldberg | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-storybook-to-maintain-components-and-redwoodjs-milecia-mcgregor-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Storybook to Maintain Components and RedwoodJS | Milecia McGregor | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-your-apps-is-not-about-devops-ivan-olivares-rojas-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Your Apps is not About Devops | Iván Olivares Rojas | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-effective-development-end-what-end-shai-reznik-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Effective Development - End (What) End | Shai Reznik | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-horror-story-to-fairy-tale-writing-code-michael-dowden-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Horror Story to Fairy Tale: Writing Code | Michael Dowden | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blazor-stability-testing-for-bullet-proof-application-ed-charbeneau-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blazor Stability Testing for Bullet Proof Application| Ed Charbeneau | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-up-your-devops-with-github-actions-kubernetes-rob-richardson-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level-up Your DevOps with GitHub Actions &amp; Kubernetes | Rob Richardson | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-worlds-most-expensive-react-component-michael-chan-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Worlds Most Expensive React Component | Michael Chan | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainable-styles-thats-a-thing-alyssa-nicoll-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintainable Styles- That's a Thing? | Alyssa Nicoll | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability-and-engineering-requirements-giorgio-natili-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability and Engineering Requirements | Giorgio Natili | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-static-web-apps-jon-papa-dan-wahlin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Static Web Apps | Jon Papa &amp; Dan Wahlin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-of-intentional-architectures-dinesh-ramadoss-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools of Intentional Architectures | Dinesh Ramadoss | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliable-system-azure-static-web-apps-craig-shoemaker-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliable System +  Azure Static Web Apps | Craig Shoemaker | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaborative-code-with-nx-brandon-roberts-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaborative Code with Nx | Brandon Roberts | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowing-your-tco-total-cost-of-ownership-owen-buckley-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowing Your TCO (Total Cost of Ownership) | Owen Buckley | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tdd-its-about-more-than-just-the-tests-jonathan-turner-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      TDD - It's About More Than Just the Tests | Jonathan Turner | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clean-code-is-no-longer-a-myth-karan-balkar-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clean code is no longer a myth | Karan Balkar | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainable-javascript-with-functional-patterns-luis-fernando-alvarez-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintainable JavaScript with Functional Patterns | Luis Fernando Alvarez | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dear-non-performant-app-nishu-goel-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dear non-performant app, | Nishu Goel | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-running-at-runtime-christoph-guttandin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep Running at Runtime | Christoph Guttandin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#betterer-incremental-improvement-craig-spence-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Betterer: Incremental Improvement | Craig Spence | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecting-for-accessibility-martine-dowden-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecting for Accessibility | Martine Dowden | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#climbing-to-the-top-of-the-lighthouse-with-scully-robert-willemelis-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Climbing to the top of the Lighthouse with Scully | Robert Willemelis | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-immutable-web-stephen-fluin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Immutable Web | Stephen Fluin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testable-architecture-in-angular-rainer-hahnekamp-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testable Architecture in Angular | Rainer Hahnekamp | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-component-harnesses-for-the-win-alain-chautard-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing with Component Harnesses for the Win | Alain Chautard | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-new-web-stephen-fluin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The New Web | Stephen Fluin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3l-cs-three-level-components-technique-aziz-yazit-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      3L-C's- Three Level Components Technique | Aziz Yazit | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-dont-have-to-suffer-in-the-cloud-melissa-jurkoic-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users Don't have to Suffer in the Cloud | Melissa Jurkoic | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindblowing-google-pagespeed-scores-with-qwik-misko-hevery-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindblowing Google PageSpeed Scores with Qwik | Misko Hevery | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-web-ui-with-web-components-cory-rylan-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Performance Web UI with Web Components | Cory Rylan | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-is-king-how-contentful-and-caas-are-changing-aaron-ladage-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content is King: How Contentful and CaaS are Changing | Aaron Ladage | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoscaling-apps-without-supersizing-costs-lara-newsom-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoscaling Apps without Supersizing Costs | Lara Newsom | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-legend-of-zelda-hexagonal-architecture-you-jonathan-turner-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Legend of Zelda, Hexagonal Architecture &amp; You | Jonathan Turner | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-second-pair-of-eyes-with-visual-testing-colby-fayock-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Second Pair of Eyes with Visual Testing | Colby Fayock | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-resilient-serverless-applications-yan-cui-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Resilient Serverless Applications | Yan Cui | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-confidence-with-cypress-tests-rob-richardson-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaining Confidence with Cypress Tests | Rob Richardson | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angular-jest-testing-titbits-maria-korneeva-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angular + Jest: Testing Titbits | Maria Korneeva | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-in-building-micro-front-ends-vishal-kumar-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges in Building Micro Front Ends| Vishal Kumar | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-code-is-a-balancing-act-jonathan-warrington-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Code is a Balancing Act | Jonathan Warrington | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop-from-anywhere-with-github-codespaces-brigit-murtaugh-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Develop from Anywhere with GitHub Codespaces | Brigit Murtaugh | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mfes-micro-frontends-with-module-federation-and-angular-manfred-steyer-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      MFEs , Micro-Frontends with Module Federation and Angular| Manfred Steyer | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#innovations-with-fast-web-components-rob-eisenberg-david-rickard-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovations with FAST Web Components | Rob Eisenberg &amp; David Rickard | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-more-fluid-pyramid-steve-upton-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      A More Fluid Pyramid | Steve Upton | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-cobol-to-node-with-devops-alejandro-mercado-pena-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Cobol to Node with DevOps | Alejandro Mercado Peña | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-the-worlds-a-staging-server-heidi-waterhouse-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      All the World's A Staging Server |Heidi Waterhouse | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-reliable-and-testable-code-with-typescript-doguhan-uluca-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crafting Reliable and Testable Code with TypeScript | Doguhan Uluca | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achieving-zero-fronted-crashes-in-production-josh-goldberg-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achieving Zero Fronted Crashes in Production | Josh Goldberg | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-storybook-to-maintain-components-and-redwoodjs-milecia-mcgregor-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Storybook to Maintain Components and RedwoodJS | Milecia McGregor | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-your-apps-is-not-about-devops-ivan-olivares-rojas-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Your Apps is not About Devops | Iván Olivares Rojas | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-effective-development-end-what-end-shai-reznik-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Effective Development - End (What) End | Shai Reznik | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-horror-story-to-fairy-tale-writing-code-michael-dowden-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Horror Story to Fairy Tale: Writing Code | Michael Dowden | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blazor-stability-testing-for-bullet-proof-application-ed-charbeneau-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blazor Stability Testing for Bullet Proof Application| Ed Charbeneau | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-up-your-devops-with-github-actions-kubernetes-rob-richardson-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level-up Your DevOps with GitHub Actions &amp; Kubernetes | Rob Richardson | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-worlds-most-expensive-react-component-michael-chan-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Worlds Most Expensive React Component | Michael Chan | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainable-styles-thats-a-thing-alyssa-nicoll-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintainable Styles- That's a Thing? | Alyssa Nicoll | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability-and-engineering-requirements-giorgio-natili-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliability and Engineering Requirements | Giorgio Natili | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-static-web-apps-jon-papa-dan-wahlin-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Static Web Apps | Jon Papa &amp; Dan Wahlin | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-of-intentional-architectures-dinesh-ramadoss-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools of Intentional Architectures | Dinesh Ramadoss | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliable-system-azure-static-web-apps-craig-shoemaker-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliable System +  Azure Static Web Apps | Craig Shoemaker | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaborative-code-with-nx-brandon-roberts-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaborative Code with Nx | Brandon Roberts | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowing-your-tco-total-cost-of-ownership-owen-buckley-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowing Your TCO (Total Cost of Ownership) | Owen Buckley | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tdd-its-about-more-than-just-the-tests-jonathan-turner-reliable-web-summit-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      TDD - It's About More Than Just the Tests | Jonathan Turner | Reliable Web Summit 2021
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>reliable web summit</h1>
+
+<h2 id="clean-code-is-no-longer-a-myth-karan-balkar-reliable-web-summit-2021">Clean code is no longer a myth | Karan Balkar | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=wf8zQriwF1g">https://www.youtube.com/watch?v=wf8zQriwF1g</a></p>
+<ul>
+<li>Karan, an Android developer, discussed clean code and its importance in a software development life cycle.</li>
+<li>He emphasized the separation of concerns principle to divide programs into distinct sections handling separate concerns.</li>
+<li>Writing clean code is about continuously refactoring code and modifying logic for better efficiency.</li>
+<li>Four-stage habit building process: Cue, Craving, Response, Reward.</li>
+<li>Husky Git Hooks can automate formatting code and applying custom rules during the precommit phase.</li>
+<li>ESLint, a popular open-source JavaScript linter, helps enforce coding standards and style guidelines.</li>
+<li>Commit Link is a tool that improves commit messages by adding a meaningful link to each commit.</li>
+<li>Node Version Manager (NVM) assists in managing different versions of Node.js and their dependencies.</li>
+</ul>
+<h2 id="maintainable-javascript-with-functional-patterns-luis-fernando-alvarez-reliable-web-summit-2021">Maintainable JavaScript with Functional Patterns | Luis Fernando Alvarez | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=96x2KQExrSM">https://www.youtube.com/watch?v=96x2KQExrSM</a></p>
+<ul>
+<li>Functional programming principles in Javascript</li>
+<li>Purity: functions don't depend on or affect external state</li>
+<li>Immutability: everything is constant, no mutation</li>
+<li>Functional programming concepts used in Javascript</li>
+<li>Map: transforms one list to another</li>
+<li>Filter: filters elements of an array based on a condition</li>
+<li>Reduce: combines all elements of an array into a single value</li>
+<li>Higher order functions in Javascript</li>
+<li>Functions that receive other functions as arguments or return them as values</li>
+<li>Examples include map, filter, and reduce</li>
+<li>Currying and partial application in Javascript</li>
+<li>Breaking down multi-argument functions into smaller ones with fewer arguments</li>
+<li>Useful for composing functions and reusing code</li>
+<li>Composition of functions in Javascript</li>
+<li>Combining multiple functions to create a new one</li>
+<li>Example: greeting map</li>
+<li>Libraries for functional programming in Javascript</li>
+<li>Ramda: provides utility functions for working with data structures like arrays, objects, and strings</li>
+<li>FP-TS: adds functional programming concepts to TypeScript</li>
+</ul>
+<h2 id="dear-non-performant-app-nishu-goel-reliable-web-summit-2021">Dear non-performant app, | Nishu Goel | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=C9bJCP0X5N8">https://www.youtube.com/watch?v=C9bJCP0X5N8</a></p>
+<ul>
+<li>Optimizing Application Performance</li>
+<li>Importance of Core Web Vitals: LCP (Largest Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift)</li>
+<li>Loading: Reduce time to first load and render content</li>
+<li>Interactivity: Improve user interaction response time</li>
+<li>Visual Stability: Ensure page layout remains stable during loading</li>
+<li>LCP Optimization Techniques</li>
+<li>Critical CSS: Load essential styles early, defer non-critical styles</li>
+<li>Inline Fonts: Avoid external font requests for faster rendering</li>
+<li>Image Optimization: Use efficient file formats and reduce image sizes</li>
+<li>CDN: Utilize Content Delivery Networks to serve resources efficiently</li>
+<li>Preload Important Resources: Prioritize downloading critical assets before rendering</li>
+<li>FID Improvement Strategies</li>
+<li>Defer Unused JavaScript: Avoid loading unnecessary scripts that slow down page load time</li>
+<li>Code Splitting: Break up large bundles into smaller, more manageable chunks for faster loading times</li>
+<li>Minimize Polyfills: Only include necessary polyfills to reduce download size and improve performance</li>
+<li>CLS Optimization Tips</li>
+<li>Dynamic Content Loading: Ensure content loads predictably without unexpected shifts in layout</li>
+<li>Responsive Images: Use image tags or iframes to conditionally load images based on screen size</li>
+<li>Adaptive Serving: Serve resources according to user connection speed for optimal performance</li>
+<li>Finalizers and Weak Refs: Understand how weak references and finalizers work in JavaScript to manage memory usage effectively.</li>
+</ul>
+<h2 id="keep-running-at-runtime-christoph-guttandin-reliable-web-summit-2021">Keep Running at Runtime | Christoph Guttandin | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1G2cIXHd120">https://www.youtube.com/watch?v=1G2cIXHd120</a></p>
+<ul>
+<li>Tracking runtime performance in web apps is important, especially for long-running applications.</li>
+<li>Error tracking and handling are crucial to avoid unexpected crashes or user experience issues.</li>
+<li>Use a framework or library that provides built-in error handling mechanisms.</li>
+<li>Implement unhandled rejection tracking to catch errors thrown by promises.</li>
+<li>Track performance metrics like memory usage, CPU usage, and frame rate for better optimization.</li>
+<li>Browsers may throttle certain events or resources based on page visibility or device capabilities.</li>
+<li>Use web workers or audio contexts to avoid main thread blocking.</li>
+<li>Modern browsers offer APIs to control screen locking or resource scheduling.</li>
+<li>Monitoring runtime performance can help identify potential issues and optimize the app's behavior.</li>
+</ul>
+<h2 id="betterer-incremental-improvement-craig-spence-reliable-web-summit-2021">Betterer: Incremental Improvement | Craig Spence | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=y5Q4eXCpn20">https://www.youtube.com/watch?v=y5Q4eXCpn20</a></p>
+<ul>
+<li>Presentation by Craig Shu Mai</li>
+<li>Worked in various environments, emphasized incremental change and working software</li>
+<li>Discusses the importance of understanding the impact of product changes based on user feedback</li>
+<li>Describes a system that evolved over time and became difficult to change without causing issues</li>
+<li>Talks about the dangers of revolutionary change and the importance of communication when making changes</li>
+<li>Introduces the concept of "branch life" and the challenges it presents in managing codebases</li>
+<li>Explains the idea of a genetic algorithm, which can be used to explore potential solutions to complex problems</li>
+<li>Discusses the use of tools like TypeScript, ESLint, and Jest for improving code quality and maintainability</li>
+<li>Talks about the concept of "microservices" as an alternative to monolithic applications</li>
+<li>Explains how breaking down a large codebase into smaller components can make it easier to manage and change over time</li>
+<li>Introduces the idea of using quantifiable metrics to track progress in improving a codebase</li>
+<li>Talks about the importance of comparing the state of a codebase at different points in time, as well as the challenges that come with it</li>
+<li>Discusses the use of test-driven development and how it can help improve the quality of a codebase</li>
+<li>Introduces the concept of "better" tools, which are designed to make incremental improvements to a codebase easier</li>
+<li>Talks about the importance of clear communication when making changes to a codebase</li>
+<li>Discusses the use of file tests and how they can help identify specific issues in a codebase</li>
+<li>Introduces the concept of "issue files" and how they can be used to track and resolve problems in a codebase</li>
+<li>Talks about the importance of using version control tools like Git to manage changes to a codebase</li>
+<li>Discusses the use of continuous integration (CI) and continuous deployment (CD) pipelines to automate the process of building, testing, and deploying software</li>
+<li>Introduces the concept of "deadlines" for migration projects and how they can help ensure that progress is made in a timely manner</li>
+<li>Talks about the importance of regularly monitoring and reporting on the status of a codebase</li>
+<li>Discusses the use of various tools and techniques to improve the quality, maintainability, and security of a codebase</li>
+<li>Emphasizes the importance of working together with others when making changes to a codebase</li>
+<li>Introduces the concept of "branching" as a way to manage changes to a codebase</li>
+<li>Talks about the importance of having a clear plan for managing changes to a codebase and how it can help ensure that progress is made in a timely manner</li>
+</ul>
+<h2 id="architecting-for-accessibility-martine-dowden-reliable-web-summit-2021">Architecting for Accessibility | Martine Dowden | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=z8r_K9BG0d4">https://www.youtube.com/watch?v=z8r_K9BG0d4</a></p>
+<ul>
+<li>Introduction to Accessibility in Web Development<ul>
+<li>Accessibility started with Berners-Lee's vision in 1945</li>
+<li>First commercial reading machine created in 1975 by Ray Kurzweil</li>
+<li>W3C launched the Web Accessibility Initiative (WAI) in 1997</li>
+</ul>
+</li>
+<li>The Importance of Accessibility<ul>
+<li>Over 1 billion people have disabilities worldwide</li>
+<li>Accessibility is essential for everyone, regardless of individual capability or disability</li>
+</ul>
+</li>
+<li>Challenges in Making Applications Accessible<ul>
+<li>Auditory: Hearing loss affects 15% of the world's population</li>
+<li>Visual: Vision impairments affect over 13 billion people worldwide</li>
+<li>Physical: Physical disabilities can limit movement and keyboard/mouse use</li>
+<li>Cognitive &amp; Neurological: Conditions such as dementia, epilepsy, or brain injuries can impact cognitive abilities and access to information</li>
+</ul>
+</li>
+<li>The Role of Legal Compliance in Accessibility<ul>
+<li>Many countries have laws that require digital accessibility</li>
+<li>Some companies may lose contracts if they don't comply with these standards</li>
+</ul>
+</li>
+<li>How to Get Started with Making Your Application Accessible<ul>
+<li>Understand the standard testing and follow legal best practices</li>
+<li>Test across different devices, browsers, and assistive technologies</li>
+<li>Make sure your application is usable by people with disabilities, regardless of their ability to perceive information or discern content presented</li>
+</ul>
+</li>
+<li>The Importance of Training &amp; Teamwork in Accessibility<ul>
+<li>A diverse team can help ensure that accessibility needs are considered throughout the development process</li>
+<li>Training and education can help everyone understand the importance of accessibility and how to implement it effectively</li>
+</ul>
+</li>
+<li>The Role of Automated Testing in Ensuring Accessibility<ul>
+<li>Automated testing can help catch common errors and make sure your application is compliant with accessibility standards</li>
+<li>However, automated testing should be supplemented by manual testing and user feedback</li>
+</ul>
+</li>
+<li>The Importance of User Feedback in Accessibility<ul>
+<li>User feedback can provide valuable insights into how people with disabilities interact with your application</li>
+<li>Regularly monitoring user feedback can help you identify areas where your application may need improvement</li>
+</ul>
+</li>
+<li>The Role of Documentation &amp; Scaling in Accessibility<ul>
+<li>Good documentation can help new team members understand the importance of accessibility and how to implement it effectively</li>
+<li>As your application grows, it's important to continue scaling your efforts to ensure that all new features are accessible</li>
+</ul>
+</li>
+</ul>
+<h2 id="climbing-to-the-top-of-the-lighthouse-with-scully-robert-willemelis-reliable-web-summit-2021">Climbing to the top of the Lighthouse with Scully | Robert Willemelis | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dD74bhKnlkE">https://www.youtube.com/watch?v=dD74bhKnlkE</a></p>
+<ul>
+<li>Talk by Robert, Berlin-based frontend developer</li>
+<li>Journey to top Lighthouse score with Scully</li>
+<li>Scully: static side generator for Jamstack applications</li>
+<li>Prerender Angular application based on route</li>
+<li>Store additional data in markdown files</li>
+<li>Use Scully to analyze routes and generate static HTML</li>
+<li>Test website performance using Google Lighthouse</li>
+<li>Focus on 5 categories: Performance, Best Practice, Accessibility, Progressive Web Apps, SEO</li>
+<li>Continuously improve Lighthouse score through optimization</li>
+<li>Optimize DevTools PageSpeed Insights for different platforms</li>
+<li>Compare hosting providers to find the best result</li>
+<li>Test multiple times and take average results</li>
+<li>Follow Lighthouse recommendations and approve low-hanging fruit</li>
+<li>Optimize images using WebP format and caching techniques</li>
+<li>Use service workers to cache assets and improve performance</li>
+<li>Focus on largest contentful paint (LCP) optimization</li>
+<li>Optimize server response time for better Lighthouse score</li>
+<li>Use inline SVGs and reduce unnecessary CSS code</li>
+<li>Implement lazy loading for non-critical images</li>
+<li>Utilize Scully's caching capabilities to optimize static HTML files</li>
+<li>Create a reusable component for responsive layouts</li>
+<li>Define breakpoints using magic angular pipe</li>
+<li>Optimize Lighthouse score by improving accessibility and SEO</li>
+<li>Use WebP format for images to reduce file size</li>
+<li>Utilize CNDs like Cloudflare to improve website performance</li>
+<li>Implement service workers with Workbox to cache assets and improve performance</li>
+<li>Set different caching strategies based on asset type and priority</li>
+<li>Optimize render-blocking JavaScript by splitting and concatenating files</li>
+<li>Use class-based file splitting for better code organization</li>
+<li>Analyze unused dependencies and optimize bundle size</li>
+<li>Refactor duplicated code to reduce bundle size</li>
+<li>Leverage Lighthouse reports, Webpack Bundle Analyzer, and other tools for optimization</li>
+</ul>
+<h2 id="the-immutable-web-stephen-fluin-reliable-web-summit-2021">The Immutable Web | Stephen Fluin | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=AsibupnDJic">https://www.youtube.com/watch?v=AsibupnDJic</a></p>
+<ul>
+<li>Intro: Excited to discuss the "Immutable Web" at the Web Summit</li>
+<li>Background: Stephen Fluin, Head Developer Relations at Chainlink Labs, previously worked at Google and has experience building web applications</li>
+<li>Key Concepts:</li>
+<li>Blockchain: A decentralized network that securely stores data and records transactions in a transparent manner. It is an alternative to traditional centralized servers.</li>
+<li>Bitcoin &amp; Ethereum: Two popular blockchains, with Bitcoin being more focused on digital currency and Ethereum providing a platform for developers to build applications using smart contracts.</li>
+<li>Immutable Web:</li>
+<li>Concept: A web application that directly interacts with decentralized networks (blockchain) instead of traditional APIs.</li>
+<li>Benefits: Greater trust, transparency, and permanence of data stored on the blockchain.</li>
+<li>Smart Contracts &amp; Dapps (Decentralized Applications):</li>
+<li>Ethereum provides a platform for developers to create smart contracts and decentralized applications using its programming language, Solidity.</li>
+<li>Example: A simple todo list application that stores data on the Ethereum blockchain.</li>
+<li>Interacting with Blockchains:</li>
+<li>Providers like Alchemy and Infura allow web developers to interact with blockchain networks through JSON APIs.</li>
+<li>Payment &amp; Gas:</li>
+<li>Transactions on a blockchain require payment in the form of cryptocurrency, which is used to compensate network participants for processing transactions and computing power.</li>
+<li>Scalability Challenges:</li>
+<li>Blockchains can have slow transaction times due to their decentralized nature and the need to verify each transaction across multiple nodes.</li>
+<li>Future Opportunities &amp; Growth:</li>
+<li>The blockchain ecosystem is growing rapidly, with new applications and services being developed every year.</li>
+</ul>
+<h2 id="testable-architecture-in-angular-rainer-hahnekamp-reliable-web-summit-2021">Testable Architecture in Angular | Rainer Hahnekamp | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pAmdyvJ5VNY">https://www.youtube.com/watch?v=pAmdyvJ5VNY</a></p>
+<ul>
+<li>Introduced the speaker, Reina Hanekamp</li>
+<li>Discussed the concept of architecture and how it relates to testing</li>
+<li>Presented a brief overview of Angular and its role in the workshop</li>
+<li>Explained the differences between unit and integration tests, highlighting their strengths and weaknesses</li>
+<li>Showcased an example application for demonstration purposes</li>
+<li>Demonstrated various testing strategies using tools like Jest, Testbed, and Cypress</li>
+<li>Introduced the concept of Nx and how it can be used to promote better architecture and testing practices in Angular applications</li>
+<li>Explained the importance of domain-driven design (DDD) and its role in creating maintainable and scalable applications</li>
+<li>Discussed the use of storybook for visual regression testing</li>
+<li>Highlighted the importance of refactoring and how it can improve testability and code quality</li>
+<li>Encouraged attendees to experiment with different testing strategies and tools</li>
+<li>Provided a schedule for a public testing workshop related to Angular</li>
+</ul>
+<p>The speaker provided an overview of various testing strategies, tools, and techniques used in Angular development. They discussed the differences between unit and integration tests, as well as how they can be combined effectively. The speaker also introduced the concept of Nx and its role in promoting better architecture and testing practices in Angular applications. Additionally, they explained the importance of domain-driven design (DDD) and demonstrated how it can be used to create maintainable and scalable applications. The speaker encouraged attendees to experiment with different testing strategies and tools and provided a schedule for a public testing workshop related to Angular.</p>
+<h2 id="testing-with-component-harnesses-for-the-win-alain-chautard-reliable-web-summit-2021">Testing with Component Harnesses for the Win | Alain Chautard | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=JJedYMmhe-A">https://www.youtube.com/watch?v=JJedYMmhe-A</a></p>
+<ul>
+<li>Introduction to Component Harness</li>
+<li>Big Picture of Testing in Web Development<ul>
+<li>Unit Testing: Validate single piece of code</li>
+<li>Integration Testing: Validate multiple pieces of code working together</li>
+<li>End-to-End Testing: Simulate user interaction and validate application behavior</li>
+<li>Performance Testing: Measure speed and responsiveness of an application</li>
+</ul>
+</li>
+<li>Component Harness: Applying Object Model Pattern at Component Level<ul>
+<li>Clear, well-defined API for component interactions</li>
+<li>Reduces complexity and increases maintainability</li>
+<li>Can be used across different testing frameworks and technologies</li>
+<li>Provides a consistent way to interact with components regardless of context (e.g., unit test or end-to-end test)</li>
+</ul>
+</li>
+<li>Harness Libraries Available<ul>
+<li>Angular Material CDK Component Development Kit (CDK) provides a component harness API</li>
+<li>Cypress, Jasmine, and other testing libraries support the use of component harnesses</li>
+</ul>
+</li>
+<li>How to Implement a Component Harness<ol>
+<li>Target implementation: Choose which testing library or environment you want to use (e.g., Cypress, Jest, Angular Testbed)</li>
+<li>Select a component: Identify the specific component you want to test</li>
+<li>Interact with the component using its API: Use the harness API to perform actions on the component and retrieve information from it</li>
+</ol>
+</li>
+<li>Benefits of Using Component Harnesses<ul>
+<li>Increases productivity when writing unit tests</li>
+<li>Reduces code duplication by reusing APIs across different test scenarios</li>
+<li>Simplifies testing complex components like dropdowns or tabs</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-new-web-stephen-fluin-reliable-web-summit-2021">The New Web | Stephen Fluin | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ctEjPTlXaYI">https://www.youtube.com/watch?v=ctEjPTlXaYI</a></p>
+<ul>
+<li>New web development concepts</li>
+<li>Importance of modern tooling and process</li>
+<li>Success in the new web: fast, engaging, and delightful user experiences</li>
+<li>Static vs dynamic websites and web applications</li>
+<li>Typescript as a game changer for building applications</li>
+<li>Evolving browser technology and ECMAScript standards (ES2021)</li>
+<li>The rise of static site generators like 11ty and Gatsby</li>
+<li>Micro frontends: a solution to scaling web apps?</li>
+<li>Webpack as an essential tool in the modern web ecosystem</li>
+<li>Blockchain's impact on the future of the web: immutable web, decentralized identity, and cryptography-based authentication</li>
+<li>Rapid evolution of web development platforms, frameworks, and libraries</li>
+<li>The importance of staying up to date with industry trends and technologies</li>
+<li>Using conferences like Reliable Web Summit and Amazing Web as resources for learning and networking</li>
+</ul>
+<h2 id="3l-cs-three-level-components-technique-aziz-yazit-reliable-web-summit-2021">3L-C's- Three Level Components Technique | Aziz Yazit | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=b15jOzJFKcI">https://www.youtube.com/watch?v=b15jOzJFKcI</a></p>
+<ul>
+<li>Introduced as a Stanford conference delegate and software architect from Malaysia</li>
+<li>Discussed competent pattern techniques in design systems</li>
+<li>Mentioned the importance of confidence levels (LC3) to understand component organization</li>
+<li>Talked about modern combination design system topologies</li>
+<li>Explained the concept of component-based architecture and its benefits</li>
+<li>Provided examples of popular frameworks such as AngularJS, React, and Vue.js</li>
+<li>Discussed the role of web components in modern UI development</li>
+<li>Showcased Google's Material Design System and how it influences product design</li>
+<li>Demonstrated Firebase's component library and its applications in various products</li>
+<li>Introduced the concept of "level confidence" to understand better the organization and structure of a design system</li>
+<li>Explained that the level of confidence does not necessarily mean superiority but rather complementarity</li>
+<li>Talked about the importance of context in designing components for different product types</li>
+<li>Discussed the concept of "le level attraction" and how it affects component extraction</li>
+<li>Provided examples of multi-app and multi-site designs within a workspace</li>
+<li>Explained that the le level attraction principle helps in better understanding the organization's needs and preferences</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Discussed the importance of a design system library and how it helps in reusing application code</li>
+<li>Explained that the component library should be flexible enough to cater to various product requirements</li>
+<li>Provided an example of a micro frontend architecture, where each microservice has its own UI components</li>
+<li>Talked about the concept of "level extraction" and how it affects the overall design system structure</li>
+<li>Introduced the concept of "le level component" as a way to understand better the organization's needs and preferences</li>
+<li>Explained that the le level complement does not necessarily mean superiority but rather complementarity</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Explained that the "configuring technique" is essential for customizing component behavior</li>
+<li>Introduced the concept of "compound components" and how they help in creating more complex UI designs</li>
+<li>Talked about the challenges faced when designing compound components and how to overcome them</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Explained that the "le level component" approach helps in understanding better the organization's needs and preferences</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Explained that the "le level component" approach helps in understanding better the organization's needs and preferences</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Explained that the "le level component" approach helps in understanding better the organization's needs and preferences</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Explained that the "le level component" approach helps in understanding better the organization's needs and preferences</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about the challenges faced when designing components for different teams and product types</li>
+<li>Provided examples of how different design systems can be used together within an organization</li>
+<li>Explained that the "le level component" approach helps in understanding better the organization's needs and preferences</li>
+<li>Discussed the importance of a "component process" in designing reusable components</li>
+<li>Introduced the concept of "level confidence complement" as an alternative to the traditional three-level confidence approach</li>
+<li>Talked about</li>
+</ul>
+<h2 id="users-dont-have-to-suffer-in-the-cloud-melissa-jurkoic-reliable-web-summit-2021">Users Don't have to Suffer in the Cloud | Melissa Jurkoic | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Vcy3kLJnYoU">https://www.youtube.com/watch?v=Vcy3kLJnYoU</a></p>
+<ul>
+<li>User-centered approach is crucial for successful technology adoption</li>
+<li>Executive buy-in and end-user buy-in are equally important in project success</li>
+<li>Include stakeholder feedback throughout the entire product life cycle</li>
+<li>Understand user needs and job requirements before designing solutions</li>
+<li>Use a hub-and-spoke model to ease transition, focusing on end-user experience first</li>
+<li>Collaborate with users during design process to create inclusive experiences</li>
+<li>Maintain database integrity and accuracy for better insights and decision making</li>
+<li>Listen to user feedback and continuously improve the product</li>
+<li>Successful implementation equals successful adoption and retention</li>
+<li>Engage users throughout the entire life cycle of a project to ensure continued use and satisfaction</li>
+</ul>
+<h2 id="mindblowing-google-pagespeed-scores-with-qwik-misko-hevery-reliable-web-summit-2021">Mindblowing Google PageSpeed Scores with Qwik | Misko Hevery | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=sCPLWf2cEY0">https://www.youtube.com/watch?v=sCPLWf2cEY0</a></p>
+<ul>
+<li>Google Page Speed Insights emphasizes the importance of time interactive score</li>
+<li>Builder.io CTO presents a solution called "Quick First" to achieve an amazing time interactive score</li>
+<li>The problem with existing frameworks is that they are replayable, which means downloading and executing large amounts of code ahead of time</li>
+<li>Quick First aims to delay as much code execution as possible and focus on making the initial render fast</li>
+<li>Bootstrapping is a crucial part of Quick First. It involves starting by sending HTML from the server and then setting up listeners for user interactions on the client side</li>
+<li>Existing frameworks struggle with fine-grained control over component rehydration and rendering, leading to unnecessary code downloads and execution</li>
+<li>Quick First focuses on resumable applications rather than replayable ones. This means that when a user leaves an application and comes back, it can quickly resume where they left off without having to download and execute large amounts of code again</li>
+<li>The key is to serialize the state of the application into HTML and then ship it to the client. When the client resumes the application, it can quickly rehydrate the state from the HTML and continue where it left off</li>
+<li>Quick First also emphasizes the importance of lazy loading. It aims to load only the necessary code when a user interacts with an application, rather than downloading everything upfront</li>
+<li>The goal is to achieve 100/100 Google Page Speed Insights scores for all websites built using Builder.io's platform</li>
+</ul>
+<h2 id="high-performance-web-ui-with-web-components-cory-rylan-reliable-web-summit-2021">High-Performance Web UI with Web Components | Cory Rylan | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QmDToR6mLhk">https://www.youtube.com/watch?v=QmDToR6mLhk</a></p>
+<ul>
+<li>Web Components provide a way to encapsulate CSS and HTML within a custom element</li>
+<li>Dependency management is crucial when building web components, as it can impact performance and maintainability</li>
+<li>Tree shaking allows developers to remove unused code from their build, resulting in smaller payload sizes</li>
+<li>CDNs (Content Delivery Networks) help serve static assets quickly and efficiently, providing global access and redundancy</li>
+<li>Text compression is an important aspect of web component performance, as it reduces the size of payloads by eliminating repetitive data</li>
+<li>CSS custom properties can be used to define fallback values for variables, ensuring that components render correctly even if a variable has not been defined</li>
+<li>CS contain and visibility auto are two CSS properties that help optimize rendering performance by allowing browsers to skip unnecessary layout calculations and render work</li>
+<li>Lighthouse is a useful tool for measuring web component performance and identifying areas for improvement</li>
+<li>Rollup build tools can be used to track tree shaking, build output time, and other important metrics when building web components</li>
+</ul>
+<h2 id="content-is-king-how-contentful-and-caas-are-changing-aaron-ladage-reliable-web-summit-2021">Content is King: How Contentful and CaaS are Changing | Aaron Ladage | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QtEDq1mxiHg">https://www.youtube.com/watch?v=QtEDq1mxiHg</a></p>
+<ul>
+<li>Introduced contentful as the platform of choice for the digital experience company, deg</li>
+<li>Described the platform's focus on headless content services and its impact on performance and flexibility in a digital experience context</li>
+<li>Explained how contentful allows for easy customization and integration with other platforms and tools</li>
+<li>Demonstrated the power of content modeling and how it enables content to be reused, scaled, and adapted across different channels and mediums</li>
+<li>Showcased contentful's app framework and its ability to embed custom experiences directly into the platform</li>
+<li>Discussed the importance of environment management in contentful and how it allows for easy deployment and version control of content models and content</li>
+<li>Demonstrated the use of contentful's graphql API to pull and manipulate content, highlighting the platform's flexibility and ease of use</li>
+</ul>
+<h2 id="autoscaling-apps-without-supersizing-costs-lara-newsom-reliable-web-summit-2021">Autoscaling Apps without Supersizing Costs | Lara Newsom | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fVP-hdLoDU8">https://www.youtube.com/watch?v=fVP-hdLoDU8</a></p>
+<ul>
+<li>Developer deploy a lot of work in the cloud, and the cost can be high</li>
+<li>Cloud spend wastage is an issue: unused resources, unattended storage volumes, idle load balancers, etc.</li>
+<li>Mismanaged resource usage can lead to unnecessary costs</li>
+<li>Understanding pricing structures and tagging resources are key to controlling costs</li>
+<li>Use built-in tools or external tools for visibility into cloud spend</li>
+<li>Implement comprehensive tagging and labeling of resources</li>
+<li>Regularly audit and enforce tagging and labeling within pipelines</li>
+<li>Consider right-sizing instances, using spot instances, reserving instances, and exploring bulk pricing options</li>
+<li>Evaluate if the chosen service option is cost-effective</li>
+<li>Refactor code to optimize resource usage and reduce unnecessary costs</li>
+</ul>
+<h2 id="the-legend-of-zelda-hexagonal-architecture-you-jonathan-turner-reliable-web-summit-2021">The Legend of Zelda, Hexagonal Architecture &amp; You | Jonathan Turner | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VVR8xlgo9Po">https://www.youtube.com/watch?v=VVR8xlgo9Po</a></p>
+<ul>
+<li>Legend Zelda Ascii Art Hexagonal Architecture Presentation</li>
+<li>2008 Bootleg Dmake Competition: Remake Legend Zelda as ASCII-based Console Game</li>
+<li>Fable Griselda: Web Application Development from C# Console App</li>
+<li>Challenges in Cross-Platform Game Development</li>
+<li>Blazor: Compiling C# to WebAssembly for Browser Execution</li>
+<li>Porting Fable Griselda Codebase to Blazor</li>
+<li>Comparison of Hexagonal, Onion, and Clean Architectures</li>
+<li>Mob Programming: Collaborative Software Development Technique</li>
+</ul>
+<h2 id="adding-a-second-pair-of-eyes-with-visual-testing-colby-fayock-reliable-web-summit-2021">Adding a Second Pair of Eyes with Visual Testing | Colby Fayock | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=MR2kl8I4_uE">https://www.youtube.com/watch?v=MR2kl8I4_uE</a></p>
+<ul>
+<li>Introduced Add Second Pair Eye Project and its focus on visual testing</li>
+<li>Demonstrated a UI gone wrong example in a supermarket app</li>
+<li>Discussed the importance of maintaining customer privacy while ensuring usability and functionality</li>
+<li>Showcased how automated tests can save time and prevent bugs, but also lead to technical debt if not maintained properly</li>
+<li>Introduced Cypress as a Javascript-based testing framework that enables real-time browser testing</li>
+<li>Explained the use of Apple's Visual Testing Platform (Apple Tool) with Cypress SDK for automated visual testing</li>
+<li>Provided an example of how to set up and run tests using the Apple Tool in a Cypress project</li>
+<li>Demonstrated adding the Apple Tool SDK to an existing Cypress test, running the test, and catching potential UI issues</li>
+</ul>
+<h2 id="building-resilient-serverless-applications-yan-cui-reliable-web-summit-2021">Building Resilient Serverless Applications | Yan Cui | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=k4wjj-bnpZs">https://www.youtube.com/watch?v=k4wjj-bnpZs</a></p>
+<ul>
+<li>Resilience in service applications</li>
+<li>Importance of building applications that can recover quickly from different types of failures</li>
+<li>AWS CTO Verner Vogels' famous quote: "Everything fails, all the time. Eventually it will be your application."</li>
+<li>Building resilient APIs using AWS services like API Gateway, Lambda, and DynamoDB</li>
+<li>Using multirex zones to prevent failure in case of an entire availability zone or region going down</li>
+<li>Managing distributed transactions with Saga patterns</li>
+<li>Implementing retry logic for failed requests and handling poison messages</li>
+<li>Using Amazon Kinesis Data Streams (KDS) to process data streams and handle failures gracefully</li>
+<li>The importance of monitoring and testing in building resilient applications</li>
+<li>Chaos Engineering principles and how they can be applied to identify weaknesses in applications</li>
+<li>Case studies of real-world applications that have implemented these practices successfully</li>
+</ul>
+<h2 id="gaining-confidence-with-cypress-tests-rob-richardson-reliable-web-summit-2021">Gaining Confidence with Cypress Tests | Rob Richardson | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5Nhv7HIScWE">https://www.youtube.com/watch?v=5Nhv7HIScWE</a></p>
+<ul>
+<li>Introduction of Cypress as a reliable web testing tool</li>
+<li>Gaining confidence in using Cypress for test automation</li>
+<li>Demonstrating the use of Cypress with TypeScript and GitHub code examples</li>
+<li>Comparing different browser testing tools: Selenium, Cyprus, TestCafe, Playwright</li>
+<li>Exploring Cypress's features and advantages over other tools</li>
+<li>Walkthrough of Cypress IDE and its capabilities for end-to-end testing</li>
+<li>Setting up a test project with Cypress and running tests in the browser</li>
+<li>Discussion on debugging and troubleshooting tests using Cypress IDE</li>
+<li>Comparison between different frontend frameworks (MVC) using Cypress</li>
+<li>Testing API calls and working with mock data using Cyprus fixtures</li>
+<li>Best practices for writing maintainable and descriptive tests in Cypress</li>
+<li>Using commands to abstract away test implementation details</li>
+<li>Demonstrating how to use Cypress to authenticate and run end-to-end tests on a website</li>
+<li>Understanding the importance of using fixtures to reuse mock data across multiple tests</li>
+<li>Discussion on using CyIntercept command for intercepting API calls during testing</li>
+</ul>
+<h2 id="angular-jest-testing-titbits-maria-korneeva-reliable-web-summit-2021">Angular + Jest: Testing Titbits | Maria Korneeva | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=HfKdktNB9wA">https://www.youtube.com/watch?v=HfKdktNB9wA</a></p>
+<ul>
+<li>Introduction by Maria Corneva, Frontend Technology Lead at Aleri</li>
+<li>Focus on unit testing an Angular application</li>
+<li>Testing strategies: pragmatic and strategic approach to test critical features first</li>
+<li>Importance of mocking in testing</li>
+<li>Discussion about error handling in testing</li>
+<li>Code snippets showcasing different types of tests (component, service, pipe)</li>
+<li>Tips for writing effective unit tests</li>
+<li>Overview of the Nx workspace structure and its benefits</li>
+<li>Real-world examples of testing scenarios</li>
+<li>Demonstration of common testing patterns using Jest</li>
+<li>Discussion about the importance of testing HTTP requests and error handling</li>
+<li>Suggestions for improving test execution and rerun options</li>
+<li>Encouragement to use plugins like "Runner" for better testing experience</li>
+<li>Conclusion and Q&amp;A session</li>
+</ul>
+<h2 id="challenges-in-building-micro-front-ends-vishal-kumar-reliable-web-summit-2021">Challenges in Building Micro Front Ends| Vishal Kumar | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=cP7_GS5mN7I">https://www.youtube.com/watch?v=cP7_GS5mN7I</a></p>
+<ul>
+<li>Microfrontends: A solution to complex monolith applications</li>
+<li>Benefits of using microfrontends</li>
+<li>Independent, deliverable frontend applications</li>
+<li>Faster development and deployment cycles</li>
+<li>Easier maintenance and scalability</li>
+<li>Improved isolation and security</li>
+<li>Better performance and flexibility</li>
+<li>Challenges of implementing microfrontends</li>
+<li>Complexity: CI/CD pipelines, infrastructure, and operational complexity</li>
+<li>Testing: Ensuring all components work well together</li>
+<li>Security: Protecting sensitive data and preventing cross-site scripting attacks</li>
+<li>UI inconsistency: Maintaining a consistent look and feel across different applications</li>
+<li>Increased payload: Avoiding bloat and optimizing performance</li>
+<li>Solutions to challenges</li>
+<li>Iframes, web components, module federation, and other techniques for building microfrontends</li>
+<li>Security measures like CORS, Content Security Policies, and testing tools like Cypress and Aptly</li>
+<li>Component interaction: Using custom events, callbacks, or APIs</li>
+<li>Shared state management: Avoiding global state and using local storage instead</li>
+<li>Testing strategies: Unit tests, integration tests, and end-to-end testing</li>
+<li>Accessibility: Ensuring all users can access the application</li>
+<li>UI consistency: Using design systems, component libraries, and consistent coding styles</li>
+<li>Performance optimization: Minimizing payload size, using lazy loading, and avoiding heavy dependencies</li>
+<li>Monorepo strategy: Managing multiple repositories as a single project for easier code sharing and maintenance</li>
+<li>Implementing microfrontends with module federation</li>
+<li>Creating separate apps and components</li>
+<li>Using nx or similar tools to manage the build process</li>
+<li>Configuring webpack and setting up remote entry points</li>
+<li>Dynamically importing components and using them in other applications</li>
+<li>Testing and ensuring component compatibility</li>
+<li>Future of microfrontends: Model federation, module federation improvements, and new technologies like Angular Elements.</li>
+</ul>
+<h2 id="good-code-is-a-balancing-act-jonathan-warrington-reliable-web-summit-2021">Good Code is a Balancing Act | Jonathan Warrington | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=35OTQ-JYqsE">https://www.youtube.com/watch?v=35OTQ-JYqsE</a></p>
+<ul>
+<li>Full Stack Developer John Warrington discusses good code and balance in the software industry.</li>
+<li>Focus on easily understood, quickly readable code, while also considering performance.</li>
+<li>Rule 1: Function should be no more than 10 lines long (or less).</li>
+<li>Rule 2: Include only one control structure per function.</li>
+<li>Rule 3: Have only one return statement per function.</li>
+<li>Use interfaces to allow for mocking parts of the application away for testing.</li>
+<li>Balance descriptive, concise naming conventions for variables and functions.</li>
+<li>Comment code when necessary; avoid commenting simple, self-explanatory functions.</li>
+<li>Strive for balance in all aspects of coding, including readability, complexity, and maintainability.</li>
+</ul>
+<h2 id="develop-from-anywhere-with-github-codespaces-brigit-murtaugh-reliable-web-summit-2021">Develop from Anywhere with GitHub Codespaces | Brigit Murtaugh | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ZHHk9wG4Cig">https://www.youtube.com/watch?v=ZHHk9wG4Cig</a></p>
+<ul>
+<li>GitHub Codespaces:</li>
+<li>Removes the need to clone source code locally.</li>
+<li>Provides a productive environment for contributing to projects.</li>
+<li>Allows developers to start working on a project immediately without setting up local development environments.</li>
+<li>Dev Containers:</li>
+<li>Customize and finetune the Codespaces environment for specific apps or use cases.</li>
+<li>Ensure anyone else can work in the same environment with the exact same development experience.</li>
+<li>Use Docker-based development to set up an isolated container environment.</li>
+<li>Remote Container Extension (VSC):</li>
+<li>Allows developers to work locally on their machines while still taking advantage of Codespaces' features.</li>
+<li>Provides a way to separate the local environment from Codespaces without needing cloud-based backend compute.</li>
+<li>Enables the use of dev containers on local machines, remote VMs, and even within the browser.</li>
+</ul>
+<h2 id="mfes-micro-frontends-with-module-federation-and-angular-manfred-steyer-reliable-web-summit-2021">MFEs , Micro-Frontends with Module Federation and Angular| Manfred Steyer | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=EGdbmj-kj88">https://www.youtube.com/watch?v=EGdbmj-kj88</a></p>
+<ul>
+<li>Module federation and web components</li>
+<li>Share code, libraries, and frameworks across different applications</li>
+<li>Use module federation to load and share code from separate bundles</li>
+<li>Web components provide a standard way of creating custom HTML elements</li>
+<li>Combining different versions and frameworks</li>
+<li>Loading and sharing different versions of the same library or framework</li>
+<li>Discussed potential issues when combining different technologies, such as loading multiple instances of the same framework</li>
+<li>Demonstration using module federation, web components, and different frameworks</li>
+<li>Showcased a demo application that uses module federation to load and share code across different micro frontends built with Angular, React, and Web Components</li>
+<li>Pitfalls and challenges</li>
+<li>Discussed potential pitfalls when combining different technologies, such as handling version conflicts and managing bundle size</li>
+<li>Mentioned the need for a good reason to combine different versions of the same library or framework</li>
+<li>Highlighted the importance of caching platform instances and using helper functions to handle router tricky situations</li>
+</ul>
+<h2 id="innovations-with-fast-web-components-rob-eisenberg-david-rickard-reliable-web-summit-2021">Innovations with FAST Web Components | Rob Eisenberg &amp; David Rickard | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=o5dylQiigUQ">https://www.youtube.com/watch?v=o5dylQiigUQ</a></p>
+<ul>
+<li>Web Components are a key part of Microsoft's Fast team, providing fast and reusable components for web development.</li>
+<li>They enable developers to build first-time reusable components that work across different libraries and frameworks, offering a technology-agnostic approach.</li>
+<li>The core standard was implemented in all major browsers beginning 2020, with Microsoft's Fast team shipping the necessary native set of components.</li>
+<li>Web Components have been used by various companies like Google, Nintendo, SpaceX, and Adobe, as well as Microsoft itself.</li>
+<li>A specific case study from David Rickard showcased the performance improvement when upgrading the Edge New Tab Page using Fast Web Elements, reducing page load time by 20% and 31% in total time to interactive (TTI).</li>
+<li>The use of Web Components also simplifies component development, eliminating the need for complex state management and redux.</li>
+<li>Fast Web Elements offer a more streamlined approach to component development, with features like delay loading elements and dynamic imports that make web pages load faster.</li>
+</ul>
+<h2 id="a-more-fluid-pyramid-steve-upton-reliable-web-summit-2021">A More Fluid Pyramid | Steve Upton | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VFRXPjoaEUc">https://www.youtube.com/watch?v=VFRXPjoaEUc</a></p>
+<ul>
+<li>Test Pyramid: A common model in testing strategies, with the foundation being unit tests, followed by integration tests and ending with end-to-end tests.</li>
+<li>Layer Confusion: The presenter acknowledges that there's confusion about which layer is which, but emphasizes that every project and team labels tests differently.</li>
+<li>Test Pyramid Adaptation: The speaker suggests a more fluid approach to the test pyramid by using different layers based on the specific needs of the project or team.</li>
+<li>User Journey Tests: Highly important for testing real user journeys, but can be slow and expensive due to their comprehensive nature.</li>
+<li>API Tests: A layer lower in the pyramid, they're faster and simpler than user journey tests, but not as flaky.</li>
+<li>Test Duplication: The speaker advises against duplicating tests across layers, as it can lead to confusion and unnecessary maintenance work.</li>
+<li>Trade-offs: The presenter emphasizes that every layer in the test pyramid has its own trade-offs, and teams should be aware of these when deciding which tests to use.</li>
+<li>Test Pyramid Limitations: The speaker acknowledges that the test pyramid model isn't perfect and can't capture all possible risks or uncertainties in a system.</li>
+<li>Exploratory Testing: A powerful tool for discovering unknown issues, but it's not part of the traditional test pyramid model.</li>
+<li>Model Approximation: The speaker highlights that any model, including the test pyramid, is an approximation and doesn't perfectly capture reality. However, they are useful tools for understanding complex systems and making informed decisions.</li>
+</ul>
+<h2 id="from-cobol-to-node-with-devops-alejandro-mercado-pena-reliable-web-summit-2021">From Cobol to Node with DevOps | Alejandro Mercado Peña | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8IlhYeYbtLI">https://www.youtube.com/watch?v=8IlhYeYbtLI</a></p>
+<ul>
+<li>Presenter introduces himself and shares his background in programming and development.</li>
+<li>He discusses the longevity of COBOL, a programming language designed in 1959, and its widespread use in financial institutions.</li>
+<li>The presenter highlights that despite being old, COBOL is still widely used due to its robustness and adaptability to business changes over time.</li>
+<li>He mentions the importance of developer experience and how tools like Visual Studio Code can help developers work more efficiently with older languages.</li>
+<li>The presenter talks about running COBOL programs in modern environments, such as cloud platforms and containers.</li>
+<li>He emphasizes that IBM Cloud supports COBOL programming, which is a significant factor for its continued use.</li>
+<li>The presenter discusses the importance of Docker containers in supporting legacy languages like COBOL.</li>
+<li>He mentions that running COBOL programs inside containers can help modernize and scale these systems more effectively.</li>
+<li>The presenter highlights the shift from monolithic architecture to microservices architecture as a way to improve scalability and flexibility in software development.</li>
+<li>He talks about how Node.js, a popular JavaScript runtime, can be used to extend COBOL programs by creating microservices that communicate with each other using APIs.</li>
+<li>The presenter suggests that running COBOL applications inside containers using Kubernetes orchestration can help streamline deployment and management processes.</li>
+</ul>
+<h2 id="all-the-worlds-a-staging-server-heidi-waterhouse-reliable-web-summit-2021">All the World's A Staging Server |Heidi Waterhouse | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=a1OBVrkBLS4">https://www.youtube.com/watch?v=a1OBVrkBLS4</a></p>
+<ul>
+<li>Importance of understanding deployment and release in reliable web development</li>
+<li>Difference between deployment and release: Deployment is about getting software to a destination (e.g., server, mobile device), while release is a business decision that involves user experience</li>
+<li>Challenges with testing production and staging environments</li>
+<li>Production environment cannot be 100% uptime due to potential issues or dependencies</li>
+<li>Staging environments may not accurately represent production behavior due to unstated assumptions, lack of real data, and incomplete feature implementation</li>
+<li>Difficulty in replicating production environments due to complex dependencies and resource scaling</li>
+<li>Importance of feature flags and dark launching for managing deployment complexity</li>
+<li>Feature flags allow controlled rollout of new features to specific user groups or environments</li>
+<li>Dark launching involves releasing a new feature to a small, select audience without immediately broadcasting its availability</li>
+<li>The concept of continuous integration and continuous delivery (CI/CD) and their role in rapid feature development and deployment</li>
+<li>CI/CD allows for frequent, automated testing and integration of code changes into the main codebase</li>
+<li>It helps ensure that only high-quality, tested code is deployed to production environments</li>
+<li>The importance of understanding system behavior and dependencies in a microservices architecture</li>
+<li>Microservices architectures require careful planning and testing to ensure that all components work together seamlessly</li>
+<li>Feature flag testing can help identify potential issues or dependencies before they affect the overall system</li>
+<li>The concept of integration testing and its role in ensuring system reliability</li>
+<li>Integration testing involves testing how different components of a system interact with each other, especially when using microservices architectures</li>
+<li>It helps ensure that all parts of the system work together correctly and can handle unexpected inputs or failures</li>
+</ul>
+<h2 id="crafting-reliable-and-testable-code-with-typescript-doguhan-uluca-reliable-web-summit-2021">Crafting Reliable and Testable Code with TypeScript | Doguhan Uluca | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=piBGqyjl-JE">https://www.youtube.com/watch?v=piBGqyjl-JE</a></p>
+<ul>
+<li>Importance of reliable code</li>
+<li>Crafting reliable and testable code with Typescript</li>
+<li>High Cohesion, Low Coupling, DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid) principles</li>
+<li>AC/DC principle: Avoid Complexity, Depend on Code</li>
+<li>Self-documenting code through comments and tools like Swagger</li>
+<li>Unit Test Driven Development mindset<ul>
+<li>Write testable code</li>
+<li>Red-Green-Refactor development cycle</li>
+<li>Solid Principles: Single Responsibility Principle, Open/Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle</li>
+</ul>
+</li>
+<li>Stateless Data Driven Design and Shifting Complexity Back End</li>
+<li>Iterative Incremental Design for implementing features</li>
+<li>Embracing Reactive Programming</li>
+<li>Typescript benefits:</li>
+<li>Enables solid code refactoring</li>
+<li>Export reusable functions</li>
+<li>Use interfaces to enforce data shape and type safety</li>
+<li>Document code with JSDoc comments</li>
+<li>Unit Testing using Jest or similar tools</li>
+<li>Lean, Common Scrum methodologies for project management</li>
+<li>Case studies:</li>
+<li>Weather API application</li>
+<li>Landmark Luminar Server application</li>
+<li>Use of GraphQL and MongoDB in backend development</li>
+</ul>
+<h2 id="achieving-zero-fronted-crashes-in-production-josh-goldberg-reliable-web-summit-2021">Achieving Zero Fronted Crashes in Production | Josh Goldberg | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dfLa5DWZdbY">https://www.youtube.com/watch?v=dfLa5DWZdbY</a></p>
+<ul>
+<li>Static and Dynamic Analysis: Josh discusses the importance of static analysis tools like ESLint, Prettier, and TypeScript for catching bugs early in development. He mentions that dynamic analysis techniques such as unit tests and end-to-end testing are also crucial for finding issues later in the process.</li>
+<li>Frontend Monitoring: Josh explains the need for monitoring tools to understand crash production and scale. He highlights the importance of aggregating, filtering, and deduplicating bug reports to get a clear picture of the issue.</li>
+<li>Blameless Postmortem: Josh emphasizes the importance of learning from mistakes rather than blaming individuals. He suggests that teams should focus on understanding the root cause of an issue and improving the system to prevent similar problems in the future.</li>
+<li>Gradual Constriction: Josh proposes a strategy for reducing crash production over time by setting goals, implementing prevention techniques, and gradually tightening constraints.</li>
+<li>System Understanding: Josh stresses the importance of understanding the entire system, including user needs, team communication, and error handling processes. He suggests that teams should continuously learn from mistakes and improve their systems to prevent future issues.</li>
+</ul>
+<h2 id="using-storybook-to-maintain-components-and-redwoodjs-milecia-mcgregor-reliable-web-summit-2021">Using Storybook to Maintain Components and RedwoodJS | Milecia McGregor | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QQ5ftrQTMnA">https://www.youtube.com/watch?v=QQ5ftrQTMnA</a></p>
+<ul>
+<li>Intro: Melissa is a Developer Advocate at IterativeAI, discussing Storybook and RedwoodJS.</li>
+<li>Background: 7+ years of experience in frontend/backend development and DevOps engineering.</li>
+<li>Component Driven Development (CDD): Model system better with independent components; use tools like Bootstrap or TypeUI libraries.</li>
+<li>Storybook: A tool to develop components in isolation, useful for testing and documentation.</li>
+<li>RedwoodJS: A full-stack JavaScript framework that integrates well with Storybook.</li>
+<li>Demo: Creating a new Redwood app and adding a custom component using Storybook.</li>
+<li>Key Points: </li>
+<li>CDD makes it easier to maintain long-term projects, especially when there is a change in requirements or team members.</li>
+<li>Storybook allows developers to work on components without worrying about the overall application structure.</li>
+<li>RedwoodJS provides built-in support for Storybook integration and testing, making it easy to scale applications.</li>
+</ul>
+<h2 id="monitoring-your-apps-is-not-about-devops-ivan-olivares-rojas-reliable-web-summit-2021">Monitoring Your Apps is not About Devops | Iván Olivares Rojas | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=T0aBlzdv27g">https://www.youtube.com/watch?v=T0aBlzdv27g</a></p>
+<ul>
+<li>Observability 101: Ivan Olivares introduces the concept of interthings and talks about the importance of understanding an application's changes from a user perspective.</li>
+<li>DevOps Culture: He discusses the role of devops in organizations, emphasizing its benefits for business agility, speed, quality, and cultural change.</li>
+<li>Observability vs Monitoring: Ivan highlights the advantages of observability over traditional monitoring, including gaining focus on business growth, understanding application performance, and providing a multidisciplinary team approach to problem-solving.</li>
+<li>Importance of Observability: He explains how observability allows organizations to expose data, analyze trends, and make informed decisions based on system behavior.</li>
+<li>Open Telemetry: Ivan introduces the open telemetry standard, which helps standardize instrumentation, metric, log, and trace collection for applications.</li>
+<li>Anatomy of Observability: He discusses the three key components of observability - telemetry, storage, and visualization - and how they work together to provide a comprehensive view of application performance.</li>
+<li>Benefits of Observability: Ivan lists several benefits of applying observability practices, including improved communication between teams, faster incident response times, and better understanding of system health and impact on business.</li>
+</ul>
+<h2 id="the-effective-development-end-what-end-shai-reznik-reliable-web-summit-2021">The Effective Development - End (What) End | Shai Reznik | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RGtOXLKvisY">https://www.youtube.com/watch?v=RGtOXLKvisY</a></p>
+<ul>
+<li>Introduced as a test effective guy and known for his Angular testing expertise.</li>
+<li>Talks about the importance of cost-effective testing in companies with tight deadlines.</li>
+<li>Shares a personal experience of feeling overwhelmed by bugs and poor code quality while working on a startup.</li>
+<li>Learned that automating tests can save time and prevent bugs.</li>
+<li>Discusses the difference between unit and integration tests, and how they can be used to improve testing efficiency.</li>
+<li>Emphasizes the importance of writing end-to-end (E2E) tests to ensure that all parts of an application work together seamlessly.</li>
+<li>Explains how manual testing is time-consuming and inefficient, while automating E2E tests can help developers catch bugs earlier in the development process.</li>
+<li>Introduces a concept called "smoke testing," which involves writing automated tests to quickly identify critical issues before releasing software to users.</li>
+<li>Suggests using Cypress as a smoke testing tool due to its fast setup, easy debugging capabilities, and strong support for developers.</li>
+<li>Encourages developers to learn more about test effective strategies by taking a free quiz available on the website.</li>
+</ul>
+<h2 id="from-horror-story-to-fairy-tale-writing-code-michael-dowden-reliable-web-summit-2021">From Horror Story to Fairy Tale: Writing Code | Michael Dowden | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Eo4jgALvH30">https://www.youtube.com/watch?v=Eo4jgALvH30</a></p>
+<ul>
+<li>Importance of clear and concise code communication</li>
+<li>Avoid ambiguity in naming conventions</li>
+<li>Use semantics and context to convey meaning</li>
+<li>Choose meaningful names for variables, methods, classes, etc.</li>
+<li>Accessibility is crucial for understanding code</li>
+<li>Automation can help with code readability and consistency</li>
+<li>Inclusivity and diversity in coding language are important</li>
+<li>Good communication within a team helps maintain consistent code standards</li>
+<li>Code reviews can improve overall code quality and readability</li>
+<li>Testing and debugging are essential parts of the coding process</li>
+</ul>
+<h2 id="blazor-stability-testing-for-bullet-proof-application-ed-charbeneau-reliable-web-summit-2021">Blazor Stability Testing for Bullet Proof Application| Ed Charbeneau | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dKswEXxCXAw">https://www.youtube.com/watch?v=dKswEXxCXAw</a></p>
+<ul>
+<li>Ed Charbonneau, Principal Developer Advocate at Progress Software, discusses Blazer stability testing and tools</li>
+<li>He emphasizes the inherent testability of Blazer applications due to its C# foundation and ability to use the same language across back end and front end</li>
+<li>XUnit is the most downloaded testing framework for .NET with over a million downloads</li>
+<li>Blazer uses a component-based approach, allowing developers to easily identify and test individual components</li>
+<li>The speaker highlights the importance of using unit tests, integration tests, and full system tests when developing applications</li>
+<li>He mentions that XUnit is commonly used for front end unit testing in combination with BUnit (Blazor Unit Testing library) for component level testing</li>
+<li>He also discusses the use of Telerik UI Blazer, which provides a tightly integrated product deal and helps process integration</li>
+<li>The speaker demonstrates how to write an XUnit test for a Blazer application using the Fact attribute and describes the importance of writing tests that fail initially before they can be refactored safely</li>
+<li>He also discusses the use of BUnit for component testing within the Blazor framework, which allows developers to leverage their favorite unit test library alongside Telerik's Blazor testing tool</li>
+<li>The speaker provides a brief tour of a sample project using unit tests and demonstrates how to create an XUnit test for a component</li>
+<li>He emphasizes the importance of writing automated, repeatable tests that can be run in an end-to-end fashion</li>
+<li>The speaker discusses the use of Telerik Mocking Tool, which helps isolate code and focus on testing specific components</li>
+<li>He also talks about the importance of using mocks to handle external services and data sources</li>
+<li>The speaker demonstrates how to write an integration test for a Blazer application using BUnit and discusses the importance of setting up dependencies correctly to ensure that tests run successfully</li>
+<li>Finally, he discusses the use of Telerik Test Studio, which is a powerful tool for testing entire applications end-to-end, including browser compatibility testing</li>
+</ul>
+<h2 id="level-up-your-devops-with-github-actions-kubernetes-rob-richardson-reliable-web-summit-2021">Level-up Your DevOps with GitHub Actions &amp; Kubernetes | Rob Richardson | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=OWJLV2ZKTgA">https://www.youtube.com/watch?v=OWJLV2ZKTgA</a></p>
+<ul>
+<li>Introduced GitHub Actions and Kubernetes for CI/CD</li>
+<li>Explained how to build a Dockerfile, push it to a container registry, and deploy it on Kubernetes</li>
+<li>Demonstrated setting up a GitHub repository with a .github/workflows file for automated builds</li>
+<li>Shared tips for managing secrets in GitHub Actions and Kubernetes</li>
+<li>Discussed using Helm for simplifying Kubernetes deployments</li>
+<li>Showcased how to set up logging and monitoring for Docker and Kubernetes clusters</li>
+<li>Demonstrated building and testing a web application with Docker, GitHub Actions, and Kubernetes</li>
+<li>Explained the importance of pull requests in managing code changes and builds</li>
+<li>Shared tips for optimizing CI/CD pipelines and reducing build times</li>
+</ul>
+<h2 id="the-worlds-most-expensive-react-component-michael-chan-reliable-web-summit-2021">The Worlds Most Expensive React Component | Michael Chan | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zxVZssf2o6U">https://www.youtube.com/watch?v=zxVZssf2o6U</a></p>
+<ul>
+<li>Talk about expensive React components and their performance</li>
+<li>Introduce Michael Chan, creator of the React Podcast and part of the new React working group</li>
+<li>Discuss the importance of collaborative performance and how it affects design decisions</li>
+<li>Focus on interface design and component API design as key aspects of performance optimization</li>
+<li>Define an "expensive" React component: one with many renders, heavy paint, or long load times due to unclear design or poor pattern usage</li>
+<li>Present a real-world example of a costly React component and its impact on the product suite</li>
+<li>Talk about the importance of refactoring components to improve their performance</li>
+<li>Discuss how linting rules can sometimes hinder collaboration and productivity</li>
+<li>Emphasize the need for clear communication, listening skills, and root problem identification within teams</li>
+<li>Highlight the benefits of component colocation in promoting collaboration and reducing organizational tension</li>
+<li>Mention the impact of cultural and social factors on team dynamics and performance</li>
+</ul>
+<h2 id="maintainable-styles-thats-a-thing-alyssa-nicoll-reliable-web-summit-2021">Maintainable Styles- That's a Thing? | Alyssa Nicoll | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=h6q84Kk8lyU">https://www.youtube.com/watch?v=h6q84Kk8lyU</a></p>
+<ul>
+<li>Alyssa Nichol discusses her passion for CS due diligence and maintaining a style that is both accessible and maintainable.</li>
+<li>She shares her excitement about creating a plan to inspire others in the field of web development.</li>
+<li>The talk covers advanced plans, accessibility, inclusivity, and more.</li>
+<li>Alyssa explains the importance of understanding accessibility and how it can be used to create better user experiences.</li>
+<li>She introduces the concept of semantic markup, which involves using HTML elements correctly to enhance accessibility.</li>
+<li>The talk demonstrates how to create accessible components in a codepen environment.</li>
+<li>Alyssa emphasizes the importance of considering default and null states when designing user interfaces.</li>
+<li>She discusses the use of ARIA labels to improve accessibility for users with screen readers or other assistive technologies.</li>
+<li>The talk highlights the need for clear labeling and proper use of placeholders in web forms.</li>
+<li>Alyssa shares her experience with visually hidden classes and how they can be used to enhance accessibility while maintaining a clean design.</li>
+<li>She explains the importance of using semantic HTML elements, such as h1 and section, to improve accessibility and maintainability.</li>
+<li>The talk highlights the use of SASS variables for styling and the benefits of scoping styles.</li>
+<li>Alyssa shares her experience with designing buttons and how she uses mixins to create consistent styles across different components.</li>
+<li>She emphasizes the importance of considering browser compatibility when designing web interfaces.</li>
+<li>The talk introduces the concept of live regions, which can be used to provide real-time updates to users with screen readers or other assistive technologies.</li>
+<li>Alyssa shares her experience with using Figma for collaboration and how it has helped her team maintain consistency in their designs.</li>
+<li>She encourages the use of tools like Kendo UI to help developers create accessible and maintainable web interfaces.</li>
+</ul>
+<h2 id="reliability-and-engineering-requirements-giorgio-natili-reliable-web-summit-2021">Reliability and Engineering Requirements | Giorgio Natili | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=VD8w-M18JV8">https://www.youtube.com/watch?v=VD8w-M18JV8</a></p>
+<ul>
+<li>Requirement validation is crucial for building a reliable system</li>
+<li>Use checklists, document-based reviews, and discussions to validate requirements effectively</li>
+<li>Dissecting requirements helps identify conflicts and areas of improvement</li>
+<li>Documentation is essential for tracking decisions and resolving conflicts</li>
+<li>Conflicts can arise due to different stakeholder perspectives, priorities, and constraints</li>
+<li>Escalating conflicts to higher levels may be necessary when negotiations fail</li>
+<li>Focus on system uniqueness and understanding constraints to develop a robust reliability checklist</li>
+</ul>
+<h2 id="azure-static-web-apps-jon-papa-dan-wahlin-reliable-web-summit-2021">Azure Static Web Apps | Jon Papa &amp; Dan Wahlin | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ldWQT2HazGU">https://www.youtube.com/watch?v=ldWQT2HazGU</a></p>
+<ul>
+<li>Azure Static Web Apps provides a reliable, globally distributed web hosting platform with built-in CI/CD integration, custom domains, and serverless APIs.</li>
+<li>Dan Walling demonstrates building a shopping app using different frontend frameworks (Angular, React, etc.) and deploying it to Azure Static Web Apps.</li>
+<li>The demo showcases the ease of setting up continuous deployment from GitHub or Azure DevOps, as well as configuring authentication and authorization options.</li>
+<li>Key features include automatic SSL provisioning, custom domain support, and the ability to set serverless API routes and roles.</li>
+<li>Dan emphasizes the importance of a reliable deployment process, including the use of CDNs for global scale and the ability to create different environments (e.g., staging, production) for testing and deployment.</li>
+<li>The platform supports various authentication providers such as Twitter, Github, and Azure Active Directory, allowing developers to easily integrate user authentication into their applications.</li>
+</ul>
+<h2 id="tools-of-intentional-architectures-dinesh-ramadoss-reliable-web-summit-2021">Tools of Intentional Architectures | Dinesh Ramadoss | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lYasQYABabE">https://www.youtube.com/watch?v=lYasQYABabE</a></p>
+<ul>
+<li>Importance of Intentional Architecture</li>
+<li>Avoids accidental architecture</li>
+<li>Drives quality and success</li>
+<li>Architectural Decision Making Process</li>
+<li>Stakeholder involvement crucial</li>
+<li>Quality Attribute Workshop method<ul>
+<li>Characterize, prioritize, and refine scenarios</li>
+<li>Use well-formed scenarios to guide downstream activities</li>
+</ul>
+</li>
+<li>Designing Satisfies Quality Attributes<ul>
+<li>Top-down and bottom-up approach</li>
+<li>Balance business and technical requirements</li>
+</ul>
+</li>
+<li>Architecture Documentation<ul>
+<li>Communicates design decisions</li>
+<li>Educates, negotiates, and gets buy-in</li>
+<li>Documents decision rationale and impact</li>
+</ul>
+</li>
+<li>Evaluating Architecture<ul>
+<li>Aligns with fundamental evaluation principles</li>
+<li>Complements scenario-driven approach</li>
+<li>Identifies risks early in the life cycle</li>
+<li>Improves communication among stakeholders</li>
+</ul>
+</li>
+<li>Managing Technical Depth<ul>
+<li>Understand debt repayment and impact on system properties</li>
+<li>Quantify depth's impact on business indicators</li>
+<li>Use a methodical process to manage technical depth</li>
+</ul>
+</li>
+<li>Steering Architecture Away from Accidents</li>
+<li>Follow a repeatable, predictable process</li>
+<li>Focus on intentionally driving success</li>
+<li>Leverage organization reference and highly recommended resources</li>
+</ul>
+<h2 id="reliable-system-azure-static-web-apps-craig-shoemaker-reliable-web-summit-2021">Reliable System +  Azure Static Web Apps | Craig Shoemaker | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SQIcbIBcW3E">https://www.youtube.com/watch?v=SQIcbIBcW3E</a></p>
+<ul>
+<li>Craig Shoemaker presents a demo on building reliable systems with Azure Static Web Apps</li>
+<li>Demonstrates an application for a volunteer organization using UI, backend API, and various storage mechanisms</li>
+<li>Explains the use of different Azure services like Azure Functions, Storage, and Queue to build the application</li>
+<li>Uses GitHub and Bitly for sharing code and demo repositories</li>
+<li>Discusses the Nuance of using Azure Static Web Apps in a real-world scenario</li>
+<li>Shows how to combine an existing Azure Function App with Azure Static Web Apps instance</li>
+<li>Demonstrates the use of CLI commands to deploy and run the application locally and on Azure</li>
+<li>Explains the importance of linking UI and backend API using Azure Static Web Apps</li>
+<li>Discusses error handling, testing, and deployment process in detail</li>
+</ul>
+<h2 id="collaborative-code-with-nx-brandon-roberts-reliable-web-summit-2021">Collaborative Code with Nx | Brandon Roberts | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=9g_87UG5dYE">https://www.youtube.com/watch?v=9g_87UG5dYE</a></p>
+<ul>
+<li>Nx build framework: A smart, extensible tool for building monorepos and promoting code sharing</li>
+<li>Monorepo benefits: Shared code visibility, reusability, atomic changes, developer mobility, consistent way of building/testing applications, and single version dependency management</li>
+<li>Nx drives monorepos: By providing a mental model (Nx way), efficient project graph, task graph, metadata driven tools, and integration with modern web development tools.</li>
+<li>Mental model: Helps to efficiently drive large codebases and projects in a consistent manner.</li>
+<li>Project graph: A tool that creates a graph based on the source code repository, external dependencies, and application libraries. It is used for code analysis tasks, running targets, and metadata driven tools.</li>
+<li>Task graph: A feature of Nx that allows developers to create task graphs anytime they run a command. This helps in efficient execution of tasks and provides a way to cache previously run computations based on state changes.</li>
+<li>Metadata driven tools: Enable toolability by providing default values, validation, auto completion, and integration along with the metadata used. </li>
+<li>GitHub &amp; IDE integrations: Nx provides seamless integration with popular platforms like GitHub and IDEs such as WebStorm and VS Code for a better developer experience.</li>
+<li>Consistent commands: Nx helps developers to define common commands that can be targeted across multiple applications within the same workspace.</li>
+<li>Computation caching: A feature of Nx that provides functionality for computation caching at both local and distributed levels, which improves performance and reduces redundancy in tasks.</li>
+<li>Extensibility &amp; Ecosystem: Nx supports extensible plugins and has a rich ecosystem with support for popular frameworks like React, Angular, Node, etc., along with automatic upgrade to the latest versions of these tools.</li>
+</ul>
+<h2 id="knowing-your-tco-total-cost-of-ownership-owen-buckley-reliable-web-summit-2021">Knowing Your TCO (Total Cost of Ownership) | Owen Buckley | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=6QBf5QCRSPI">https://www.youtube.com/watch?v=6QBf5QCRSPI</a></p>
+<ul>
+<li>Owen Buckley discusses the concept of Total Cost of Ownership (TCO) in software development, specifically focusing on open-source projects and modern web development</li>
+<li>TCO goes beyond just the initial purchase price; it includes ongoing costs such as maintenance, updates, and potential security risks</li>
+<li>The analogy of an "inverse iceberg" is introduced to help visualize the hidden costs beneath the surface of a project or technology stack</li>
+<li>The importance of intentional decision making in selecting tools and technologies is emphasized, with the goal of minimizing risk and maximizing benefits for the user or client</li>
+<li>Acknowledgment that choosing the right tool or framework can be challenging due to the vast array of options available, but that careful consideration and research can lead to better outcomes</li>
+<li>The concept of "minimum viable developer experience" is discussed, emphasizing the importance of balancing productivity with the need for a stable and reliable development environment</li>
+<li>The speaker encourages attendees to always work backwards from the problem they are trying to solve when making decisions about technology choices, in order to ensure that the solution meets their specific needs and requirements</li>
+</ul>
+<h2 id="tdd-its-about-more-than-just-the-tests-jonathan-turner-reliable-web-summit-2021">TDD - It's About More Than Just the Tests | Jonathan Turner | Reliable Web Summit 2021</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ad0XTtZm83g">https://www.youtube.com/watch?v=ad0XTtZm83g</a></p>
+<ul>
+<li>Introduced Test Driven Development (TDD)</li>
+<li>Discussed three laws of TDD</li>
+<li>Explained red, green, refactor cycle in TDD</li>
+<li>Demonstrated TDD on a Roman Numeral to Arabic Number conversion problem using C# and NUnit</li>
+<li>Showcased how to write tests that fail first, make them pass, then refactor the code</li>
+<li>Discussed how to apply simple solutions to make tests pass</li>
+<li>Shared the importance of decomposition in breaking down complex problems into smaller ones</li>
+<li>Demonstrated how to use a test kata (a practice exercise used by martial artists) to improve coding skills and solve a problem</li>
+<li>Explained the concept of code smells and how refactoring can help make code better</li>
+<li>Showcased how to create a simple, maintainable solution using TDD</li>
+<li>Provided additional resources for learning more about TDD and code katas</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

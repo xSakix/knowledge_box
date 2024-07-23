@@ -1,0 +1,4548 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/devoxx/devoxx_cern_2023.html">
+      
+      
+        <link rel="prev" href="../acm/popl_2024_dolphin_mistral_v2.html">
+      
+      
+        <link rel="next" href="../computer_scientists/allan_kay_mistral.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>cern 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-voxxed-days-cern-2024-by-cristian-schuszter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              cern 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="devoxx_cern_2023.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-voxxed-days-cern-2024-by-cristian-schuszter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to Voxxed Days CERN 2024 by Cristian Schuszter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cern-behind-the-physics-by-derek-mathieson-dr-sofia-vallecorsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      CERN: Behind the Physics by Derek Mathieson &amp; Dr. Sofia Vallecorsa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-in-java-yes-its-possible-by-mohammed-aboullaite" class="md-nav__link">
+    <span class="md-ellipsis">
+      ML in Java, YES it's possible! by Mohammed Aboullaite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spring-modulith-spring-for-the-architecturally-curious-developer-by-oliver-drotbohm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Modulith – Spring for the Architecturally Curious Developer by Oliver Drotbohm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-really-know-jwt-by-karim-pinchon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do you really know JWT? by Karim Pinchon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-is-agile-by-venkat-subramaniam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java is Agile by Venkat Subramaniam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-lean-spring-boot-applications-for-the-cloud-by-patrick-baumgartner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Lean Spring Boot Applications for the Cloud by Patrick Baumgartner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conways-law-when-best-practices-are-not-enough-by-julien-topcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conway's Law: When Best Practices Are Not Enough by Julien Topçu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-past-present-and-future-of-cross-sitecross-origin-request-forgery-by-dr-philippe-de-ryck" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Past, Present, and Future of Cross-Site/Cross-Origin Request Forgery by Dr Philippe De Ryck
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-oriented-programming-in-java-21-by-nicolai-parlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Oriented Programming in Java 21 by Nicolai Parlog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-web-hosting-where-the-web-was-invented-by-alberto-pimpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern web hosting where the web was invented by Alberto Pimpo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-java-slideless-by-adam-bien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Java #slideless by Adam Bien
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-meets-ai-how-to-build-llm-powered-applications-with-langchain4j-by-lize-raes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java Meets AI: How to build LLM-Powered Applications with LangChain4j by Lize Raes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-sand-and-java-are-used-to-create-the-worlds-most-powerful-chips-by-johan-janssen" class="md-nav__link">
+    <span class="md-ellipsis">
+      How sand and Java are used to create the world’s most powerful chips by Johan Janssen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-spring-data-projections-beyond-jpa-by-victor-uria-valle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Spring Data Projections Beyond JPA by Victor Uria Valle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wired-how-your-brain-learns-new-programming-languages-by-simone-de-gijt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wired! How your brain learns (new) programming languages by Simone de Gijt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos-and-donts-of-managing-numerous-very-large-databases-at-cern-by-andrzej-nowicki" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOs and DON'Ts of managing numerous very large databases at CERN by Andrzej Nowicki
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-mitosis-by-julien-topcu-josian-chevalier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Mitosis by Julien Topçu &amp; Josian Chevalier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-ballerina-by-mario-del-olmo-diaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Ballerina by Mario Del Olmo Diaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-java-by-venkat-subramaniam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know your Java? by Venkat Subramaniam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-clicks-to-conversations-designing-llm-powered-apps-by-marie-alice-blete" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Clicks to Conversations: Designing LLM-powered Apps by Marie-Alice Blete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-fun-and-absurd-introduction-to-vector-databases-by-alexander-chatzizacharias" class="md-nav__link">
+    <span class="md-ellipsis">
+      A fun and absurd introduction to Vector Databases by Alexander Chatzizacharias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-21-and-beyond-a-roadmap-of-innovations-by-ana-maria-mihalceanu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java 21 and Beyond: A Roadmap of Innovations by Ana-Maria Mihalceanu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principles-of-effective-developers-by-sebastian-daschner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Effective Developers by Sebastian Daschner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-design-pattern-goes-to-the-supermarket-by-kaya-weers" class="md-nav__link">
+    <span class="md-ellipsis">
+      A design pattern goes to the supermarket by Kaya Weers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-make-a-contract-the-art-of-designing-a-java-api-by-mario-fusco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's make a contract: the art of designing a Java API by Mario Fusco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-pattern-matching-in-java-21-by-alberto-cortina-eduarte" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Art of Pattern Matching in Java 21 by Alberto Cortina Eduarte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-rags-to-riches-making-sense-of-your-documentation-with-llms-by-cristian-schuszter" class="md-nav__link">
+    <span class="md-ellipsis">
+      From RAGs to riches: making sense of your documentation with LLMs by Cristian Schuszter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-21-unveiled-a-quick-tour-of-whats-new-by-alberto-cortina-eduarte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java 21 Unveiled: A Quick Tour of What's New by Alberto Cortina Eduarte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spring-boot-testcontainers-by-ivan-lopez" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Boot ❤️ Testcontainers by Iván López
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootiful-spring-boot-3-x-by-josh-long" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bootiful Spring Boot 3 x by Josh Long
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-resilience-patterns-your-microservices-teams-should-know-by-victor-rentea" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Resilience Patterns your Microservices Teams Should Know by Victor Rentea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-k9s-to-opentelemetry-a-guide-to-observability-for-your-apps-in-k8s-by-matthias-haeussler" class="md-nav__link">
+    <span class="md-ellipsis">
+      From k9s to OpenTelemetry: A guide to observability for your apps in K8s by Matthias Haeussler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-intelligent-supersonic-subatomic-applications-with-quarkus-by-dimitris-andreadis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crafting Intelligent Supersonic Subatomic applications with Quarkus by Dimitris Andreadis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-gotchas-when-writing-unit-tests-with-mockito-by-jesse-kershaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips, tricks and gotchas when writing unit tests with Mockito by Jesse Kershaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-tests-are-needed-and-simple-by-piotr-przybyl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration tests are needed and simple by Piotr Przybyl
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-voxxed-days-cern-2024-by-cristian-schuszter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to Voxxed Days CERN 2024 by Cristian Schuszter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cern-behind-the-physics-by-derek-mathieson-dr-sofia-vallecorsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      CERN: Behind the Physics by Derek Mathieson &amp; Dr. Sofia Vallecorsa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-in-java-yes-its-possible-by-mohammed-aboullaite" class="md-nav__link">
+    <span class="md-ellipsis">
+      ML in Java, YES it's possible! by Mohammed Aboullaite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spring-modulith-spring-for-the-architecturally-curious-developer-by-oliver-drotbohm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Modulith – Spring for the Architecturally Curious Developer by Oliver Drotbohm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-really-know-jwt-by-karim-pinchon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do you really know JWT? by Karim Pinchon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-is-agile-by-venkat-subramaniam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java is Agile by Venkat Subramaniam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-lean-spring-boot-applications-for-the-cloud-by-patrick-baumgartner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Lean Spring Boot Applications for the Cloud by Patrick Baumgartner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conways-law-when-best-practices-are-not-enough-by-julien-topcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conway's Law: When Best Practices Are Not Enough by Julien Topçu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-past-present-and-future-of-cross-sitecross-origin-request-forgery-by-dr-philippe-de-ryck" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Past, Present, and Future of Cross-Site/Cross-Origin Request Forgery by Dr Philippe De Ryck
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-oriented-programming-in-java-21-by-nicolai-parlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Oriented Programming in Java 21 by Nicolai Parlog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-web-hosting-where-the-web-was-invented-by-alberto-pimpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern web hosting where the web was invented by Alberto Pimpo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-java-slideless-by-adam-bien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Java #slideless by Adam Bien
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-meets-ai-how-to-build-llm-powered-applications-with-langchain4j-by-lize-raes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java Meets AI: How to build LLM-Powered Applications with LangChain4j by Lize Raes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-sand-and-java-are-used-to-create-the-worlds-most-powerful-chips-by-johan-janssen" class="md-nav__link">
+    <span class="md-ellipsis">
+      How sand and Java are used to create the world’s most powerful chips by Johan Janssen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-spring-data-projections-beyond-jpa-by-victor-uria-valle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Spring Data Projections Beyond JPA by Victor Uria Valle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wired-how-your-brain-learns-new-programming-languages-by-simone-de-gijt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wired! How your brain learns (new) programming languages by Simone de Gijt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dos-and-donts-of-managing-numerous-very-large-databases-at-cern-by-andrzej-nowicki" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOs and DON'Ts of managing numerous very large databases at CERN by Andrzej Nowicki
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-mitosis-by-julien-topcu-josian-chevalier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Mitosis by Julien Topçu &amp; Josian Chevalier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-ballerina-by-mario-del-olmo-diaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Ballerina by Mario Del Olmo Diaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#know-your-java-by-venkat-subramaniam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know your Java? by Venkat Subramaniam
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-clicks-to-conversations-designing-llm-powered-apps-by-marie-alice-blete" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Clicks to Conversations: Designing LLM-powered Apps by Marie-Alice Blete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-fun-and-absurd-introduction-to-vector-databases-by-alexander-chatzizacharias" class="md-nav__link">
+    <span class="md-ellipsis">
+      A fun and absurd introduction to Vector Databases by Alexander Chatzizacharias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-21-and-beyond-a-roadmap-of-innovations-by-ana-maria-mihalceanu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java 21 and Beyond: A Roadmap of Innovations by Ana-Maria Mihalceanu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principles-of-effective-developers-by-sebastian-daschner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Effective Developers by Sebastian Daschner
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-design-pattern-goes-to-the-supermarket-by-kaya-weers" class="md-nav__link">
+    <span class="md-ellipsis">
+      A design pattern goes to the supermarket by Kaya Weers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-make-a-contract-the-art-of-designing-a-java-api-by-mario-fusco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's make a contract: the art of designing a Java API by Mario Fusco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-art-of-pattern-matching-in-java-21-by-alberto-cortina-eduarte" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Art of Pattern Matching in Java 21 by Alberto Cortina Eduarte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-rags-to-riches-making-sense-of-your-documentation-with-llms-by-cristian-schuszter" class="md-nav__link">
+    <span class="md-ellipsis">
+      From RAGs to riches: making sense of your documentation with LLMs by Cristian Schuszter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-21-unveiled-a-quick-tour-of-whats-new-by-alberto-cortina-eduarte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java 21 Unveiled: A Quick Tour of What's New by Alberto Cortina Eduarte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spring-boot-testcontainers-by-ivan-lopez" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Boot ❤️ Testcontainers by Iván López
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootiful-spring-boot-3-x-by-josh-long" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bootiful Spring Boot 3 x by Josh Long
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-resilience-patterns-your-microservices-teams-should-know-by-victor-rentea" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Resilience Patterns your Microservices Teams Should Know by Victor Rentea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-k9s-to-opentelemetry-a-guide-to-observability-for-your-apps-in-k8s-by-matthias-haeussler" class="md-nav__link">
+    <span class="md-ellipsis">
+      From k9s to OpenTelemetry: A guide to observability for your apps in K8s by Matthias Haeussler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-intelligent-supersonic-subatomic-applications-with-quarkus-by-dimitris-andreadis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crafting Intelligent Supersonic Subatomic applications with Quarkus by Dimitris Andreadis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-gotchas-when-writing-unit-tests-with-mockito-by-jesse-kershaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips, tricks and gotchas when writing unit tests with Mockito by Jesse Kershaw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-tests-are-needed-and-simple-by-piotr-przybyl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration tests are needed and simple by Piotr Przybyl
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>cern 2023</h1>
+
+<h2 id="welcome-to-voxxed-days-cern-2024-by-cristian-schuszter">Welcome to Voxxed Days CERN 2024 by Cristian Schuszter</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=llPuMcxUg9s">https://www.youtube.com/watch?v=llPuMcxUg9s</a></p>
+<ol>
+<li>Vox Day CERN Conference - Third Edition</li>
+<li>30 rooms booked; pandemic has affected organization</li>
+<li>New edition with double the number of speakers (35)</li>
+<li>Lunchtime session: 15-minute talks, followed by lunch immediately</li>
+<li>Guided tours for badge holders on Tuesday and Wednesday</li>
+<li>Science Gateway exhibition accessible from Tuesday; guided tours available</li>
+<li>Big Bang Cafe and electronic lockers for storing personal belongings</li>
+<li>Keynote speaker: Dere Sophia; applause at the start of the event</li>
+</ol>
+<h2 id="cern-behind-the-physics-by-derek-mathieson-dr-sofia-vallecorsa">CERN: Behind the Physics by Derek Mathieson &amp; Dr. Sofia Vallecorsa</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pddIiza2Pc8">https://www.youtube.com/watch?v=pddIiza2Pc8</a></p>
+<ol>
+<li>CERN is a leading European research organization focused on particle physics, with a mission to unravel the secrets of the universe through fundamental research.</li>
+<li>The Large Hadron Collider (LHC) is a 27 km-long particle accelerator located at CERN, which operates at high energies and helps in discovering new particles.</li>
+<li>LHC detectors like ATLAS and CMS are massive, complex instruments that help analyze data from collisions. They require advanced computing infrastructure to process the large amount of data generated.</li>
+<li>Quantum Computing is a promising technology that can be applied to various aspects of particle physics research, including simulation, optimization, and analysis.</li>
+<li>CERN is actively exploring quantum technologies for use in their experiments, including quantum sensors, quantum computing, and quantum cryptography.</li>
+<li>CERN's open access policy allows researchers from around the world to collaborate on projects, share resources, and contribute to global scientific advancements.</li>
+</ol>
+<h2 id="ml-in-java-yes-its-possible-by-mohammed-aboullaite">ML in Java, YES it's possible! by Mohammed Aboullaite</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=bGXfapN_cIs">https://www.youtube.com/watch?v=bGXfapN_cIs</a></p>
+<ol>
+<li>Deep learning Java focuses on simplifying machine learning processes for developers, especially in the enterprise world.</li>
+<li>DGL and Deep Learning 4G are two popular frameworks mentioned for Java-based deep learning applications.</li>
+<li>DGL offers multi-framework support, making it easy to use various libraries like TensorFlow and PyTorch.</li>
+<li>Deep Learning 4G provides a simplified deployment model with predefined models and an easy-to-use interface.
+(5) Oracle Tribo EVAL Matrix helps in evaluating machine learning models by checking training, hyperparameter tuning, and data preparation.
+(6) The transcript suggests that Deep Learning 4G offers the most control for Java developers within the deep learning space.
+(7) Both frameworks are designed to work well with enterprise-focused applications.
+(8) Key features include simplified machine learning, integration with existing data sources, and support for traditional and deep learning algorithms.
+(9) DGL offers a larger community compared to Deep Learning 4G, while Deep Learning 4G provides more power through its engine.
+(10) The speaker emphasizes the importance of focusing on enterprise-specific use cases within deep learning frameworks.</li>
+</ol>
+<h2 id="spring-modulith-spring-for-the-architecturally-curious-developer-by-oliver-drotbohm">Spring Modulith – Spring for the Architecturally Curious Developer by Oliver Drotbohm</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=7c6xXmJvDjo">https://www.youtube.com/watch?v=7c6xXmJvDjo</a></p>
+<ol>
+<li>Spring Modulith: A concept for building modular systems using microservices principles within a single application.</li>
+<li>Event-based Integration Model: An alternative to the traditional transactional approach, allowing asynchronous communication between modules.</li>
+<li>Spring Framework Support: Actuator provides insight into application-level abstraction, while externalization tools simplify event handling for various platforms (Kafka, AMQP, JMS).</li>
+<li>Microservices vs Modulith: Both approaches aim to achieve a modular system, but microservices focus on splitting the system apart at the business level, whereas Modulith focuses on technical aspects and promoting event-based communication.</li>
+<li>Workshop Version: An enhanced implementation of externalizing events with Kafka listeners for better separation between modules and testing isolation.</li>
+</ol>
+<h2 id="do-you-really-know-jwt-by-karim-pinchon">Do you really know JWT? by Karim Pinchon</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=1dJwKVkrRJo">https://www.youtube.com/watch?v=1dJwKVkrRJo</a></p>
+<ol>
+<li>JWT (Json Web Token) is a widely used technology for secure data transfer.</li>
+<li>It uses cryptography to provide confidentiality, integrity, and authentication.</li>
+<li>JWT has several implementations, including JWS (JSON Signature), JWE (JSON Encryption), and JWT-based tokens like Access Tokens in OAuth 2.0.</li>
+<li>Key management is crucial for securing JWTs; using asymmetric keys with strong algorithms can help prevent attacks.</li>
+<li>Blacklisting or rotating tokens can be employed to mitigate revocation issues, while avoiding storing sensitive information within JWTs.</li>
+</ol>
+<h2 id="java-is-agile-by-venkat-subramaniam">Java <em>is</em> Agile by Venkat Subramaniam</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Dg6jfLGyD8o">https://www.youtube.com/watch?v=Dg6jfLGyD8o</a></p>
+<ol>
+<li>Agile development is about adaptive planning and feedback-driven processes, rather than strict timelines or specifications.</li>
+<li>Java has evolved significantly over the years, with its 6-month release cycle allowing for incremental changes and improvements.</li>
+<li>Legacy code maintenance can be challenging, but evolving languages like Java provide smart casting features that simplify working with existing codebases.</li>
+<li>Virtual threads in Java offer a scalable, efficient way to handle asynchronous programming without the overhead of creating multiple threads.</li>
+<li>Agile development is about learning from past experiences and continuously improving processes, rather than adhering to rigid methodologies.</li>
+</ol>
+<h2 id="building-lean-spring-boot-applications-for-the-cloud-by-patrick-baumgartner">Building Lean Spring Boot Applications for the Cloud by Patrick Baumgartner</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=uwmtqTjj4pM">https://www.youtube.com/watch?v=uwmtqTjj4pM</a></p>
+<ol>
+<li>Optimize startup time and resource usage in Spring Boot applications.</li>
+<li>Use benchmarking techniques to compare performance between different JDK versions, build packs, and container images.</li>
+<li>Apply optimization strategies such as lazy initialization, virtual threads, and memory tuning.</li>
+<li>Minimize dependency size by using dependency clean plugins and removing unused dependencies.</li>
+<li>Explore alternative Java distributions like OpenJ9 for better performance.</li>
+<li>Consider native image generation to improve startup time and resource consumption.</li>
+<li>Leverage build packs for containerization, such as the one from BellSoft or Pivotal, to further optimize applications.</li>
+<li>Utilize checkpoint recovery technology to provide faster application start times by restoring snapshots of the state.</li>
+<li>Keep up-to-date with new Java ecosystem projects like Lean and Project Lithium for continuous performance improvements.</li>
+</ol>
+<h2 id="conways-law-when-best-practices-are-not-enough-by-julien-topcu">Conway's Law: When Best Practices Are Not Enough by Julien Topçu</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=c03WwH82NQI">https://www.youtube.com/watch?v=c03WwH82NQI</a></p>
+<ol>
+<li>Melvin Conway's Law states that an organization's communication structure will closely resemble its information processing system.</li>
+<li>Inverse Conway Maneuver is a technique to break down complex systems into smaller, more manageable subsystems by defining interfaces between them.</li>
+<li>B Model focuses on business analysis, prioritizing problem identification and solution before implementation.</li>
+<li>Domain-Driven Design emphasizes the importance of understanding the problem domain before designing a solution.</li>
+<li>Team Topology aims to improve communication within an organization by reorganizing teams based on their interaction patterns.</li>
+<li>The transcript discusses various methods and techniques for improving organizational design, communication structure, and team collaboration.</li>
+</ol>
+<h2 id="the-past-present-and-future-of-cross-sitecross-origin-request-forgery-by-dr-philippe-de-ryck">The Past, Present, and Future of Cross-Site/Cross-Origin Request Forgery by Dr Philippe De Ryck</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=K903vmJI-1U">https://www.youtube.com/watch?v=K903vmJI-1U</a></p>
+<ol>
+<li>Cross-Site Request Forgery (CSRF) and Cross Origin Request Forgery are vulnerabilities that can be mitigated using Synchronizer Tokens, Side Cookies, or CSRF tokens.</li>
+<li>Side Cookies help maintain authentication state by treating them as cookies from different sites, thus preventing cross-site attacks.</li>
+<li>APIs should use Content-Type headers to enforce specific request formats and protect against CSRF attacks.</li>
+<li>BFF (Backend for Frontend) libraries can be used to isolate API endpoints, reducing the risk of CSRF vulnerabilities.</li>
+<li>Synchronizer Tokens help identify legitimate form submissions by comparing tokens from different forms on a page.</li>
+<li>Use authorization headers and custom headers in APIs to ensure proper authentication and prevent CSRF attacks.</li>
+<li>Consider using JavaScript-based solutions for more complex applications, as they can provide better control over requests.</li>
+</ol>
+<h2 id="data-oriented-programming-in-java-21-by-nicolai-parlog">Data Oriented Programming in Java 21 by Nicolai Parlog</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8FRU_aGY4mY">https://www.youtube.com/watch?v=8FRU_aGY4mY</a></p>
+<ol>
+<li>Data-oriented programming (DOP) focuses on organizing data and operations around data, rather than objects or classes.</li>
+<li>Pattern matching is a language feature in Java 16 that enables handling different types of data without using if/else statements.</li>
+<li>Sealed interfaces can be used to restrict inheritance for better encapsulation and security.</li>
+<li>Record data type is immutable, allowing easy access to fields and methods while reducing boilerplate code.</li>
+<li>Functional programming emphasizes composable functions and immutability. It's useful in complex problem domains but may require more effort in smaller projects.</li>
+<li>Sealed classes can be used for better encapsulation, security, and performance by restricting inheritance to specific subclasses.</li>
+<li>Pattern matching allows handling different types of data without conditional statements or switch statements.</li>
+<li>Visitor patterns are useful for handling complex objects and operations in a structured manner.</li>
+<li>Record data type can be used to represent immutable data, simplifying access to fields and methods while reducing boilerplate code.</li>
+<li>Functional programming focuses on composable functions and immutability, which may require more effort in smaller projects but is useful for complex problem domains.</li>
+</ol>
+<h2 id="modern-web-hosting-where-the-web-was-invented-by-alberto-pimpo">Modern web hosting where the web was invented by Alberto Pimpo</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=E9lzurdOYdE">https://www.youtube.com/watch?v=E9lzurdOYdE</a></p>
+<ol>
+<li>Alberto Pimpo, a junior DevOps engineer at CERN, discusses the organization's infrastructure and services.</li>
+<li>The main idea behind CERN's system is to create a global sharing platform for scientific papers and websites.</li>
+<li>They use Kubernetes for multitenancy, focusing on fault tolerance, scalability, full operability, and ease of maintenance.</li>
+<li>Services include one-click provisioning for popular apps, centralized logging and storage, and custom plugins/PHP code support.</li>
+<li>CERN's infrastructure provides various options for hosting static files, running PHP/Python scripts, and managing web applications with full control over Kubernetes namespaces.</li>
+</ol>
+<h2 id="serverless-java-slideless-by-adam-bien">Serverless Java #slideless by Adam Bien</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=rRZlgd2OwMk">https://www.youtube.com/watch?v=rRZlgd2OwMk</a></p>
+<ol>
+<li>Serverless Java project</li>
+<li>Comparing costs and performance of various architectures (e.g., Lambda, microservices)</li>
+<li>Quarkus as a serverless-friendly framework</li>
+<li>Cloud Native Computing Foundation's role in the serverless landscape</li>
+<li>The importance of security and compliance considerations for serverless projects</li>
+<li>Event-driven architecture with Amazon Web Services (AWS) services like EventBridge, Kinesis, SQS, and SNS</li>
+<li>Performance optimization strategies (e.g., reducing memory footprint)</li>
+<li>Testing and deployment best practices</li>
+<li>Utilizing Quarkus for microservice applications with CERN's Large Hadron Collider data analysis pipeline as a use case</li>
+<li>The role of Java in serverless computing, focusing on its advantages over other languages</li>
+</ol>
+<h2 id="java-meets-ai-how-to-build-llm-powered-applications-with-langchain4j-by-lize-raes">Java Meets AI: How to build LLM-Powered Applications with LangChain4j by Lize Raes</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=LIfpKwCig14">https://www.youtube.com/watch?v=LIfpKwCig14</a></p>
+<ol>
+<li>The speaker presented on Lang Chain, an AI framework for software development and drug discovery.</li>
+<li>They highlighted the importance of LLMs (Language Models) and their applications in various fields, including image models and embedding models.</li>
+<li>A new Java library called Lang Chain J was introduced to simplify model integration and interaction with LLMs.</li>
+<li>The speaker discussed various open-source models, including Open AI's GPT-3 and Azure's Turing NLG, and their respective advantages.</li>
+<li>They demonstrated the use of a quarkus Spring Boot application for chatbot functionality, showcasing its ability to handle multiple languages and integrate with LLMs.</li>
+<li>The speaker emphasized the importance of documentation and community contributions in the development of these models and frameworks.</li>
+</ol>
+<h2 id="how-sand-and-java-are-used-to-create-the-worlds-most-powerful-chips-by-johan-janssen">How sand and Java are used to create the world’s most powerful chips by Johan Janssen</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Rc3JwmOdIIA">https://www.youtube.com/watch?v=Rc3JwmOdIIA</a></p>
+<ol>
+<li>The transcript discusses the chip manufacturing process, focusing on the production of Wafers and advanced machines used in the industry.</li>
+<li>Newer machines are more complex and require specialized knowledge to operate effectively.</li>
+<li>The European market is growing with new factories being built, but skilled labor shortages persist.</li>
+<li>Plugin contracts within the platform help communicate between different systems, including Docker containers and Spark.</li>
+<li>The oldest piece of software running a 30-year-old machine is mentioned, highlighting the need for careful maintenance to avoid downtime.</li>
+</ol>
+<h2 id="custom-spring-data-projections-beyond-jpa-by-victor-uria-valle">Custom Spring Data Projections Beyond JPA by Victor Uria Valle</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=4LrDqB_TnE8">https://www.youtube.com/watch?v=4LrDqB_TnE8</a></p>
+<ol>
+<li>The speaker presents an idea of projecting entities and its benefits for applications.</li>
+<li>They discuss a method to expose APIs with reduced information and better security.</li>
+<li>Entity projections are useful for reducing the size of data sent to clients.</li>
+<li>A sample implementation is provided using a Person class, showing how to filter sensitive information.</li>
+<li>The speaker suggests future improvements such as cleaner annotations and improved entity projection methods.</li>
+</ol>
+<h2 id="wired-how-your-brain-learns-new-programming-languages-by-simone-de-gijt">Wired! How your brain learns (new) programming languages by Simone de Gijt</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dOjdW3lkOMA">https://www.youtube.com/watch?v=dOjdW3lkOMA</a></p>
+<ol>
+<li>Use creative contextual association for effective learning.</li>
+<li>Engage all senses during learning for better memory retention.</li>
+<li>Apply active learning techniques, avoid passive methods like copy-pasting.</li>
+<li>Keep sharp by staying involved in the learning process.</li>
+<li>Inspire automation to make room for new knowledge and skills.</li>
+<li>Use generative AI tools to enhance transactive memory storage and retrieval.</li>
+<li>Pair with others for guidance, especially in complex domains.</li>
+<li>Stay aware of the implications of using AI tools for learning.</li>
+<li>Be open-minded when it comes to new technologies like the Web and Cyborgs.</li>
+<li>Embrace change and adapt to evolving knowledge bases.</li>
+</ol>
+<h2 id="dos-and-donts-of-managing-numerous-very-large-databases-at-cern-by-andrzej-nowicki">DOs and DON'Ts of managing numerous very large databases at CERN by Andrzej Nowicki</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=BQHpnqFWmI0">https://www.youtube.com/watch?v=BQHpnqFWmI0</a></p>
+<ol>
+<li>CERN's database infrastructure: 5 petabytes of data stored in Oracle, MySQL, and Inflex DB; automated management tools for resource allocation, patching, and upgrading.</li>
+<li>User management: Provisioning and monitoring user accounts with separate access levels (owner, administrator, etc.).</li>
+<li>Database automation: Cloning databases, backup solutions, and data recovery using snapshot backups.</li>
+<li>Resource Management: Tracking ownership of resources, automatic reassignment in case of employee departure, and a self-service portal for user account management.</li>
+<li>Elastic infrastructure: Utilizing elastic clusters to handle varying loads and scale resources based on demand.</li>
+<li>Cost analysis: Calculating the total cost of ownership for database services, including storage costs, license fees, and hardware expenses.</li>
+<li>Data replication: Maintaining multiple copies of critical databases in different data centers for redundancy and disaster recovery.</li>
+</ol>
+<h2 id="model-mitosis-by-julien-topcu-josian-chevalier">Model Mitosis by Julien Topçu &amp; Josian Chevalier</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ydatnnHo0lw">https://www.youtube.com/watch?v=ydatnnHo0lw</a></p>
+<ol>
+<li>Discussing the need for microservices, the speaker highlights issues with model tension and duplication in codebases.</li>
+<li>Suggested solutions include splitting behavior into separate services, creating a booking domain with tax computation, and using shared canals to communicate between services.</li>
+<li>The transcript discusses various patterns, including Big Ball Mud (BBM), Monoliths, microservices, and Hive Patterns, with the speaker advocating for a balance between these approaches.</li>
+<li>The speaker emphasizes the importance of flexibility in architecture and scaling while maintaining business logic.</li>
+<li>A focus on domain-driven design is encouraged to create cleaner codebases and better communication between teams.</li>
+</ol>
+<h2 id="introduction-to-ballerina-by-mario-del-olmo-diaz">Introduction to Ballerina by Mario Del Olmo Diaz</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=dlArA8I8Mr4">https://www.youtube.com/watch?v=dlArA8I8Mr4</a></p>
+<ol>
+<li>Ballerina is a new programming language focusing on service-oriented programming.</li>
+<li>It aims to simplify integration of various systems with features like parallel code and graphical editing.</li>
+<li>The language has a syntax similar to SQL for data manipulation and supports network interaction error handling.</li>
+<li>Ballerina provides an easy installation process through Visual Studio Code extension, making it accessible for developers.</li>
+<li>It can be used to build small services like the example Joke API presented in the transcript.</li>
+</ol>
+<h2 id="know-your-java-by-venkat-subramaniam">Know your Java? by Venkat Subramaniam</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=DHwNR7h3k5Y">https://www.youtube.com/watch?v=DHwNR7h3k5Y</a></p>
+<ol>
+<li>Emphasis on functional programming, lazy evaluation, and immutability.</li>
+<li>Importance of code correctness and efficiency in functional programming.</li>
+<li>Critical language work in functional style coding with lazy evaluation.</li>
+<li>Need for purity functions and immutable data structures to maintain correctness.</li>
+<li>Code review as a crucial practice to improve code quality and developer skills.</li>
+</ol>
+<h2 id="from-clicks-to-conversations-designing-llm-powered-apps-by-marie-alice-blete">From Clicks to Conversations: Designing LLM-powered Apps by Marie-Alice Blete</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WbhaZveZ2TM">https://www.youtube.com/watch?v=WbhaZveZ2TM</a></p>
+<ol>
+<li>The speaker discussed designing an application using LLMs (Large Language Models) and shared their experience with various models, including GPT-4, GPT-3, and others.</li>
+<li>They proposed three approaches to integrate LLMs into applications: basic approach, state machine solution, and agent solution.</li>
+<li>The speaker highlighted issues with non-deterministic components in applications, prompt injection risks, and the need for cost management within conversation lengths.</li>
+<li>They emphasized the importance of monitoring and controlling data sent to LLMs, particularly when dealing with sensitive information.</li>
+<li>The speaker suggested a combination of rule engines and LLMs as a possible solution.</li>
+</ol>
+<h2 id="a-fun-and-absurd-introduction-to-vector-databases-by-alexander-chatzizacharias">A fun and absurd introduction to Vector Databases by Alexander Chatzizacharias</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=7rt2-GkRH80">https://www.youtube.com/watch?v=7rt2-GkRH80</a></p>
+<ol>
+<li>Vector databases are purpose-built for storing and retrieving vector data efficiently, with a focus on speed and performance.</li>
+<li>The speaker introduces several use cases, such as Pokémon image search, Pokémon card game database, and video games like Minecraft that could benefit from vector databases.</li>
+<li>Vector Space is discussed as an important concept in vector databases, where vectors are stored within their own dimensionality space to ensure accurate distance calculations.</li>
+<li>The speaker highlights the importance of embedding models for indexing and retrieval algorithms, such as approximate nearest neighbor search (ANN), K-nearest neighbors (KNN), and hierarchical navigable small world (HNSW) algorithms.</li>
+<li>Vector databases are seen as synonymous with AI, with applications in large language models and machine learning models that rely on vectorization for efficient data processing.</li>
+<li>The speaker suggests using open-source tools like Pinecone or Redis to build a vector database.</li>
+<li>A potential application of vector databases is in the gaming industry, where they could be used for storing and retrieving game data efficiently.</li>
+<li>The speaker emphasizes the importance of documentation and transparency in open-source projects and tools.</li>
+<li>Lastly, the speaker shares a personal experience using ElasticSearch for text search and mentions that vector databases can use similar techniques to improve their performance.</li>
+</ol>
+<h2 id="java-21-and-beyond-a-roadmap-of-innovations-by-ana-maria-mihalceanu">Java 21 and Beyond: A Roadmap of Innovations by Ana-Maria Mihalceanu</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=mWs6CXYbI6c">https://www.youtube.com/watch?v=mWs6CXYbI6c</a></p>
+<ol>
+<li>Java 21 Beyond: A detailed presentation discussing various features and improvements introduced in recent Java versions.</li>
+<li>Project Loom: Virtual Threads, a performance improvement project focused on better concurrency control and faster startup warmup for Java applications.</li>
+<li>Babylon: An experimental project exploring ways to extend Java's reach by facilitating foreign programming models like SQL and machine learning.</li>
+<li>Open JDK Mailing List: A platform where the community discusses changes and ideas related to Java features.</li>
+<li>Nikolai's Video: The speaker mentions a future talk on a specific topic, encouraging the audience to attend.</li>
+</ol>
+<h2 id="principles-of-effective-developers-by-sebastian-daschner">Principles of Effective Developers by Sebastian Daschner</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=7GKZhqiAxaI">https://www.youtube.com/watch?v=7GKZhqiAxaI</a></p>
+<ol>
+<li>Minimize context switch: Focus on keyboard usage and minimize mouse movement for an efficient workflow.</li>
+<li>Use keyboard shortcuts and command lines: Learn and use shortcuts to speed up tasks and reduce time spent navigating menus.</li>
+<li>Decline meetings: Manage your schedule by declining non-essential meetings, allowing more time for focused work.</li>
+<li>Turn off distractions: Use 'flight mode' or similar settings on devices to minimize notifications and improve focus.</li>
+<li>Automate routine tasks: Write scripts or use automation tools to handle repetitive tasks, freeing up time for more complex projects.</li>
+<li>Reflect daily: Journal your workday to identify patterns and areas for improvement, helping you become a better developer over time.</li>
+<li>Share knowledge: Contribute to the community by writing blog posts or recording sessions to help others learn from your experiences.</li>
+</ol>
+<h2 id="a-design-pattern-goes-to-the-supermarket-by-kaya-weers">A design pattern goes to the supermarket by Kaya Weers</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=taj_inLi-pY">https://www.youtube.com/watch?v=taj_inLi-pY</a></p>
+<ol>
+<li>Discussed various design patterns: Command, Observer, Adapter, Factory Method, and Facade.</li>
+<li>Command pattern: Used for grocery shopping; mom's request to get groceries was converted into a note for Bobby.</li>
+<li>Observer pattern: Applied in the supermarket when customers were interested in knowing back stock updates.</li>
+<li>Adapter pattern: Utilized by Billy with a Spanish-English translation app, converting Spanish ingredient lists on products to English.</li>
+<li>Factory Method: Demonstrated in a bakery, creating different types of bread based on the location (inside or outside supermarket).</li>
+<li>Facade pattern: Used by mom who gave instructions for putting away groceries; simplified interface to handle complex subsystems.</li>
+</ol>
+<h2 id="lets-make-a-contract-the-art-of-designing-a-java-api-by-mario-fusco">Let's make a contract: the art of designing a Java API by Mario Fusco</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=RejJukzz8M0">https://www.youtube.com/watch?v=RejJukzz8M0</a></p>
+<ol>
+<li>API design principles: Define clear boundaries, provide consistency, and ensure future-proofing.</li>
+<li>Fluent APIs: Improve readability and conciseness by chaining method calls.</li>
+<li>Optional values: Avoid null references using optional types (e.g., Optionals in Java 8).</li>
+<li>Functional interfaces: Replace complex listener classes with simple lambda expressions.</li>
+<li>Least astonishment principle: Make API behavior predictable and consistent.</li>
+<li>Design for evolution: Anticipate future changes and be flexible to accommodate them.</li>
+</ol>
+<h2 id="the-art-of-pattern-matching-in-java-21-by-alberto-cortina-eduarte">The Art of Pattern Matching in Java 21 by Alberto Cortina Eduarte</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SUqK9IsKsFs">https://www.youtube.com/watch?v=SUqK9IsKsFs</a></p>
+<ol>
+<li>The speaker discussed pattern matching in Java 21, highlighting new features and their usage.</li>
+<li>Pattern matching involves testing objects with specific structures to extract data.</li>
+<li>Guard patterns, record patterns, and scope patterns were mentioned as important concepts.</li>
+<li>A focus on careful naming and handling of null values was emphasized.</li>
+<li>The speaker shared code examples demonstrating these features and provided resources for further exploration.</li>
+</ol>
+<h2 id="from-rags-to-riches-making-sense-of-your-documentation-with-llms-by-cristian-schuszter">From RAGs to riches: making sense of your documentation with LLMs by Cristian Schuszter</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=r2Fi-HGKRvU">https://www.youtube.com/watch?v=r2Fi-HGKRvU</a></p>
+<ol>
+<li>The speaker discussed using LLMs to improve documentation management at CERN, focusing on their small example project.</li>
+<li>They mentioned the challenges of working with large amounts of documentation and the need for efficient search and retrieval methods.</li>
+<li>To address these issues, they implemented a solution using Ray Serve, an open-source framework that provides scalable program serving capabilities.</li>
+<li>The solution involved integrating various technologies such as hugging face, Transformers, and Llama Index to improve the search process.</li>
+<li>They emphasized the importance of context in their bot's responses and the need for continuous improvement in handling different languages and scenarios.</li>
+</ol>
+<h2 id="java-21-unveiled-a-quick-tour-of-whats-new-by-alberto-cortina-eduarte">Java 21 Unveiled: A Quick Tour of What's New by Alberto Cortina Eduarte</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=6K86F_3h024">https://www.youtube.com/watch?v=6K86F_3h024</a></p>
+<ol>
+<li>Java 21 features discussed: Longer support, 15 new features, 50 maintenance improvements</li>
+<li>Focus on developer-used features: Stream template, Template Expressions, Custom Templates</li>
+<li>New features highlighted: Fully functional stream template, Preview Star Split, Interpolation security</li>
+<li>Sequential Collection enhancements: Unified API for various collection types</li>
+<li>Record Pattern Matching: Type inference, convenience, readability improvements</li>
+<li>Concurrency improvements: Virtual Threads, light framework, thread sharing immutable data</li>
+<li>Scope Value and Structured Concurrency: Eliminate common risks, policy-based approaches</li>
+</ol>
+<h2 id="spring-boot-testcontainers-by-ivan-lopez">Spring Boot ❤️ Testcontainers by Iván López</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=TAI4ZiKMcfY">https://www.youtube.com/watch?v=TAI4ZiKMcfY</a></p>
+<ol>
+<li>Discussed Test Container usage in Spring Boot applications, its advantages and implementation details.</li>
+<li>Showcased a simple application with integration tests for PostgreSQL, Kafka, and RabbitMQ dependencies.</li>
+<li>Introduced Spring Boot 3.1 features like Service Connection Annotation and Docker Compose support.</li>
+<li>Discussed the use of Test Container Cloud to manage container lifecycles in development environments.</li>
+<li>Emphasized the importance of streamlining configuration for easy integration with various services.</li>
+</ol>
+<h2 id="bootiful-spring-boot-3-x-by-josh-long">Bootiful Spring Boot 3 x by Josh Long</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8l0tv3_jFoY">https://www.youtube.com/watch?v=8l0tv3_jFoY</a></p>
+<ol>
+<li>Java 21 data-oriented programming features make working with large datasets easier.</li>
+<li>Spring Boot 3.0 uses sealed types and pattern matching for more precise handling of input.</li>
+<li>Dev tools like Live Reload speed up development by updating the UI without restarting the app.</li>
+<li>Spring Boot 3.0's Docker Compose integration enables faster application start times.</li>
+<li>Singularity AI can be used to generate text stories, but requires an API key and environment setup.</li>
+<li>Virtual threads in Java 21 improve scalability by providing better resource management for concurrent tasks.</li>
+<li>Spring Boot's Native Image compilation reduces startup time and memory usage.</li>
+<li>Docker Compose can be used to manage multiple services, including databases and web servers.</li>
+<li>Singularity AI can help generate responses in real-time without needing a separate database.</li>
+<li>Live Reload tools enable faster development by updating the UI without restarting the app.</li>
+</ol>
+<h2 id="the-resilience-patterns-your-microservices-teams-should-know-by-victor-rentea">The Resilience Patterns your Microservices Teams Should Know by Victor Rentea</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=IR89tmg9v3A">https://www.youtube.com/watch?v=IR89tmg9v3A</a></p>
+<ol>
+<li>Resilient systems: The need to handle unexpected situations and maintain user experience in a scalable manner.</li>
+<li>Isolation: Separate smaller pieces of the system for easier management, monitoring, and failure handling.</li>
+<li>Latency control: Ensure timely response by limiting concurrent requests or using queues.</li>
+<li>Loose coupling: Decouple services to avoid cascading failures and ensure that one issue doesn't affect the entire system.</li>
+<li>Supervision: Monitor and manage the health of individual components, triggering human intervention when needed.</li>
+<li>Eventual consistency: Prioritize availability over strict consistency by allowing some data inconsistency for a short time.</li>
+<li>Event Sourcing: Store events instead of data to enable easier recovery from failures and simplify complex workflows.</li>
+<li>Monitoring: Track system health, performance, and error rates to identify potential issues early on.</li>
+<li>Health Checks: Ensure all components are functional by setting up regular checks for proper functioning.</li>
+<li>Error Handling: Properly handle errors and communicate them effectively to users or other services.</li>
+</ol>
+<h2 id="from-k9s-to-opentelemetry-a-guide-to-observability-for-your-apps-in-k8s-by-matthias-haeussler">From k9s to OpenTelemetry: A guide to observability for your apps in K8s by Matthias Haeussler</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=EJc3ppBJZrw">https://www.youtube.com/watch?v=EJc3ppBJZrw</a></p>
+<ol>
+<li>The speaker discussed various tools and techniques for observability in Kubernetes, including monitoring, logging, and tracing.</li>
+<li>They introduced open Telemetry as a standardized solution for collecting metrics across applications and platforms.</li>
+<li>The speaker demonstrated different approaches to instrumenting Java-based applications with open Telemetry using Spring Cloud Sleuth, Micronaut, Quarkus, and Lombok annotations.</li>
+<li>They discussed the pros and cons of using service mesh technology like Istio and sidecars for observability.</li>
+<li>The speaker also highlighted extended Berkeley Packet Filter (ebpf) as a potential tool for monitoring network traffic at the kernel level.</li>
+<li>Open source projects like open Telemetry Collector, Grafana, Prometheus, and Jaeger were mentioned as useful tools in this space.</li>
+<li>The speaker advised considering commercial solutions like Elastic APM and Datadog AppSec for advanced observability needs.</li>
+<li>Finally, they emphasized the importance of standardization within the industry and encouraged collaboration among various vendors.</li>
+</ol>
+<h2 id="crafting-intelligent-supersonic-subatomic-applications-with-quarkus-by-dimitris-andreadis">Crafting Intelligent Supersonic Subatomic applications with Quarkus by Dimitris Andreadis</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ubZtXfwG6ec">https://www.youtube.com/watch?v=ubZtXfwG6ec</a></p>
+<ol>
+<li>Demonstrated the integration of LChain J library with Quarkus, showcasing its ease and efficiency.</li>
+<li>Discussed the potential for AI-powered applications using LLMs in conjunction with Java frameworks like Quarkus.</li>
+<li>Highlighted the importance of annotation and configuration in enhancing the functionality and performance of LLM models.</li>
+<li>Showcased various use cases, such as generating movie recommendations and responding to user queries based on AI-powered conversations.</li>
+<li>Expressed excitement for future innovations within the Java ecosystem, particularly around improving developer experience and enabling more efficient workflows.</li>
+</ol>
+<h2 id="tips-tricks-and-gotchas-when-writing-unit-tests-with-mockito-by-jesse-kershaw">Tips, tricks and gotchas when writing unit tests with Mockito by Jesse Kershaw</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Rc-zoUqC0s8">https://www.youtube.com/watch?v=Rc-zoUqC0s8</a></p>
+<ol>
+<li>Jesse Im, a CERN Staff software engineer, discussed Makito, an open-source mocking library for Java unit testing.</li>
+<li>Makito provides tools to simplify writing cleaner and more concise tests by focusing on the behavior of the system under test rather than its implementation details.</li>
+<li>Makito offers return family methods for specifying return values and multiple invocation support for handling different interactions with a method.</li>
+<li>The speaker mentioned that Makito can be integrated with Spring Boot, providing annotation-based mocking and auto-wiring capabilities.</li>
+<li>Makito's ability to change default responses for specific methods helps in writing better tests by avoiding pointer exceptions and unnecessary code.</li>
+<li>The speaker emphasized the importance of strict mocking over lenient options and provided guidelines on when to use Makito, such as avoiding marking value objects and using it with classes that are difficult to test.</li>
+</ol>
+<h2 id="integration-tests-are-needed-and-simple-by-piotr-przybyl">Integration tests are needed and simple by Piotr Przybyl</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SxJG4uZdvj8">https://www.youtube.com/watch?v=SxJG4uZdvj8</a></p>
+<ol>
+<li>Presented a detailed demonstration of using Test Container in Java, emphasizing its integration with various technologies and frameworks.</li>
+<li>Discussed the importance of proper integration testing and efficient use of resources like containers for performance optimization.</li>
+<li>Showcased a practical example of building a gas detector system using Test Container with Docker and Java.</li>
+<li>Encouraged feedback from attendees to improve future conferences and talks.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/clojure/clojure_conf_2023_merlinite.html">
+      
+      
+        <link rel="prev" href="../computer_scientists/grady_booch_mistral.html">
+      
+      
+        <link rel="next" href="../gdc/gdc_2023.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Conf 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-in-practice-by-rich-hickey" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conf 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="clojure_conf_2023_merlinite.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-in-practice-by-rich-hickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Design in Practice" by Rich Hickey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-symbolic-architectures-in-clojure-by-carin-meier" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Vector Symbolic Architectures In Clojure" by Carin Meier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-constant-time-lookup-over-unorganized-data-ghadi-shayban-jeb-beich" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Gaining Constant time Lookup over Unorganized Data" - Ghadi Shayban, Jeb Beich
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-of-xtdb-by-jon-pither" class="md-nav__link">
+    <span class="md-ellipsis">
+      "State of XTDB" by Jon Pither
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluree-an-immutable-verifiable-shareable-database-daniel-petranek" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Fluree: an Immutable, Verifiable, Shareable Database" - Daniel Petranek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-the-write-rhythm-for-your-software-composition-by-jordan-miller-and-heather-haylett" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to Find the Write Rhythm for your Software Composition" by Jordan Miller and Heather Haylett
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-clojure-by-chris-nuernberger" class="md-nav__link">
+    <span class="md-ellipsis">
+      "High Performance Clojure" by Chris Nuernberger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequential-clojure-architectures-by-janet-carr" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Consequential Clojure Architectures" by Janet Carr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unmanned-systems-flight-planning-with-clojure-by-heow-goodman" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Unmanned Systems Flight Planning with Clojure" by Heow Goodman
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecting-systems-through-engineering-principles-by-bruno-tavares" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Architecting systems through Engineering Principles" by Bruno Tavares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-datomic-at-scale-by-joao-palharini-and-filipe-andrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Operating Datomic at Scale" by João Palharini and Filipe Andrade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-in-the-fintech-ecosystem-by-philip-cooper" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure in the Fintech Ecosystem" by Philip Cooper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#four-years-of-datomic-powered-etl-in-anger-with-candel-by-ben-kamphaus-and-marshall-thompson" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Four years of Datomic powered ETL in anger with CANDEL" by Ben Kamphaus and Marshall Thompson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-build-a-clojure-dialect-by-jeaye-wilkerson" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to build a Clojure dialect" by Jeaye Wilkerson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-frontend-on-clojurescript-and-react-in-2023-by-yuri-khmelevsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Modern Frontend on ClojureScript and React in 2023" by Yuri Khmelevsky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joyful-cross-platform-development-with-clojuredart-by-christophe-grand-and-baptiste-dupuch" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Joyful Cross platform Development with ClojureDart" by Christophe Grand and Baptiste Dupuch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#growing-data-center-networking-mgmt-ui-using-clojurescript-reagent-and-re-frame-by-kirill-ishanov" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Growing Data Center networking mgmt UI using ClojureScript, Reagent and re-frame" by Kirill Ishanov
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-lsp-one-tool-to-lint-them-all-by-eric-dallo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure lsp – One tool to lint them all" by Eric Dallo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-toms-with-clojure-by-thomas-clark-and-daniel-slutsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Real @toms with Clojure!" by Thomas Clark and Daniel Slutsky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-protein-structures-with-clojure-by-blaine-mooers" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Comparing protein structures with Clojure" by Blaine Mooers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bi-and-reporting-for-datomic-by-arne-brasseur" class="md-nav__link">
+    <span class="md-ellipsis">
+      "BI and Reporting for Datomic" by Arne Brasseur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-for-data-science-in-the-real-world-by-kira-mclean" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure for Data Science in the Real World" by Kira McLean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-transfer-clojure-goodness-to-other-languages-by-elango-cheran-and-timothy-pratley" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to transfer Clojure goodness to other languages" by Elango Cheran and Timothy Pratley
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emmy-moldable-physics-and-lispy-microworlds-by-sam-ritchie" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Emmy: Moldable Physics and Lispy Microworlds" by Sam Ritchie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-machine-a-makers-journey-into-clojure-by-adam-vermeer" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Working With the Machine – A Maker’s Journey into Clojure" by Adam Vermeer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_fast_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usenix/usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-in-practice-by-rich-hickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Design in Practice" by Rich Hickey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-symbolic-architectures-in-clojure-by-carin-meier" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Vector Symbolic Architectures In Clojure" by Carin Meier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-constant-time-lookup-over-unorganized-data-ghadi-shayban-jeb-beich" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Gaining Constant time Lookup over Unorganized Data" - Ghadi Shayban, Jeb Beich
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-of-xtdb-by-jon-pither" class="md-nav__link">
+    <span class="md-ellipsis">
+      "State of XTDB" by Jon Pither
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluree-an-immutable-verifiable-shareable-database-daniel-petranek" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Fluree: an Immutable, Verifiable, Shareable Database" - Daniel Petranek
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-find-the-write-rhythm-for-your-software-composition-by-jordan-miller-and-heather-haylett" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to Find the Write Rhythm for your Software Composition" by Jordan Miller and Heather Haylett
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-performance-clojure-by-chris-nuernberger" class="md-nav__link">
+    <span class="md-ellipsis">
+      "High Performance Clojure" by Chris Nuernberger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequential-clojure-architectures-by-janet-carr" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Consequential Clojure Architectures" by Janet Carr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unmanned-systems-flight-planning-with-clojure-by-heow-goodman" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Unmanned Systems Flight Planning with Clojure" by Heow Goodman
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecting-systems-through-engineering-principles-by-bruno-tavares" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Architecting systems through Engineering Principles" by Bruno Tavares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-datomic-at-scale-by-joao-palharini-and-filipe-andrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Operating Datomic at Scale" by João Palharini and Filipe Andrade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-in-the-fintech-ecosystem-by-philip-cooper" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure in the Fintech Ecosystem" by Philip Cooper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#four-years-of-datomic-powered-etl-in-anger-with-candel-by-ben-kamphaus-and-marshall-thompson" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Four years of Datomic powered ETL in anger with CANDEL" by Ben Kamphaus and Marshall Thompson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-build-a-clojure-dialect-by-jeaye-wilkerson" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to build a Clojure dialect" by Jeaye Wilkerson
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-frontend-on-clojurescript-and-react-in-2023-by-yuri-khmelevsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Modern Frontend on ClojureScript and React in 2023" by Yuri Khmelevsky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joyful-cross-platform-development-with-clojuredart-by-christophe-grand-and-baptiste-dupuch" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Joyful Cross platform Development with ClojureDart" by Christophe Grand and Baptiste Dupuch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#growing-data-center-networking-mgmt-ui-using-clojurescript-reagent-and-re-frame-by-kirill-ishanov" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Growing Data Center networking mgmt UI using ClojureScript, Reagent and re-frame" by Kirill Ishanov
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-lsp-one-tool-to-lint-them-all-by-eric-dallo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure lsp – One tool to lint them all" by Eric Dallo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-toms-with-clojure-by-thomas-clark-and-daniel-slutsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Real @toms with Clojure!" by Thomas Clark and Daniel Slutsky
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-protein-structures-with-clojure-by-blaine-mooers" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Comparing protein structures with Clojure" by Blaine Mooers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bi-and-reporting-for-datomic-by-arne-brasseur" class="md-nav__link">
+    <span class="md-ellipsis">
+      "BI and Reporting for Datomic" by Arne Brasseur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-for-data-science-in-the-real-world-by-kira-mclean" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Clojure for Data Science in the Real World" by Kira McLean
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-transfer-clojure-goodness-to-other-languages-by-elango-cheran-and-timothy-pratley" class="md-nav__link">
+    <span class="md-ellipsis">
+      "How to transfer Clojure goodness to other languages" by Elango Cheran and Timothy Pratley
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emmy-moldable-physics-and-lispy-microworlds-by-sam-ritchie" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Emmy: Moldable Physics and Lispy Microworlds" by Sam Ritchie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-machine-a-makers-journey-into-clojure-by-adam-vermeer" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Working With the Machine – A Maker’s Journey into Clojure" by Adam Vermeer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Conf 2023</h1>
+
+<h2 id="design-in-practice-by-rich-hickey">"Design in Practice" by Rich Hickey</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=c5QF2HjHLSE">https://www.youtube.com/watch?v=c5QF2HjHLSE</a></p>
+<ul>
+<li>Presenter discusses design process, focusing on problem diagnosis and solution.</li>
+<li>He mentions using a decision matrix spreadsheet to evaluate different approaches and make a choice.</li>
+<li>The presenter emphasizes the importance of clear, concise problem statements and detailed descriptions.</li>
+<li>He also talks about avoiding subjective judgment and predefined sets when evaluating options.</li>
+<li>The presenter encourages introspection, questioning assumptions, and seeking alternative perspectives.</li>
+<li>He mentions the value of diagramming to understand relationships and visualize solutions.</li>
+<li>The presenter highlights the importance of growing a team, sharing knowledge, and giving constructive feedback.</li>
+<li>He also stresses the need for continuous learning, practice, and improvement in design.</li>
+</ul>
+<h2 id="vector-symbolic-architectures-in-clojure-by-carin-meier">"Vector Symbolic Architectures In Clojure" by Carin Meier</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=j7ygjfbBJD0">https://www.youtube.com/watch?v=j7ygjfbBJD0</a></p>
+<ul>
+<li>Carin Meier discusses Vector Symbolic Architecture (VSA) in Clojure, which is a way to approach AI that is noise tolerant and can ground real-world input.<ul>
+<li>VSAs use high-dimensional vectors with at least 10,000 dimensions, allowing for big patterns to be expressed in a small vector space.</li>
+<li>The vectors are orthogonal and nearly orthogonal, making them noise tolerant and able to solve the symbol grounding problem.</li>
+<li>VSAs were first implemented using binary spatter code (BSC), which is an algebraic way of combining and operating on high-dimensional vectors.</li>
+<li>VSAs can bundle, edit, clip, and multiply vectors element-wise, allowing for a variety of operations to be performed on the data.</li>
+<li>A dictionary is used to hold and access the hyperdimensional vectors, with cleanup memory being necessary to remove old or irrelevant data.</li>
+<li>An example of using VSAs is shown in the context of robotics, where hyperdimensional vectors are used to represent and query data structures.</li>
+<li>VSAs can be used as a map-like structure, allowing for multiple values to be searched within a fuzzy probabilistic zone.</li>
+<li>Compound values can be created using VSAs, allowing for complex relationships to be represented and queried.</li>
+<li>The challenge of exploring the human brain intersection with VSAs is presented, with the potential for hyperinventional vectors in Lisp operations.</li>
+<li>The concept of merging the intersection of two worlds (deep learning vs symbolic AI) using VSAs is also discussed.</li>
+</ul>
+</li>
+</ul>
+<p>The summary of Carin Meier's talk on Vector Symbolic Architecture (VSA) in Clojure highlights the potential for high-dimensional vectors to be used in various applications, such as data structuring and querying, and the possibility of exploring complex relationships using VSAs. The challenge of merging deep learning and symbolic AI is also presented as a potential area of exploration.</p>
+<h2 id="gaining-constant-time-lookup-over-unorganized-data-ghadi-shayban-jeb-beich">"Gaining Constant time Lookup over Unorganized Data" - Ghadi Shayban, Jeb Beich</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8XgY1j1etOI">https://www.youtube.com/watch?v=8XgY1j1etOI</a></p>
+<ul>
+<li>The speaker discusses the importance of leveraging organized data for efficient lookups, using a certificate revocation list (CRL) as an example.<ul>
+<li>Organizing data can be done through sorting or using a hash map.</li>
+<li>Hash maps provide constant time access, but they're not well-suited for updating data sets.</li>
+<li>DynamoDB is a database that provides deterministic low latency and can handle large data sets.</li>
+<li>The speaker suggests using a hybrid approach of organizing data once and then using a database like DynamoDB to handle lookups.</li>
+</ul>
+</li>
+<li>The speaker mentions the challenge of building solutions for specific use cases, which often require expensive custom solutions.<ul>
+<li>He proposes identifying the underlying categorical problem and finding a reusable solution that fits various molded use cases.</li>
+<li>An example is creating an experimentation platform for A/B testing with a unique key and sufficient non-membership test.</li>
+</ul>
+</li>
+<li>The speaker discusses using hash indexes to improve lookup performance, which can be implemented using a closure data structure like Maps or a hash organized tree.<ul>
+<li>Hash indexes are not suitable for updating data sets directly, but they can be used to create an index for disconnected data sets.</li>
+<li>The speaker uses the term "logarithmic time" to describe the performance of lookups in a data set with varying size encoding and data type.</li>
+</ul>
+</li>
+<li>The speaker suggests using a two-part index for data sets, consisting of the actual data set and the associated content.<ul>
+<li>This allows for efficient lookup and record retrieval using a primary method like API calls or SPI program calls.</li>
+<li>Custom behavior can be added to the index implementation to handle different data set instantiations.</li>
+</ul>
+</li>
+<li>The speaker provides examples of use cases requiring specific data set abstractions, such as CRL data sets and customer Shard maps.<ul>
+<li>He suggests using an abstraction layer with a SPI (Service Provider Interface) to provide flexibility in handling various data set types.</li>
+</ul>
+</li>
+<li>The speaker discusses the importance of understanding schema and encoding when working with data sets, using Avro as an example.<ul>
+<li>He suggests using a data set abstraction tool to handle different data set implementations and provide indexing capabilities.</li>
+<li>CSV libraries may not support random access or providing line numbers, making it challenging to implement indexing for CSV data sets.</li>
+</ul>
+</li>
+<li>The speaker emphasizes the importance of designing systems with specific use cases in mind and using appropriate tools and technologies.<ul>
+<li>He mentions the cost of two million dollars for an EC2 instance and the potential savings from using a more efficient design.</li>
+<li>The speaker suggests using EFS (Elastic File System) for storing large data sets, which provides sub-microsecond access times and scales well.</li>
+<li>He encourages designing systems to be stateless whenever possible and making the most of container scheduling and orchestration tools like Kubernetes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="state-of-xtdb-by-jon-pither">"State of XTDB" by Jon Pither</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=gQV-XrkJj2o">https://www.youtube.com/watch?v=gQV-XrkJj2o</a></p>
+<ul>
+<li>Jon Pither, CEO of Juxt Consultancy, gave a talk on the state of XTDB, a database designed for temporal data.<ul>
+<li>He mentioned that XTDB is written in closure and is known for its simplicity and power.</li>
+<li>The talk focused on three main areas: temporal functionality, columnar SQL, and operational improvements.</li>
+</ul>
+</li>
+<li>Temporal functionality is a key feature of XTDB, allowing users to query data based on timelines.<ul>
+<li>Bitemporality is discussed as a way to give control over time insertion.</li>
+<li>The talk also mentioned the challenges of keeping full timeline databases around and the tradeoffs between nonbiotemporal and bitemporal views.</li>
+</ul>
+</li>
+<li>Columnar SQL is another feature of XTDB, which allows for efficient querying of large datasets.<ul>
+<li>The talk discussed the advantages of columnar storage over traditional row storage.</li>
+<li>Apache Arrow is mentioned as a data format specification that can be used with XTDB.</li>
+</ul>
+</li>
+<li>Operational improvements have been made to XTDB, including checkpointing and operational hardening.<ul>
+<li>The talk also discussed the new Core 2 architecture, which has been replaced by a more scalable and flexible design.</li>
+<li>XTDB now supports first-class SQL functionality, with a focus on temporal capability and compatibility with the latest SQL temporal specification.</li>
+</ul>
+</li>
+</ul>
+<p>Jon Pither thanked the Closure Conch community for their feedback and help in developing XTDB. He also mentioned that an Early Access version is available and encouraged people to provide feedback to help harden the product.</p>
+<h2 id="fluree-an-immutable-verifiable-shareable-database-daniel-petranek">"Fluree: an Immutable, Verifiable, Shareable Database" - Daniel Petranek</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=PV4IUuqblig">https://www.youtube.com/watch?v=PV4IUuqblig</a></p>
+<ul>
+<li>The speaker, Daniel Petranek, discusses the challenges and benefits of sharing data across trust boundaries.<ul>
+<li>He proposes using a new data representation called Json LD to simplify schema and improve data interoperability.</li>
+<li>He also suggests using a graph database like Fluree to store and manage the data.</li>
+<li>The goal is to make data sharing more efficient, secure, and cost-effective.</li>
+</ul>
+</li>
+<li>The speaker mentions that he has been working on this project for about two months and plans to release it soon.</li>
+<li>He encourages people to check out the website, docs, and repo for more information.<ul>
+<li>He also thanks Daniel Higginbotham for helping with the project and giving feedback.</li>
+<li>The speaker has a booth at Closure Camp and is willing to help people learn about the technology in a fun and friendly way.</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-find-the-write-rhythm-for-your-software-composition-by-jordan-miller-and-heather-haylett">"How to Find the Write Rhythm for your Software Composition" by Jordan Miller and Heather Haylett</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=_beZ07o91rg">https://www.youtube.com/watch?v=_beZ07o91rg</a></p>
+<ul>
+<li>The speakers are Jordan Miller and Heather Haylett.</li>
+<li>They discuss the importance of finding the right rhythm for a software composition.</li>
+<li>A good rhythm can help create a shared understanding among team members.</li>
+<li>Documentation should provide context at different levels: outer message, inner message, and closure.</li>
+<li>Closure is an abstraction that helps humans understand code.</li>
+<li>The speakers advocate for using a consistent structure in documentation, like the diataxis model.</li>
+<li>They mention the importance of considering both conventional and bespoke organization in documentation.</li>
+<li>A good documentation strategy can help improve PR reviews and reduce friction within a team.</li>
+<li>The speakers suggest starting with a readme file and prioritizing code readability.</li>
+<li>They recommend creating a shared frame or context for the team to work towards.</li>
+<li>The speakers mention the role models of well-documented open source projects.</li>
+<li>They discuss the importance of organizing code and documentation for different types of projects.</li>
+<li>The speakers highlight the need to balance complexity with readability in documentation and code.</li>
+<li>They recommend using a consistent structure, like the diataxis model, to help readers understand the code base.</li>
+<li>A good documentation strategy can help teams work more efficiently and reduce friction.</li>
+</ul>
+<h2 id="high-performance-clojure-by-chris-nuernberger">"High Performance Clojure" by Chris Nuernberger</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=ralZ4j_ruVg">https://www.youtube.com/watch?v=ralZ4j_ruVg</a></p>
+<ul>
+<li>The speaker, Chris Nuernberger, discussed high performance Clojure and its optimization techniques.</li>
+<li>He mentioned the importance of understanding the CSV and JSON parsing in Clojure.</li>
+<li>The speaker found a significant performance issue with CSV libraries and implemented a faster method using a canonicalizing map.</li>
+<li>He also talked about the Eden reader, a high-performance Lisp reader, and its benefits.</li>
+<li>The speaker compared various data structures, such as hash tables and bitmap trees, in terms of performance.</li>
+<li>He discussed the importance of reducing computational complexity and optimizing algorithms.</li>
+<li>The speaker mentioned his experience with the Futhark programming language, which is designed for high-performance parallel computing.</li>
+<li>He also talked about the Monte Carlo simulation method and its use in probabilistic programming.</li>
+</ul>
+<h2 id="consequential-clojure-architectures-by-janet-carr">"Consequential Clojure Architectures" by Janet Carr</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=vf1GLAeT6V4">https://www.youtube.com/watch?v=vf1GLAeT6V4</a></p>
+<ul>
+<li>Speaker's name: Janet Carr</li>
+<li>Occupation: Independent closure consultant</li>
+<li>Experience: Professional experience in DevOps, SRE, and software engineering</li>
+<li>Blogs and tweets about architecture design and closure</li>
+<li>Talks about consequential closure architecture and negative impacts</li>
+<li>Antipatterns in closure-based system design</li>
+<li>Single namespace problem: information overload and reluctance to find functions</li>
+<li>Haphazard Handler locality problem: trying to solve locality business logic with APIs and input systems</li>
+<li>Wishful typing problem: trying to use statically typed programming languages for closure</li>
+<li>Relational mapping inversion control DB: using a protocol for record protocol can create rigidity</li>
+<li>Proposal for software architecture patterns: Model View Controller (MVC) and the Gang of Four design pattern</li>
+<li>MVC: decouples state, state change, and state usage using strategy and observer patterns</li>
+<li>Gang of Four design pattern: achieves separation of concern and allows for easy addition of new watch functions</li>
+<li>Porcelain adapter architecture (Hexagonal architecture): decouples input business logic and output, promoting good mocking dependency testing</li>
+<li>Driving adapter wraps external libraries or services, while driven adapter wraps application logic core APIs</li>
+<li>Ports adapter architecture: promotes reusable components called bricks and organizes them in a component base workspace</li>
+<li>Four domains: domain, technical, application logic, and API layer</li>
+<li>Strangler pattern: helps transition to microservices by decoupling dependencies and making software web scale</li>
+<li>Favor closure for many small code bases in microservices architecture</li>
+</ul>
+<h2 id="unmanned-systems-flight-planning-with-clojure-by-heow-goodman">"Unmanned Systems Flight Planning with Clojure" by Heow Goodman</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=5-IZeGphlhc">https://www.youtube.com/watch?v=5-IZeGphlhc</a></p>
+<ul>
+<li>Speaker: Hugh Goodman, full stack engineer at ATA</li>
+<li>Topic: Unmanned Systems Flight Planning with Clojure</li>
+<li>Goal: Create a software solution for managing and planning flights of unmanned systems</li>
+<li>Challenges:<ul>
+<li>Different types of hazards to consider (oncoming aircraft, train derailments, hazardous chemical spills)</li>
+<li>Various rules and regulations from different levels of government (federal, local, state)</li>
+<li>Integrating data from multiple sources (GIS systems, FAA UAS system, foreign systems)</li>
+</ul>
+</li>
+<li>Solution: Airdex Authority, a software platform designed to collect, disseminate, and administer information for public safety and emergency services</li>
+<li>Features:<ul>
+<li>Real-time advisories based on various data sources</li>
+<li>Collision detection and prevention</li>
+<li>Restricted and unrestricted information access</li>
+<li>User interface for creating and managing advisories</li>
+</ul>
+</li>
+<li>Technology Stack:<ul>
+<li>Clojure (for its robustness, simplicity, and consistency)</li>
+<li>Reagent and Reframe (for building single-page apps and reusing code)</li>
+<li>Polyleth (for composable blocks of code)</li>
+<li>Babashka (for development patterns and build automation)</li>
+</ul>
+</li>
+<li>Benefits:<ul>
+<li>Allows for quick, simple, and consistent code structure</li>
+<li>Enables code reuse across different projects and services</li>
+<li>Simplifies error handling and debugging</li>
+<li>Accommodates nontrivial problems and complex data structures</li>
+</ul>
+</li>
+<li>Use Cases:<ul>
+<li>Public safety and emergency services</li>
+<li>Aircraft manufacturers and FAA</li>
+<li>NASA</li>
+</ul>
+</li>
+</ul>
+<h2 id="architecting-systems-through-engineering-principles-by-bruno-tavares">"Architecting systems through Engineering Principles" by Bruno Tavares</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WMlPT3ELP9s">https://www.youtube.com/watch?v=WMlPT3ELP9s</a></p>
+<ul>
+<li>Bruno Tavares presented "Architecting systems through Engineering Principles" at newbank.</li>
+<li>He discussed the Cold Organization Principle and its application in code organization and architecture.</li>
+<li>The presentation aimed to help people understand and write idiomatic code that fits within a system's norms and expectations.</li>
+<li>Tavares emphasized the importance of clear definitions, feedback, and nurturing a growth mindset in a microservice architecture.</li>
+<li>He also shared lessons learned from building systems at newbank, such as the value of consistent syntax, design patterns, and architectural principles.</li>
+<li>The presentation included examples of data set expectations, backfilling information, and the importance of a consistent approach to change management.</li>
+</ul>
+<h2 id="operating-datomic-at-scale-by-joao-palharini-and-filipe-andrade">"Operating Datomic at Scale" by João Palharini and Filipe Andrade</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=bvEsnJiCs7E">https://www.youtube.com/watch?v=bvEsnJiCs7E</a></p>
+<ul>
+<li>João Palharini and Filipe Andrade presented on operating Datomic at scale.</li>
+<li>They work for the atomic team, which moved to Datomic eight months ago.</li>
+<li>The presentation focused on tuning techniques and troubleshooting performance issues.</li>
+<li>A key problem they addressed was optimizing query execution for large databases with many customers.</li>
+<li>They discussed how to interpret and adjust queries, focusing on ordering clauses and removing unnecessary memory consumption and computation.</li>
+<li>They also covered caching strategies, transaction management, and using various APIs to optimize performance.</li>
+<li>The presentation included examples of using iostats, caching setup, and documentation to measure and improve performance.</li>
+<li>The speakers shared their experience with indexing and storage, emphasizing the importance of indexing performance and memory usage.</li>
+<li>They provided tips for tuning, such as adjusting GC settings and increasing CPUs to handle more parallel work.</li>
+<li>The presentation concluded with a summary of how Datomic can improve transaction throughput and lower latency.</li>
+</ul>
+<h2 id="clojure-in-the-fintech-ecosystem-by-philip-cooper">"Clojure in the Fintech Ecosystem" by Philip Cooper</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=QCxcLsxQeYs">https://www.youtube.com/watch?v=QCxcLsxQeYs</a></p>
+<ul>
+<li>Presenter's past experience:</li>
+<li>Worked with Python, numpy, and panda for data analysis in finance.</li>
+<li>Used Fortran 4 in college, but didn't like it.</li>
+<li>Began investment management career in the early 2000s.</li>
+<li>Started using Python again in 2019 due to APL-like features and ecosystem.</li>
+<li>Has been involved with a large bank project since then.</li>
+<li>Presenter's interest in Scala, Clojure, and other languages.</li>
+<li>Presenter's experience with financial data analysis:</li>
+<li>Works with stock, bond, and loan data.</li>
+<li>Deals with dirty, noisy, and obfuscated data.</li>
+<li>Uses XML libraries for data storage and retrieval.</li>
+<li>Presenter's use of Datomic for scalability and reproducibility in financial analysis:</li>
+<li>Impressed by Datomic's ability to handle 80 million customer credit card records.</li>
+<li>Prefers Datomic's self-healing and logging features over traditional databases.</li>
+<li>Presenter's experience with web frameworks:</li>
+<li>Familiar with Ruby on Rails, Django, and ClojureScript.</li>
+<li>Preferring Ring Interceptor pattern for routing and database integration.</li>
+<li>Presenter's use of npm packages and React for frontend development:</li>
+<li>Impressed by the quality and features of Blueprintjs AG Grid.</li>
+<li>Uses Helix for frontend development, which provides a "last mile" solution.</li>
+<li>Presenter's recommendation for data science tools:</li>
+<li>Encourages using Python, numpy, and panda for data analysis in finance.</li>
+<li>Prefers Clojure for its immutable data structures and community support.</li>
+<li>Presenter's use of GitHub and other resources:</li>
+<li>Follows Chris Nuremberg's talk on Lib Python Clj and Chris Read Buffer.</li>
+<li>Uses Specter, Exoscale, and Plumatic Graph for data pipeline processing.</li>
+<li>Presenter's use of tooling and infrastructure:</li>
+<li>Finds tech radar useful for finding the best practices and libraries.</li>
+<li>Uses Jupyter Notebook and PyCharm for Python development.</li>
+</ul>
+<h2 id="four-years-of-datomic-powered-etl-in-anger-with-candel-by-ben-kamphaus-and-marshall-thompson">"Four years of Datomic powered ETL in anger with CANDEL" by Ben Kamphaus and Marshall Thompson</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=2nIfNxZZhiQ">https://www.youtube.com/watch?v=2nIfNxZZhiQ</a></p>
+<ul>
+<li>Four years of Datomic powered ETL in anger with CANDEL</li>
+<li>Benefits of using a unified data platform for managing and analyzing data from different sources</li>
+<li>Overview of the Candle ecosystem, including raw sugar, a tool for handling raw data files, and Mantis, a tool for multi-dimensional analysis</li>
+<li>Importance of having a schema that can handle nontrivial relationships and evolving data models</li>
+<li>Challenges in building a system to manage and analyze large and complex datasets</li>
+<li>Use of R tools and visual query builder interface to help scientists build queries</li>
+<li>Need for unified set of processes, validation, and data ingestion analysis</li>
+<li>Example of using Candle in a multiomic profiling study in a clinical trial</li>
+<li>Importance of data harmonization and cleaning in data science workflows</li>
+<li>Use of atomic databases and version control to manage schema changes and handle conflicts</li>
+</ul>
+<h2 id="how-to-build-a-clojure-dialect-by-jeaye-wilkerson">"How to build a Clojure dialect" by Jeaye Wilkerson</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Yw4IAY4Nx_o">https://www.youtube.com/watch?v=Yw4IAY4Nx_o</a></p>
+<ul>
+<li>The speaker, Jay Wilkerson, is discussing the process of building a Clojure dialect called Jank.</li>
+<li>He started working on Jank in 2015 and has been refining it since then.</li>
+<li>Jank is built on top of C++, C+++, Objective-C, Rust, and LLVM/libc++.</li>
+<li>The speaker has considered using a tokenizer but decided to write his own regex-based lexer instead.</li>
+<li>He is struggling with semantic analysis and generating code from the parse tree.</li>
+<li>Jank's compiler integrates its runtime, which generates code as needed.</li>
+<li>The speaker has been inspired by Rich Hickey's work on Clojure and is trying to implement a macro system similar to Clojure's.</li>
+<li>He is also considering adding support for socket programming and interop with Java and JavaScript.</li>
+<li>The speaker acknowledges the complexity of implementing a closure dialect and the need to figure out how to handle metadata and interop.</li>
+<li>He plans to implement an object model and class hierarchy in Jank, which will be based on existing Java classes.</li>
+<li>The speaker is also considering adding support for packed arguments and variadic calls.</li>
+<li>He is looking for ways to make the closure core more compact and easier to use.</li>
+<li>The speaker hopes that Jank can be used as a library in C++ applications and as an embedded language in existing applications.</li>
+<li>He is considering adding support for software transactional memory, linting, editor support, and other features.</li>
+<li>The speaker acknowledges the challenges of building a closure dialect and the need to get community feedback and support.</li>
+</ul>
+<p>(Please note that this summary is based on the provided transcript and may not capture all the nuances or subtleties of the original talk.)</p>
+<h2 id="modern-frontend-on-clojurescript-and-react-in-2023-by-yuri-khmelevsky">"Modern Frontend on ClojureScript and React in 2023" by Yuri Khmelevsky</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=lvsAqVIeRAQ">https://www.youtube.com/watch?v=lvsAqVIeRAQ</a></p>
+<ul>
+<li>Presenter is discussing building a UI kit and frontend application using ClojureScript and React.<ul>
+<li>Used design system UI kit for consistency and efficiency.</li>
+<li>Utilized Figma API to fetch color, typography, and shadow data.</li>
+<li>Used SVG for icons, automating the process with a script.</li>
+<li>Implemented a macro to create react components more easily.</li>
+<li>Organized components into categories and subcategories, with documentation and themes.</li>
+</ul>
+</li>
+<li>Presenter also discussed building a backend component:<ul>
+<li>Used Helix library for its close React API.</li>
+<li>Utilized Emotion library for CSS-in-JS styling.</li>
+<li>Implemented reagent library for building react components.</li>
+<li>Used preagent to optimize the build process.</li>
+<li>Discussed using SWR hook and react suspense for data fetching.</li>
+</ul>
+</li>
+<li>Presenter highlighted the importance of fast refresh, developer experience, and efficient rendering.</li>
+<li>Presented an example of a UI kit built with ClojureScript and React:<ul>
+<li>600 components in the UI kit.</li>
+<li>130 components built for the application.</li>
+<li>Fast refresh and performance are good.</li>
+<li>Router and state management are implemented using react context.</li>
+</ul>
+</li>
+<li>Presented an example of building a solid design system:<ul>
+<li>Used reframe to organize global state.</li>
+<li>Implemented atomic principles for react context.</li>
+<li>Discussed migrating from react context to atomics.</li>
+<li>Highlighted benefits of using Shadowcljs, such as code sharing and lazy loading.</li>
+</ul>
+</li>
+<li>Presenter concluded by praising ClojureScript's frontend capabilities:<ul>
+<li>Shareable code between frontend and backend.</li>
+<li>Incredible UI performance.</li>
+<li>Solid developer experience and excellent performance.</li>
+</ul>
+</li>
+</ul>
+<h2 id="joyful-cross-platform-development-with-clojuredart-by-christophe-grand-and-baptiste-dupuch">"Joyful Cross platform Development with ClojureDart" by Christophe Grand and Baptiste Dupuch</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=wbUBb09bUnk">https://www.youtube.com/watch?v=wbUBb09bUnk</a></p>
+<ul>
+<li>The speakers introduce themselves and the subject of their talk, "Joyful Cross Platform Development with ClojureDart".</li>
+<li>They mention that they have been working on ClojureDart for over two years.</li>
+<li>The speakers show a slideshow containing code examples in both Clojure and Dart.</li>
+<li>They discuss the benefits of using ClojureDart, including its simplicity and ease of use.</li>
+<li>The speakers demonstrate how to create a basic UI application using Flutter and ClojureDart.</li>
+<li>They show how to create a todo list application with checkboxes and navigation features.</li>
+<li>The speakers discuss the importance of listening for changes in application state and updating the UI accordingly.</li>
+<li>They mention some challenges they encountered while developing with ClojureDart, such as dealing with global state and creating custom widgets.</li>
+<li>The speakers show how to use Flutter's build system to create a cross-platform application that runs on iOS, Android, and the web.</li>
+<li>They discuss the importance of testing and debugging when developing with ClojureDart.</li>
+<li>The speakers mention some resources for learning more about ClojureDart and Flutter.</li>
+</ul>
+<h2 id="growing-data-center-networking-mgmt-ui-using-clojurescript-reagent-and-re-frame-by-kirill-ishanov">"Growing Data Center networking mgmt UI using ClojureScript, Reagent and re-frame" by Kirill Ishanov</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pTyYH5t1fFo">https://www.youtube.com/watch?v=pTyYH5t1fFo</a></p>
+<ul>
+<li>The presentation discusses a large application built in the networking domain, with a UI that fetches data from multiple sources and displays it in a single page.</li>
+<li>The application has around 800 API endpoints and almost 400 unique UI screens.</li>
+<li>Data visualization is an important aspect of the application, which led to the creation of Reagent and Reframe frameworks.</li>
+<li>The presentation also touches on the challenges faced during development, such as scalability, data modeling, and integration with existing systems.</li>
+<li>The team had to learn best practices from the industry and adopt a more structured approach over time.</li>
+<li>The application has been integrated with Juniper Networks' internal systems since its acquisition, which brought new challenges related to customer support and documentation.</li>
+<li>The presentation ends with lessons learned during the journey of building and scaling the application.</li>
+</ul>
+<h2 id="clojure-lsp-one-tool-to-lint-them-all-by-eric-dallo">"Clojure lsp – One tool to lint them all" by Eric Dallo</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=nxcNrjKL2WA">https://www.youtube.com/watch?v=nxcNrjKL2WA</a></p>
+<ul>
+<li>Speaker introduced himself and his background in software engineering.</li>
+<li>He discussed the challenges of managing linkers across different projects in a large company.</li>
+<li>The speaker highlighted the importance of standardization in configuration management.</li>
+<li>He introduced LSP (Language Server Protocol) as a solution to these problems.</li>
+<li>LSP is an open-source project that provides a standard for language servers to follow.</li>
+<li>The speaker encouraged contributing to and sponsoring LSP development.</li>
+<li>He also mentioned the use of Clojure LSP in the company's projects.</li>
+<li>The speaker discussed the importance of code style, class path, and analysis in project management.</li>
+<li>He introduced the concept of a dump feature for analyzing project dependencies.</li>
+<li>The speaker mentioned the use of external libraries and tools like babashka and pod.</li>
+<li>He emphasized the importance of exportable configuration features for easier management.</li>
+<li>The speaker provided examples of macro usage and the need for proper configuration.</li>
+<li>He discussed the use of Code style and code lanes to improve code quality.</li>
+<li>The speaker mentioned the importance of handling specific problems in large code bases.</li>
+<li>He introduced the concept of custom linkers and their impact on configuration management.</li>
+</ul>
+<h2 id="real-toms-with-clojure-by-thomas-clark-and-daniel-slutsky">"Real @toms with Clojure!" by Thomas Clark and Daniel Slutsky</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=SE5Ge4QP4oY">https://www.youtube.com/watch?v=SE5Ge4QP4oY</a></p>
+<ul>
+<li>Thomas Clark and Daniel Slutsky presented on using Clojure for scientific programming.</li>
+<li>They discussed the benefits of simplicity, abstraction, and a functional approach in Clojure.</li>
+<li>The talk focused on a project involving laser light and atomic physics.</li>
+<li>They demonstrated how to use Clojure for data analysis, visualization, and experimentation.</li>
+<li>Thomas Clark mentioned the EIT (Electromagnetically Induced Transparency) effect and sculpting shadows with magnetic fields.</li>
+<li>Daniel Slutsky discussed workflow, tooling, and the importance of a namespace notebook in scientific programming.</li>
+<li>The speakers emphasized the value of collaboration, community building, and peer review in scientific research.</li>
+</ul>
+<h2 id="comparing-protein-structures-with-clojure-by-blaine-mooers">"Comparing protein structures with Clojure" by Blaine Mooers</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=vt594qgAc1I">https://www.youtube.com/watch?v=vt594qgAc1I</a></p>
+<ul>
+<li>Speaker introduces the topic of comparing protein structures using Clojure and the Cyclose community's study group.<ul>
+<li>They discuss their experience working on a textbook Bayesian data analysis process.</li>
+<li>A protein bioinformatics problem is presented as an example, focusing on overlaying protein structure comparison.</li>
+</ul>
+</li>
+<li>The speaker provides a basic introduction to protein structure, using simple cartoons and ribbon diagrams.</li>
+<li>Two methods for comparing protein structures are presented: a principal method and a test hypothesis protein structure comparison.<ul>
+<li>An example of a predicted protein structure from artificial intelligence (Alpha fold) is compared to an experimental structure.</li>
+</ul>
+</li>
+<li>The speaker introduces probabilistic programming, using Python libraries like Dash, clj, and pi MC, to model protein structures.</li>
+<li>The speaker demonstrates the use of enclosure and lib python to create a protein polymer model.<ul>
+<li>Amino acids are represented by different colors: blue for polar and green for nonpolar.</li>
+</ul>
+</li>
+<li>The speaker explains how the shape of a protein determines its function, using an example of a protein involved in cell growth and tumor development.</li>
+<li>The workflow for comparing protein structures is presented, including crystal preparation, data collection, and electron density map generation.<ul>
+<li>Crystal properties are discussed, such as size, shape, and the importance of rapid cooling.</li>
+</ul>
+</li>
+<li>The speaker highlights the use of national facilities for high-intensity X-ray diffraction experiments.</li>
+<li>The importance of the Protein Data Bank is emphasized, with over 200,000 protein structures available.</li>
+<li>The speaker discusses the development of cryo methods and their impact on experimental accuracy.<ul>
+<li>They mention a shift from in-house to national facilities for data collection.</li>
+</ul>
+</li>
+<li>The speaker introduces C Alpha Trace, a molecular representation used for comparing overlay structure.</li>
+<li>The speaker uses conventional and probabilistic programming approaches to superimpose two protein structures.<ul>
+<li>They discuss the assumption of equal variance position along the polypeptide chain in the conventional approach.</li>
+</ul>
+</li>
+<li>The speaker introduces the Theseus program and the Theseus PP method, which use a probabilistic programming approach.<ul>
+<li>They demonstrate the improvement of the Theseus PP method compared to the conventional approach.</li>
+</ul>
+</li>
+<li>The speaker discusses the application of the probabilistic programming approach using NMR data and nuclear magnetic resonance techniques.</li>
+<li>The speaker presents an example of superimposing two protein structures, using the Theseus PP method and a NMR technique.<ul>
+<li>They highlight the importance of long-distance information and the challenge of constraining overall shape.</li>
+</ul>
+</li>
+<li>The speaker discusses the use of Hamiltonian Monte Carlo (HMC) and the Metropolis Hastings algorithm in probabilistic programming.<ul>
+<li>They compare the performance of these methods using probability distribution plots.</li>
+</ul>
+</li>
+<li>The speaker concludes by thanking the Cyclose community for their collaboration and discussing future directions, including the potential use of deep learning approaches.</li>
+</ul>
+<h2 id="bi-and-reporting-for-datomic-by-arne-brasseur">"BI and Reporting for Datomic" by Arne Brasseur</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=w9RO8Qb8m8g">https://www.youtube.com/watch?v=w9RO8Qb8m8g</a></p>
+<ul>
+<li>The speaker introduced the topic of Atomic, a project they've worked on.<ul>
+<li>Atomic is a cloud-based accounting software built using closure script and database.</li>
+<li>It aims to provide business intelligence features, allowing users to get insights from data and make informed decisions.</li>
+<li>The speaker mentioned two use cases for Atomic: prebuilt dashboards and self-service querying.</li>
+</ul>
+</li>
+<li>The speaker discussed the challenges of integrating Atomic with various databases, including PostgreSQL, Google BigQuery, and Google Sheets.</li>
+<li>They introduced embedkit, an open-source project that simplifies integration with Metabase.<ul>
+<li>It provides a single Eden data structure for storing user logins, query results, and dashboards.</li>
+<li>Embedkit can save time by reusing existing dashboards and reducing the need for manual administration.</li>
+</ul>
+</li>
+<li>The speaker mentioned a potential use case for embedkit in SaaS products that want to offer nicer visualizations.</li>
+<li>They introduced Metabase, an open-source business intelligence tool built using closure script.<ul>
+<li>It supports various data sources and allows users to create prebuilt dashboards or perform self-service querying.</li>
+<li>The speaker mentioned the importance of having a robot named Melvin for automating user management tasks.</li>
+</ul>
+</li>
+<li>The speaker discussed the challenges of connecting Atomic to Metabase using the driver architecture in Metabase.<ul>
+<li>They created a custom driver for Atomic using multimethods and resolved data source configuration issues.</li>
+</ul>
+</li>
+<li>The speaker mentioned the performance benefits of using Atomic's native query format compared to SQL.</li>
+<li>They discussed the potential for Atomic Analytics to use Presto as a SQL engine, which has its own driver and metadata file-based membership attribute.<ul>
+<li>Presto is an open-source distributed SQL database that can handle large datasets.</li>
+<li>The speaker mentioned that Atomic Analytics was based on Presto until it was renamed to Trino in 2019.</li>
+<li>They noted that there has been less activity around Atomic Analytics and Trino recently, and they are unsure of future developments.</li>
+</ul>
+</li>
+<li>The speaker discussed the challenges of optimizing performance in Atomic Analytics when dealing with wide tables and complex queries.<ul>
+<li>They suggested a simple idea for improving performance by using Atomic's transaction log to process schema changes and data changes.</li>
+<li>This approach would require postgres to create a transaction table and an idents table, among other modifications.</li>
+</ul>
+</li>
+<li>The speaker mentioned that Atomic Analytics currently uses PostgreSQL as its database, which is not typically used for analytics workloads.<ul>
+<li>They suggested using column store databases like Snowflake for better performance in analytics workloads.</li>
+<li>The speaker noted the differences between OLTP and OLAP workloads and the benefits of using different databases for each type of workload.</li>
+<li>They mentioned that PostgreSQL is a versatile database that can handle various use cases adequately.</li>
+</ul>
+</li>
+<li>The speaker concluded by mentioning the importance of understanding SQL dialects, data types, and equivalents when working with different databases.</li>
+</ul>
+<h2 id="clojure-for-data-science-in-the-real-world-by-kira-mclean">"Clojure for Data Science in the Real World" by Kira McLean</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=MguatDl5u2Q">https://www.youtube.com/watch?v=MguatDl5u2Q</a></p>
+<ul>
+<li>The presentation focuses on Clojure for Data Science, with a specific emphasis on its use in the real world.</li>
+<li>Kira McLean, a software engineer at TPX Impact, is the presenter.</li>
+<li>Clojure is a functional programming language that is well-suited for data science tasks.</li>
+<li>The presentation covers various aspects of using Clojure for data science, including its ease of use, interoperability with other languages, and its suitability for reproducible analytical pipelines.</li>
+<li>The presenter highlights the stability and reproducibility benefits of using a functional programming language like Clojure in data science.</li>
+<li>The presentation also discusses the challenges of data science, such as the need for stable and reproducible code, and how Clojure can help mitigate these issues.</li>
+<li>The presenter emphasizes the importance of learnability, discoverability, and polish in the Clojure ecosystem.</li>
+<li>There is a push to integrate Clojure more closely with popular data science tools and workflows.</li>
+<li>The presentation also discusses the potential for tighter integration between Clojure libraries and existing data science ecosystems.</li>
+<li>The presenter highlights the potential of Clojure to make working with data feel familiar and ergonomic for data scientists.</li>
+<li>The presentation concludes by discussing various ways to get involved in the Clojure community, such as contributing to open source projects, attending meetups, and participating in study groups.</li>
+</ul>
+<h2 id="how-to-transfer-clojure-goodness-to-other-languages-by-elango-cheran-and-timothy-pratley">"How to transfer Clojure goodness to other languages" by Elango Cheran and Timothy Pratley</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=terdLf0ribg">https://www.youtube.com/watch?v=terdLf0ribg</a></p>
+<ul>
+<li>Elango Cheran and Timothy Pratley discussed their project, Kalei, which transpiles code from various languages to Rust or Java.</li>
+<li>They mentioned the challenges of handling different syntax, semantics, and mutation between languages.</li>
+<li>The goal of Kalei is to provide a simple, efficient, and flexible solution for transpiling code while preserving its intended meaning.</li>
+<li>They also talked about the importance of immutability, persistent data structures, and type inference in their design.</li>
+<li>Elango shared his experience working with Scala and building a time series database, which led him to adopt Rust and create Kalei.</li>
+</ul>
+<h2 id="emmy-moldable-physics-and-lispy-microworlds-by-sam-ritchie">"Emmy: Moldable Physics and Lispy Microworlds" by Sam Ritchie</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=B9kqD8vBuwU">https://www.youtube.com/watch?v=B9kqD8vBuwU</a></p>
+<ul>
+<li>The speaker has written a textbook and created a project called Emmy, which is a library for running physics simulations.</li>
+<li>The library uses a build system to integrate equations into the codebase and provides data structure libraries and a notebook environment for working with physics simulations.</li>
+<li>The library was inspired by Sussman's scheme library, which contains a full general relativity implementation written in scheme.</li>
+<li>The speaker has created a web browser-based environment for developing and testing Emmy using Clerk, a closure library that watches the namespace for changes.</li>
+<li>The library includes features such as a D operator for taking derivatives and a Taylor series expansion function.</li>
+<li>The speaker is working on improving the performance of the library and making it more accessible to non-experts.</li>
+</ul>
+<h2 id="working-with-the-machine-a-makers-journey-into-clojure-by-adam-vermeer">"Working With the Machine – A Maker’s Journey into Clojure" by Adam Vermeer</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=R_CSO8v1ELs">https://www.youtube.com/watch?v=R_CSO8v1ELs</a></p>
+<ul>
+<li>Adam Vermeer talks about his journey from a maker to a programmer.</li>
+<li>He started as a mechanical engineer and learned CAD software like SolidWorks, AutoCAD, and Inventor.</li>
+<li>He discovered the concept of programmatic CAD and found it compelling.</li>
+<li>He used Python and open-source libraries to create a 3D model of a chess set and a squat rack.</li>
+<li>He also helped his brother make a chess set using laser cut parts.</li>
+<li>During the pandemic, he started working on a portable hydroponic system prototype.</li>
+<li>He learned about functional programming and open-sourced his code.</li>
+<li>He started using Emacs and Htmlx for web development and created a solenoid web app prototype.</li>
+<li>He is currently working on a quilt design tool and a generative art tool using SVG.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

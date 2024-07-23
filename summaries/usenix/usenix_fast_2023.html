@@ -1,0 +1,4651 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xsakix.github.io/knowledge_box/docs/summaries/usenix/usenix_fast_2023.html">
+      
+      
+        <link rel="prev" href="usenix_atc_2023_v2.html">
+      
+      
+        <link rel="next" href="usenix_sre_americas2023.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Fast 2023 - Architect's Insight Hub: Elevate Your Learning Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fast-23-building-and-operating-a-pretty-big-storage-system-my-adventures-in-amazon-s3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-header__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architect's Insight Hub: Elevate Your Learning Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fast 2023
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Architect&#39;s Insight Hub: Elevate Your Learning Experience" class="md-nav__button md-logo" aria-label="Architect's Insight Hub: Elevate Your Learning Experience" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Architect's Insight Hub: Elevate Your Learning Experience
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Politics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Politics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    davos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            davos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/davos/davos_2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yale
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Yale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/modern_social_theory_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Modern Social Theory with pwd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/snyder_ukraine_summary_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timothy Snyder - The Making of Modern Ukraine - short
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/yale/power_and_politics_llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power of Politics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    duke
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            duke
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/duke/hayek_lecture_series.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hayek
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dw
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            dw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/dw/to_the_point.long.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To the point-long
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wiena
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            wiena
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2022_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../politics/wiena/2023_llama3.book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wienna Humanities Festival 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical summaries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical summaries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    a16z
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            a16z
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_ai.llama3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_company_building.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company building
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a16z/a16z_podcast.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    acm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            acm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acm/popl_2024_dolphin_mistral_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POPL 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    devoxx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            devoxx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devoxx/devoxx_cern_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cern 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer scientists
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            computer scientists
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/allan_kay_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allan Kay
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/donald_knuth_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Donald Knuth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer_scientists/grady_booch_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    clojure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            clojure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clojure/clojure_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gdc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            gdc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdc/gdc_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdc 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/deep_mind_learning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deep mind learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_io_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    io 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google/google_talks_tech.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tech talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    goto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            goto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_dt_ui_ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design thinking/ui/ux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_eda_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    event driven arch 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_FE_v4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_programming_lang.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    programming languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_sw_arch_list.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    software architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goto/goto_yow_2020.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    yow! 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    haskell
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            haskell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/haskell_conf_2023_merlinite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    jakartaee
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            jakartaee
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jakartaee/jakartaone_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jakartaone 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    java
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/jvm_language_summit_2023_mistral_fp16.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jvm language summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/level_up_java_dev_day_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    level up java dev day
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/road_to_21_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    road to 21
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript/Typescript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript/Typescript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/ng_conf_2023_neuralchat.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ng conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/nordic_js_2022.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nordic.js 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_dev/reliable_web_summit_2021.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reliable web summit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    kubeconf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            kubeconf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/kubeconf_utrecht_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utrech 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2023_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubeconf/k8s_community_days_uk_2022_mistral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community days UK 2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lex Fridman
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Lex Fridman
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lex%20fridman/lex_friedman_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    podcast
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux foundation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            Linux foundation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/ai.dev.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/oss.eu.2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSS EU 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_foundation/wasmcon_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WASM conf 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux plumbers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Linux plumbers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_plumbers/linux_plumbers_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI dev 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ndc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            ndc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_AI_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/ndc_london_2024_starling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    london 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ndc/archticture_clouds.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture and clouds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycon
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Pycon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pycon/pycon_us_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pycon us 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Red Hat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            Red Hat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redhat/dev_nation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dev nation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stanford
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            Stanford
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanford_seminar_enterpreneurial_though_leader.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterpreneurial thought leader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stanford/stanfort_technology.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strangeloop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            Strangeloop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../strangeloop/strange_loop_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    year 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thoughworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_22">
+            <span class="md-nav__icon md-icon"></span>
+            Thoughworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoughtworks/thoughtworks_xconf_eu_2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    xconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usenix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_23">
+            <span class="md-nav__icon md-icon"></span>
+            Usenix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usenix_atc_2023_v2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATC 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="usenix_fast_2023.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fast 2023
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-building-and-operating-a-pretty-big-storage-system-my-adventures-in-amazon-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-practical-design-considerations-for-wide-locally-recoverable-codes-lrcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Practical Design Considerations for Wide Locally Recoverable Codes (LRCs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-pararc-embracing-sub-packetization-for-repair-parallelization-in-msr-coded-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ParaRC: Embracing Sub-Packetization for Repair Parallelization in MSR-Coded Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-inftydedup-scalable-and-cost-effective-cloud-tiering-with-deduplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - InftyDedup: Scalable and Cost-Effective Cloud Tiering with Deduplication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-perseus-a-fail-slow-detection-framework-for-cloud-storage-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Perseus: A Fail-Slow Detection Framework for Cloud Storage Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-adoc-automatically-harmonizing-dataflow-between-components-in-log-structured-key-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ADOC: Automatically Harmonizing Dataflow Between Components in Log-Structured Key-Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fusee-a-fully-memory-disaggregated-key-value-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - FUSEE: A Fully Memory-Disaggregated Key-Value Store
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-rolex-a-scalable-rdma-oriented-learned-key-value-store-for-disaggregated-memory-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ROLEX: A Scalable RDMA-oriented Learned Key-Value Store for Disaggregated Memory Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-gl-cache-group-level-learning-for-efficient-and-high-performance-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - GL-Cache: Group-level learning for efficient and high-performance caching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-shade-enable-fundamental-cacheability-for-distributed-deep-learning-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - SHADE: Enable Fundamental Cacheability for Distributed Deep Learning Training
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-intelligent-resource-scheduling-for-co-located-latency-critical-services-a-multi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Intelligent Resource Scheduling for Co-located Latency-critical Services: A Multi-Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-cjfs-concurrent-journaling-for-better-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - CJFS: Concurrent Journaling for Better Scalability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-unsafe-at-any-copy-name-collisions-from-mixing-case-sensitivities" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Unsafe at Any Copy: Name Collisions from Mixing Case Sensitivities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-confd-analyzing-configuration-dependencies-of-file-systems-for-fun-and-profit" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ConfD: Analyzing Configuration Dependencies of File Systems for Fun and Profit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAST '23 - ConfD: Analyzing Configuration Dependencies of File Systems for Fun and Profit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presentation-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentation Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-hadafs-a-file-system-bridging-the-local-and-shared-burst-buffer-for-exascale" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - HadaFS: A File System Bridging the Local and Shared Burst Buffer for Exascale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fisc-a-large-scale-cloud-native-oriented-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Fisc: A Large-scale Cloud-native-oriented File System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-tenet-memory-safe-and-fault-tolerant-persistent-transactional-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - TENET: Memory Safe and Fault Tolerant Persistent Transactional Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-madfs-per-file-virtualization-for-userspace-persistent-memory-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - MadFS: Per-File Virtualization for Userspace Persistent Memory Filesystems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-on-stacking-a-persistent-memory-file-system-on-legacy-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - On Stacking a Persistent Memory File System on Legacy File Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-citron-distributed-range-lock-management-with-one-sided-rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Citron: Distributed Range Lock Management with One-sided RDMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-patronus-high-performance-and-protective-remote-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Patronus: High-Performance and Protective Remote Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-more-than-capacity-performance-oriented-evolution-of-pangu-in-alibaba" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-io-a-unified-io-stack-for-computational-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - λ-IO: A Unified IO Stack for Computational Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-revitalizing-the-forgotten-on-chip-dma-to-expedite-data-movement-in-nvm-based-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Revitalizing the Forgotten On-Chip DMA to Expedite Data Movement in NVM-based Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-conference-talk-on-revitalizing-forgotten-onchip-dma-using-nvm-based-storage-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of conference talk on revitalizing Forgotten Onchip DMA using NVM-based Storage System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-nvmevirt-a-versatile-software-defined-virtual-nvme-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - NVMeVirt: A Versatile Software-defined Virtual NVMe Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-smrstore-a-storage-engine-for-cloud-object-storage-on-hm-smr-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - SMRSTORE: A Storage Engine for Cloud Object Storage on HM-SMR Drives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-multi-view-feature-based-ssd-failure-prediction-what-when-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Multi-view Feature-based SSD Failure Prediction: What, When, and Why
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fast-application-launch-on-personal-computingcommunication-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Fast Application Launch on Personal Computing/Communication Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-integrated-host-ssd-mapping-table-management-for-improving-user-experience-of-smartphones" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Integrated Host-SSD Mapping Table Management for Improving User Experience of Smartphones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usenix_sre_americas2023.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SRE Americas 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ycombinator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_24">
+            <span class="md-nav__icon md-icon"></span>
+            Ycombinator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_dalton_michael.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalton and Michael
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_how_to_build_future.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to build the future
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ycombinator/ycombinator_startup_school.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Startup school
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/eda.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Distributed Applications with Event-Driven Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/architecture/ebay.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/computer_science/booch_limits_sw_parc_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grady Booch on The Limits of Software Parc[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Openshift
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/openshift/openshift_serverless_gpt4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift serverless[gpt-4]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Webassembly
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Webassembly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/wasm/webassembly_v3_qwen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server-Side WebAssembly[qwen]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/design/design_for_the_utopia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design for the Utopia You Want, Not the Dystopia You're In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/other/tech_rada_trends_preview.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technology Radar Volume 29 - preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-building-and-operating-a-pretty-big-storage-system-my-adventures-in-amazon-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-practical-design-considerations-for-wide-locally-recoverable-codes-lrcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Practical Design Considerations for Wide Locally Recoverable Codes (LRCs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-pararc-embracing-sub-packetization-for-repair-parallelization-in-msr-coded-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ParaRC: Embracing Sub-Packetization for Repair Parallelization in MSR-Coded Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-inftydedup-scalable-and-cost-effective-cloud-tiering-with-deduplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - InftyDedup: Scalable and Cost-Effective Cloud Tiering with Deduplication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-perseus-a-fail-slow-detection-framework-for-cloud-storage-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Perseus: A Fail-Slow Detection Framework for Cloud Storage Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-adoc-automatically-harmonizing-dataflow-between-components-in-log-structured-key-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ADOC: Automatically Harmonizing Dataflow Between Components in Log-Structured Key-Value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fusee-a-fully-memory-disaggregated-key-value-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - FUSEE: A Fully Memory-Disaggregated Key-Value Store
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-rolex-a-scalable-rdma-oriented-learned-key-value-store-for-disaggregated-memory-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ROLEX: A Scalable RDMA-oriented Learned Key-Value Store for Disaggregated Memory Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-gl-cache-group-level-learning-for-efficient-and-high-performance-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - GL-Cache: Group-level learning for efficient and high-performance caching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-shade-enable-fundamental-cacheability-for-distributed-deep-learning-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - SHADE: Enable Fundamental Cacheability for Distributed Deep Learning Training
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-intelligent-resource-scheduling-for-co-located-latency-critical-services-a-multi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Intelligent Resource Scheduling for Co-located Latency-critical Services: A Multi-Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-cjfs-concurrent-journaling-for-better-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - CJFS: Concurrent Journaling for Better Scalability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-unsafe-at-any-copy-name-collisions-from-mixing-case-sensitivities" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Unsafe at Any Copy: Name Collisions from Mixing Case Sensitivities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-confd-analyzing-configuration-dependencies-of-file-systems-for-fun-and-profit" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - ConfD: Analyzing Configuration Dependencies of File Systems for Fun and Profit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAST '23 - ConfD: Analyzing Configuration Dependencies of File Systems for Fun and Profit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presentation-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentation Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-hadafs-a-file-system-bridging-the-local-and-shared-burst-buffer-for-exascale" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - HadaFS: A File System Bridging the Local and Shared Burst Buffer for Exascale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fisc-a-large-scale-cloud-native-oriented-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Fisc: A Large-scale Cloud-native-oriented File System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-tenet-memory-safe-and-fault-tolerant-persistent-transactional-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - TENET: Memory Safe and Fault Tolerant Persistent Transactional Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-madfs-per-file-virtualization-for-userspace-persistent-memory-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - MadFS: Per-File Virtualization for Userspace Persistent Memory Filesystems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-on-stacking-a-persistent-memory-file-system-on-legacy-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - On Stacking a Persistent Memory File System on Legacy File Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-citron-distributed-range-lock-management-with-one-sided-rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Citron: Distributed Range Lock Management with One-sided RDMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-patronus-high-performance-and-protective-remote-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Patronus: High-Performance and Protective Remote Memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-more-than-capacity-performance-oriented-evolution-of-pangu-in-alibaba" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-io-a-unified-io-stack-for-computational-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - λ-IO: A Unified IO Stack for Computational Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-revitalizing-the-forgotten-on-chip-dma-to-expedite-data-movement-in-nvm-based-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Revitalizing the Forgotten On-Chip DMA to Expedite Data Movement in NVM-based Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-conference-talk-on-revitalizing-forgotten-onchip-dma-using-nvm-based-storage-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of conference talk on revitalizing Forgotten Onchip DMA using NVM-based Storage System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-nvmevirt-a-versatile-software-defined-virtual-nvme-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - NVMeVirt: A Versatile Software-defined Virtual NVMe Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-smrstore-a-storage-engine-for-cloud-object-storage-on-hm-smr-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - SMRSTORE: A Storage Engine for Cloud Object Storage on HM-SMR Drives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-multi-view-feature-based-ssd-failure-prediction-what-when-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Multi-view Feature-based SSD Failure Prediction: What, When, and Why
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-fast-application-launch-on-personal-computingcommunication-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Fast Application Launch on Personal Computing/Communication Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-23-integrated-host-ssd-mapping-table-management-for-improving-user-experience-of-smartphones" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAST '23 - Integrated Host-SSD Mapping Table Management for Improving User Experience of Smartphones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Fast 2023</h1>
+
+<h2 id="fast-23-building-and-operating-a-pretty-big-storage-system-my-adventures-in-amazon-s3">FAST '23 - Building and Operating a Pretty Big Storage System (My Adventures in Amazon S3)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=sc3J4McebHE">https://www.youtube.com/watch?v=sc3J4McebHE</a></p>
+<ul>
+<li>S3 is a storage service that operates at a massive scale</li>
+<li>The Fleets in the S3 system are constantly growing and evolving, with new hardware being added to improve performance and reliability</li>
+<li>Hard drives play a crucial role in the operation of the S3 system, despite their physical fragility and slow access times</li>
+<li>The S3 system is designed to be highly durable and fault-tolerant, with redundancy built into every layer of the system</li>
+<li>The concept of "organizational scale" is important when considering how the S3 system operates, as it relies on a complex network of teams and individuals working together to maintain and improve the service</li>
+<li>The process of scaling an organization like Amazon involves not only technical challenges, but also cultural and organizational ones</li>
+<li>The concept of "scaling ownership" is key to the success of the S3 system, as it ensures that everyone involved in the operation of the service feels a sense of responsibility and accountability for its performance and reliability</li>
+<li>The S3 system uses a variety of different technologies and tools to manage and store data, including DynamoDB, S3 Connect, and the AWS SDK</li>
+</ul>
+<h2 id="fast-23-practical-design-considerations-for-wide-locally-recoverable-codes-lrcs">FAST '23 - Practical Design Considerations for Wide Locally Recoverable Codes (LRCs)</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pfnSYWEf5q4">https://www.youtube.com/watch?v=pfnSYWEf5q4</a></p>
+<ul>
+<li>Wide Locally Recoverable Codes (LRCs) are used in large scale storage clusters to protect against disk failure.</li>
+<li>Commonly used Erasure codes, such as Reeder Solomon code or MDS code, aim to reduce the total number of parity chunks and improve data-to-parity ratio for lower storage overhead.</li>
+<li>LRCs are designed to handle single chunk failures efficiently.</li>
+<li>Wide LRCs have been proposed to further increase fault tolerance by using many local groups compared to conventional LRCs, thus reducing the reconstruction cost when a single chunk fails.</li>
+<li>Key factors affecting wide LRC reliability include distance code, coefficient (which depends on Erasure code generator matrix choice), and layout design.</li>
+<li>Uniform Kaushi LRCs are designed with a focus on simplicity and robustness, using Cauchy coefficients to achieve close-to-maximally recoverable codes while maintaining good layout design.</li>
+<li>Practical considerations for deploying wide LRCs include measuring their performance in terms of robustness against random failures, average repair cost for one or two erasures, and mean time data loss (MTTDL).</li>
+<li>The speaker presents a case study where Uniform Kaushi LRCs were deployed at Google, showing that they improved availability by reducing unavailability recorded events compared to the previous deployment.</li>
+</ul>
+<h2 id="fast-23-pararc-embracing-sub-packetization-for-repair-parallelization-in-msr-coded-storage">FAST '23 - ParaRC: Embracing Sub-Packetization for Repair Parallelization in MSR-Coded Storage</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=kd6JTmJY0Xg">https://www.youtube.com/watch?v=kd6JTmJY0Xg</a></p>
+<ul>
+<li>Introduced Eurasia Coding and its applications</li>
+<li>Discussed the concept of repair bandwidth, maximum repair load, and tradeoffs in designing erasure codes</li>
+<li>Presented MSR (Minimum Storage Regenerating) code, a new erasure code construction that minimizes repair bandwidth while satisfying MDS property like RS code</li>
+<li>Explained packetization feature and its role in reducing repair overhead</li>
+<li>Demonstrated an example of applying parallelism to the repair process using the MSR code</li>
+<li>Introduced the concept of parallel RC (Parallel Repair Framework) and how it can be applied to balance load across nodes during repairs</li>
+<li>Presented a heuristic for finding an optimal tradeoff between repair bandwidth and maximum repair load, called MLP (Minimum Load Point)</li>
+<li>Discussed the challenges in implementing MLP and proposed a solution using a colored PEC deck approach</li>
+<li>Described a prototype implementation of power RC on Hadoop HDFS and how it can be used to evaluate performance on Alibaba Cloud</li>
+<li>Concluded by emphasizing the importance of parallelism, efficient design, and small block sizes in designing erasure codes for large NK systems.</li>
+</ul>
+<h2 id="fast-23-inftydedup-scalable-and-cost-effective-cloud-tiering-with-deduplication">FAST '23 - InftyDedup: Scalable and Cost-Effective Cloud Tiering with Deduplication</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=E72C3hkYW28">https://www.youtube.com/watch?v=E72C3hkYW28</a></p>
+<ul>
+<li>Introduced Infinity, a scalable and cost-effective cloud tiering application</li>
+<li>Aimed to exploit the cloud's capabilities and provide limitless scalability and significant cost reduction</li>
+<li>Developed using NEC Hydra Store as a reference</li>
+<li>Cloud tier encrypted application allows for data duplication in the cloud with efficient batch processing, deduplication, and parallelized work</li>
+<li>Utilizes multiple classes of cloud storage to decrease total costs while storing data</li>
+<li>Batch processing algorithm efficiently processes petabyte-scale datasets at an affordable cost</li>
+<li>Introduced a technique that reduces costs by mixing hot and cold storage classes based on restore frequency policies</li>
+<li>Demonstrated the effectiveness of the approach through experiments, achieving linear scalability and efficient garbage collection algorithms</li>
+</ul>
+<h2 id="fast-23-perseus-a-fail-slow-detection-framework-for-cloud-storage-systems">FAST '23 - Perseus: A Fail-Slow Detection Framework for Cloud Storage Systems</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=DcDnrZY11Yw">https://www.youtube.com/watch?v=DcDnrZY11Yw</a></p>
+<ul>
+<li>Raymond Im discusses his work on detecting field slow failures in large-scale cloud storage systems.</li>
+<li>He mentions a joint research project with Shanghai Jiao Tong University and Sharda University.</li>
+<li>Field slow failures are often overlooked but can cause severe performance degradation and downtime.</li>
+<li>The first law of component failure states that even if one component is still functioning, it may have lower expected performance.</li>
+<li>Perseus, an intrusive fine-grained general detection framework, was introduced to detect field slow failures.</li>
+<li>A dataset of 248,000 drives was analyzed for detected field store failures.</li>
+<li>The dataset covers different drive specifications serving nine cloud services and contains device-level performance logs like latency and throughput.</li>
+<li>A time series-based raw data set was also built and released as a test benchmark for fail slow detection tests.</li>
+<li>Previous attempts at threshold filtering were not successful due to the difficulty of setting accurate thresholds empirically.</li>
+<li>Peer evaluation was introduced, where drive node performance is compared with similar peers using sliding windows and latency versus throughput distributions.</li>
+<li>A light regression model scoring mechanism was used to detect slow failures throughout part of the process.</li>
+<li>The design of Perseus utilizes classic machine learning techniques and a general scoring mechanism for accurate finding of fails slow detection problems.</li>
+<li>A test benchmark was released to evaluate the performance of Perseus and other similar systems.</li>
+<li>315 field slow drive tests were conducted, revealing that most root causes were software-induced resource contention issues.</li>
+</ul>
+<h2 id="fast-23-adoc-automatically-harmonizing-dataflow-between-components-in-log-structured-key-value">FAST '23 - ADOC: Automatically Harmonizing Dataflow Between Components in Log-Structured Key-Value</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=g-WbFJzQfcg">https://www.youtube.com/watch?v=g-WbFJzQfcg</a></p>
+<ul>
+<li>Introduced City University Hong Kong and the topic of their paper on data flow harmonization.</li>
+<li>Described the background problem: TV Redstone, a popular system used in many scenarios, has performance issues due to its key value store (KVS) structure.</li>
+<li>Presented the KV system architecture consisting of three major components: memory component, buffer, and commit log.</li>
+<li>Explained that ensuring consistency is difficult due to the nature of the commit log operation.</li>
+<li>Introduced RocksDB as their starting platform for the paper since it's a popular representative of an awesome KVS.</li>
+<li>Described the three main components of RocksDB: memory table (MT), write-ahead log (WAL), and store table (ST).</li>
+<li>Detailed the two major operations in the system: background compaction and foreground flush.</li>
+<li>Introduced the concept of Red Store, a common problem observed where performance drops due to resource exhaustion.</li>
+<li>Presented their experimental setup to observe the right store problem and its dependency on different storage devices.</li>
+<li>Described the three categories of red store based on observation: resource exhaustion, level zero/one compaction execution, and deep level compaction.</li>
+<li>Introduced the concept of data overflow, a new way to explain the formation of Red Store by considering overall harmony between components.</li>
+<li>Proposed a new tuning framework called ADOC (Auto Distributed Optimized Compaction) to remove or alleviate red store problems.</li>
+<li>Discussed the limitations of their proposed solution and future work.</li>
+</ul>
+<h2 id="fast-23-fusee-a-fully-memory-disaggregated-key-value-store">FAST '23 - FUSEE: A Fully Memory-Disaggregated Key-Value Store</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=XjkJK9pYN2c">https://www.youtube.com/watch?v=XjkJK9pYN2c</a></p>
+<ul>
+<li>Introduced the new paper: "Fuzzy: A Fully Memory Disaggregated KV Store"</li>
+<li>Joint work between Chinese University Hong Kong, Huawei Cloud, Photon University, and Song Asan University.</li>
+<li>The paper tackles issues in existing memory KV stores like Redis and Memcached, which are fundamental building blocks for many cloud services.</li>
+<li>Proposed a disaggregated memory architecture to address the limitations of monolithic server CPU/memory resource coupling and elasticity issues.</li>
+<li>Discussed the challenges of achieving fully memory disaggregated KV stores: client-centric index replication, remote memory allocation, and metadata corruption.</li>
+<li>Proposed Fuzzy as a solution to these challenges.</li>
+<li>Demonstrated the effectiveness of Fuzzy through experiments using YCSB hybrid benchmarks, which showed that it achieves 49 times higher throughput compared to existing approaches.</li>
+</ul>
+<h2 id="fast-23-rolex-a-scalable-rdma-oriented-learned-key-value-store-for-disaggregated-memory-systems">FAST '23 - ROLEX: A Scalable RDMA-oriented Learned Key-Value Store for Disaggregated Memory Systems</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=pQLKBicYIpI">https://www.youtube.com/watch?v=pQLKBicYIpI</a></p>
+<ul>
+<li>Introduced a new, scalable RDMA-oriented Key-Value Store system</li>
+<li>Disaggregated memory system into separate components: leaf constructs and learning indexes</li>
+<li>Used a 3D model to improve data retrieval performance</li>
+<li>Emphasized on reducing network overhead and improving read/write performance</li>
+<li>Implemented an asynchronous, one-set RDMA operation for indexing</li>
+<li>Utilized a relaxed training code, available on GitHub</li>
+<li>Proposed a solution to the problem of inconsistent states in compute nodes</li>
+<li>Demonstrated how to handle large amounts of data and insert/delete operations efficiently</li>
+<li>Discussed the challenges faced by existing systems and proposed solutions for them</li>
+<li>Showcased an example of how the new system can achieve significant improvements over previous methods (13-28 times faster)</li>
+</ul>
+<h2 id="fast-23-gl-cache-group-level-learning-for-efficient-and-high-performance-caching">FAST '23 - GL-Cache: Group-level learning for efficient and high-performance caching</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=8VMJjdYqX84">https://www.youtube.com/watch?v=8VMJjdYqX84</a></p>
+<ul>
+<li>Introduced three types of noncash learning: simple expert, learning distribution, and object level learning.</li>
+<li>Discussed group-level learning, which is a new approach to cache management.</li>
+<li>Compared different caching algorithms in terms of efficiency and throughput.</li>
+<li>Presented a diagram showing the potential efficiency and act throughput of various algorithms.</li>
+<li>Introduced the concept of group object and how it can be used for better cache management.</li>
+<li>Demonstrated how to use feature models and grid boosting tree regression in caching systems.</li>
+<li>Showcased evaluation results using Cloud, Physic Trace, MSR Tree, Wikipedia trace, and other datasets.</li>
+<li>Discussed the importance of choosing the right parameters for optimal cache performance.</li>
+<li>Compared the throughput of different algorithms, highlighting that RB (Relaxed Bloom) has lower support but can achieve higher throughput with group level learning.</li>
+</ul>
+<h2 id="fast-23-shade-enable-fundamental-cacheability-for-distributed-deep-learning-training">FAST '23 - SHADE: Enable Fundamental Cacheability for Distributed Deep Learning Training</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=NwIYM3O-qvA">https://www.youtube.com/watch?v=NwIYM3O-qvA</a></p>
+<ul>
+<li>Deep learning is everywhere and its market is expected to grow 19% annually in the foreseeable future.</li>
+<li>Caching can be a solution for speeding up data-intensive deep learning applications, which take around 85-90% of total training time.</li>
+<li>The Shade system addresses the challenge of caching by using four techniques: loss decomposition, rank-based importance course, and patch sampling policy for app cache.</li>
+<li>The Shade architecture consists of two layers: a control layer and a data layer. It uses an analysis framework to facilitate experimentation.</li>
+<li>A distributed training pipeline is incorporated in the system, enabling it to train models on large datasets with multiple GPUs.</li>
+<li>Evaluation results show that using the Shade caching system can improve accuracy, reduce time, increase throughput, and increase heat ratio for deep learning applications.</li>
+</ul>
+<h2 id="fast-23-intelligent-resource-scheduling-for-co-located-latency-critical-services-a-multi-model">FAST '23 - Intelligent Resource Scheduling for Co-located Latency-critical Services: A Multi-Model</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=XfFCTuNOHYg">https://www.youtube.com/watch?v=XfFCTuNOHYg</a></p>
+<ul>
+<li>Introducing OSMOSML: An intelligent resource scheduling approach for colocating latency-critical services.</li>
+<li>Addresses challenges in scheduling colocated services due to diverse behavior across storage hierarchy, enlarged scheduling exploration space, and the presence of interactive resources like CPU, LLC, memory bandwidth, and I/O.</li>
+<li>OSMOSML uses a multimodel Collaborative Learning based resource scheduling approach that leverages machine learning to achieve higher load take and meet QoS targets compared to prior work.</li>
+<li>Cloud applications are moving from monolithic architecture to loosely coupled designs, which include many LC services with strict QoS requirements. This often results in multiple services being scheduled on the same server simultaneously, increasing server utilization and cost efficiency.</li>
+<li>OSMOSML addresses these challenges by designing a machine learning based resource scheduler that can handle diverse behavior across storage hierarchy, enlarged scheduling exploration space, and the presence of interactive resources.</li>
+<li>The resource scheduler uses a normal machine learning approach to predict optimal allocation areas (OAAs) and avoid resource cliffs, which can lead to significant performance slowdowns if not handled properly.</li>
+<li>OSMOSML's design includes three main components: Model A for predicting Cliff/OE bandwidth; Model B for balancing QoS resource allocation among colocated LC services; and Model C for handling change using reinforcement learning.</li>
+<li>The system also incorporates two Shadow models to handle different scenarios effectively.</li>
+<li>OSMOSML uses a pipeline approach that combines these models in an efficient manner to provide optimal scheduling solutions for colocated LC services.</li>
+<li>In terms of performance, OSMOSML has been shown to converge faster than baseline approaches and can handle dynamically changing loads more effectively.</li>
+<li>The project is open source and encourages community contributions to continue enhancing its capabilities and adding new case studies.</li>
+</ul>
+<h2 id="fast-23-cjfs-concurrent-journaling-for-better-scalability">FAST '23 - CJFS: Concurrent Journaling for Better Scalability</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=iSBmgErixXg">https://www.youtube.com/watch?v=iSBmgErixXg</a></p>
+<ul>
+<li>Background:</li>
+<li>Hardware evolution (CPUs, SSDs)</li>
+<li>
+<p>Software stack: Cloud Server with many core CPUs and containerized services</p>
+</li>
+<li>
+<p>Problem:</p>
+</li>
+<li>
+<p>Bottlenecks in software stack due to serial commit process</p>
+</li>
+<li>
+<p>Solution:</p>
+</li>
+<li>
+<p>CJFs (Concurrent Journal File System)</p>
+<ul>
+<li>Multiple transaction committed concurrently</li>
+<li>Four techniques: journaling, multiple potential paging opportunities, policy, compound flush</li>
+</ul>
+</li>
+<li>
+<p>Evaluation:</p>
+</li>
+<li>
+<p>Improved throughput by 16x in Shield benchmark, 13x in Palm split, and 12x in D benchmark compared to original ESD4</p>
+</li>
+<li>
+<p>Conclusion:</p>
+</li>
+<li>CJFs improves system performance by utilizing parallelism in storage devices.</li>
+</ul>
+<h2 id="fast-23-unsafe-at-any-copy-name-collisions-from-mixing-case-sensitivities">FAST '23 - Unsafe at Any Copy: Name Collisions from Mixing Case Sensitivities</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=E2zznSP2nl4">https://www.youtube.com/watch?v=E2zznSP2nl4</a></p>
+<ul>
+<li>Presentation on case insensitivity in file systems<ul>
+<li>Background and existing security work<ul>
+<li>Name-based attack, name collision detection</li>
+</ul>
+</li>
+<li>File system mapping and security issues<ul>
+<li>Resource confusion, data loss, corruption, incorrect file overrides, confidential information leaks</li>
+<li>Classic squatting attack, link traversal attack</li>
+<li>Different file systems handle case sensitivity differently</li>
+</ul>
+</li>
+<li>Case diversity in modern file systems<ul>
+<li>Linux ext4 folder marking case-sensitive/insensitive folders</li>
+</ul>
+</li>
+<li>Real-world implications and examples<ul>
+<li>Git CBE 2021 collision, 2014 Mercurial issue</li>
+</ul>
+</li>
+<li>Contribution: coined term "name collision"<ul>
+<li>Place hierarchy name collision in the context of file systems</li>
+</ul>
+</li>
+<li>Detection strategy and evaluation<ul>
+<li>Developed a test suite for detecting unsafe responses and novel exploits</li>
+</ul>
+</li>
+<li>Defense mechanisms<ul>
+<li>Program conveying case sensitivity to underlying file system</li>
+<li>Canonicalize path names, normalize path folding, return canonicalized path name</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Q&amp;A session with audience encouraged.</li>
+</ul>
+<h2 id="fast-23-confd-analyzing-configuration-dependencies-of-file-systems-for-fun-and-profit">FAST '23 - ConfD: Analyzing Configuration Dependencies of File Systems for Fun and Profit</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=GygCZSnT-_8">https://www.youtube.com/watch?v=GygCZSnT-_8</a></p>
+<h3 id="presentation-summary">Presentation Summary:</h3>
+<ul>
+<li>Researchers present work on analyzing configuration dependency in file systems, focusing on the Ext4 and XFS file systems.</li>
+<li>The talk highlights the importance of understanding configuration dependencies to prevent issues like data corruption or system crashes.</li>
+<li>They introduce a tool called Quantity that can automatically extract multilevel dependencies from file systems and generate valid configuration states based on these dependencies.</li>
+<li>The researchers demonstrate how their tool can help identify bugs in real-world scenarios, such as when the E4 defrag utility causes file corruption due to incorrect configuration settings.</li>
+<li>They also discuss future work, including extending Quantity's support to other types of systems and applications beyond just file systems.</li>
+</ul>
+<h2 id="fast-23-hadafs-a-file-system-bridging-the-local-and-shared-burst-buffer-for-exascale">FAST '23 - HadaFS: A File System Bridging the Local and Shared Burst Buffer for Exascale</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=l-pwBIewqno">https://www.youtube.com/watch?v=l-pwBIewqno</a></p>
+<ul>
+<li>Speaker introduces birthday system for file systems (FS)</li>
+<li>Focus on maximizing input/output (I/O) performance and scalability</li>
+<li>Discusses two types of photographer systems deployed in the Philippines</li>
+<li>Introduces a global file system (GFS) with local and remote storage nodes</li>
+<li>Talks about balancing read/write operations between different FS nodes</li>
+<li>Explains how to manage data migration for large scale applications</li>
+<li>Mentions the importance of user control over data storage</li>
+<li>Discusses the use of "localized trash architecture" for efficient data storage</li>
+<li>Introduces a new method for bypassing kernel restrictions in FS</li>
+<li>Talks about different types of databases used to store metadata and file information</li>
+<li>Explains how to measure file system performance using various metrics</li>
+<li>Discusses the importance of synchronization strategies for different applications</li>
+<li>Provides examples of data migration flows and their impact on application performance</li>
+<li>Talks about optimizing FS performance by reducing latency and improving bandwidth</li>
+<li>Introduces a new method for comparing FS performance using different configurations</li>
+<li>Explains how to use JFS (Japanese File System) in different models and its impact on performance</li>
+<li>Discusses the importance of kernel cache striping technology for application parallelism</li>
+<li>Talks about the challenges of data immigration and ways to optimize it</li>
+<li>Introduces a new method for tuning FS performance by remapping client/server connections</li>
+<li>Concludes by introducing a personal power file system called "office" that bridges support for local and remote storage nodes.</li>
+</ul>
+<h2 id="fast-23-fisc-a-large-scale-cloud-native-oriented-file-system">FAST '23 - Fisc: A Large-scale Cloud-native-oriented File System</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=btDflcOPZ00">https://www.youtube.com/watch?v=btDflcOPZ00</a></p>
+<ul>
+<li>Alibaba Cloud Engineer discusses Fisk, a large scale cloud native oriented file system</li>
+<li>Purpose: Optimize backend storage for cloud Big Data applications</li>
+<li>Bottlenecks in current setup:<ul>
+<li>Resource multiplexing among many file clients</li>
+<li>Inefficient network load balancing</li>
+<li>Load imbalance between backend storage clusters</li>
+<li>High cost of using traditional load balancers</li>
+</ul>
+</li>
+<li>Fisk's design goals:<ol>
+<li>Reduce resource multiplexing among many file clients</li>
+<li>Build a storage-aware kit for better performance and fault tolerance</li>
+</ol>
+</li>
+<li>Fisk architecture:<ul>
+<li>Two-layer resource aggregation architecture<ul>
+<li>Lightweight phase client load function</li>
+<li>Fiscal agent (fixed process)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Key features of Fisk:<ul>
+<li>VRPC (Virtual RPC): A simplified, secure RPC framework that offloads uploaded resources and aggregates traffic</li>
+<li>Resource Smart Profile: Allows different container computation servers to aggregate local Fisk agents and distribute resources among them</li>
+</ul>
+</li>
+<li>Benefits of Fisk:<ul>
+<li>Reduced CPU cost by 60%</li>
+<li>Lower memory footprint</li>
+<li>Improved network bandwidth usage</li>
+<li>Better fault tolerance and load balancing</li>
+</ul>
+</li>
+<li>Evaluation metrics for Fisk:<ul>
+<li>FIO micro benchmark test</li>
+<li>Production sample average latency</li>
+</ul>
+</li>
+</ul>
+<h2 id="fast-23-tenet-memory-safe-and-fault-tolerant-persistent-transactional-memory">FAST '23 - TENET: Memory Safe and Fault Tolerant Persistent Transactional Memory</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=o800CoToxD0">https://www.youtube.com/watch?v=o800CoToxD0</a></p>
+<ul>
+<li>Overview of NVM and its challenges</li>
+<li>Nonvolatile memory (NVM) is exposed directly to user space, making it vulnerable to data corruption from software bugs or hardware errors.</li>
+<li>Two main types of errors: medium risk error (hardware side) and application bug (software side).</li>
+<li>Tenet's solution for NVM data protection</li>
+<li>Develop a programming framework that helps developers build memory safe and fault tolerant NVM applications.</li>
+<li>The framework includes:<ul>
+<li>A library of functions called PMDK Transaction Library, which supports persistent transaction operations.</li>
+<li>A design principle called "Tenet" that focuses on preventing application code from causing spatial or temporal safety violations in the NVM data structure.</li>
+</ul>
+</li>
+<li>Key components of Tenet</li>
+<li>Spatial safety: Prevent bugs from accessing memory regions beyond allocated ranges.</li>
+<li>Temporal safety: Avoid dangling pointers and other issues that can lead to unintended memory access.</li>
+<li>Fault tolerance: Protect NVM data against uncorrectable medium errors, which can cause permanent data loss.</li>
+<li>Design principles for ensuring spatial and temporal safety</li>
+<li>Enforce read-only permissions on certain NVM regions to prevent accidental writes or reads of corrupted data.</li>
+<li>Use a Canary bit as an additional check for memory safety violations, such as when writing to the NVM.</li>
+<li>Implement a pointer tag system that allows developers to validate whether a given memory address is valid or not.</li>
+<li>Fault tolerance techniques</li>
+<li>Replicate NVM data on a local SSD to provide a backup copy in case of uncorrectable medium errors.</li>
+<li>Use consistent lossless recovery techniques to ensure that any lost data can be restored without compromising the integrity of the system.</li>
+<li>Evaluation of Tenet's performance and scalability</li>
+<li>Compared against existing PDMK Transaction Library implementations, Tenet showed minimal overhead and maintained high levels of scalability.</li>
+<li>The addition of fault tolerance features slightly impacted performance but still remained within acceptable limits.</li>
+</ul>
+<h2 id="fast-23-madfs-per-file-virtualization-for-userspace-persistent-memory-filesystems">FAST '23 - MadFS: Per-File Virtualization for Userspace Persistent Memory Filesystems</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=J60sTA3cwJo">https://www.youtube.com/watch?v=J60sTA3cwJo</a></p>
+<ul>
+<li>Sean Work presented Med FS, a user space persistent memory file system.</li>
+<li>Metadata embedding: Efficient metadata management in user space without kernel involvement.</li>
+<li>Profile Virtualization: User-space virtualization layer that manages file functionality including metadata management and crash consistency.</li>
+<li>Concurrency Control: Optimistic concurrency control for metadata updates.</li>
+<li>Med FS has better overall performance than X4 Dax, EX4 Deck, and Nova in micro Benchmarks and real-world application tests.</li>
+</ul>
+<h2 id="fast-23-on-stacking-a-persistent-memory-file-system-on-legacy-file-systems">FAST '23 - On Stacking a Persistent Memory File System on Legacy File Systems</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=MHcJ114hVk8">https://www.youtube.com/watch?v=MHcJ114hVk8</a></p>
+<ul>
+<li>Introducing SPF (SPF Stack Persistent Memory File System)</li>
+<li>Lightweight and efficient PMEM file system</li>
+<li>Offers PM Oblivious File System (PMOFS)<ul>
+<li>Provides persistent right cache</li>
+<li>Uses extent hashing algorithm for metadata management</li>
+</ul>
+</li>
+<li>Designing SPF</li>
+<li>Focus on small synchronous right lightweight</li>
+<li>Efficiently manages metadata hash table and extent hash table</li>
+<li>Utilizes sync point profiling mechanism to detect synchronous IO</li>
+<li>Balances pmem usage by predicting block placement decisions</li>
+<li>Implementing SPF</li>
+<li>Improves performance of legacy products like FS99<ul>
+<li>Detects smaller synchronous right using Sync Point Profiles</li>
+<li>Efficiently manages metadata and extent hash tables</li>
+</ul>
+</li>
+<li>Utilizes rapid caching mechanism for small synchronous right</li>
+<li>Focuses on synchronization and IO patterns</li>
+<li>Evaluating SPF</li>
+<li>Compares performance with XFS, F2FS, and other file systems</li>
+<li>Demonstrates higher throughput and lower latency in certain scenarios<ul>
+<li>Stacking SPF with block devices and file systems improves overall performance</li>
+</ul>
+</li>
+<li>Future Work</li>
+<li>Continue optimizing SPF for specific workloads and use cases<ul>
+<li>Further reduce metadata size and improve hash table efficiency</li>
+<li>Develop new sync point profiling techniques to better manage synchronous IO</li>
+</ul>
+</li>
+</ul>
+<h2 id="fast-23-citron-distributed-range-lock-management-with-one-sided-rdma">FAST '23 - Citron: Distributed Range Lock Management with One-sided RDMA</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=_Aegd52O_Hg">https://www.youtube.com/watch?v=_Aegd52O_Hg</a></p>
+<ul>
+<li>Introduced work on distributed range lock management using onesided RDMA</li>
+<li>Aimed at improving performance and scalability in storage systems like file systems, databases etc.</li>
+<li>Proposed a system that bypasses serverside CPUs to avoid bottlenecks</li>
+<li>Presented a segment tree based data structure for efficient range dog management</li>
+<li>Demonstrated the effectiveness of their approach through experiments on a cluster of four machines (one server and three clients)</li>
+<li>Compared with existing solutions, showed that their system achieved better performance and scalability</li>
+<li>Introduced a novel RDMA extended atomics mechanism to perform synchronization efficiently</li>
+</ul>
+<h2 id="fast-23-patronus-high-performance-and-protective-remote-memory">FAST '23 - Patronus: High-Performance and Protective Remote Memory</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zO6CeFCik58">https://www.youtube.com/watch?v=zO6CeFCik58</a></p>
+<pre><code>- Ping Xinhua from Xinhua University introduces work on Patronus, a high-performance protective remote memory system.
+- The current data center issue is low memory utilization.
+- Remote Memory Architecture (RMA) separates CPU and memory into two network-attached components: Compute Node and Memory Node.
+- RDMA (Remote Direct Memory Access) allows direct read/write operations on remote memory without involving the CPU.
+- Patronus provides flexible resource allocation, which improves memory utilization.
+- Previous efforts to make remote memory practical include efficient remote index designs, easy-to-use programming models, and deploying popular applications.
+- Despite these improvements, there are still challenges in implementing a practical remote system.
+- The talk focuses on the protection of remote memory, especially in workloads with shared access patterns.
+- Previous works like RHT (Remote Hash Table) and P+3 did not provide robust protection mechanisms.
+- Patronus introduces an efficient permission management system that allows fast permission checks and rejects illegal operations.
+- The Petronas system includes a three-step client workflow: start, data access, and end permissions.
+- The talk presents experimental results showing the effectiveness of the Patronus system in terms of performance and robustness.
+- Three key ideas were introduced to improve common path performance, exception path performance, and QPR (Queue Pair) resource provisioning.
+- Memory Window Operation Reduction reduces memory node overhead by optimizing protection semantics.
+- Client Collaborative List allows clients to handle failures and manage lists efficiently.
+- Q-Pair Provisioning conceals interruptions during QP (Queue Pair) failure recovery, ensuring system performance remains unaffected.
+- The experimental results show that Patronus offers 52 times better throughput compared to competitors while maintaining low overhead.
+</code></pre>
+<h2 id="fast-23-more-than-capacity-performance-oriented-evolution-of-pangu-in-alibaba">FAST '23 - More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Twss7x3Ib2Q">https://www.youtube.com/watch?v=Twss7x3Ib2Q</a></p>
+<ul>
+<li>Panku, a unified storage system by Alibaba Cloud, is used widely.</li>
+<li>It's designed to handle various applications like databases, online search, Big Data analysis, and message queues.</li>
+<li>The first generation of Panku was built seven years ago with the focus on scalability, reliability, and availability.</li>
+<li>A new storage medium called Mme SSD has significantly impacted the design of Panku. </li>
+<li>The second generation of Panku addresses the challenge of performance design by introducing a new storage operating system called USS OS. It simplifies high-performance system development by bypassing the kernel and reducing latency.</li>
+<li>Panku adopts distributed master architecture to enhance availability and increase metadata processor ability, reducing latency.</li>
+<li>Cache profiling is used for batch optimization, which helps reduce latency at the client side.</li>
+<li>The backend network hardware and software are co-designed to remove limitations and improve IO efficiency.</li>
+<li>The P3910 latency is controlled around millisecond level in the second generation of Panku.</li>
+<li>The EBS search service has an average read latency controlled at 200 microseconds, while the write latency is controlled at 100 microseconds.</li>
+<li>The User Space Storage design and tele latency control mechanism are used to optimize full stack latency in Panku.</li>
+<li>Network traffic flow analysis helps reduce network traffic by filtering, compressing, and using image coding compression techniques.</li>
+<li>The RDCA (Remote Direct CASH Access) method is proposed to bypass the DDR memory and improve memory bandwidth efficiency.</li>
+<li>The CPU hardware is fully utilized with many core architecture offloading computational tasks.</li>
+<li>An FPGA-based compression card is used to offload CRC tasks, improving overall throughput.</li>
+</ul>
+<h2 id="fast-23-io-a-unified-io-stack-for-computational-storage">FAST '23 - λ-IO: A Unified IO Stack for Computational Storage</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=xYENKqthG40">https://www.youtube.com/watch?v=xYENKqthG40</a></p>
+<ul>
+<li>Lambda IO: Unified Auto stack for computational storage</li>
+<li>Purpose: To offload user-defined computational logic and read/write data, while improving performance over vanilla Linux IO.</li>
+<li>Challenges in conventional systems: Accessing large amounts of data can be slow and costly.</li>
+<li>Computational Storage: A method that processes data within the storage device itself, reducing the need for data transfer between host devices.</li>
+<li>Lambda IO Design:<ul>
+<li>Easy Studios APIs: Hide underlying details to make it easy to use.</li>
+<li>Closed Platform &amp; Lambda Runtime: Provides a consistent environment for executing computational logic.</li>
+<li>Dynamic Request Dispatching: Allows efficient scheduling of I/O requests.</li>
+</ul>
+</li>
+<li>Advantages over vanilla IO stack:<ul>
+<li>Straightforward porting with minimal overhead.</li>
+<li>Closed platform and runtime offer better control and consistency.</li>
+<li>Dynamic request dispatching improves efficiency and performance.</li>
+</ul>
+</li>
+<li>Lambda IO's Dynamic Checking: Ensures access within memory boundaries, addressing issues related to EBPF (eXtended Berkeley Packet Filter).</li>
+<li>Evaluation Results:<ul>
+<li>Synthetic applications: Lambda IO outperforms vanilla Linux IO in terms of speed and efficiency.</li>
+<li>Real-world application (SpicyCycle): Lambda IO also achieves better performance than vanilla Linux IO.</li>
+</ul>
+</li>
+<li>Conclusion: Lambda IO is a unified Auto stack that manages computer computation storage resources across the whole standard device, offloading user-defined computational logic and improving performance significantly over vanilla Linux IO.</li>
+</ul>
+<h2 id="fast-23-revitalizing-the-forgotten-on-chip-dma-to-expedite-data-movement-in-nvm-based-storage">FAST '23 - Revitalizing the Forgotten On-Chip DMA to Expedite Data Movement in NVM-based Storage</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=fIUoc8bKZ5k">https://www.youtube.com/watch?v=fIUoc8bKZ5k</a></p>
+<h2 id="summary-of-conference-talk-on-revitalizing-forgotten-onchip-dma-using-nvm-based-storage-system">Summary of conference talk on revitalizing Forgotten Onchip DMA using NVM-based Storage System</h2>
+<ul>
+<li>Overview: The speaker introduces the concept of Fast Move, a general data movement engine that exploits on-chip DMA to speed up data transfer in NVMe-based storage systems. This engine incorporates three key techniques: optimized DMA, cooperative bulk read/write, and lightweight scheduler.</li>
+<li>Optimized DMA: This technique involves batching DRM page pinning, submission, and metadata buffer preallocation to improve efficiency.</li>
+<li>Cooperative Bulk Read/Write: This method divides data into chunks and has the CPU send a chunk while the DMA sends the rest, effectively pausing the DMA until the CPU finishes sending its portion of the data.</li>
+<li>Lightweight Scheduler: This scheduler coordinates resources and decides whether to split requests or have the CPU and DMA cooperate.</li>
+<li>Evaluation: The speaker presents experimental results showing significant improvements in latency and throughput when using Fast Move compared to traditional CPU-based data transfer methods. They also demonstrate how adding specific optimizations can lead to even greater performance gains.</li>
+<li>Conclusion: The speaker concludes by emphasizing that their comprehensive analysis of Intel's OAT platform demonstrates the benefits of exploiting on-chip DMA through the use of Fast Move, without requiring changes to existing application source code.</li>
+</ul>
+<h2 id="fast-23-nvmevirt-a-versatile-software-defined-virtual-nvme-device">FAST '23 - NVMeVirt: A Versatile Software-defined Virtual NVMe Device</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=cBonhqDooPE">https://www.youtube.com/watch?v=cBonhqDooPE</a></p>
+<ul>
+<li>Presenter introduces himself and thanks collaboration partners.</li>
+<li>Short story about the development of an idea for a new key-value store (KVSSD).</li>
+<li>The presenter discusses the challenges faced in evaluating various devices, including the difficulty of accessing and modifying them.</li>
+<li>They mention using an emulator to test software, but also highlight the limitations associated with it.</li>
+<li>The presenter talks about the concept of a virtual MVME device and how it can support RDMA (Remote Direct Memory Access).</li>
+<li>He explains that this approach allows for better performance and lower latency than traditional methods.</li>
+<li>However, he points out that there are still some downsides to using virtualization techniques, such as increased overhead.</li>
+<li>The presenter shares the challenges faced during development, including difficulties in detecting updates and handling interruptions.</li>
+<li>He then discusses the importance of incorporating advanced garbage collection models into the design of the system.</li>
+<li>The speaker introduces a simple model for processing data chunks and moving data between different components.</li>
+<li>They compare performance results from using an emulator versus actual devices, showing that there is a significant difference in performance when using emulators.</li>
+<li>The presenter shares some case studies where they have used their developed system to evaluate the performance of various devices and applications.</li>
+<li>He emphasizes the importance of replicating real-world conditions as closely as possible during testing.</li>
+<li>Finally, the speaker highlights the benefits of using their MVME-based approach for strategic computations and provides some examples of how it can improve overall system performance.</li>
+</ul>
+<h2 id="fast-23-smrstore-a-storage-engine-for-cloud-object-storage-on-hm-smr-drives">FAST '23 - SMRSTORE: A Storage Engine for Cloud Object Storage on HM-SMR Drives</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=b_iW94OQmbY">https://www.youtube.com/watch?v=b_iW94OQmbY</a></p>
+<ul>
+<li>Introduced new starter engine ASMR store</li>
+<li>Joint work with OSS family team</li>
+<li>Replacing S3 compatible service with a new version that supports higher density drives and better cost efficiency</li>
+<li>Asthma drive divides address into fixed size zones, which improves performance</li>
+<li>HMS hmsm drive without compromising performance</li>
+<li>Big picture of OSS architecture: frontend layer processes requests, forwarding them to the service layer for processing</li>
+<li>Pango file system: persistent layer packs Master Manager servers responsible for data persistence</li>
+<li>Drive trunk corresponds to a file in F4 format</li>
+<li>Observation 1: OSS medial stream metadatari stream listed data chunk really small</li>
+<li>Observation 2: f2fs normally opens one zone at a time, putting chunks in different streams</li>
+<li>Techno choice: build new user space storage engine directly, hmsm drive</li>
+<li>HMSM drive codesigns OSS back to achieve high performance</li>
+<li>Design principles for OSS workloads are based on traditional local file systems and exist within the customer's drives by Zoom block interface</li>
+<li>Data layout includes data indexing and memory management</li>
+<li>Master follows log structure design, with records being the basic unit of metadata and user data</li>
+<li>Layout of SMR drive: divide address into three partitions; first zone is a superzone for information performance timestamps, version numbers, etc.</li>
+<li>Three types of records are used to store serialized checkpoint journal chunk data</li>
+<li>Payload data records have four kilobyte headers with invariable payload sizes</li>
+<li>Read reduction and reidentification avoidance through reading small parts of the payload</li>
+<li>SMR store organizes memory structures effectively by optimizing placement and reducing overhead</li>
+<li>Scratch collection is used to manage empty zones efficiently</li>
+<li>Data indexing provides straightforward mapping between logical and physical locations</li>
+<li>Chunk data design includes three workload-aware placement strategies: reduce overhead, collect first, separate chunk different zone stream type adapt multichunk size limit</li>
+<li>The effect of interleaved zones in SMR store is demonstrated through the example of replacing a trunk</li>
+<li>Compared to CMR drives, SMS talks about providing comparable performance and even up to 30% higher throughput for larger sizes</li>
+<li>Micro Benchmark results show that ASMR stock performed well with small outsize, while SMR store achieved consistent register reports at 216 times faster speeds than F2FS</li>
+<li>Comparing the performance of enabling/disabling the SMR drive strategy, it's found that disabling the SMR drive reduces similar performance while optimized displacement CDFS Zoom utilization improves it significantly</li>
+<li>Building a new user space storage engine for ASMR store designs three workload-aware placement strategies to charge according to characteristics</li>
+<li>OSS closing SMS store performs much better than deploying an F2FS system with SMR drives, leading to a decrease in total costs by around 15%.</li>
+</ul>
+<h2 id="fast-23-multi-view-feature-based-ssd-failure-prediction-what-when-and-why">FAST '23 - Multi-view Feature-based SSD Failure Prediction: What, When, and Why</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=Daa5E083Sps">https://www.youtube.com/watch?v=Daa5E083Sps</a></p>
+<ul>
+<li>SSD Value Prediction Scheme:<ul>
+<li>Based on field-determined data.</li>
+<li>Long-term monitoring data is useful for failure prediction.</li>
+<li>Multiview, multitask Random Forest (MBTRF) scheme proposed.</li>
+<li>Finds long-term data monitoring data useful in value prediction.</li>
+<li>Combines short-term and long-term monitoring data to capture failure.</li>
+<li>Proposes a new approach for analyzing SSD monitoring data.</li>
+<li>Designs histogram feature pocket statistic to represent long-term data distribution.</li>
+<li>Finds that ssds server workload is usually similar, thus trends can be compared.</li>
+<li>Introduces three features: coefficient variation, artist production degree, and cortex represents stiffness trend slope.</li>
+<li>Evolves 3D feature to reflect trend differences.</li>
+<li>Desires a tight-ended lifespan solution that deals with failure operator provided machine learning model.</li>
+<li>Three main parts of the overall architecture: offline training, online prediction, and real-time monitoring.</li>
+<li>Combines multiple decision processes to improve prediction accuracy.</li>
+<li>Uses key decisions to reveal failure causes and verifies them.</li>
+<li>Evaluates the proposed language art existing scheme using precision, recall, F1 score, and AUC.</li>
+<li>Compares single task model with multi-task model for better prediction accuracy.</li>
+<li>Extracts major decision process based on Reverse Medium Error.</li>
+<li>Main failure codes are extracted to improve failure prediction.</li>
+<li>The MBTRF model improves the customer storage library serviceability.</li>
+</ul>
+</li>
+</ul>
+<h2 id="fast-23-fast-application-launch-on-personal-computingcommunication-devices">FAST '23 - Fast Application Launch on Personal Computing/Communication Devices</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=zGnn7IkIdiE">https://www.youtube.com/watch?v=zGnn7IkIdiE</a></p>
+<ul>
+<li>Tony Lee from Texas A&amp;M University presented a conference talk on improving application launch times using SSDs.</li>
+<li>The key problem is that performance flash storage still lags behind expectations, especially in comparison to cheaper QLC SSDs.</li>
+<li>He proposed a new technique called "parafetch" which aims to make better use of CPU cores and internal parallelism within SSDs.</li>
+<li>Parafetch consists of two phases: learning phase and prefetch phase.</li>
+<li>The learning phase involves monitoring disk access patterns and identifying launch-related blocks.</li>
+<li>The prefetch phase involves storing information about these launch-related blocks to accelerate loading subsequent launches of the application.</li>
+<li>He also discussed various challenges in designing a prefetcher, such as accurately collecting launch-related disk blocks and optimizing the order in which they are prefetched.</li>
+<li>Parafetch uses metadata shifting and range merging techniques to reduce prefetching times while increasing metadata shift sizes.</li>
+<li>The talk concluded with an evaluation of the parafetch technique on various platforms, showing significant improvements in application launch times, especially for warm starts.</li>
+</ul>
+<h2 id="fast-23-integrated-host-ssd-mapping-table-management-for-improving-user-experience-of-smartphones">FAST '23 - Integrated Host-SSD Mapping Table Management for Improving User Experience of Smartphones</h2>
+<p>URL: <a href="https://www.youtube.com/watch?v=WUh3AaSdKcQ">https://www.youtube.com/watch?v=WUh3AaSdKcQ</a></p>
+<ul>
+<li>Presentation by Yuna Keem, Seoul National University</li>
+<li>Focus on improving user experience in smartphones through integrated host SSD mapping table management</li>
+<li>Long storage latency is a key contributor to poor user experience</li>
+<li>Addressing L2P cache misses and their impact on user perceived latency</li>
+<li>Introduced HPV (Host Processor Virtualization) as a solution for better UX quality</li>
+<li>Two shortcomings in existing HPV management scheme: 1. Critical Miss Penalty still exists, and 2. It might reduce working memory space for user apps</li>
+<li>Proposed HPP Valve to address these issues using two techniques: Foreground App Centric HPV Caching and Dynamic HPB Size Adjustment</li>
+<li>Evaluation of proposed solutions using Snapdragon Triple Eight Mobile Hardware Development Kit showed significant improvements in app launching time and reduced number of important apps killed by LMKD (Low Memory Killer Daemon)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
