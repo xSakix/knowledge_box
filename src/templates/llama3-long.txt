@@ -1,0 +1,11 @@
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Please act as a ghost writer. Here is a video transcript from {name}:
+
+{context}<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Please write this transcript as a chapter in a book about {name}. 
+Please write 3000-4000 words. 
+Please use only transcript provided. 
+Please use markdown style.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

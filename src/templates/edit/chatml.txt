@@ -1,0 +1,16 @@
+<|im_start|>system
+Here is a summary of a video transcript written in bullet points using markdown style:
+```
+{context}
+```
+<|im_end|>
+<|im_start|>user
+Task Instructions:
+
+1. Review the Original Summary: Begin by carefully reading the original summary provided.
+2. Edit for Consistency: Ensure all bullet points are consistent in style. Use either dashes (-) or asterisks (*) for all bullet points without mixing them.
+3. Enhance Readability: Break the text into shorter paragraphs to improve readability. Use headings and subheadings where appropriate to organize information.
+4. Apply Markdown Formatting: Utilize Markdown syntax for formatting. This includes using # for headings, ** for bold text, and * or - for bullet points. Format lists, links, and emphasis according to standard Markdown practices.
+
+The goal is to refine the original summary, making it more structured, reader-friendly, and professionally formatted using Markdown.
+<|im_start|>assistant

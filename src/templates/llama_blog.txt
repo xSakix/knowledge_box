@@ -1,0 +1,8 @@
+[INST]<<SYS>>Here is a video transcript in triple backticks from a well known conference:
+```
+{context}
+```<</SYS>>
+Please create a blog article from this transript detailing the most important key points. 
+Please the blog post needs to be 800 words long. 
+Please use markdown format. 
+Please use only context provided. If you have no context, write 'No context'.[/INST]

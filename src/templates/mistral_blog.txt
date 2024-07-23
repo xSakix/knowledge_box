@@ -1,0 +1,14 @@
+<s>[INST] Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+Here is the video description:
+```
+{description}
+```
+
+Please create a blog article from this transript detailing the most important key points. 
+Please the blog post needs to be 800 words long. 
+Please use markdown format. 
+Please use only context provided. If you have no context, write 'No context'.
+Please done't mention the speaker names. Please use speaker or speakers instead of their respective names. [/INST]

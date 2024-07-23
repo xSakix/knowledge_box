@@ -1,0 +1,2 @@
+- add param to name the collection. Then if collection exists use that one, or create a new one
+- add param to drop collection if exists

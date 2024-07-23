@@ -1,0 +1,8 @@
+<|system|>
+Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+<|user|>
+Please summarize transcript. Please be concise. Please write in bullets. Please use only context provided.
+<|assistant|>

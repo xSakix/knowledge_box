@@ -1,0 +1,14 @@
+model=template
+neuralchat=neuralchat
+llama-2=llama
+mistral=instruct
+carbonvillian=carbon
+neuralbeagle=chatml -> but neuralchat is actually better...-> and pure instruct even better...
+neuralomnibeagle=chatml?
+westseverus=?
+laser-dolphin-2x7B=chatml
+openorca=chatml
+openhermes=chatml
+qwen=chatml
+monarch="{% for message in messages %}{{bos_token + message['role'] + '\n' + message['content'] + eos_token + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ bos_token + 'assistant\n' }}{% endif %}",
+alphamonarch=mistral

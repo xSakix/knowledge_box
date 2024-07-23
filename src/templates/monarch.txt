@@ -1,0 +1,19 @@
+<s>system
+Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+Here is the video description:
+```
+{description}
+```
+</s>
+<s>user
+Please summarize transcript. Please be concise. Please write in bullets. Please use only context provided.
+
+Example of How to Format the Summary:
+
+* [Summarize the point in a clear, concise sentence.]
+* [Summarize the next point, focusing on relevance to architects and developers.]
+* [Continue with additional points, ensuring clarity and direct relevance.]
+</s>

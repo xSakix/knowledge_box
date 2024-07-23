@@ -1,0 +1,4 @@
+python3 summarize_videos.py -l PLutlXcN4EAwDDwfoO67BY6KUPYVct8BIq -w > jakarta_community_dev_days_2023.md
+python3 summarize_videos.py -l PLGGpadyh0wS589np9dre-nOeGfzRfutmQ -w > authors_at_google.md
+python3 summarize_videos.py -l PLGGpadyh0wS6Q8ikSHvOTMk0bL2dSDeRP -w > economy_at_google.md
+python3 summarize_videos.py -l PL8f-F_Zx8XA-AuxOJY8-ShsYjDSx8GvAj -w > thougthworks_pragmatism_in_practice.md

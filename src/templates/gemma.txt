@@ -1,0 +1,13 @@
+<bos><start_of_turn>user
+Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+Here is the video description:
+```
+{description}
+```
+
+Please summarize transcript. Please be concise. Please write in bullets. Please use only context provided.<end_of_turn>
+<start_of_turn>model
+

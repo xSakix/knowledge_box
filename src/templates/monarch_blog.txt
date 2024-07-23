@@ -1,0 +1,12 @@
+<s>[INST] Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+Here is the video description:
+```
+{description}
+```
+
+First list the speaker names mentioned in description. If no speaker names are found in description, use the transcript. 
+Second create a short summary in bullet points from transcript and description.
+Third create a blog article using transcript, description, list of speakers, and summary detailing the most important key points. Please use 800 words or more for the blog article. Please use markdown format for the blog article. Please use only context provided for the blog article. If you have no context, write 'No context'. [/INST]

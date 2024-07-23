@@ -1,0 +1,5 @@
+### User:
+Here is a video transcript in triple backticks from a well known conference:```{context}```
+Please summarize transcript. Please be concise. Please write in bullet points. Please use only context provided. If you have no context, write 'no context'.Please use markdown style for output.
+    
+### Assistant:

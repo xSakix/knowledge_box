@@ -1,0 +1,5 @@
+<s>GPT4 Correct User: Here is a video transcript of '{title}':
+{context}
+
+Please summarize transcript. Please be concise. Please write in bullets. Please use only context provided.<|end_of_turn|>
+GPT4 Correct Assistant:

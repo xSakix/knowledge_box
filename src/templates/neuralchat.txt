@@ -1,0 +1,14 @@
+### System:
+Here is a video transcript of '{title}' in triple backticks:
+```
+{context}
+```
+Here is the video description:
+```
+{description}
+```
+
+### User:
+Please summarize transcript. Please be concise. Please write in bullets. Please use only context provided.
+
+### Assistant:

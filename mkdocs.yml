@@ -1,0 +1,132 @@
+site_name: "Architect's Insight Hub: Elevate Your Learning Experience"
+site_url: https://xsakix.github.io/knowledge_box/docs/
+use_directory_urls: false
+nav:
+  - Home: index.md
+  - Politics:
+    - davos:
+      - year 2024: politics/davos/davos_2024.md
+    - Yale:
+      - Foundations of Modern Social Theory with pwd: politics/yale/modern_social_theory_llama3.md
+      - Timothy Snyder - The Making of Modern Ukraine - long: politics/yale/snyder_ukraine_llama3.md
+      - Timothy Snyder - The Making of Modern Ukraine - short: politics/yale/snyder_ukraine_summary_llama3.md
+      - Power of Politics: politics/yale/power_and_politics_llama3.md      
+    - duke:
+      - Hayek: politics/duke/hayek_lecture_series.md
+    - dw:
+      - To the point: politics/dw/to_the_point.llama3.md
+      - To the point-long: politics/dw/to_the_point.long.llama3.md
+    - wiena:
+      - Wienna Humanities Festival 2022: politics/wiena/2022_llama3.book.md
+      - Wienna Humanities Festival 2023: politics/wiena/2023_llama3.book.md
+  - Technical summaries:
+    - a16z:
+      - AI: summaries/a16z/a16z_ai.llama3.md
+      - Company building: summaries/a16z/a16z_company_building.md
+      - Podcast: summaries/a16z/a16z_podcast.md
+    - acm:
+      - POPL 2023: summaries/acm/popl_2023_merlinite.md
+      - POPL 2024: summaries/acm/popl_2024_dolphin_mistral_v2.md
+    - devoxx:
+      - cern 2023: summaries/devoxx/devoxx_cern_2023.md
+    - computer scientists:
+      - Allan Kay: summaries/computer_scientists/allan_kay_mistral.md
+      - Donald Knuth: summaries/computer_scientists/donald_knuth_mistral.md
+      - Grady Booch: summaries/computer_scientists/grady_booch_mistral.md
+    - clojure:
+      - Conf 2023: summaries/clojure/clojure_conf_2023_merlinite.md
+    - gdc:
+      - gdc 2023: summaries/gdc/gdc_2023.md
+    - google:      
+      - deep mind learning: summaries/google/deep_mind_learning.md
+      - io 2023: summaries/google/google_io_2023.md
+      - tech talks: summaries/google/google_talks_tech.md
+    - goto: 
+      - design thinking/ui/ux: summaries/goto/goto_dt_ui_ux.md
+      - event driven arch 2023: summaries/goto/goto_eda_2023.md
+      - frontend: summaries/goto/goto_FE_v4.md
+      - programming languages: summaries/goto/goto_programming_lang.md
+      - software architecture: summaries/goto/goto_sw_arch_list.md
+      - yow! 2020: summaries/goto/goto_yow_2020.md
+    - haskell:
+      - conf 2023: summaries/haskell/haskell_conf_2023_merlinite.md
+    - jakartaee:
+      - jakartaone 2023: summaries/jakartaee/jakartaone_2023.md
+    - java:
+      - jvm language summit: summaries/java/jvm_language_summit_2023_mistral_fp16.md
+      - level up java dev day: summaries/java/level_up_java_dev_day_mistral.md
+      - road to 21: summaries/java/road_to_21_mistral.md
+    - Javascript/Typescript:
+      - ng conf 2022: summaries/web_dev/ng_conf_2022.md
+      - ng conf 2023: summaries/web_dev/ng_conf_2023_neuralchat.md
+      - nordic.js 2022: summaries/web_dev/nordic_js_2022.md
+      - reliable web summit: summaries/web_dev/reliable_web_summit_2021.md
+    - kubeconf:
+      - utrech 2023: summaries/kubeconf/kubeconf_utrecht_2023.md
+      - Community days UK 2023: summaries/kubeconf/k8s_community_days_uk_2023_mistral.md
+      - Community days UK 2022: summaries/kubeconf/k8s_community_days_uk_2022_mistral.md
+    - Lex Fridman:
+      - podcast: summaries/lex fridman/lex_friedman_v2.md
+    - Linux foundation:
+      - AI dev 2023: summaries/linux_foundation/ai.dev.2023.md
+      - OSS EU 2023: summaries/linux_foundation/oss.eu.2023.md
+      - WASM conf 2023: summaries/linux_foundation/wasmcon_2023.md
+    - Linux plumbers:
+      - AI dev 2023: summaries/linux_plumbers/linux_plumbers_2023.md
+    - ndc:
+      - AI: summaries/ndc/ndc_AI_starling.md
+      - london 2024: summaries/ndc/ndc_london_2024_starling.md
+      - Architecture and clouds: summaries/ndc/archticture_clouds.md
+    - Pycon:
+      - Pycon us 2023: summaries/pycon/pycon_us_2023.md
+    - Red Hat:
+      - dev nation: summaries/redhat/dev_nation.md
+    - Stanford:
+      - Enterpreneurial thought leader: summaries/stanford/stanford_seminar_enterpreneurial_though_leader.md
+      - Technology: summaries/stanford/stanfort_technology.md
+    - Strangeloop:
+      - year 2023: summaries/strangeloop/strange_loop_2023.md
+    - Thoughworks:
+      - xconf: summaries/thoughtworks/thoughtworks_xconf_eu_2023.md
+    - Usenix:
+      - ATC 2023: summaries/usenix/usenix_atc_2023_v2.md
+      - Fast 2023: summaries/usenix/usenix_fast_2023.md
+      - SRE Americas 2023: summaries/usenix/usenix_sre_americas2023.md
+    - Ycombinator:
+      - Dalton and Michael: summaries/ycombinator/ycombinator_dalton_michael.md
+      - How to build the future: summaries/ycombinator/ycombinator_how_to_build_future.md
+      - Startup school: summaries/ycombinator/ycombinator_startup_school.md
+  - Blogs:
+    - Architecture:
+      - Building Distributed Applications with Event-Driven Architecture: blog/architecture/eda.md
+      - Large-Scale Architecture - The Unreasonable Effectiveness of Simplicity: blog/architecture/ebay.md
+    - Computer science:
+      # - Grady Booch on The Limits of Software Parc[qwen long context]: blog/computer_science/booch_limits_sw_parc.md
+      - Grady Booch on The Limits of Software Parc[gpt-4]: blog/computer_science/booch_limits_sw_parc_gpt4.md
+    - Openshift:
+      - Openshift serverless[gpt-4]: blog/openshift/openshift_serverless_gpt4.md
+      # - Openshift serverless[qwen]: blog/openshift/openshift_serverless_qwen.md
+      # - Openshift serverless[monarch]: blog/openshift/openshift_serverless_monarch.md
+      # - Openshift serverless[monarch v2]: blog/openshift/openshift_serverless_monarch_v2.md
+      # - Openshift serverless[mistral]: blog/openshift/openshift_serverless_mistral.md
+      # - Openshift serverless[mixtral]: blog/openshift/openshift_serverless_mixtral.md
+      # - Openshift serverless[mixtral Q5]: blog/openshift/openshift_serverless_mixtral_q5.md
+    - Webassembly:
+      - Server-Side WebAssembly[qwen]: blog/wasm/webassembly_v3_qwen.md
+      # - Server-Side WebAssembly[monarch]: blog/wasm/webassembly_v2_monarch.md
+    - Design:
+      - Design for the Utopia You Want, Not the Dystopia You're In: blog/design/design_for_the_utopia.md
+    - Other:
+      - Technology Radar Volume 29 - preview: blog/other/tech_rada_trends_preview.md
+  - Tags: tags.md
+theme:
+  name: 'material'
+plugins:
+  - search:
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+  - tags
+
+
