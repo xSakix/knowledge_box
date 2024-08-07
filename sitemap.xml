@@ -2,432 +2,497 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/index.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/tags.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/architecture/ebay.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/architecture/eda.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/computer_science/booch_limits_sw_parc.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/computer_science/booch_limits_sw_parc_gpt4.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/design/design_for_the_utopia.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_gpt4.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_mixtral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_mixtral_q5.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_monarch.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_monarch_v2.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/openshift/openshift_serverless_qwen.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/other/tech_rada_trends_preview.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/wasm/webassembly_v2_monarch.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/blog/wasm/webassembly_v3_qwen.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/davos/davos_2024.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/duke/hayek_lecture_series.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/dw/to_the_point.llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/dw/to_the_point.long.llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/2022_llama3.book.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/2023_llama3.book.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.long.athena.70b.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.long.llama.3.1.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.long.llama.3.70.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.long.llama.3.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.long.qwen2.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.mistral.nemo.1.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.mistral.nemo.2.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.mistral.nemo.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.mistral.nemo.q5.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.mistral.nemo.q6.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.summary.llama.3.1.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.summary.mistral.nemo.html</loc>
+         <lastmod>2024-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xsakix.github.io/knowledge_box/docs/politics/wiena/future_annual_symposium_2024.yi.long.html</loc>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/modern_social_theory.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/modern_social_theory_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/political_science_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/power_and_politics_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/snyder_ukraine_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/snyder_ukraine_summary_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/politics/yale/sociology_foundation_book.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/a16z/a16z_ai.llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/a16z/a16z_ai.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/a16z/a16z_company_building.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/a16z/a16z_podcast.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/acm/popl_2023_merlinite.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/acm/popl_2024_dolphin_mistral_v2.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/clojure/clojure_conf_2023_merlinite.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/computer_scientists/allan_kay_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/computer_scientists/donald_knuth_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/computer_scientists/grady_booch_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/devoxx/devoxx_cern_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/gdc/gdc_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/google/deep_mind_learning.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/google/google_io_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/google/google_talks_tech.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_FE_v4.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_dt_ui_ux.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_eda_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_programming_lang.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_sw_arch_list.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/goto/goto_yow_2020.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/haskell/haskell_conf_2023_merlinite.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/jakartaee/jakartaone_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/java/jvm_language_summit_2023_mistral_fp16.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/java/level_up_java_dev_day_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/java/road_to_21_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/kubeconf/k8s_community_days_uk_2022_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/kubeconf/k8s_community_days_uk_2023_mistral.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/kubeconf/kubeconf_utrecht_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/lex%20fridman/lex_friedman_v2.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/lex%20fridman/podcast_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/linux_foundation/ai.dev.2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/linux_foundation/oss.eu.2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/linux_foundation/wasmcon_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/linux_plumbers/linux_plumbers_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ndc/archticture_clouds.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ndc/ndc_AI_starling.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ndc/ndc_london_2024_llama3.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ndc/ndc_london_2024_starling.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/pycon/pycon_us_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/redhat/dev_nation.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/stanford/stanford_seminar_enterpreneurial_though_leader.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/stanford/stanfort_technology.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/strangeloop/strange_loop_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/thoughtworks/thoughtworks_xconf_eu_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/usenix/usenix_atc_2023_v2.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/usenix/usenix_fast_2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/usenix/usenix_sre_americas2023.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/ng_conf_2022.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/ng_conf_2023_neuralchat.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/nordic_js_2022.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/web_dev/reliable_web_summit_2021.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ycombinator/ycombinator_dalton_michael.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ycombinator/ycombinator_how_to_build_future.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/summaries/ycombinator/ycombinator_startup_school.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xsakix.github.io/knowledge_box/docs/tags/event-driven-architecture.html</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2024-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
