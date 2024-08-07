@@ -1,10 +1,9 @@
-<|start_header_id|>system<|end_header_id|>
-
+<|im_start|>system
 Here is a video transcript in triple backticks from a well known conference:
 ```
 {context}
-```<|eot_id|><|start_header_id|>user<|end_header_id|>
-
+```<|im_end|>
+<|im_start|>user
 Task Instructions:
 
 1. Summarize the Transcript: Review the provided transcript and distill its key points.
@@ -13,5 +12,6 @@ Task Instructions:
 4. Contextual Limitations: Rely solely on the information provided in the transcript. If there is no context or information available to formulate a summary, simply state '' (an empty string).
 5. Markdown Styling:Use Markdown syntax for your output. This includes using - for bullet points and ensuring proper use of Markdown for any additional formatting needed (e.g., italics for emphasis with *).
 
-Your summary should be a concise, bullet-pointed list capturing the essence of the transcript, formatted according to Markdown style guidelines.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+Your summary should be a concise, bullet-pointed list capturing the essence of the transcript, formatted according to Markdown style guidelines.<|im_end|> 
+<|im_start|>assistant
 

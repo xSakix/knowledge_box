@@ -23,6 +23,7 @@ from nltk.tokenize import word_tokenize
 MAIN_VIDEOS_DIR = "videos"
 MAX_TOKENS = 8192
 N_PREDICT=8192
+# N_PREDICT = -1
 TEMPERATURE = 0.7
 OVERLAP = 0
 DEFAULT_TEMPLATE=f"templates/instruct.txt"
@@ -41,7 +42,10 @@ def get_template(video, template_type="instruct", isedit = False):
     else:
         template=open(DEFAULT_TEMPLATE,"r").read()
 
-    result = template.format(title=video["title"],context=video["transcript"], description=video["description"],name=video["name"])
+    if "name" in video.keys():
+        result = template.format(title=video["title"],context=video["transcript"], description=video["description"],name=video["name"])
+    else:
+        result = template.format(title=video["title"],context=video["transcript"], description=video["description"])
     # print(result, file=sys.stderr)
     return result
 
@@ -183,7 +187,12 @@ def edit_summary(context,template_type="instruct"):
     return "error..."
 
 def summarize_whole(video,params):
-    data = {"prompt": get_template(video,params['template_type']), "n_predict": N_PREDICT, "temperature": params['temperature'], "stop":['<|end_of_turn|>','<|im_end|>', '</s>','<|endoftext|>']}
+    data = {
+        "prompt": get_template(video,params['template_type']), 
+        "n_predict": N_PREDICT, 
+        "temperature": params['temperature'], 
+        "stop":['<|end_of_turn|>','<|im_end|>', '</s>','<|endoftext|>'], 
+        "keep":-1}
 
     response = requests.post("http://localhost:8080/completion", json=data)
 
@@ -234,7 +243,7 @@ def summarize_per_parts(video, num_tokens, params):
         video_part["transcript"]=part
         prompt = get_template(video_part, params['template_type'])
         print("part num of tokens:",count_tokens(prompt), file=sys.stderr)
-        data = {"prompt": prompt, "n_predict": N_PREDICT, "temperature": params['temperature'],"stop":['<|end_of_turn|>','<|im_end|>', '</s>','<|endoftext|>']}
+        data = {"prompt": prompt, "n_predict": N_PREDICT, "temperature": params['temperature'],"stop":['<|end_of_turn|>','<|im_end|>', '</s>','<|endoftext|>'], "keep":-1}
 
         response = requests.post("http://localhost:8080/completion", json=data)
 
@@ -317,6 +326,9 @@ def main():
             "description": desc,
             "transcript":transcript
         }
+        if args.name is not None:
+            video["name"] = args.name
+
         print(f"Using template type:{args.template_type}", file=sys.stderr)
         summary = summarize_video(video, params)
         print("## " + title+"\n")
@@ -339,10 +351,15 @@ def main():
                 transcript = get_one_video_transcript(video["video_id"])
                 transcript = clean_text(transcript)
                 video["transcript"]=transcript
-                video["name"] = args.name
+
+                if args.name is not None:
+                    video["name"] = args.name
+                
                 summary = summarize_video(video, params)
+                
                 if args.stats:
                     print_stats(summary, transcript)
+
             except:
                 summary = "Error"
             print(summary)

@@ -19,6 +19,15 @@ nav:
     - wiena:
       - Wienna Humanities Festival 2022: politics/wiena/2022_llama3.book.md
       - Wienna Humanities Festival 2023: politics/wiena/2023_llama3.book.md
+      - Future anual symposium 2024 mistral nemo short: politics/wiena/future_annual_symposium_2024.summary.mistral.nemo.md
+      - Future anual symposium 2024 mistral nemo long q4: politics/wiena/future_annual_symposium_2024.mistral.nemo.md
+      - Future anual symposium 2024 mistral nemo long q5: politics/wiena/future_annual_symposium_2024.mistral.nemo.q5.md
+      - Future anual symposium 2024 mistral nemo long q6: politics/wiena/future_annual_symposium_2024.mistral.nemo.q6.md
+      - Future anual symposium 2024 mistral nemo long q8: politics/wiena/future_annual_symposium_2024.mistral.nemo.1.md
+      - Future anual symposium 2024 llama3.1 short: politics/wiena/future_annual_symposium_2024.summary.llama.3.1.md
+      - Future anual symposium 2024 llama3.1 long: politics/wiena/future_annual_symposium_2024.long.llama.3.1.md
+      - Future anual symposium 2024 yi-34B long: politics/wiena/future_annual_symposium_2024.yi.long.md
+      - Future anual symposium 2024 athena-70B long: politics/wiena/future_annual_symposium_2024.long.athena.70b.md
   - Technical summaries:
     - a16z:
       - AI: summaries/a16z/a16z_ai.llama3.md
